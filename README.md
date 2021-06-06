@@ -14,4 +14,4 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ## Community Channel
 
-We're on [Gitter](https://gitter.im/TheAlgorithms)!  Please join us.
+We're on [Gitter](https://gitter.im/TheAlgorithms) and [Discord](https://discord.gg/c7MnfGFGa6)! Please join us.
