@@ -4,7 +4,7 @@
 [![Gitter chat](https://img.shields.io/badge/Chat-Gitter-ff69b4.svg?label=Chat&logo=gitter&style=flat-square)](https://gitter.im/TheAlgorithms)&nbsp;
 [![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/TheAlgorithms/donate)
 
-### All algorithms implemented in Julia (for educational purposes)
+### Algorithms implemented in Julia (for educational purposes)
 
 These implementations are for learning purposes. The implementations may be less efficient than the Julia standard library.
 
