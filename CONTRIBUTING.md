@@ -6,6 +6,6 @@
 
 #### **Do you have questions about the source code?**
 
-- Ask any question about how to use the repository in the [TheAlgorithms room in Gitter](https://gitter.im/TheAlgorithms/community?source=orgpage#)!
+- Ask any questions about how to use the repository in the [The Algorithms room in Gitter](https://gitter.im/TheAlgorithms/community?source=orgpage#) or in the [Discord](https://discord.gg/c7MnfGFGa6) server.
 
-That is all you need to know about the process now it is your turn to help us improve the repository, thank you! 
+That is all you need to know about the process. Now it is your turn to help us improve the repository; thank you! 
