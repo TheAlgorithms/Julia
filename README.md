@@ -10,7 +10,7 @@ These implementations are for learning purposes. The implementations may be less
 
 ## Contribution Guidelines
 
-Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
+Read our [Contribution Guidelines](https://github.com/TheAlgorithms/Julia/blob/main/CONTRIBUTING.md) before you contribute.
 
 ## Community Channel
 
