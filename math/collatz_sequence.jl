@@ -1,3 +1,6 @@
+using Test
+
+
 """
 
 Collatz conjecture: start with any positive integer n. The next term is
@@ -17,11 +20,8 @@ function collatz_sequence(n::Int64)::Vector{Int64}
 	return sequence
 end
 
-function main()
-	n = 42
-	seq = collatz_sequence(n)
-	println(seq)
-	println("It took $(length(seq)) steps for n = $(n)")
-end
-
-main()
+@testset "Collatz Sequence" begin
+	@test collatz_sequence(3) == [3,10,5,16,8,4,2,1]
+	@test collatz_sequence(42) == [42,21,64,32,16,8,4,2,1]
+	@test collatz_sequence(5) == [5,16,8,4,2,1]
+end;

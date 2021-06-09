@@ -1,6 +1,13 @@
+using Test
+
 
 """
 Approximates the area under the curve using the trapezoidal rule
+Arguments:
+ - f: function for the
+ - x_start: starting value for x
+ - x_end: ending value for x
+ - steps: steps taken while integrating.
 """
 
 function trapazoidal_area(f,x_start,x_end,steps)
@@ -19,18 +26,8 @@ function trapazoidal_area(f,x_start,x_end,steps)
 	return area
 end
 
-test_function(x) = x^3 + x^2
-
-function main()
-	x_start = -5
-	x_end = 5
-	steps = 1
-	while steps < 10000
-		println("with $(steps) steps, area: $(trapazoidal_area(test_function,x_start,x_end,steps))")
-		steps += 1
-	end
-end
-
-main()
-
-
+@testset "Area by Trapazoid rule" begin
+	@test trapazoidal_area(x -> 5, 12, 14, 1000) == 10.00000000000334
+	@test trapazoidal_area(x -> 9*x^2, -4, 0, 1000) == 192.0000960000001
+	@test trapazoidal_area(x -> 9*x^2, -4, 4, 1000) == 384.0007680000011
+end;
