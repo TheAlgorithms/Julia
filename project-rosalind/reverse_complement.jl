@@ -15,11 +15,3 @@ end
 @testset "reverse complement" begin
 	@test reverse_complement("AAAACCCGGT") == "ACCGGGTTTT"
 end
-	
-
-
-
-
-
-
-
