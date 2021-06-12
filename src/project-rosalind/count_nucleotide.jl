@@ -1,5 +1,3 @@
-using Test
-
 """
 Given: A DNA string s
 
@@ -9,8 +7,4 @@ Return: Four integers (separated by spaces) counting the respective number of ti
 """
 function count_nucleotides(s::AbstractString)
 	return join(map(y -> count(x -> x == y, s),['A', 'T', 'G', 'C']), " ")
-end
-
-@testset "count nucleotides" begin
-	@test count_nucleotides("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC") == "20 21 17 12" 
 end
