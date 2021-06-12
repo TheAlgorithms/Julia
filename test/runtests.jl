@@ -2,5 +2,10 @@ using TheAlgorithms
 using Test
 
 @testset "TheAlgorithms.jl" begin
-    # Write your tests here.
+
+include("math.jl")
+include("matrix.jl")
+include("project-rosalind.jl")
+include("searches.jl")
+
 end
