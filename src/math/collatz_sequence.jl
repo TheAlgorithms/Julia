@@ -6,7 +6,7 @@ obtained as follows:
 The conjecture states the sequence will always reach 1 for any starting value n.
 """
 
-function collatz_sequence(n::Int64)::Vector{Int64}
+function collatz_sequence(n::Int)::Vector{Int}
 	sequence = [n]
 	while n != 1
 		n = n % 2 == 1 ? 3 * n + 1 : div(n, 2)
