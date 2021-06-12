@@ -4,7 +4,7 @@ CurrentModule = TheAlgorithms
 
 # TheAlgorithms
 
-Documentation for [TheAlgorithms](https://github.com/TheAlgorithms/TheAlgorithms.jl).
+Documentation for [TheAlgorithms](https://github.com/TheAlgorithms/Julia).
 
 ```@index
 ```
