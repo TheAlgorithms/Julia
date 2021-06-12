@@ -2,6 +2,7 @@ module TheAlgorithms
 
 # Usings/Imports (keep sorted)
 using DifferentialEquations
+using LinearAlgebra
 using Plots
 
 ## Exports

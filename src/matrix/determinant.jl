@@ -1,6 +1,3 @@
-using LinearAlgebra #to test against the predefined function.
-using Test
-
 """
 Given a non singluar matrix, calculate its determinant using LU decomposition.
 
@@ -25,12 +22,4 @@ function determinant(mat)
 
 	return l_prod * u_prod
 end
-M1 = [1 0; 2 2]
-M2 = rand(3,3)
-M3 = rand(4,4)
 
-@testset "Check Determinants" begin
-	@test determinant(M1) == det(M1)
-	@test round(determinant(M2),digits = 4) == round(det(M2),digits = 4)
-	@test round(determinant(M3),digits = 4) == round(det(M3),digits = 4)
-end
