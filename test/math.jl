@@ -40,4 +40,19 @@ end
     plot(sol)
 end
 
+@testset "Math: Armstrong Number" begin
+    x = 370     # an armstrong number
+    @test is_armstrong(x) == true
+    x = 225     # Not an armstrong number
+    @test is_armstrong(x) == false
+    x = -23     # Not an armstrong number
+    @test is_armstrong(x) == false
+    x = 153     # an armstrong number
+    @test is_armstrong(x) == true
+    x = 0       # an armstrong number
+    @test is_armstrong(x) == true
+    x = 12      # Not an armstrong number
+    @test is_armstrong(x) == false
+end
+
 end

@@ -18,6 +18,7 @@ export euler_method
 export line_length
 export SIR # TODO: make the name lowercase if possible
 export trapazoidal_area
+export is_armstrong
 
 # Exports: matrix
 export determinant
@@ -45,6 +46,7 @@ include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/line_length.jl")
 include("math/sir_model.jl")
+include("math/armstrong_number.jl")
 
 
 # Includes: matrix
