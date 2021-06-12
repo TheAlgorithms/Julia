@@ -36,6 +36,8 @@ export search
 # Exports: statistics
 export OLSbeta
 
+# Exports: strings
+export is_palindrome
 
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
@@ -64,5 +66,8 @@ include("searches/linear_search.jl")
 
 # Includes: statistics
 include("statistics/ordinary_least_squares.jl")
+
+# Includes: strings
+include("strings/is_palindrome.jl")
 
 end
