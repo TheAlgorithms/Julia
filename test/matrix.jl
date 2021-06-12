@@ -4,7 +4,7 @@
         M1 = [1 0; 2 2]
         M2 = rand(3,3)
         M3 = rand(4,4)
-        
+
         @test determinant(M1) == det(M1)
         @test round(determinant(M2),digits = 4) == round(det(M2),digits = 4)
         @test round(determinant(M3),digits = 4) == round(det(M3),digits = 4)
