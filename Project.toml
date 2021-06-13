@@ -13,6 +13,8 @@ Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [compat]
 GLM = "1"
+DataFrames = "1"
+DifferentialEquations = "6"
 julia = "1.6"
 
 [extras]
