@@ -15,7 +15,7 @@ abs(123.1) # returns 123.1
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
 """
-function abs_val(num::Int64)
+function abs_val(num)
     return num < 0 ? -num : num
 end
 

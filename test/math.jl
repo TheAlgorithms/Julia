@@ -55,20 +55,30 @@ end
     @test is_armstrong(x) == false
 end
 
-@testset "Math: Absolute Value" begin
-    @test abs_val(-100) == 100                  # returns 100
-    @test abs_val(0) == 0                       # returns 0
-    @test abs(123.1) ==123.1                    # returns 123.1
-    @test (-1000 == abs_val(-1000)) == false    #returns false
-    @test (1000 == abs_val(1000)) == true       #returns true
+@testset "Math: abs.jl(Absolute Value) " begin
+    @test abs_val(-100) == 100
+    @test abs_val(0) == 0
+    @test abs(123.1) ==123.1
+    @test (-1000 == abs_val(-1000)) == false
+    @test (1000 == abs_val(1000)) == true
 
-    @test abs_max([1,3,4]) == 4                 # returns 4
-    @test abs_max([-3,1,2]) == -3               # returns -3
-    @test abs_max([-7,-3,6]) == -7              #returns -7
+    @test abs_max([1,3,4]) == 4
+    @test abs_max([-3,1,2]) == -3
+    @test abs_max([-7,-3,6]) == -7
     
-    @test abs_min([1,3,4]) == 1                 # returns 1
-    @test abs_min([-3,1,2]) == 1                # returns 1
-    @test abs_min([-7,-3,6]) == -3              #returns -3
+    @test abs_min([1,3,4]) == 1
+    @test abs_min([-3,1,2]) == 1
+    @test abs_min([-7,-3,6]) == -3
+end
+
+@testset "Math: ceil_floor" begin
+    @test ceil_val(1.3) == 2.0
+    @test ceil_val(2.0) == 2.0
+    @test ceil_val(-1.5) == -1.0
+
+    @test floor_val(1.3) == 1
+    @test floor_val(2.0) == 2.0
+    @test floor_val(-1.7) == -2.0
 end
 
 end

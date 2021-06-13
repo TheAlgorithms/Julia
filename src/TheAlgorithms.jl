@@ -13,13 +13,16 @@ using Random
 # Please keep the folders/functions sorted
 
 # Exports: math
+export abs_max
+export abs_min
+export abs_val
+export ceil_val, floor_val
 export collatz_sequence
 export euler_method
+export is_armstrong
 export line_length
 export SIR # TODO: make the name lowercase if possible
 export trapazoidal_area
-export is_armstrong
-export abs_val, abs_max, abs_min
 
 # Exports: matrix
 export determinant
@@ -51,6 +54,7 @@ include("math/line_length.jl")
 include("math/sir_model.jl")
 include("math/armstrong_number.jl")
 include("math/abs.jl")
+include("math/ceil_floor.jl")
 
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl
