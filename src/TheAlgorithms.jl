@@ -34,6 +34,9 @@ export collatz_sequence
 export euler_method
 export is_armstrong
 export line_length
+export mean
+export median
+export mode
 export SIR # TODO: make the name lowercase if possible
 export surfarea_cube
 export surfarea_sphere
@@ -69,11 +72,15 @@ include("math/abs.jl")
 include("math/area_under_curve.jl")
 include("math/armstrong_number.jl")
 include("math/area.jl")
+include("math/average_mean.jl")
+include("math/average_median.jl")
+include("math/average_mode.jl")
 include("math/ceil_floor.jl")
 include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/line_length.jl")
 include("math/sir_model.jl")
+
 
 
 
