@@ -57,7 +57,7 @@ export search
 
 # Exports: statistics
 export OLSbeta
-
+export PearsonCorrelation
 # Exports: strings
 export is_palindrome
 
