@@ -10,6 +10,7 @@ using Random
 
 @testset "TheAlgorithms" begin
 
+include("knapsack.jl")
 include("math.jl")
 include("matrix.jl")
 include("project-rosalind.jl")

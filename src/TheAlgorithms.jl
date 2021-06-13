@@ -12,6 +12,10 @@ using Random
 ## Exports
 # Please keep the folders/functions sorted
 
+# Exports: knapsack
+export ZeroOnePack!
+export CompletePack!
+
 # Exports: math
 export collatz_sequence
 export euler_method
@@ -41,6 +45,9 @@ export is_palindrome
 
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
+
+# Includes: knapsack
+include("knapsack/knapsack.jl")
 
 # Includes: math
 include("math/area_under_curve.jl")
