@@ -23,5 +23,3 @@ function PearsonCorrelation(x, y)
     YYs = sum((y.-mean_y).*(y.-mean_y))
     return(sum(XY)/(sqrt(XXs.*YYs)))
 end
-
-
