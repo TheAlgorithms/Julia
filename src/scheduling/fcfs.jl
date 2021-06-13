@@ -17,6 +17,8 @@ fcfs(n, process_id, burst_times)
 # Reference
 
 https://en.wikipedia.org/wiki/Scheduling_(computing)#First_come,_first_served
+
+Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
 """
 function fcfs(n, process_id, burst_time)
     waiting_time = []
