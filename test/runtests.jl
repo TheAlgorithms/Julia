@@ -16,5 +16,6 @@ include("matrix.jl")
 include("project-rosalind.jl")
 include("searches.jl")
 include("statistics.jl")
+include("scheduling.jl")
 
 end

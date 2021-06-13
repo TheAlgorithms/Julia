@@ -61,6 +61,9 @@ export OLSbeta
 # Exports: strings
 export is_palindrome
 
+# Exports: scheduling
+export fcfs
+
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
 
@@ -102,5 +105,8 @@ include("statistics/ordinary_least_squares.jl")
 
 # Includes: strings
 include("strings/is_palindrome.jl")
+
+# Includes: scheduling
+include("scheduling/fcfs.jl")
 
 end
