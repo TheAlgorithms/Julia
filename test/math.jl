@@ -81,4 +81,55 @@ end
     @test floor_val(-1.7) == -2.0
 end
 
+@testset "Math: Area" begin
+    @test surfarea_cube(1) == 6
+    @test surfarea_cube(3) == 54
+    @test_throws DomainError surfarea_cube(-1) 
+
+    @test surfarea_sphere(5) == 314.1592653589793
+    @test surfarea_sphere(1) == 12.566370614359172
+    @test_throws DomainError surfarea_sphere(-1) 
+
+    @test area_rectangle(10,20) == 200
+    @test_throws DomainError area_rectangle(-1,-2)
+    @test_throws DomainError area_rectangle(1,-2)
+    @test_throws DomainError area_rectangle(-1,2)
+
+    @test area_square(10) == 100
+    @test_throws DomainError area_square(-1) 
+
+    @test area_triangle(10,10) == 50.0
+    @test_throws DomainError area_triangle(-1,-2)
+    @test_throws DomainError area_triangle(1,-2)
+    @test_throws DomainError area_triangle(-1,2)
+
+    @test area_heron_triangle(5,12,13) == 30.0
+    @test_throws DomainError area_heron_triangle(-1,-2,1)
+    @test_throws DomainError area_heron_triangle(1,-2,1)
+    @test_throws DomainError area_heron_triangle(-1,2,1)
+
+    @test area_parallelogram(10,20) == 200
+    @test_throws DomainError area_parallelogram(-1,-2)
+    @test_throws DomainError area_parallelogram(1,-2)
+    @test_throws DomainError area_parallelogram(-1,2)
+
+    @test area_trapezium(10, 20, 30) == 450.0
+    @test_throws DomainError area_trapezium(-1, -2, -3)
+    @test_throws DomainError area_trapezium(-1, 2, 3)
+    @test_throws DomainError area_trapezium(1, -2, 3)
+
+    @test area_circle(20) == 1256.6370614359173
+    @test_throws DomainError area_circle(-1) 
+
+    @test area_ellipse(10, 10) == 314.1592653589793
+    @test area_ellipse(10, 20) == 628.3185307179587
+    @test_throws DomainError area_ellipse(1, -2) 
+    @test_throws DomainError area_ellipse(-1, 2) 
+    @test_throws DomainError area_ellipse(-1, -2) 
+
+    @test area_rhombus(10, 20) == 100.0
+    @test_throws DomainError area_rhombus(-1,-2)
+    @test_throws DomainError area_rhombus(1,-2)  
+    @test_throws DomainError area_rhombus(-1,2)  
+end
 end
