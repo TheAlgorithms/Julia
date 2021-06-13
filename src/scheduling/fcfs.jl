@@ -3,14 +3,16 @@
 
 Implementation of first come first served scheduling algorithm
 
+# Output
+Tuple of vectors (process_id, burst_time, waiting_time, turnaround_time, avg_waiting_time, avg_turnaround_time)
+
 # Example
 
 ```julia
-n = 3
-process_id = Any[1, 2, 3]
-burst_times = Any[3, 4, 5]
+n = 3 # number of processes
+process_id = Any[1, 2, 3] # process ids
+burst_times = Any[3, 4, 5] # burst times
 fcfs(n, process_id, burst_times)
-
 ```
 # Reference
 
@@ -38,7 +40,3 @@ function fcfs(n, process_id, burst_time)
 
     return process_id, burst_time, waiting_time, turnaround_time, avg_waiting_time, avg_turnaround_time
 end
-n = 3
-process_id = Any[1, 2, 3]
-burst_times = Any[10, 5, 8]
-fcfs(n, process_id, burst_times)
