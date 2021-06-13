@@ -17,12 +17,27 @@ export ZeroOnePack!
 export CompletePack!
 
 # Exports: math
+export abs_max
+export abs_min
+export abs_val
+export area_circle
+export area_ellipse
+export area_heron_triangle
+export area_parallelogram
+export area_rectangle
+export area_rhombus
+export area_square
+export area_trapezium
+export area_triangle
+export ceil_val, floor_val
 export collatz_sequence
 export euler_method
+export is_armstrong
 export line_length
 export SIR # TODO: make the name lowercase if possible
+export surfarea_cube
+export surfarea_sphere
 export trapazoidal_area
-export is_armstrong
 
 # Exports: matrix
 export determinant
@@ -50,12 +65,16 @@ export is_palindrome
 include("knapsack/knapsack.jl")
 
 # Includes: math
+include("math/abs.jl")
 include("math/area_under_curve.jl")
+include("math/armstrong_number.jl")
+include("math/area.jl")
+include("math/ceil_floor.jl")
 include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/line_length.jl")
 include("math/sir_model.jl")
-include("math/armstrong_number.jl")
+
 
 
 # Includes: matrix
