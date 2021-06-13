@@ -48,9 +48,4 @@ function binarysearch(list, query; rev=false, lt=<, by=identity)
     end
 end
 
-sample = [0, 23, 52, 552, 555, 602, 1004]
-reversed_sample = reverse(sample)
-unsorted_sample = [124, 53, 21, 163]
-println(binarysearch(sample, 52))
-println(binarysearch(reversed_sample, 52, rev=true))
-println(binarysearch(unsorted_sample, 21))  # throws an error
+

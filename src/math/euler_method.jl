@@ -1,9 +1,6 @@
-using Test
-
 """
 Calculate the solution to a differential equation using forward euler method.
 """
-
 function euler_method(f, x0, span, h=1.0e-2)
     s, e = span
     steps = floor((e - s) / h) |> Int
@@ -16,8 +13,4 @@ function euler_method(f, x0, span, h=1.0e-2)
 		t[i + 1] = t[i] + h
     end
     return x, t
-end
-
-@testset "Euler Method" begin
-    @test euler_method((x, t) -> x, 1, (0, 5))[1][end] == 143.33937864611195
 end

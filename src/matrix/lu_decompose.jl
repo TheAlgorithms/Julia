@@ -1,6 +1,3 @@
-using LinearAlgebra # to test against the inbuilt function
-using Test
-
 """
 Decomposes a `n x n` non singular matrix into a lower triangular matrix (L) and an upper triangular matrix (U)
 """
@@ -34,26 +31,7 @@ function lu_decompose(mat)
 	return L,U
 end
 
-mat = [
-	2  -1 -2; 
-	-4   6  3; 
-	-4  -2  8
-]
 
-L = [
-	 1  0 0;    
-	-2  1 0;   
-	-2 -1 1
-]
-U = [
-	2 -1 -2;   
-	0  4 -1;    
-	0  0  3
-]
-
-@testset "LU decomposition" begin
-	@test lu_decompose(mat) == (L,U)
-end
 
 
 

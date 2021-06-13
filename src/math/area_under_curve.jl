@@ -1,5 +1,3 @@
-using Test
-
 """
 Approximates the area under the curve using the trapezoidal rule
 Arguments:
@@ -23,10 +21,4 @@ function trapazoidal_area(f, x_start, x_end, steps)
 	end
 
 	return area
-end
-
-@testset "Area by Trapazoid rule" begin
-	@test trapazoidal_area(x -> 5, 12, 14, 1000) == 10.00000000000334
-	@test trapazoidal_area(x -> 9 * x^2, -4, 0, 1000) == 192.0000960000001
-	@test trapazoidal_area(x -> 9 * x^2, -4, 4, 1000) == 384.0007680000011
 end
