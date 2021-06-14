@@ -1,6 +1,7 @@
 module TheAlgorithms
 
 # Usings/Imports (keep sorted)
+using Base: Float64
 using DataFrames
 using DifferentialEquations
 using GLM
@@ -43,6 +44,8 @@ export line_length
 export mean
 export median
 export mode
+export prime_check
+export prime_factors
 export perfect_cube
 export perfect_number
 export perfect_square
@@ -75,6 +78,15 @@ export is_palindrome
 # Exports: scheduling
 export fcfs
 
+# Exports: conversions
+export celsius_to_fahrenheit
+export celsius_to_kelvin
+export fahrenheit_to_celsius
+export fahrenheit_to_kelvin
+export kelvin_to_celsius
+export kelvin_to_fahrenheit
+export weight_conversion
+
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
 
@@ -98,6 +110,8 @@ include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/factorial.jl")
 include("math/line_length.jl")
+include("math/prime_check.jl")
+include("math/prime_factors.jl")
 include("math/perfect_cube.jl")
 include("math/perfect_number.jl")
 include("math/perfect_square.jl")
@@ -126,5 +140,9 @@ include("strings/is_palindrome.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
+
+# Includes: conversions
+include("conversions/weight_conversion.jl")
+include("conversions/temparature_conversion.jl")
 
 end

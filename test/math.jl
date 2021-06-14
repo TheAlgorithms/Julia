@@ -146,6 +146,35 @@ end
 	@test line_length(x -> sin(5 * x) + cos(10 * x) + 0.1 * x^2, 0, 10, 10000) == 69.53493003183544
 end
 
+@testset "Math: Prime Check" begin
+    @test prime_check(2) == true
+    @test prime_check(3) == true
+    @test prime_check(5) == true
+    @test prime_check(7) == true
+    @test prime_check(11) == true
+    @test prime_check(13) == true
+    @test prime_check(17) == true
+    @test prime_check(19) == true
+    @test prime_check(23) == true
+    @test prime_check(29) == true
+    @test prime_check(112) == false
+    @test prime_check(172) == false
+    @test prime_check(1231) == true
+    @test prime_check(2332) == false
+    @test prime_check(2932) == false
+end
+
+@testset "Math: Prime Factors" begin
+    @test prime_factors(50) == [2,5,5]
+    @test prime_factors(0) == []
+    @test prime_factors(100) == [2, 2, 5, 5]
+    @test prime_factors(2560) == [2, 2, 2, 2, 2, 2, 2, 2, 2, 5]
+    @test prime_factors(10^-2) == []
+    @test prime_factors(0.02) == []
+    @test prime_factors(10^-354) == []
+    @test_throws MethodError prime_factors("hello")
+ end
+
 @testset "Math: Perfect Cube" begin
     @test perfect_cube(27) == true
     @test perfect_cube(4) == false
