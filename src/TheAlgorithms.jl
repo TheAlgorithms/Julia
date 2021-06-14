@@ -1,9 +1,7 @@
 module TheAlgorithms
 
 # Usings/Imports (keep sorted)
-using DifferentialEquations: include
 using Plots
-using DifferentialEquations
 using DataFrames
 using DifferentialEquations
 using GLM
