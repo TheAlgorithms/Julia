@@ -104,7 +104,7 @@
         @test mode(["x", "x" , "y", "y", "z"]) == ["x", "y"]
     end
 
-        @testset "Math: Average Median" begin
+    @testset "Math: Average Median" begin
         @test median([2,1,3,4]) == 2.5
         @test median([2, 70, 6, 50, 20, 8, 4]) == 8
         @test median([0]) == 0
@@ -118,7 +118,7 @@
         @test floor_val(1.3) == 1
         @test floor_val(2.0) == 2.0
         @test floor_val(-1.7) == -2.0
-            end
+    end
 
     @testset "Math: Collatz Sequence" begin
         @test collatz_sequence(3) == [3,10,5,16,8,4,2,1]
