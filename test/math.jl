@@ -129,6 +129,16 @@ end
     @test euler_method((x, t) -> x, 1, (0, 5))[1][end] == 143.33937864611195
 end
 
+@testset "Math: Factorial Related" begin
+    @test factorial_iterative(5) == 120
+    @test_throws ErrorException factorial_iterative(0.1)
+    @test_throws ErrorException  factorial_iterative(-1)
+
+    @test factorial_recursive(5) == 120
+    @test_throws ErrorException  factorial_recursive(0.1)
+    @test_throws ErrorException  factorial_recursive(-1)
+end
+
 @testset "Math: Line Length" begin
     # Arc Lengths
     @test line_length(x -> x, 0, 1, 10) == 1.4142135623730947

@@ -32,6 +32,8 @@ export area_triangle
 export ceil_val, floor_val
 export collatz_sequence
 export euler_method
+export factorial_iterative
+export factorial_recursive
 export is_armstrong
 export line_length
 export mean
@@ -86,6 +88,7 @@ include("math/average_mode.jl")
 include("math/ceil_floor.jl")
 include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
+include("math/factorial.jl")
 include("math/line_length.jl")
 include("math/perfect_cube.jl")
 include("math/perfect_number.jl")
