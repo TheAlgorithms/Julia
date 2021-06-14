@@ -37,6 +37,9 @@ export line_length
 export mean
 export median
 export mode
+export perfect_cube
+export perfect_number
+export perfect_square
 export SIR # TODO: make the name lowercase if possible
 export surfarea_cube
 export surfarea_sphere
@@ -82,10 +85,10 @@ include("math/ceil_floor.jl")
 include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/line_length.jl")
+include("math/perfect_cube.jl")
+include("math/perfect_number.jl")
+include("math/perfect_square.jl")
 include("math/sir_model.jl")
-
-
-
 
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl
