@@ -1,4 +1,6 @@
 """
+    determinant(mat)
+
 Given a non singluar matrix, calculate its determinant using LU decomposition.
 
 L and U are lower triangular and upper triangular matrices respectively such that

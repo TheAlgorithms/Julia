@@ -1,4 +1,6 @@
 """
+    collatz_sequence(n)
+
 Collatz conjecture: start with any positive integer n. The next term is
 obtained as follows:
 	If n term is even, the next term is: n / 2 .
@@ -6,7 +8,7 @@ obtained as follows:
 The conjecture states the sequence will always reach 1 for any starting value n.
 """
 
-function collatz_sequence(n::Int)::Vector{Int}
+function collatz_sequence(n)
 	sequence = [n]
 	while n != 1
 		n = n % 2 == 1 ? 3 * n + 1 : div(n, 2)

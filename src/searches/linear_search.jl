@@ -1,4 +1,5 @@
-function search(array, key)
+# TODO: doc is missing
+function linear_search(array, key)
     for i in 1:length(array)
         if array[i] == key
             return i

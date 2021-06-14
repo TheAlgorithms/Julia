@@ -1,6 +1,7 @@
 module TheAlgorithms
 
 # Usings/Imports (keep sorted)
+using DifferentialEquations: include
 using Plots
 using DifferentialEquations
 using DataFrames
@@ -57,8 +58,11 @@ export dna2rna
 export reverse_complement
 
 # Exports: searches
-export binarysearch
-export search
+export binary_search
+export exponential_search
+export interpolation_search
+export jump_search
+export linear_search
 
 # Exports: statistics
 export OLSbeta # TODO: make the name lowercase if possible
@@ -79,13 +83,13 @@ include("knapsack/knapsack.jl")
 
 # Includes: math
 include("math/abs.jl")
+include("math/area.jl")
 include("math/area_under_curve.jl")
 include("math/armstrong_number.jl")
-include("math/area.jl")
 include("math/average_mean.jl")
+include("math/ceil_floor.jl") # needed by average_median
 include("math/average_median.jl")
 include("math/average_mode.jl")
-include("math/ceil_floor.jl")
 include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/line_length.jl")
@@ -102,8 +106,14 @@ include("project-rosalind/count_nucleotide.jl")
 include("project-rosalind/dna2rna.jl")
 include("project-rosalind/reverse_complement.jl")
 
+# Includes: scheduling
+include("scheduling/fcfs.jl")
+
 # Includes: search
 include("searches/binary_search.jl")
+include("searches/exponential_search.jl")
+include("searches/interpolation_search.jl")
+include("searches/jump_search.jl")
 include("searches/linear_search.jl")
 
 # Includes: statistics
@@ -113,8 +123,5 @@ include("statistics/variance.jl")
 
 # Includes: strings
 include("strings/is_palindrome.jl")
-
-# Includes: scheduling
-include("scheduling/fcfs.jl")
 
 end

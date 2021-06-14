@@ -1,4 +1,5 @@
 """
+    count_nucleotides(s::AbstractString)
 Given: A DNA string s
 
 of length at most 1000 nt.

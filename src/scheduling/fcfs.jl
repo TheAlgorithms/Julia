@@ -1,5 +1,5 @@
 """
-    fcfs()
+    fcfs(n, process_id, burst_time)
 
 Implementation of first come first served scheduling algorithm
 

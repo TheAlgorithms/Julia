@@ -1,4 +1,5 @@
 """
+    lu_decompose(mat)
 Decomposes a `n x n` non singular matrix into a lower triangular matrix (L) and an upper triangular matrix (U)
 """
 function lu_decompose(mat)

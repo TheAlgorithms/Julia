@@ -1,4 +1,5 @@
 """
+    zero_one_pack!(capacity::N, weights::V, values::V, dp::V) where {N <: Number,V <: AbstractVector}
 This does 0-1 (each item can be chosen only once) knapsack :
 pack capacity = capacity
 weight of each item = weights

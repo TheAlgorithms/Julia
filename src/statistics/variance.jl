@@ -1,3 +1,5 @@
+# TODO: doc is missing
+
 function variance(a)
     avg = a / length(a)
     x = sum(a - avg)
