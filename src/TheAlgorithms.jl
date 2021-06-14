@@ -12,6 +12,10 @@ using Random
 ## Exports
 # Please keep the folders/functions sorted
 
+# Exports: data_structures
+export AbstractBinaryTree,AbstractBinaryTree_arr,BinaryTree,ch,isleaf,height,left,right,insert!,depth
+export DisjointSet,find,merge!
+
 # Exports: knapsack
 export ZeroOnePack!
 export CompletePack!
@@ -43,6 +47,10 @@ export OLSbeta
 
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
+
+# Includes: data_structures
+include("data_structures/binary_tree/basic_binary_tree.jl")
+include("data_structures/disjoint_set/disjoint_set.jl")
 
 # Includes: knapsack
 include("knapsack/knapsack.jl")
