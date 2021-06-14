@@ -95,6 +95,7 @@ include("math/sum_of_geometric_progression.jl")
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl
 include("matrix/determinant.jl")
+include("matrix/rotation_matrix.jl")
 
 # Includes: project-rosalind
 include("project-rosalind/count_nucleotide.jl")
