@@ -32,6 +32,8 @@ export area_triangle
 export ceil_val, floor_val
 export collatz_sequence
 export euler_method
+export factorial_iterative
+export factorial_recursive
 export is_armstrong
 export line_length
 export mean
@@ -39,6 +41,9 @@ export median
 export mode
 export prime_check
 export prime_factors
+export perfect_cube
+export perfect_number
+export perfect_square
 export SIR # TODO: make the name lowercase if possible
 export sum_ap
 export sum_gp
@@ -85,15 +90,16 @@ include("math/average_mode.jl")
 include("math/ceil_floor.jl")
 include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
+include("math/factorial.jl")
 include("math/line_length.jl")
 include("math/prime_check.jl")
 include("math/prime_factors.jl")
+include("math/perfect_cube.jl")
+include("math/perfect_number.jl")
+include("math/perfect_square.jl")
 include("math/sir_model.jl")
 include("math/sum_of_arithmetic_series.jl")
 include("math/sum_of_geometric_progression.jl")
-
-
-
 
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl

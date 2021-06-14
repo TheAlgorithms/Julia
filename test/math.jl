@@ -129,6 +129,16 @@ end
     @test euler_method((x, t) -> x, 1, (0, 5))[1][end] == 143.33937864611195
 end
 
+@testset "Math: Factorial Related" begin
+    @test factorial_iterative(5) == 120
+    @test_throws ErrorException factorial_iterative(0.1)
+    @test_throws ErrorException  factorial_iterative(-1)
+
+    @test factorial_recursive(5) == 120
+    @test_throws ErrorException  factorial_recursive(0.1)
+    @test_throws ErrorException  factorial_recursive(-1)
+end
+
 @testset "Math: Line Length" begin
     # Arc Lengths
     @test line_length(x -> x, 0, 1, 10) == 1.4142135623730947
@@ -163,6 +173,27 @@ end
     @test prime_factors(0.02) == []
     @test prime_factors(10^-354) == []
     @test_throws MethodError prime_factors("hello")
+ end
+
+@testset "Math: Perfect Cube" begin
+    @test perfect_cube(27) == true
+    @test perfect_cube(4) == false
+end
+
+@testset "Math: Perfect Number" begin
+    @test perfect_number(27)  == false
+    @test perfect_number(28)  == true
+    @test perfect_number(496) == true
+    @test perfect_number(8128)== true
+    @test perfect_number(123) == false
+end
+
+@testset "Math: Perfect Square" begin
+    @test perfect_square(9) == true
+    @test perfect_square(16)== true
+    @test perfect_square(1) == true
+    @test perfect_square(0) == true
+    @test perfect_square(10)== false
 end
 
 @testset "Math: SIR Model" begin
