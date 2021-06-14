@@ -69,6 +69,9 @@ export reverse_complement
 export binarysearch
 export search
 
+# Exports: sorts
+export BubbleSort!,InsertionSort!,SelectionSort!
+
 # Exports: statistics
 export OLSbeta
 export PearsonCorrelation
@@ -131,6 +134,11 @@ include("project-rosalind/reverse_complement.jl")
 # Includes: search
 include("searches/binary_search.jl")
 include("searches/linear_search.jl")
+
+# Includes: sorts
+include("sorts/bubble_sort.jl")
+include("sorts/insertion_sort.jl")
+include("sorts/selection_sort.jl")
 
 # Includes: statistics
 include("statistics/ordinary_least_squares.jl")
