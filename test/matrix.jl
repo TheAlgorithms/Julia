@@ -30,5 +30,12 @@
 
 	    @test lu_decompose(mat) == (L,U)
     end
-
+	
+	@testset "Matrix: rotation matrix" begin
+		theta = pi/6
+		a = [1;0]
+		b = [0;1]
+		@test rotation_matrix(theta)*a == [cos(theta);sin(theta)]
+		@test rotation_matrix(theta)*b == [-sin(theta);cos(theta)]
+	end
 end
