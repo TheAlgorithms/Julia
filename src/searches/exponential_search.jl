@@ -18,7 +18,7 @@ function binary_search(arr::AbstractArray{T,1}, l::T, r::T, x::T) where T <: Rea
 	n = size(arr)[1]
 	if (r >= l)
 		mid = Int(ceil(l + (r - l) / 2));
-		println(mid)
+		# println(mid)
 		if (arr[mid] == x)
 			return "Element present at index $mid"
 		elseif (arr[mid] > x)
