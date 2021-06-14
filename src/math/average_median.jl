@@ -3,7 +3,7 @@
 
 Finds median of a vector of numbers
 
-# Example
+## Example
 
 ```julia
 median([2,1,3,4])                   # returns 2.5
