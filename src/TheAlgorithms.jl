@@ -47,6 +47,7 @@ export trapazoidal_area
 # Exports: matrix
 export determinant
 export lu_decompose
+export rotation_matrix
 
 # Exports: project-rosalind
 export count_nucleotides
