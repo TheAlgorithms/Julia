@@ -18,5 +18,6 @@ include("project-rosalind.jl")
 include("searches.jl")
 include("statistics.jl")
 include("scheduling.jl")
+include("conversions.jl")
 
 end

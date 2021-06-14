@@ -1,6 +1,7 @@
 module TheAlgorithms
 
 # Usings/Imports (keep sorted)
+using Base: Float64
 using DataFrames
 using DifferentialEquations
 using GLM
@@ -75,6 +76,15 @@ export is_palindrome
 # Exports: scheduling
 export fcfs
 
+# Exports: conversions
+export celsius_to_fahrenheit
+export celsius_to_kelvin
+export fahrenheit_to_celsius
+export fahrenheit_to_kelvin
+export kelvin_to_celsius
+export kelvin_to_fahrenheit
+export weight_conversion
+
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
 
@@ -126,5 +136,9 @@ include("strings/is_palindrome.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
+
+# Includes: conversions
+include("conversions/weight_conversion.jl")
+include("conversions/temparature_conversion.jl")
 
 end
