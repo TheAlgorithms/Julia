@@ -51,13 +51,3 @@ function interpolation_search(arr::AbstractArray{T,1}, l::T, r::T, x::T) where {
 		return "Element not present in array"
 	end
 end
-
-
-# Arguments
-arr = [1, 2, 3, 4, 13, 15, 20];
-x = 15;
-n = size(arr)[1]
-l = 1;
-r = n;
-
-interpolation_search(arr, l, r, x)

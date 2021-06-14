@@ -13,9 +13,7 @@ Exponential Binary Search is particularly useful for unbounded searches, where s
 It works better than Binary Search for bounded arrays, and also when the element to be searched is closer to the first element.
 """
 
-"""
-	Binary Search
-"""
+# See Issue https://github.com/TheAlgorithms/Julia/issues/34
 function binary_search(arr::AbstractArray{T,1}, l::T, r::T, x::T) where T <: Real
 	n = size(arr)[1]
 	if (r >= l)
@@ -51,13 +49,3 @@ function exponential_search(arr::AbstractArray{T,1}, x::T) where {T <: Real}
 	end
 	return binary_search(arr, Int(ceil(i / 2)), min(i, n), x)
 end
-
-
-# Arguments
-arr = [1, 2, 3, 4, 13, 15, 20];
-x = 4;
-n = size(arr)[1]
-l = 1;
-r = n;
-
-exponential_search(arr, x)

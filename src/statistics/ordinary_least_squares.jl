@@ -1,4 +1,4 @@
-
+# TODO: doc is missing
 
 OLSbeta(y,x) = inv(x' * x) * (x' * y)
 

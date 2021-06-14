@@ -13,7 +13,7 @@ In the worst case, we have to do n/m jumps and if the last checked value is grea
 """
 
 """
-	jump_search()
+    jump_search(arr::AbstractArray{T,1}, x::T, jump::T = Int(ceil(sqrt(n)))) where {T <: Real}
 Jump Search in 1-D array
 Time Complexity :  O(√ n)
 Time complexity of Jump Search is between Linear Search ( ( O(n) ) and Binary Search ( O (Log n) )
@@ -36,10 +36,3 @@ function jump_search(arr::AbstractArray{T,1}, x::T, jump::T = Int(ceil(sqrt(n)))
 	end
 	return -1
 end
-
-arr = [1, 2, 3, 31, 4, 13];
-x = 31;
-jump = 2; # optimum is sqroot(n)
-n = size(arr)[1];
-
-jump_search(arr, x, jump)

@@ -1,5 +1,5 @@
 """
-    Pearson Correlation
+    pearson_correlation(x, y)
 
 Find the pearson correlation between two variables.
 

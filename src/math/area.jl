@@ -1,8 +1,5 @@
-"""
-Functions for area of various geometric shapes
-
-Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
-"""
+# Functions for area of various geometric shapes
+# Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
 
 """
     surfarea_cube(side)

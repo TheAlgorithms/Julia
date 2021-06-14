@@ -1,5 +1,6 @@
-
 """
+    is_armstrong(x)
+
 Program to check if a number is an [Armstrong/Narcissistic number](https://en.wikipedia.org/wiki/Narcissistic_number) in decimal system.
 
 Armstrong number is a number that is the sum of its own digits raised to the power of the number of digits.

@@ -1,4 +1,5 @@
 """
+    dna2rna(s::AbstractString)
 Given: A DNA string t
 
 having length at most 1000 nt.
