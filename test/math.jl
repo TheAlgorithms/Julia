@@ -136,6 +136,27 @@ end
 	@test line_length(x -> sin(5 * x) + cos(10 * x) + 0.1 * x^2, 0, 10, 10000) == 69.53493003183544
 end
 
+@testset "Math: Perfect Cube" begin
+    @test perfect_cube(27) == true
+    @test perfect_cube(4) == false
+end
+
+@testset "Math: Perfect Number" begin
+    @test perfect_number(27)  == false
+    @test perfect_number(28)  == true
+    @test perfect_number(496) == true
+    @test perfect_number(8128)== true
+    @test perfect_number(123) == false
+end
+
+@testset "Math: Perfect Square" begin
+    @test perfect_square(9) == true
+    @test perfect_square(16)== true
+    @test perfect_square(1) == true
+    @test perfect_square(0) == true
+    @test perfect_square(10)== false
+end
+
 @testset "Math: SIR Model" begin
     # TODO: implement tests
 
