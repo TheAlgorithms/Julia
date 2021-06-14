@@ -35,7 +35,7 @@ abs_max([-7,-3,6]) #returns -7
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
 """
 function abs_max(x)
-    result = sort(x, by = abs; alg = QuickSort)
+    result = sort(x, by=abs; alg=QuickSort)
     return result[length(result)]
 end
 
@@ -54,6 +54,6 @@ abs_min([-7,-3,6]) #returns -3
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
 """
 function abs_min(x)
-    result = sort(x, by = abs; alg = QuickSort)
+    result = sort(x, by=abs; alg=QuickSort)
     return result[1]
 end

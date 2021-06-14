@@ -16,7 +16,7 @@ ceil_val(-1.5)  #returns -1.0
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
 """
 function ceil_val(x)
-    return x -trunc(x) <= 0 ? trunc(x) : trunc(x)+1
+    return x - trunc(x) <= 0 ? trunc(x) : trunc(x) + 1
 end
 
 """
@@ -37,5 +37,5 @@ floor_val(-1.7) # returns -2.0
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
 """
 function floor_val(x)
-    return x -trunc(x) >= 0 ? trunc(x) : trunc(x)-1
+    return x - trunc(x) >= 0 ? trunc(x) : trunc(x) - 1
 end

@@ -8,7 +8,7 @@ Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
 
 A positive integer is called an Armstrong number (of order n) if
 
-`abcd... = a^n + b^n + c^n + d^n +....` 
+`abcd... = a^n + b^n + c^n + d^n +....`
 """
 function is_armstrong(x)
     # If the number is less than 0, then it is not a armstrong number.
@@ -16,7 +16,7 @@ function is_armstrong(x)
         return false
     elseif x == 0
         return true
-    else 
+    else
         # Finding the total number of digits in the number
         length = Int(floor(log10(x) + 1))
         result = 0

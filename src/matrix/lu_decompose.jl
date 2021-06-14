@@ -3,8 +3,8 @@ Decomposes a `n x n` non singular matrix into a lower triangular matrix (L) and 
 """
 function lu_decompose(mat)
 	n = mat |> size |> first
-	L = zeros(n,n)
-	U = zeros(n,n)
+	L = zeros(n, n)
+	U = zeros(n, n)
 
 	for i in 1:n
 		for j in i:n
@@ -18,7 +18,7 @@ function lu_decompose(mat)
 		for k in i:n
 			if i == k
 				L[i,i] = 1
-			else
+    			else
 				s = 0
 				for j in 1:i
 					s += L[k,j] * U[j,i]
@@ -28,11 +28,5 @@ function lu_decompose(mat)
 		end
 	end
 
-	return L,U
+	return L, U
 end
-
-
-
-
-
-
