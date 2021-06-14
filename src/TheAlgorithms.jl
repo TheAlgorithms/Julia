@@ -66,6 +66,8 @@ export is_palindrome
 # Exports: scheduling
 export fcfs
 
+# Exports: conversions
+export weight_conversion
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
 
@@ -112,5 +114,8 @@ include("strings/is_palindrome.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
+
+# Includes: conversions
+include("conversions/weight_conversion.jl")
 
 end
