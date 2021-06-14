@@ -38,6 +38,8 @@ export mean
 export median
 export mode
 export SIR # TODO: make the name lowercase if possible
+export sum_ap
+export sum_gp
 export surfarea_cube
 export surfarea_sphere
 export trapazoidal_area
@@ -83,6 +85,8 @@ include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/line_length.jl")
 include("math/sir_model.jl")
+include("math/sum_of_arithmetic_series.jl")
+include("math/sum_of_geometric_progression.jl")
 
 
 

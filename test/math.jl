@@ -152,4 +152,19 @@ end
     plot(sol)
 end
 
+@testset "Math: Sum of Arithmetic progression" begin
+    @test sum_ap(1, 1, 10) == 55.0 
+    @test sum_ap(1, 10, 100) == 49600.0
+end
+
+@testset "Math: Sum of Geometric Progrssion" begin
+    @test sum_gp(1, 2, 10) == 1023.0
+    @test sum_gp(1, 10, 5) == 11111.0
+    @test sum_gp(0, 2, 10) == 0.0
+    @test sum_gp(1, 0, 10) == 1.0
+    @test sum_gp(1, 2, 0) == -0.0
+    @test sum_gp(-1, 2, 10) == -1023.0
+    @test sum_gp(1, -2, 10) == -341.0
+end
+
 end
