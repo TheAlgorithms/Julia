@@ -18,7 +18,7 @@ surfarea_cube(-1) # returns DomainError
 ```
 """
 function surfarea_cube(side)
-    if side < 0 
+    if side < 0
         throw(DomainError(side, "surfarea_cube() only works for non-negative values"))
     end
     return 6(side^2)
@@ -38,10 +38,10 @@ surfarea_sphere(-1) # returns DomainError
 ```
 """
 function surfarea_sphere(radius)
-    if radius < 0 
+    if radius < 0
         throw(DomainError(radius, "surfarea_sphere() only works for non-negative values"))
     end
-    return 4pi*(radius^2)
+    return 4π * (radius^2)
 end
 
 """
@@ -160,7 +160,7 @@ end
 """
 area_trapezium(base1,base2,height)
 
-Finds area of the trapizium
+Finds area of the traπzium
 
 # Example
 
@@ -175,7 +175,7 @@ area_trapezium(1, -2, -3)   # returns DomainError
 area_trapezium(-1, 2, -3)   # returns DomainError
 ```
 """
-function area_trapezium(base1,base2,height)
+function area_trapezium(base1, base2, height)
     if base1 < 0 || base2 < 0 || height < 0
         throw(DomainError("area_trapezium() only accepts non-negative values"))
     end
@@ -198,7 +198,7 @@ function area_circle(radius)
     if radius < 0
         throw(DomainError("area_circle() only accepts non-negative values"))
     end
-    return pi * radius ^ 2
+    return π * radius^2
 end
 
 """
@@ -220,7 +220,7 @@ function area_ellipse(radius_x, radius_y)
     if radius_x < 0 || radius_y < 0
         throw(DomainError("area_ellipse() only accepts non-negative values"))
     end
-    return pi * radius_x * radius_y
+    return π * radius_x * radius_y
 end
 
 """

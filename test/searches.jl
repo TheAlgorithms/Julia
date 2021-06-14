@@ -1,4 +1,5 @@
 @testset "Searches" begin
+
     @testset "Searches: Binary" begin
         sample = [0, 23, 52, 552, 555, 602, 1004]
         reversed_sample = reverse(sample)

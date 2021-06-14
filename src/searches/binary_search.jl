@@ -47,5 +47,3 @@ function binarysearch(list, query; rev=false, lt=<, by=identity)
         throw(error("List not sorted, unable to search value"))
     end
 end
-
-

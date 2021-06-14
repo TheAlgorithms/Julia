@@ -5,12 +5,12 @@
 # using DifferentialEquations
 # using Plots
 
-function SIR(du,u,p,t)
-    s,i,r = u
-    b,k = p
-    du[1] = -b*s*i
-    du[2] = b*s*i - k*i
-    du[3] = k*i
+function SIR(du, u, p, t)
+    s, i, r = u
+    b, k = p
+    du[1] = -b * s * i
+    du[2] = b * s * i - k * i
+    du[3] = k * i
 end
 
 # TODO: make the following a doctest example

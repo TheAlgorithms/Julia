@@ -1,6 +1,8 @@
 module TheAlgorithms
 
 # Usings/Imports (keep sorted)
+using Plots
+using DifferentialEquations
 using DataFrames
 using DifferentialEquations
 using GLM
@@ -13,8 +15,8 @@ using Random
 # Please keep the folders/functions sorted
 
 # Exports: knapsack
-export ZeroOnePack!
-export CompletePack!
+export complete_pack!
+export zero_one_pack!
 
 # Exports: math
 export abs_max
@@ -29,9 +31,10 @@ export area_rhombus
 export area_square
 export area_trapezium
 export area_triangle
-export ceil_val, floor_val
+export ceil_val
 export collatz_sequence
 export euler_method
+export floor_val
 export is_armstrong
 export line_length
 export mean
@@ -56,8 +59,10 @@ export binarysearch
 export search
 
 # Exports: statistics
-export OLSbeta
-export PearsonCorrelation
+export OLSbeta # TODO: make the name lowercase if possible
+export pearson_correlation
+export variance
+
 # Exports: strings
 export is_palindrome
 
@@ -84,9 +89,6 @@ include("math/euler_method.jl")
 include("math/line_length.jl")
 include("math/sir_model.jl")
 
-
-
-
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl
 include("matrix/determinant.jl")
@@ -102,6 +104,8 @@ include("searches/linear_search.jl")
 
 # Includes: statistics
 include("statistics/ordinary_least_squares.jl")
+include("statistics/pearson_correlation.jl")
+include("statistics/variance.jl")
 
 # Includes: strings
 include("strings/is_palindrome.jl")

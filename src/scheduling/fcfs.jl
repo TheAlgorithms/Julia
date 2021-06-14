@@ -25,7 +25,7 @@ function fcfs(n, process_id, burst_time)
     push!(waiting_time, 0)
     for i = 2:n
         # Calculates waiting time
-        push!(waiting_time, burst_time[i-1] + waiting_time[i-1])
+        push!(waiting_time, burst_time[i - 1] + waiting_time[i - 1])
     end
 
     turnaround_time = []
@@ -33,7 +33,7 @@ function fcfs(n, process_id, burst_time)
         # Calculates turnaround time
         push!(turnaround_time, burst_time[i] + waiting_time[i])
     end
-    
+
     # Calculates Average waiting time
     avg_waiting_time = sum(waiting_time) / length(waiting_time)
 
