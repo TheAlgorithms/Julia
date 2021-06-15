@@ -126,10 +126,6 @@
         @test collatz_sequence(5) == [5,16,8,4,2,1]
     end
 
-    @testset "Math: Euler Method" begin
-        @test euler_method((x, t) -> x, 1, (0, 5))[1][end] == 143.33937864611195
-    end
-
     @testset "Math: Line Length" begin
         # Arc Lengths
         @test line_length(x -> x, 0, 1, 10) == 1.4142135623730947
@@ -137,19 +133,83 @@
         @test line_length(x -> sin(5 * x) + cos(10 * x) + 0.1 * x^2, 0, 10, 10000) == 69.53493003183544
     end
 
+    @testset "Math: Euler Method" begin
+        @test euler_method((x, t) -> x, 1, (0, 5))[1][end] == 143.33937864611195
+    end
+
+    @testset "Math: Factorial Related" begin
+        @test factorial_iterative(5) == 120
+        @test_throws ErrorException factorial_iterative(0.1)
+        @test_throws ErrorException  factorial_iterative(-1)
+
+        @test factorial_recursive(5) == 120
+        @test_throws ErrorException  factorial_recursive(0.1)
+        @test_throws ErrorException  factorial_recursive(-1)
+    end
+
+    @testset "Math: Prime Check" begin
+        @test prime_check(2) == true
+        @test prime_check(3) == true
+        @test prime_check(5) == true
+        @test prime_check(7) == true
+        @test prime_check(11) == true
+        @test prime_check(13) == true
+        @test prime_check(17) == true
+        @test prime_check(19) == true
+        @test prime_check(23) == true
+        @test prime_check(29) == true
+        @test prime_check(112) == false
+        @test prime_check(172) == false
+        @test prime_check(1231) == true
+        @test prime_check(2332) == false
+        @test prime_check(2932) == false
+    end
+
+    @testset "Math: Prime Factors" begin
+        @test prime_factors(50) == [2,5,5]
+        @test prime_factors(0) == []
+        @test prime_factors(100) == [2, 2, 5, 5]
+        @test prime_factors(2560) == [2, 2, 2, 2, 2, 2, 2, 2, 2, 5]
+        @test prime_factors(10^-2) == []
+        @test prime_factors(0.02) == []
+        @test prime_factors(10^-354) == []
+        @test_throws MethodError prime_factors("hello")
+    end
+
+    @testset "Math: Perfect Cube" begin
+        @test perfect_cube(27) == true
+        @test perfect_cube(4) == false
+    end
+
+    @testset "Math: Perfect Number" begin
+        @test perfect_number(27)  == false
+        @test perfect_number(28)  == true
+        @test perfect_number(496) == true
+        @test perfect_number(8128)== true
+        @test perfect_number(123) == false
+    end
+
+    @testset "Math: Perfect Square" begin
+        @test perfect_square(9) == true
+        @test perfect_square(16)== true
+        @test perfect_square(1) == true
+        @test perfect_square(0) == true
+        @test perfect_square(10)== false
+    end
+
     @testset "Math: SIR Model" begin
         # TODO: implement tests
 
-        # initian conditions
-        p = [0.5 / 7900000.0,0.33]
+        #initian conditions
+        p = [0.5/7900000.0,0.33]
         u0 = [7900000.0,10.0,0.0]
-        tspan = (0.0, 140.0)
+        tspan = (0.0,140.0)
 
-        # solve
-        sir = ODEProblem(SIR, u0, tspan, p)
+        #solve
+        sir = ODEProblem(SIR,u0,tspan,p)
         sol = solve(sir)
 
-        # plot
+        #plot
         plot(sol)
     end
 
@@ -158,7 +218,7 @@
         @test sum_ap(1, 10, 100) == 49600.0
     end
 
-    @testset "Math: Sum of Geometric progression" begin
+    @testset "Math: Sum of Geometric Progrssion" begin
         @test sum_gp(1, 2, 10) == 1023.0
         @test sum_gp(1, 10, 5) == 11111.0
         @test sum_gp(0, 2, 10) == 0.0

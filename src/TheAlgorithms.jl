@@ -1,7 +1,6 @@
 module TheAlgorithms
 
 # Usings/Imports (keep sorted)
-using Plots
 using DataFrames
 using DifferentialEquations
 using GLM
@@ -12,6 +11,21 @@ using Random
 
 ## Exports
 # Please keep the folders/functions sorted
+
+# Exports: data_structures
+export AbstractBinaryTree
+export AbstractBinaryTree_arr
+export BinaryTree
+export ch
+export depth
+export DisjointSet
+export find
+export height
+export insert!
+export isleaf
+export left
+export merge!
+export right
 
 # Exports: knapsack
 export complete_pack!
@@ -34,11 +48,18 @@ export ceil_val
 export collatz_sequence
 export euler_method
 export floor_val
+export factorial_iterative
+export factorial_recursive
 export is_armstrong
 export line_length
 export mean
 export median
 export mode
+export prime_check
+export prime_factors
+export perfect_cube
+export perfect_number
+export perfect_square
 export SIR # TODO: make the name lowercase if possible
 export sum_ap
 export sum_gp
@@ -73,8 +94,21 @@ export is_palindrome
 # Exports: scheduling
 export fcfs
 
+# Exports: conversions
+export celsius_to_fahrenheit
+export celsius_to_kelvin
+export fahrenheit_to_celsius
+export fahrenheit_to_kelvin
+export kelvin_to_celsius
+export kelvin_to_fahrenheit
+export weight_conversion
+
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
+
+# Includes: data_structures
+include("data_structures/binary_tree/basic_binary_tree.jl")
+include("data_structures/disjoint_set/disjoint_set.jl")
 
 # Includes: knapsack
 include("knapsack/knapsack.jl")
@@ -90,7 +124,13 @@ include("math/average_median.jl")
 include("math/average_mode.jl")
 include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
+include("math/factorial.jl")
 include("math/line_length.jl")
+include("math/prime_check.jl")
+include("math/prime_factors.jl")
+include("math/perfect_cube.jl")
+include("math/perfect_number.jl")
+include("math/perfect_square.jl")
 include("math/sir_model.jl")
 include("math/sum_of_arithmetic_series.jl")
 include("math/sum_of_geometric_progression.jl")
@@ -121,5 +161,12 @@ include("statistics/variance.jl")
 
 # Includes: strings
 include("strings/is_palindrome.jl")
+
+# Includes: scheduling
+include("scheduling/fcfs.jl")
+
+# Includes: conversions
+include("conversions/weight_conversion.jl")
+include("conversions/temparature_conversion.jl")
 
 end
