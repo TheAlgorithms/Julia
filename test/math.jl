@@ -229,7 +229,7 @@
     end
 
 	@testset "Math: Verlet scheme" begin
-		@test verlet_integration(x->-x,[0.0,0.1],(1,10))[end][end] == 9.99	
+		@test verlet_integration(x->-x,[0.0,0.1],(1,10))[end][end] == 9.999	
 	end
 	
 	@testset "Math: Sieve of Eratosthenes" begin
