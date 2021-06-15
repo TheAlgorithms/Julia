@@ -66,6 +66,8 @@ export sum_gp
 export surfarea_cube
 export surfarea_sphere
 export trapazoidal_area
+export sieve_of_eratosthenes
+export verlet_integration
 
 # Exports: matrix
 export determinant
@@ -138,6 +140,8 @@ include("math/perfect_square.jl")
 include("math/sir_model.jl")
 include("math/sum_of_arithmetic_series.jl")
 include("math/sum_of_geometric_progression.jl")
+include("math/sieve_of_eratosthenes.jl")
+include("math/verlet.jl")
 
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl
