@@ -66,7 +66,7 @@ export sum_gp
 export surfarea_cube
 export surfarea_sphere
 export trapazoidal_area
-export sieve_of_eratosthenes
+export eratosthenes
 export verlet_integration
 
 # Exports: matrix
