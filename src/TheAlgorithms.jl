@@ -154,6 +154,8 @@ include("project-rosalind/dna2rna.jl")
 include("project-rosalind/reverse_complement.jl")
 
 # Includes: scheduling
+
+# Includes: scheduling
 include("scheduling/fcfs.jl")
 
 # Includes: search
@@ -182,5 +184,3 @@ include("scheduling/fcfs.jl")
 # Includes: conversions
 include("conversions/weight_conversion.jl")
 include("conversions/temparature_conversion.jl")
-
-end
