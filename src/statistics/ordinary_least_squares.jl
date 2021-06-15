@@ -1,6 +1,6 @@
+# TODO: doc is missing
 
-
-OLSbeta(y,x) = inv(x'*x)*(x'*y)
+OLSbeta(y,x) = inv(x' * x) * (x' * y)
 
 # TODO: make it a doctest string
 # a = [10, 14,17,21,20, 18, 42, 51, 77, 11, 91]
@@ -9,7 +9,7 @@ OLSbeta(y,x) = inv(x'*x)*(x'*y)
 
 # df = DataFrame(a=a, b=b)
 # ols = GLM.lm(@formula(a~b), df)
-# coef(ols) # print coefficients 
+# coef(ols) # print coefficients
 
 # # Predict
 # predict(ols) # predict the model

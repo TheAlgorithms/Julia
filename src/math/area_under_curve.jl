@@ -1,4 +1,6 @@
 """
+    trapazoidal_area(f, x_start, x_end, steps)
+
 Approximates the area under the curve using the trapezoidal rule
 Arguments:
  - f: function for the

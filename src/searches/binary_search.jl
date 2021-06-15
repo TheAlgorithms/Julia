@@ -4,6 +4,8 @@
 # Problem Instructions:
 
 """
+    binary_search(list, query; rev=false, lt=<, by=identity)
+
 Implement a binary search algorithm.
 Searching a sorted collection is a common task. A dictionary is a sorted list of word definitions. Given a word, one can find its definition. A telephone book is a sorted list of people's names, addresses, and telephone numbers. Knowing someone's name allows one to quickly find their telephone number and address.
 
@@ -25,7 +27,7 @@ Bonus task:
 Implement keyword arguments by, lt and rev so that by specifies a transformation applied to all elements of the list, lt specifies a comparison and rev specifies if the list is ordered in reverse.
 """
 
-function binarysearch(list, query; rev=false, lt=<, by=identity)
+function binary_search(list, query; rev=false, lt=<, by=identity)
     if issorted(list) || issorted(list, rev=true)
         low = !rev ? 1 : length(list)
         high = !rev ? length(list) : 1
@@ -47,5 +49,3 @@ function binarysearch(list, query; rev=false, lt=<, by=identity)
         throw(error("List not sorted, unable to search value"))
     end
 end
-
-

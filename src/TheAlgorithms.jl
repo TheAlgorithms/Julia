@@ -1,7 +1,6 @@
 module TheAlgorithms
 
 # Usings/Imports (keep sorted)
-using Base: Float64
 using DataFrames
 using DifferentialEquations
 using GLM
@@ -14,12 +13,23 @@ using Random
 # Please keep the folders/functions sorted
 
 # Exports: data_structures
-export AbstractBinaryTree,AbstractBinaryTree_arr,BinaryTree,ch,isleaf,height,left,right,insert!,depth
-export DisjointSet,find,merge!
+export AbstractBinaryTree
+export AbstractBinaryTree_arr
+export BinaryTree
+export ch
+export depth
+export DisjointSet
+export find
+export height
+export insert!
+export isleaf
+export left
+export merge!
+export right
 
 # Exports: knapsack
-export ZeroOnePack!
-export CompletePack!
+export complete_pack!
+export zero_one_pack!
 
 # Exports: math
 export abs_max
@@ -34,9 +44,10 @@ export area_rhombus
 export area_square
 export area_trapezium
 export area_triangle
-export ceil_val, floor_val
+export ceil_val
 export collatz_sequence
 export euler_method
+export floor_val
 export factorial_iterative
 export factorial_recursive
 export is_armstrong
@@ -67,12 +78,17 @@ export dna2rna
 export reverse_complement
 
 # Exports: searches
-export binarysearch
-export search
+export binary_search
+export exponential_search
+export interpolation_search
+export jump_search
+export linear_search
 
 # Exports: statistics
-export OLSbeta
-export PearsonCorrelation
+export OLSbeta # TODO: make the name lowercase if possible
+export pearson_correlation
+export variance
+
 # Exports: strings
 export is_palindrome
 
@@ -100,13 +116,13 @@ include("knapsack/knapsack.jl")
 
 # Includes: math
 include("math/abs.jl")
+include("math/area.jl")
 include("math/area_under_curve.jl")
 include("math/armstrong_number.jl")
-include("math/area.jl")
 include("math/average_mean.jl")
+include("math/ceil_floor.jl") # needed by average_median
 include("math/average_median.jl")
 include("math/average_mode.jl")
-include("math/ceil_floor.jl")
 include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/factorial.jl")
@@ -130,12 +146,20 @@ include("project-rosalind/count_nucleotide.jl")
 include("project-rosalind/dna2rna.jl")
 include("project-rosalind/reverse_complement.jl")
 
+# Includes: scheduling
+include("scheduling/fcfs.jl")
+
 # Includes: search
 include("searches/binary_search.jl")
+include("searches/exponential_search.jl")
+include("searches/interpolation_search.jl")
+include("searches/jump_search.jl")
 include("searches/linear_search.jl")
 
 # Includes: statistics
 include("statistics/ordinary_least_squares.jl")
+include("statistics/pearson_correlation.jl")
+include("statistics/variance.jl")
 
 # Includes: strings
 include("strings/is_palindrome.jl")

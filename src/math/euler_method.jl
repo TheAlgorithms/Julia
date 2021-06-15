@@ -1,4 +1,6 @@
 """
+    euler_method(f, x0, span, h=1.0e-2)
+
 Calculate the solution to a differential equation using forward euler method.
 """
 function euler_method(f, x0, span, h=1.0e-2)

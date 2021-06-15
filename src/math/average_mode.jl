@@ -39,5 +39,3 @@ function mode(nums)
 
     return result
 end
-println(mode([1, 3, 6, 6, 6, 6, 7, 7, 12, 12, 17]))
-println(mode((1, 1, 2, 4, 4)))

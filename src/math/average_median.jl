@@ -1,11 +1,9 @@
-include("ceil_floor.jl")
-
 """
     median(nums)
 
 Finds median of a vector of numbers
 
-# Example
+## Example
 
 ```julia
 median([2,1,3,4])                   # returns 2.5
@@ -19,5 +17,5 @@ function median(nums)
     sorted = sort(nums)
     len = length(sorted)
     mid_index = Int(floor_val(len / 2))
-    return len % 2 == 0 ? (sorted[mid_index+1] + sorted[mid_index]) / 2 : sorted[mid_index+1]
+    return len % 2 == 0 ? (sorted[mid_index + 1] + sorted[mid_index]) / 2 : sorted[mid_index + 1]
 end
