@@ -84,6 +84,9 @@ export interpolation_search
 export jump_search
 export linear_search
 
+# Exports: sorts
+export BubbleSort!,InsertionSort!,SelectionSort!
+
 # Exports: statistics
 export OLSbeta # TODO: make the name lowercase if possible
 export pearson_correlation
@@ -155,6 +158,11 @@ include("searches/exponential_search.jl")
 include("searches/interpolation_search.jl")
 include("searches/jump_search.jl")
 include("searches/linear_search.jl")
+
+# Includes: sorts
+include("sorts/bubble_sort.jl")
+include("sorts/insertion_sort.jl")
+include("sorts/selection_sort.jl")
 
 # Includes: statistics
 include("statistics/ordinary_least_squares.jl")
