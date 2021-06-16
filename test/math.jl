@@ -147,6 +147,12 @@
         @test_throws ErrorException  factorial_recursive(-1)
     end
 
+	@testset "Math: Monte Carlo Integration" begin
+		@test isapprox(monte_carlo_integration(x->3*x^2,100000,(0,1)),1,atol = 0.01)
+		@test isapprox(monte_carlo_integration(x->sin(x),1000,(0,pi)),2,atol = 0.1)
+	end
+		
+
     @testset "Math: Prime Check" begin
         @test prime_check(2) == true
         @test prime_check(3) == true
