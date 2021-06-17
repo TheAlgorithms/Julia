@@ -11,7 +11,7 @@ This functionr returns a tuple (x,t):
 Reference:
 - https://www.algorithm-archive.org/contents/verlet_integration/verlet_integration.html
 
-Contributed by: [Ved Mahajan](https://github.com/Ved-Mahajan)
+contributed By:- [Ved Mahajan](https://github.com/Ved-Mahajan)
 """
 function verlet_integration(f,x0,tspan,Δt= 1.0e-3)
         s,e = tspan
@@ -26,3 +26,4 @@ function verlet_integration(f,x0,tspan,Δt= 1.0e-3)
         end
         return x,t
 end
+
