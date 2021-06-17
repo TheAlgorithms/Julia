@@ -4,7 +4,6 @@ However, only single variable integrals is considered.
 
 Refereces:
 -https://kingaa.github.io/sbied/pfilter/monteCarlo.html
--https://kingaa.github.io/sbied/pfilter/monteCarlo.html
 
 Contributed By-: [Ved Mahajan](https://github.com/Ved-Mahajan)
 """
