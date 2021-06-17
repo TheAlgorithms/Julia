@@ -5,7 +5,7 @@
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://TheAlgorithms.github.io/Julia/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://TheAlgorithms.github.io/Julia/dev)
 [![Build Status](https://github.com/TheAlgorithms/Julia/workflows/CI/badge.svg)](https://github.com/TheAlgorithms/Julia/actions)
-[![Coverage](https://codecov.io/gh/TheAlgorithms/Julia/branch/master/graph/badge.svg)](https://codecov.io/gh/TheAlgorithms/Julia)
+[![codecov](https://codecov.io/gh/TheAlgorithms/Julia/branch/main/graph/badge.svg)](https://codecov.io/gh/TheAlgorithms/Julia)
 [![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/TheAlgorithms/donate)
 
 ### Algorithms implemented in Julia (for educational purposes)
