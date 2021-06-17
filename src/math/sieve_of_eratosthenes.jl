@@ -1,5 +1,6 @@
 """
 Sieve of Eratosthenes is an algorithm for finding all the primes upto a limit `n`.
+
 Reference:
 -https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 
