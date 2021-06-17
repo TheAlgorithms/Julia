@@ -96,6 +96,7 @@ export variance
 
 # Exports: strings
 export is_palindrome
+export detect_anagrams
 
 # Exports: scheduling
 export fcfs
@@ -175,6 +176,7 @@ include("statistics/variance.jl")
 
 # Includes: strings
 include("strings/is_palindrome.jl")
+include("strings/detect_anagrams.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
