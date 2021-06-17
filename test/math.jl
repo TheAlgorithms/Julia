@@ -235,6 +235,11 @@
 	@testset "Math: Sieve of Eratosthenes" begin
         @test eratosthenes(20) ==   [2,3,5,7,11,13,17,19]
         @test eratosthenes(2) == [2]
+<<<<<<< Updated upstream
         @test eratosthenes(1) == Int64[] # No prime number less that 1, so it should return empty array.
+=======
+        @test eratosthenes(1) == Int64[] # No prime number less than 1, so it should return an empty array
+>>>>>>> Stashed changes
     end
+    
 end
