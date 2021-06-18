@@ -1,6 +1,6 @@
 """
 Monte carlo integration is a very easy and scalable way to do multidimentional integrals.
-However, only single variable integrals is considered.
+However, only single variable integrals are considered.
 
 
 This function takes three outputs:
