@@ -66,6 +66,14 @@ export sum_gp
 export surfarea_cube
 export surfarea_sphere
 export trapazoidal_area
+export vol_cube
+export vol_cuboid
+export vol_cone
+export vol_right_circ_cone
+export vol_prism
+export vol_pyramid
+export vol_sphere
+export vol_circular_cylinder
 
 # Exports: matrix
 export determinant
@@ -138,6 +146,7 @@ include("math/perfect_square.jl")
 include("math/sir_model.jl")
 include("math/sum_of_arithmetic_series.jl")
 include("math/sum_of_geometric_progression.jl")
+include("math/volume.jl")
 
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl
