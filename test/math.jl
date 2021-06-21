@@ -228,4 +228,21 @@
         @test sum_gp(1, -2, 10) == -341.0
     end
 
+    @testset "Math: Volume of Various Shape"
+        @test vol_cube(1) == 1
+        @test vol_cube(3) == 27
+        @test vol_cuboid(1, 1, 1) == 1
+        @test vol_cuboid(1, 2, 3) == 6
+        @test vol_cone(10, 3) == 10.0
+        @test vol_cone(1, 1) == 0.3333333333333333
+        @test vol_right_circ_cone(2, 3) == 12.566370614359172
+        @test vol_prism(10, 2) == 20.0
+        @test vol_prism(11, 1) == 11.0
+        @test vol_pyramid(10, 3) == 10.0
+        @test vol_pyramid(1.5, 3) == 1.5
+        @test vol_sphere(5) == 523.5987755982989
+        @test vol_sphere(1) == 4.1887902047863905
+        @test vol_circular_cylinder(1, 1) == 3.141592653589793
+        @test vol_circular_cylinder(4, 3) == 150.79644737231007
+
 end
