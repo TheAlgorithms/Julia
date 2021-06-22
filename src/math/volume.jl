@@ -146,6 +146,7 @@ julia> vol_circular_cylinder(1, 1)
 3.141592653589793
 julia> vol_circular_cylinder(4, 3)
 150.79644737231007
+```
 """
 function vol_circular_cylinder(area_of_base, height)
     return pi*radius^2*height

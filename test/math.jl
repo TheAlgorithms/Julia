@@ -228,7 +228,7 @@
         @test sum_gp(1, -2, 10) == -341.0
     end
 
-    @testset "Math: Volume of Various Shapes"
+    @testset "Math: Volume of Various Shapes" begin
         @test vol_cube(1) == 1
         @test vol_cube(3) == 27
         @test vol_cuboid(1, 1, 1) == 1
