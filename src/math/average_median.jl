@@ -11,11 +11,11 @@ median([2, 70, 6, 50, 20, 8, 4])    # returns 8
 median([0])                         # returns 0
 ```
 
-Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
+Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function median(nums)
+function median(nums::Vector)
     sorted = sort(nums)
     len = length(sorted)
-    mid_index = Int(floor_val(len / 2))
+    mid_index = div(len,2)
     return len % 2 == 0 ? (sorted[mid_index + 1] + sorted[mid_index]) / 2 : sorted[mid_index + 1]
 end
