@@ -228,7 +228,7 @@
         @test sum_gp(1, -2, 10) == -341.0
     end
 
-    @testset "Math: Volume of Various Shape"
+    @testset "Math: Volume of Various Shape" begin
         @test vol_cube(1) == 1
         @test vol_cube(3) == 27
         @test vol_cuboid(1, 1, 1) == 1
@@ -244,5 +244,5 @@
         @test vol_sphere(1) == 4.1887902047863905
         @test vol_circular_cylinder(1, 1) == 3.141592653589793
         @test vol_circular_cylinder(4, 3) == 150.79644737231007
-
+    end
 end
