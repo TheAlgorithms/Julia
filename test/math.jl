@@ -143,8 +143,6 @@
         @test_throws ErrorException  factorial_iterative(-1)
 
         @test factorial_recursive(5) == 120
-        @test_throws ErrorException  factorial_recursive(0.1)
-        @test_throws ErrorException  factorial_recursive(-1)
     end
 
 	  @testset "Math: Monte Carlo Integration" begin
@@ -176,10 +174,6 @@
         @test prime_factors(0) == []
         @test prime_factors(100) == [2, 2, 5, 5]
         @test prime_factors(2560) == [2, 2, 2, 2, 2, 2, 2, 2, 2, 5]
-        @test prime_factors(10^-2) == []
-        @test prime_factors(0.02) == []
-        @test prime_factors(10^-354) == []
-        @test_throws MethodError prime_factors("hello")
     end
 
     @testset "Math: Perfect Cube" begin
