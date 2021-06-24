@@ -151,6 +151,8 @@
         @test krishnamurthy(145) == true
         @test krishnamurthy(240) == false
         @test krishnamurthy(1) == true 
+        @test_throws ErrorException krishnamurthy(0.1)
+        @test_throws ErrorException krishnamurthy(-1)
     end
     
     @testset "Math: Prime Check" begin
