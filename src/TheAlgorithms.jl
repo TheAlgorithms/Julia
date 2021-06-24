@@ -52,6 +52,7 @@ export factorial_iterative
 export factorial_recursive
 export is_armstrong
 export line_length
+export krishnamurthy
 export mean
 export median
 export mode
@@ -130,6 +131,7 @@ include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/factorial.jl")
 include("math/line_length.jl")
+include("math/krishnamurthy_number.jl")
 include("math/prime_check.jl")
 include("math/prime_factors.jl")
 include("math/perfect_cube.jl")

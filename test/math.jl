@@ -147,6 +147,12 @@
         @test_throws ErrorException  factorial_recursive(-1)
     end
 
+    @testset "Math: Krishnamurthy Number" begin
+        @test krishnamurthy(145) == true
+        @test krishnamurthy(240) == false
+        @test krishnamurthy(1) == true 
+    end
+    
     @testset "Math: Prime Check" begin
         @test prime_check(2) == true
         @test prime_check(3) == true
