@@ -1,6 +1,7 @@
 module TheAlgorithms
 
 # Usings/Imports (keep sorted)
+using Base: ident_cmp
 using DataFrames
 using DifferentialEquations
 using GLM
@@ -107,6 +108,21 @@ export kelvin_to_celsius
 export kelvin_to_fahrenheit
 export weight_conversion
 
+# Exports: machine_learning
+export binary_step
+export ELU
+export gaussian
+export GELU
+export identity
+export LeakyReLU
+export PReLU
+export ReLU
+export SELU
+export sigmoid
+export SiLU
+export softplus
+export tanh
+
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
 
@@ -179,4 +195,6 @@ include("scheduling/fcfs.jl")
 include("conversions/weight_conversion.jl")
 include("conversions/temparature_conversion.jl")
 
+# Includes machine learning
+include("machine_learning/activation_functions.jl")
 end
