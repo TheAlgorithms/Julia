@@ -150,7 +150,13 @@
 		    @test isapprox(monte_carlo_integration(x->3*x^2,100000,(0,1)),1,atol = 0.01)
 		    @test isapprox(monte_carlo_integration(x->sin(x),1000,(0,pi)),2,atol = 0.1)
 	  end
-		
+
+
+    @testset "Math: Krishnamurthy Number" begin
+        @test krishnamurthy(145) == true
+        @test krishnamurthy(240) == false
+        @test krishnamurthy(1) == true
+    end
 
     @testset "Math: Prime Check" begin
         @test prime_check(2) == true
@@ -234,8 +240,8 @@
         @test eratosthenes(2) == [2]
         @test eratosthenes(1) == Int64[] # No prime number less that 1, so it should return empty array.
     end
-    
+
    @testset "Math: Verlet scheme" begin
-        @test verlet_integration(x->-x,[0.0,0.1],(1,10))[end][end] == 9.999	
+        @test verlet_integration(x->-x,[0.0,0.1],(1,10))[end][end] == 9.999
    end
 end
