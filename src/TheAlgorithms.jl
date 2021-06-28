@@ -46,6 +46,7 @@ export area_trapezium
 export area_triangle
 export ceil_val
 export collatz_sequence
+export eratosthenes
 export euler_method
 export floor_val
 export factorial_iterative
@@ -55,6 +56,7 @@ export line_length
 export mean
 export median
 export mode
+export monte_carlo_integration
 export prime_check
 export prime_factors
 export perfect_cube
@@ -138,11 +140,13 @@ include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/factorial.jl")
 include("math/line_length.jl")
+include("math/monte_carlo_integration.jl")
 include("math/prime_check.jl")
 include("math/prime_factors.jl")
 include("math/perfect_cube.jl")
 include("math/perfect_number.jl")
 include("math/perfect_square.jl")
+include("math/sieve_of_eratosthenes.jl")
 include("math/sir_model.jl")
 include("math/sum_of_arithmetic_series.jl")
 include("math/sum_of_geometric_progression.jl")
