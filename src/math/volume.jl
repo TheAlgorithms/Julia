@@ -131,11 +131,11 @@ function vol_sphere(radius)
     if radius < 0
         throw(DomainError)
     end
-    return 4/3π*(radius)^3
+    return 4/3*pi*(radius)^3
 end
 
 """
-    vol_circular_cylinder(radius, height)
+    vol_circular_cylinder(area_of_, height)
 
 Compute the Volume of a Circular Cylinder.
 
@@ -147,6 +147,6 @@ julia> vol_circular_cylinder(1, 1)
 julia> vol_circular_cylinder(4, 3)
 150.79644737231007
 """
-function vol_circular_cylinder(area_of_base, height)
+function vol_circular_cylinder(radius, height)
     return pi*radius^2*height
 end
