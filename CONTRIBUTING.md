@@ -1,5 +1,17 @@
 ## How to contribute?
 
+#### **Adding a new algorithm**
+
+New contributors should only have one PR per algorithm
+
+- Clone this repository:
+    - through git `git clone https://github.com/TheAlgorithms/Julia`; or
+    - through github cli `gh repo clone TheAlgorithms/Julia`.
+- Describe the algorithm in the PR. Explain what it does.
+- Add documentation in the code.
+- Add tests and fix any CodeCov issues.
+- We appreciate if you only have one commit of your PR as too many commits mess conversations within the PR.
+
 #### **Did you find a bug?**
 
 - Please avoid opening issues asking to be "assigned” to a particular algorithm. This merely creates unnecessary noise for maintainers. Instead, please submit your implementation in a pull request and it will be evaluated by project maintainers.
