@@ -4,7 +4,7 @@ module TheAlgorithms
 using Base: ident_cmp
 using DataFrames
 using DifferentialEquations
-using GLM
+# using GLM
 using LinearAlgebra
 using Plots
 using Random
@@ -56,6 +56,7 @@ export line_length
 export mean
 export median
 export mode
+export monte_carlo_integration
 export prime_check
 export prime_factors
 export perfect_cube
@@ -67,6 +68,7 @@ export sum_gp
 export surfarea_cube
 export surfarea_sphere
 export trapazoidal_area
+export eratosthenes
 
 # Exports: matrix
 export determinant
@@ -146,6 +148,7 @@ include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/factorial.jl")
 include("math/line_length.jl")
+include("math/monte_carlo_integration.jl")
 include("math/prime_check.jl")
 include("math/prime_factors.jl")
 include("math/perfect_cube.jl")
@@ -154,6 +157,7 @@ include("math/perfect_square.jl")
 include("math/sir_model.jl")
 include("math/sum_of_arithmetic_series.jl")
 include("math/sum_of_geometric_progression.jl")
+include("math/sieve_of_eratosthenes.jl")
 
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl
