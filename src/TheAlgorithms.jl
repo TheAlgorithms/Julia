@@ -33,6 +33,7 @@ export complete_pack!
 export zero_one_pack!
 
 # Exports: math
+export SIR # TODO: make the name lowercase if possible
 export abs_max
 export abs_min
 export abs_val
@@ -47,10 +48,11 @@ export area_trapezium
 export area_triangle
 export ceil_val
 export collatz_sequence
+export eratosthenes
 export euler_method
-export floor_val
 export factorial_iterative
 export factorial_recursive
+export floor_val
 export is_armstrong
 export line_length
 export mean
@@ -62,13 +64,15 @@ export prime_factors
 export perfect_cube
 export perfect_number
 export perfect_square
-export SIR # TODO: make the name lowercase if possible
+export prime_check
+export prime_factors
 export sum_ap
 export sum_gp
 export surfarea_cube
 export surfarea_sphere
 export trapazoidal_area
 export eratosthenes
+export verlet_integration
 
 # Exports: matrix
 export determinant
@@ -141,9 +145,9 @@ include("math/area.jl")
 include("math/area_under_curve.jl")
 include("math/armstrong_number.jl")
 include("math/average_mean.jl")
-include("math/ceil_floor.jl") # needed by average_median
 include("math/average_median.jl")
 include("math/average_mode.jl")
+include("math/ceil_floor.jl") # needed by average_median
 include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/factorial.jl")
@@ -154,10 +158,14 @@ include("math/prime_factors.jl")
 include("math/perfect_cube.jl")
 include("math/perfect_number.jl")
 include("math/perfect_square.jl")
+include("math/prime_check.jl")
+include("math/prime_factors.jl")
+include("math/sieve_of_eratosthenes.jl")
 include("math/sir_model.jl")
 include("math/sum_of_arithmetic_series.jl")
 include("math/sum_of_geometric_progression.jl")
 include("math/sieve_of_eratosthenes.jl")
+include("math/verlet.jl")
 
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl
