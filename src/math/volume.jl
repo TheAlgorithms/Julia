@@ -20,7 +20,7 @@ DomainError
 """
 function vol_cube(side)
     if side<0
-        throw(DomainError(side, "vol_cube() only works for non negtive values."))
+        throw(DomainError("vol_cube() only works for non negative values."))
     end
     return side^3
 end
@@ -40,6 +40,9 @@ julia> vol_cuboid(1, 2, 3)
 ```
 """
 function vol_cuboid(width, height, length)
+    if width < 0 || height <0 || length < 0
+        throw(DomainError("vol_cuboid() only works for non negative values."))
+    end
     return width*height*length
 end
 
@@ -59,6 +62,9 @@ julia> vol_cone(1, 1)
 ```
 """
 function vol_cone(area_of_base, height)
+    if area_of_base < 0 || height <0
+        throw(DomainError("vol_cone() only works for non negative values."))
+    end
     return area_of_base*height/3.0
 end
 
@@ -75,6 +81,9 @@ julia> vol_right_circ_cone(2, 3)
 ```
 """
 function vol_right_circ_cone(radius, height)
+    if radius < 0 || height < 0
+        throw(DomainError("vol_right_circ_cone() only works for non negative values."))
+    end
     return π*radius^2*height/3.0
 end
 
@@ -93,6 +102,9 @@ julia> vol_prism(11, 1)
 ```
 """
 function vol_prism(area_of_base, height)
+    if area_of_base < 0 || height < 0
+        throw(DomainError("vol_prism() only works for non negative values."))
+    end
     return area_of_base*height
 end
 
@@ -111,6 +123,9 @@ julia> vol_pyramid(1.5, 3)
 ```
 """
 function vol_pyramid(area_of_base, height)
+    if area_of_base < 0 || height < 0
+        throw(DomainError("vol_pyramid() only works for non negative values."))
+    end
     return area_of_base*height/3.0
 end
 
@@ -129,7 +144,7 @@ vol_sphere(-1) # returns DomainError
 """
 function vol_sphere(radius)
     if radius < 0
-        throw(DomainError)
+        throw(DomainError("vol_sphere() only works for non negative values."))
     end
     return 4/3*pi*(radius)^3
 end
@@ -148,5 +163,8 @@ julia> vol_circular_cylinder(4, 3)
 150.79644737231007
 """
 function vol_circular_cylinder(radius, height)
+    if radius < 0 || height < 0
+        throw(DomainError("vol_circular_cylinder() only works for non negative values."))
+    end
     return pi*radius^2*height
 end

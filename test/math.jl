@@ -250,5 +250,14 @@
         @test vol_sphere(1) == 4.1887902047863905
         @test vol_circular_cylinder(1, 1) == 3.141592653589793
         @test vol_circular_cylinder(4, 3) == 150.79644737231007
+
+        @test_throws DomainError vol_cube(-1)
+        @test_throws DomainError vol_cuboid(-1, 2, 2)
+        @test_throws DomainError vol_cone(-1, 3)
+        @test_throws DomainError vol_right_circ_cone(-1, 3)
+        @test_throws DomainError vol_prism(-1, 2)
+        @test_throws DomainError vol_pyramid(-1, 3)
+        @test_throws DomainError vol_sphere(-1)
+        @test_throws DomainError vol_circular_cylinder(-1, 3)
     end
 end
