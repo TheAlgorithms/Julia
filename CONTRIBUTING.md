@@ -2,9 +2,16 @@
 
 ### Writing the Julian way
 
-Although there is no idiomatic way to write Julia for all users, some aspects of the language contribute to its popularity. As such, we invite our contributors to write and possibly write their contribution in an easy-to-read fashion. Example of existing algorithm within this repository and many others, starting with the julialang repository itself contains plethora of examples.
+Although there is no systematic way to write Julia, some aspects of the language contribute to its popularity. As such, we invite our contributors to write and possibly write their contribution in an easy-to-read fashion. Example of existing algorithm within this repository and many others, starting with the julialang repository itself contains plethora of examples.
 
-#### about multiple dispatch
+Some emblematic features of the languages follow.
+
+##### multiple dispatch
+
+One key feature of Julia is that it is possible to dispatch a function to different methods according to its signature, that is the number and type of its arguments.
+
+<!-- TODO: give examples, invluding one using the Val(Symbol) trick -->
+
 
 ### Improve an existing algorithm
 
