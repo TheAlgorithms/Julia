@@ -32,7 +32,7 @@ If you used github cli, there is already `upstream` remote, so to keep your repo
 
     $ git pull --rebase upstream main
 
-Things you should do is always create a new branch when adding a new algorithm (or any contribution):
+Always create a new branch when adding a new algorithm (or any contribution):
 
 	$ git checkout -b <name of issue or algorithm> main
 	$ # do changes anew
