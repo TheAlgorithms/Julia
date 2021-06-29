@@ -35,9 +35,10 @@ If you used github cli, there is already `upstream` remote, so to keep your repo
 Always create a new branch when adding a new algorithm (or any contribution):
 
 	$ git checkout -b <name of issue or algorithm> main
-	$ # do changes anew
+	$ # do some work
+    $ git push -u origin <name of issue or algorithm>
 
-You should never touch your `main` branch of your repository. Any mistake can lead to inconsistent history. You must always create a new branch for any changes you might want to add.
+It is not advised to modify your `main` branch of your repository. Any mistake can lead to inconsistent history. You must always create a new branch for any changes you might want to add. Once those changes are merged upstream, you can merge those changes using `git pull --rebase upstream main` to keep your history on track from upstream.
 
 ### Usual steps in adding the new algorithm
 
