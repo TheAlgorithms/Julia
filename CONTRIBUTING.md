@@ -53,30 +53,30 @@ Add documentation in the code. Documentation is great for people who want to che
 An example documentation would look like this:
 
 ```julia
-    """
-        factorial_iterative(n)
+"""
+    factorial_iterative(n)
 
-    Finds factorial of a number using Iterative method
+Finds factorial of a number using Iterative method
 
-    # Example
-    ```julia
-    factorial_iterative(5)      # returns 120
-    factorial_iterative(0.1)    # returns error
-    factorial_iterative(-1)     # returns error
-    ```
-    # Reference
-        - factorial of a positive integer -- https://en.wikipedia.org/wiki/Factorial
+# Example
+```julia
+factorial_iterative(5)      # returns 120
+factorial_iterative(0.1)    # returns error
+factorial_iterative(-1)     # returns error
+```
+# Reference
+    - factorial of a positive integer -- https://en.wikipedia.org/wiki/Factorial
 
-        Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
-    """
-    function factorial_iterative(n)
-        if n != trunc(n) || n < 0
-            throw(error("factorial_iterative() only accepts non-negative integral values"))
-        end
-        factorial::BigInt = 1
-        map(i -> factorial *= i, 1:n)
-        return factorial
+    Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
+"""
+function factorial_iterative(n)
+    if n != trunc(n) || n < 0
+        throw(error("factorial_iterative() only accepts non-negative integral values"))
     end
+    factorial::BigInt = 1
+    map(i -> factorial *= i, 1:n)
+    return factorial
+end
 ```
 
 Add tests and fix any any issues. Adding tests to your algorithm will let us confirm that it works. Without tests, we cannot verify the function of the algorithm or if it works. To add your test, append it with other existing tests (but keep it separate) in the file named after the category within the `test` folder. For example, you should append the tests for `sieve of erastosthenes` with the other tests in `test/math.jl`.
