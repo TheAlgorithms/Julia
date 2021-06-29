@@ -28,7 +28,9 @@ To keep your forked repository up to date, setup the `upstream` remote to pull i
 
 	$ git pull --rebase upstream main
 
-If you used github cli, there is already `upstream` remote so no need to do the thing above.
+If you used github cli, there is already `upstream` remote, so to keep your repository updated just do
+
+    $ git pull --rebase upstream main
 
 Things you should do is always create a new branch when adding a new algorithm (or any contribution):
 
