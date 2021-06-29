@@ -16,8 +16,25 @@ Assume we want to right two versions of the `best_algo_ever` for floats and inte
 best_algo_ever(x::F) where {F <: AbstractFloat} = println("Best float ever: $x")
 
 best_algo_ever(n::Int) = println("Such an Integer: $n")
+
+best_algo_ever(42)
+
+best_algo_ever(42.0)
 ```
 
+A user of our algorithm does not need to know the different methods for `best_algo_ever`, Julia will dispatch the argument to the correct method. Now assume we want to provide two different ways (in order, or reverse) to apply this `best_algo_ever` to a `Vector` of numbers. One option would be to create, once again two different functions. Or, we could use multiple dispatch again.
+
+```julia
+# Create order and reverse version
+best_algo_ever(v, ::Val{:order}) = foreach(best_algo_ever, v)
+best_algo_ever(v, ::Val{:reverse}) = foreach(best_algo_ever, reverse(v))
+
+# Optional: make a dispatcher method easier to use that default to ordered iteration
+best_algo_ever(v; order = :reverse) = best_algo_ever(v, Val(order))
+
+best_algo_ever([1,2,3])
+best_algo_ever([12, 3.14, 42]; order = :reverse)
+```
 
 ### Improve an existing algorithm
 
