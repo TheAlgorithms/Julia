@@ -45,7 +45,7 @@ The following is self-explanatory and contributors **should** do the following:
 
 Add documentation in the code. Documentation is great for people who want to check out the repo and read the code. It will give them an idea on how it works.
 
-Add tests and fix any any issues. Adding tests to your algorithm will let us confirm that it works. Without tests, we cannot verify the function of the algorithm or if it works. To add your test, put it in the file named after the category within the `tests` folder.
+Add tests and fix any any issues. Adding tests to your algorithm will let us confirm that it works. Without tests, we cannot verify the function of the algorithm or if it works. To add your test, append it with other existing tests (but keep it separate) in the file named after the category within the `test` folder. For example, you should append the tests for `sieve of erastosthenes` with the other tests in `test/math.jl`.
 
 If you have changes you need to commit, do the following commands:
 
