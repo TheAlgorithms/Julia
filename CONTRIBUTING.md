@@ -38,7 +38,7 @@ Always create a new branch when adding a new algorithm (or any contribution):
 	$ # do some work
     $ git push -u origin <name of issue or algorithm>
 
-It is not advised to modify your `main` branch of your repository. Any mistake can lead to inconsistent history. You must always create a new branch for any changes you might want to add. Once those changes are merged upstream, you can merge those changes to `main` either by clicking fetching upstream on your remote repository or using `git pull --rebase upstream main` on your local repository to keep your history on track from upstream.
+It is not advised to modify your `main` branch of your repository. Any mistake can lead to inconsistent history. You must always create a new branch for any changes you might want to add. Once those changes are merged upstream, you can merge those changes to `main` either by clicking "fetching upstream" button on your remote repository from Github or using `git pull --rebase upstream main` on your local repository to keep your history on track from upstream.
 
 ### Usual steps in adding the new algorithm
 
