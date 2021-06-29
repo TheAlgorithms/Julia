@@ -6,11 +6,17 @@ Although there is no systematic way to write Julia, some aspects of the language
 
 Some emblematic features of the languages follow.
 
-##### multiple dispatch
+##### Multiple dispatch
 
 One key feature of Julia is that it is possible to dispatch a function to different methods according to its signature, that is the number and type of its arguments.
 
-<!-- TODO: give examples, invluding one using the Val(Symbol) trick -->
+Assume we want to right two versions of the `best_algo_ever` for floats and integer. One could create two functions `best_algo_ever_float` and `best_algo_ever_int`, or, preferably use multiple dispatch.
+
+```julia
+best_algo_ever(x::F) where {F <: AbstractFloat} = println("Best float ever: $x")
+
+best_algo_ever(n::Int) = println("Such an Integer: $n")
+```
 
 
 ### Improve an existing algorithm
