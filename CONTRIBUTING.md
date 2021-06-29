@@ -58,6 +58,38 @@ New contributors should only have one PR per algorithm
 - Add tests and fix any CodeCov issues.
 - We appreciate if you only have one commit of your PR as too many commits mess conversations within the PR.
 
+### Documentation template
+
+As for other part of the repository, we try to keep some consistency between the algorithms provided. Follows a template for documentation based on the [AutomaticDocstrings.jl](https://github.com/baggepinnen/AutomaticDocstrings.jl#usage) package.
+
+````julia
+"""
+    f(x::A, b=5; c=LinRange(1,2,10)) where A
+
+DOCSTRING (please describe the algorithm here)
+
+# Arguments:
+- `x`: DESCRIPTION
+- `b`: DESCRIPTION
+- `c`: DESCRIPTION
+
+# Examples (optional but recommended)
+
+# Implementation (optional)
+```julia
+function f(x::A, b=5; c=LinRange(1,2,10)) where A
+    5
+end
+```
+
+# Contributors (optional):
+- [Azzaare](https://github.com/Azzaare) (jf@baffier)
+"""
+function f(x::A, b=5; c=LinRange(1,2,10)) where A
+    5
+end
+````
+
 ### **Did you find a bug?**
 
 - Please avoid opening issues asking to be "assigned” to a particular algorithm. This merely creates unnecessary noise for maintainers. Instead, please submit your implementation in a pull request and it will be evaluated by project maintainers.
