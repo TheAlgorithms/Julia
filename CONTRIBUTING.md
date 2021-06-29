@@ -16,6 +16,12 @@ through github cli:
 
 	$ gh repo clone <Your username>/Julia
 
+within Julia:
+
+    ] dev https://github.com/TheAlgorithms/Julia
+
+the source folder when cloning the repository within julia is located at `$HOME/.julia/dev/TheAlgorithms/Julia`
+
 To keep your forked repository up to date, setup the `upstream` remote to pull in new changes
 
 	$ git remote add upstream https://github.com/TheAlgorithms/Julia.git
@@ -29,7 +35,7 @@ Things you should do is always create a new branch when adding a new algorithm (
 	$ git checkout -b <name of issue or algorithm> main
 	$ # do changes anew
 
-You should never touch your `main` branch of your repository. Any mistake can be hard for those new to git.
+You should never touch your `main` branch of your repository. Any mistake can lead to inconsistent history. You must always create a new branch for any changes you might want to add.
 
 ### Usual steps in adding the new algorithm
 
@@ -39,7 +45,7 @@ The following is self-explanatory and contributors **should** do the following:
 
 Add documentation in the code. Documentation is great for people who want to check out the repo and read the code. It will give them an idea on how it works.
 
-Add tests and fix any any issues. Adding tests to your algorithm will let us confirm that it works. Without tests, we cannot verify the function of the algorithm or if it works.
+Add tests and fix any any issues. Adding tests to your algorithm will let us confirm that it works. Without tests, we cannot verify the function of the algorithm or if it works. To add your test, put it in the file named after the category within the `tests` folder.
 
 If you have changes you need to commit, do the following commands:
 
@@ -47,7 +53,6 @@ If you have changes you need to commit, do the following commands:
 	$ git commit -m "<your message>"
 	$ git push
 
-A more powerful way of modifying commits is through [git-rebase](https://git-scm.org/docs/git-rebase#_interactive_mode). It allows you to join, reorder, change the description, or remove commits and more.
 
 ## Did you find a bug?
 
