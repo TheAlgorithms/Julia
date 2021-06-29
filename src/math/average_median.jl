@@ -13,7 +13,7 @@ median([0])                         # returns 0
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function median(nums::Vector)
+function median(nums::Vector{T})where T<:Number
     sorted = sort(nums)
     len = length(sorted)
     mid_index = div(len,2)

@@ -139,10 +139,11 @@
 
     @testset "Math: Factorial Related" begin
         @test factorial_iterative(5) == 120
-        @test_throws ErrorException factorial_iterative(0.1)
+        @test factorial_iterative(0) == 1
         @test_throws ErrorException  factorial_iterative(-1)
-
         @test factorial_recursive(5) == 120
+        @test factorial_recursive(0) == 1
+        @test_throws ErrorException  factorial_recursive(-1)
     end
 
 	  @testset "Math: Monte Carlo Integration" begin
