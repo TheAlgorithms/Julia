@@ -39,11 +39,44 @@ You should never touch your `main` branch of your repository. Any mistake can le
 
 ### Usual steps in adding the new algorithm
 
-Put the algorithm in what you think is the right category in the `src` folder. For example, if it involves string manipulation, you should create a new file in `src/strings/<name of algorithm>`.
+Put the algorithm in what you think is the right category in the `src` folder. Don't worry, the maintainers and other contributors will assist you and discuss on where to put it. For example, if it involves string manipulation, you should create a new file in `src/strings/<name of algorithm>`.
 
 The following is self-explanatory and contributors **should** do the following:
 
-Add documentation in the code. Documentation is great for people who want to check out the repo and read the code. It will give them an idea on how it works.
+Add documentation in the code. Documentation is great for people who want to check out the repo and read the code. It will give them an idea on how it works. A documentation should have the following entries:
+
+- Name of the contributor (can be a real name or an anonymous name) and email if there are any.
+- Link or source of the algorithm, if there are any.
+- A brief description of the algorithm
+- And of course, description of each function parameter if they can be described.
+
+An example documentation would look like this:
+
+
+    """
+        factorial_iterative(n)
+
+    Finds factorial of a number using Iterative method
+
+    # Example
+    ```julia
+    factorial_iterative(5)      # returns 120
+    factorial_iterative(0.1)    # returns error
+    factorial_iterative(-1)     # returns error
+    ```
+    # Reference
+        - factorial of a positive integer -- https://en.wikipedia.org/wiki/Factorial
+
+        Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
+    """
+    function factorial_iterative(n)
+        if n != trunc(n) || n < 0
+            throw(error("factorial_iterative() only accepts non-negative integral values"))
+        end
+        factorial::BigInt = 1
+        map(i -> factorial *= i, 1:n)
+        return factorial
+    end
 
 Add tests and fix any any issues. Adding tests to your algorithm will let us confirm that it works. Without tests, we cannot verify the function of the algorithm or if it works. To add your test, append it with other existing tests (but keep it separate) in the file named after the category within the `test` folder. For example, you should append the tests for `sieve of erastosthenes` with the other tests in `test/math.jl`.
 
