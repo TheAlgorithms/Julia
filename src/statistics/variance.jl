@@ -12,9 +12,9 @@ Find the variance from a set of data.
 # Contributors:
 - [Aru Bhardwaj](https://github.com/arubhardwaj)
 """
-function variance(a::Vector{T}) where T <: Number
-    avg = a / length(a)
-    x = sum(a - avg)
+function variance(a)
+    avg = sum(a) / length(a)
+    x = sum((a .- avg).^2)
     s_sq = x / (length(a) - 1)
     return(s_sq)
 end
