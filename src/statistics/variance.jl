@@ -1,6 +1,5 @@
 """
-    variance(a::Vector{T}) where T <: Number
-    variance(a::UnitRange{T}) where T <: Number
+    variance(a)
 
 Find the variance from a set of data.
 
@@ -19,11 +18,3 @@ function variance(a::Vector{T}) where T <: Number
     s_sq = x / (length(a) - 1)
     return(s_sq)
 end
-
-function variance(a::UnitRange{T}) where T <: Number
-    avg = a / length(a)
-    x = sum(a - avg)
-    s_sq = x / (length(a) - 1)
-    return(s_sq)
-end
-
