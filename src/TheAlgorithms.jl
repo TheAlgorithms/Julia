@@ -54,6 +54,7 @@ export factorial_recursive
 export floor_val
 export is_armstrong
 export line_length
+export krishnamurthy
 export mean
 export median
 export mode
@@ -143,7 +144,9 @@ include("math/ceil_floor.jl") # needed by average_median
 include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/factorial.jl")
+include("math/krishnamurthy_number.jl")
 include("math/line_length.jl")
+include("math/krishnamurthy_number.jl")
 include("math/monte_carlo_integration.jl")
 include("math/prime_check.jl")
 include("math/prime_factors.jl")
