@@ -26,10 +26,10 @@ perfect_number(8128)   # returns true
 perfect_number(123)    # returns false
 ```
 
-Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
+Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function perfect_number(number)
-    divisors = []
+function perfect_number(number::N)where N<:Number
+    divisors = Vector{Int}()
     for i = 1:(number÷2+1)
         if number % i == 0
             push!(divisors, i)
