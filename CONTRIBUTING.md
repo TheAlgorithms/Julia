@@ -1,6 +1,6 @@
 # Contributing to [The Algorithms - Julia](https://github.com/TheAlgorithms/Julia) (WIP)
 
-This document describes how to become a contributor to this repository. This will help you add new algorithms, correct issues and adding new fixes.
+We're glad you want to contribute to the Julia repository! This document describes how to become a contributor to this repository. This will help you add new algorithms, correct issues, and adding new fixes.
 
 ### Writing the Julian way
 
@@ -10,7 +10,7 @@ Some emblematic features of the languages follow.
 
 ##### Multiple dispatch
 
-One key feature of Julia is that it is possible to dispatch a function to different methods according to its signature, that is the number and type of its arguments.
+One key feature of Julia is that it is possible to dispatch a function to different methods according to its signature, the number, and the type of its arguments.
 
 Assume we want to right two versions of the `best_algo_ever` for floats and integer. One could create two functions `best_algo_ever_float` and `best_algo_ever_int`, or, preferably use multiple dispatch.
 
@@ -41,26 +41,24 @@ best_algo_ever([12, 3.14, 42]; order = :reverse)
 ### Improve an existing algorithm
 
 Pull Requests (PR) to an existing algorithm are welcome, especially in the following cases:
-1. enhance the algorithm readability
-1. improve efficiency (speed, allocations, accuracy)
-1. provide a significant variation of the available algorithm(s), especially if historically or algorithmically relevant or innovative
+
+1. Enhancing the algorithm readability
+1. Improve its efficiency (speed, allocations, accuracy)
+1. Provide a significant variation of the available algorithm(s), especially if historically or algorithmically relevant or innovative
 
 We invite contributors to detail those improvements in the PR and in the documentation of the new function/method.
 
-
 ### Adding a new algorithm
 
-New contributors should only have one PR per algorithm. We assume you have basic knowledge of [git](https://git-scm.org).
+New contributors should only have one PR per algorithm. We assume you have basic knowledge using the [Git](https://git-scm.org) software.
 
-To get started [fork](https://help.github.com/articles/fork-a-repo) this repository. Then clone it:
-
-through git:
+To get started, [fork](https://help.github.com/articles/fork-a-repo) this repository, then clone the repository through Git.
 
 ```
 $ git clone https://github.com/<Your username>/Julia
 ```
 
-through github cli:
+You can clone this repository using GitHub CLI by running the following command:
 
 ```
 $ gh repo clone <Your username>/Julia
@@ -71,16 +69,15 @@ within Julia:
 ] dev https://github.com/TheAlgorithms/Julia
 ```
 
-the source folder when cloning the repository within julia is located at `$HOME/.julia/dev/TheAlgorithms/Julia`
-
-To keep your forked repository up to date, setup the `upstream` remote to pull in new changes
+The source folder when cloning the repository within Julia is located at `$HOME/.julia/dev/TheAlgorithms/Julia`.\
+To keep your forked repository up to date, set up the `upstream` remote to pull in new changes.
 
 ```
 $ git remote add upstream https://github.com/TheAlgorithms/Julia.git
 $ git pull --rebase upstream main
 ```
 
-If you used github cli, there is already `upstream` remote, so to keep your repository updated just do
+If you used GitHub CLI, there is already an `upstream` remote, so to keep your repository updated just run
 
 ```
 $ git pull --rebase upstream main
@@ -94,7 +91,7 @@ $ # do some work
 $ git push -u origin <name of issue or algorithm>
 ```
 
-It is not advised to modify your `main` branch of your repository. Any mistake can lead to inconsistent history. You must always create a new branch for any changes you might want to add. Once those changes are merged upstream, you can merge those changes to `main` either by clicking "fetching upstream" button on your remote repository from Github or using `git pull --rebase upstream main` on your local repository to keep your history on track from upstream.
+It is not advised to modify the `main` branch of your repository. Any mistake can lead to inconsistent history. You must always create a new branch for any changes you might want to add. Once those changes are merged upstream, you can merge those changes to `main` either by clicking the "fetching upstream" button on your remote repository from GitHub or using the `git pull --rebase upstream main` on your local repository to keep your history on track from upstream.
 
 ### Usual steps in adding a new algorithm
 
@@ -104,7 +101,7 @@ Add documentation in the code, it will be build automatically on the github repo
 
 Add tests and fix any issues. Adding tests to your algorithm will let us confirm that it works. Without tests, we cannot verify the function of the algorithm or if it works. To add your test, append it with other existing tests (but keep it separate) in the file named after the category within the `test` folder. For example, you should append the tests for `sieve of erastosthenes` with the other tests in `test/math.jl`.
 
-If you have changes you need to commit, do the following commands:
+If you have changes you need to commit, run the following commands:
 
 ```
 $ git add <file>
@@ -144,7 +141,7 @@ f("Hello world", b = 42)
 
 # Documentation tests (optional, should replace `Examples` if present)
 
-Script like tests
+Script-like tests
 
 ```jldoctest
 a = 1
@@ -156,7 +153,7 @@ a + b
 3
 ```
 
-REPL like tests
+REPL-like tests
 
 ```jldoctest
 julia> a = 1
