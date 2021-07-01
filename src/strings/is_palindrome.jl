@@ -8,6 +8,7 @@ Arguments:
 """
 
 function is_palindrome(s) # Named function
+    s = lowercase(s)
     s == reverse(s)
 end
 
