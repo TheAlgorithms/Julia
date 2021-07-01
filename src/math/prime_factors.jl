@@ -10,18 +10,14 @@ prime_factors(50)          # returns [2,5,5]
 prime_factors(0)           # returns []
 prime_factors(100)         # returns [2, 2, 5, 5]
 prime_factors(2560)        # returns [2, 2, 2, 2, 2, 2, 2, 2, 2, 5]
-prime_factors(10^-2)       # returns []
-prime_factors(0.02)        # returns []
-prime_factors(10^-354)     # returns []
-prime_factors("hello")     # returns error
 ```
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
 """
-function prime_factors(number)
+function prime_factors(number::N)where N<:Integer
     i = 2
-    factors = []
-    while i^2 <= number
+    factors = Vector{Int}()
+    while i*i <= number
         if number % i == 1
             i += 1
         else
