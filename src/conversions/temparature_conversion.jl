@@ -15,7 +15,7 @@ celsius_to_fahrenheit(20) == 68.0             # returns true
 ```
 """
 function celsius_to_fahrenheit(celsius, ndigits::Int = 2)
-    return round((float(celsius) * 9 / 5) + 32; digits = ndigits)
+    return round((float(celsius) * 1.8) + 32.0; digits = ndigits)
 end
 
 """
@@ -57,7 +57,7 @@ fahrenheit_to_celsius(80.0) == 26.67         # returns true
 ```
 """
 function fahrenheit_to_celsius(fahrenheit, ndigits::Int = 2)
-    return round((float(fahrenheit) - 32) * 5 / 9; digits = ndigits)
+    return round((float(fahrenheit) - 32.0) * 5 / 9; digits = ndigits)
 end
 
 
@@ -80,7 +80,7 @@ fahrenheit_to_kelvin(80.0) == 299.82        # returns true
 ```
 """
 function fahrenheit_to_kelvin(fahrenheit, ndigits::Int = 2)
-    round(((float(fahrenheit) - 32) * 5 / 9) + 273.15; digits = ndigits)
+    round(((float(fahrenheit) - 32.0) * 5 / 9) + 273.15; digits = ndigits)
 end
 
 
@@ -119,5 +119,5 @@ kelvin_to_fahrenheit(300) == 80.33          # returns true
 ```
 """
 function kelvin_to_fahrenheit(kelvin, ndigits::Int = 2)
-    round(((float(kelvin) - 273.15) * 9 / 5) + 32; digits = ndigits)
+    round(((float(kelvin) - 273.15) * 1.8) + 32.0; digits = ndigits)
 end
