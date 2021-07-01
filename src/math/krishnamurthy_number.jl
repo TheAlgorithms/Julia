@@ -1,7 +1,7 @@
 include("factorial.jl")
 
 """
-krishnamurthy(number)
+    krishnamurthy(number)
 
 Check if a number is a Krishnamurthy number or not
 
