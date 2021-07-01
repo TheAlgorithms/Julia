@@ -139,11 +139,10 @@
 
     @testset "Math: Factorial Related" begin
         @test factorial_iterative(5) == 120
-        @test_throws ErrorException factorial_iterative(0.1)
+        @test factorial_iterative(0) == 1
         @test_throws ErrorException  factorial_iterative(-1)
-
         @test factorial_recursive(5) == 120
-        @test_throws ErrorException  factorial_recursive(0.1)
+        @test factorial_recursive(0) == 1
         @test_throws ErrorException  factorial_recursive(-1)
     end
 
@@ -155,6 +154,11 @@
         @test_throws ErrorException krishnamurthy(-1)
     end
     
+	  @testset "Math: Monte Carlo Integration" begin
+		    @test isapprox(monte_carlo_integration(x->3*x^2,100000,(0,1)),1,atol = 0.01)
+		    @test isapprox(monte_carlo_integration(x->sin(x),1000,(0,pi)),2,atol = 0.1)
+	  end
+		
     @testset "Math: Prime Check" begin
         @test prime_check(2) == true
         @test prime_check(3) == true
@@ -178,10 +182,6 @@
         @test prime_factors(0) == []
         @test prime_factors(100) == [2, 2, 5, 5]
         @test prime_factors(2560) == [2, 2, 2, 2, 2, 2, 2, 2, 2, 5]
-        @test prime_factors(10^-2) == []
-        @test prime_factors(0.02) == []
-        @test prime_factors(10^-354) == []
-        @test_throws MethodError prime_factors("hello")
     end
 
     @testset "Math: Perfect Cube" begin
@@ -236,4 +236,13 @@
         @test sum_gp(1, -2, 10) == -341.0
     end
 
+    @testset "Math: Sieve of Eratosthenes" begin
+        @test eratosthenes(20) ==   [2,3,5,7,11,13,17,19]
+        @test eratosthenes(2) == [2]
+        @test eratosthenes(1) == Int64[] # No prime number less that 1, so it should return empty array.
+    end
+    
+   @testset "Math: Verlet scheme" begin
+        @test verlet_integration(x->-x,[0.0,0.1],(1,10))[end][end] == 9.999	
+   end
 end

@@ -1,5 +1,5 @@
 KILOGRAM_CHART = Dict{String,Float64}(
-    "kilogram" => 1,
+    "kilogram" => 1.0,
     "gram" => 10^3,
     "milligram" => 10^6,
     "metric-ton" => 10^-3,
@@ -7,12 +7,12 @@ KILOGRAM_CHART = Dict{String,Float64}(
     "short-ton" => 0.0011023122,
     "pound" => 2.2046244202,
     "ounce" => 35.273990723,
-    "carrat" => 5000,
+    "carrat" => 5000.0,
     "atomic-mass-unit" => 6.022136652e26,
 )
 
 WEIGHT_TYPE_CHART = Dict{String,Float64}(
-    "kilogram" => 1,
+    "kilogram" => 1.0,
     "gram" => 10^-3,
     "milligram" => 10^-6,
     "metric-ton" => 10^3,

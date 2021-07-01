@@ -6,21 +6,21 @@ Finds factorial of a number using Iterative method
 # Example
 ```julia
 factorial_iterative(5)      # returns 120
-factorial_iterative(0.1)    # returns error
 factorial_iterative(-1)     # returns error
 ```
 # Reference
 - factorial of a positive integer -- https://en.wikipedia.org/wiki/Factorial
 
-Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
+Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function factorial_iterative(n)
-    if n != trunc(n) || n < 0
+function factorial_iterative(n::N)where N<:Integer
+    if n < 0
         throw(error("factorial_iterative() only accepts non-negative integral values"))
     end
-    factorial::BigInt = 1
-    map(i -> factorial *= i, 1:n)
-    return factorial
+    if n==0 || n==1
+        return one(BigInt)
+    end
+    return n*factorial_iterative(n-1)
 end
 
 """
@@ -31,22 +31,24 @@ Finds factorial of anumber using recursive method
 # Example
 ```julia
 factorial_recursive(5)      # returns 120
-factorial_recursive(0.1)    # returns error
-factorial_recursive(-1)     # returns error
 ```
 # Reference
 - factorial of a positive integer -- https://en.wikipedia.org/wiki/Factorial
 
-Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
+Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function factorial_recursive(n)
-    if n != trunc(n) || n < 0
+function factorial_recursive(n::N)::BigInt where N<:Integer
+    if n < 0
         throw(error("factorial_iterative() only accepts non-negative integral values"))
     end
     if n == 0 || n == 1
-        return 1
+        return one(BigInt)
+        # keep same result type
     else
-        factorial::BigInt = n * factorial_recursive(n - 1)
+        factorial=one(BigInt)
+        for i in 1:n
+            factorial*=i
+        end
         return factorial
     end
 end
