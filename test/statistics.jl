@@ -5,12 +5,12 @@
         b = [0.11,0.7,0.2,0.19,0.09,0.8, 0.71,0.1, 0.6,0.3,0.81]
         OLSbeta(a, b)
 
-        df = DataFrame(a=a, b=b)
-        ols = GLM.lm(@formula(a ~ b), df)
-        coef(ols) # print coefficients
+        # df = DataFrame(a=a, b=b)
+        # ols = GLM.lm(@formula(a ~ b), df)
+        # coef(ols) # print coefficients
 
-        # Predict
-        predict(ols) # predict the model
+        # # Predict
+        # predict(ols) # predict the model
     end
 
     @testset "Statistics: Pearson Correlation" begin
@@ -26,7 +26,7 @@
 
     @testset "Statistics: Variance" begin
         a = 1:10
-        
+
         @test variance(a) == 9.166666666666666
 
         a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
