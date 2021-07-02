@@ -45,8 +45,14 @@ function isleaf(tree::Tree,from::Int)::Bool where Tree<:AbstractBinaryTree_arr
 end
 
 function ch(tree::Tree,from::Int,select::Bool)where Tree<:AbstractBinaryTree_arr
-    if select return tree.rch[from] 
-    else return tree.lch[from] 
+    if select return tree.rch[from]
+    else return tree.lch[from]
+    end
+end
+
+function set_ch(tree::Tree,from::Int,select::Bool,value::T)where {Tree<:AbstractBinaryTree_arr,T}
+    if select tree.rch[from]=value
+    else tree.lch[from]=value
     end
 end
 
