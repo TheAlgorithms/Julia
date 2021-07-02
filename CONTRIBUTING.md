@@ -4,15 +4,14 @@ We're glad you want to contribute to the Julia repository! This document describ
 
 ### Writing the Julian way
 
-Although there is no systematic way to write Julia, some aspects of the language contribute to its popularity. As such, we invite our contributors to write and possibly write their contribution in an easy-to-read fashion. Example of existing algorithm within this repository and many others, starting with the julialang repository itself contains plethora of examples.
+Although there is no systematic way to write Julia, some aspects of the language contribute to its popularity. As such, we invite our contributors to write and possibly write their contributions in an easy-to-read fashion. Examples of the existing algorithms within this repository and many others, starting with the Julia language repository itself contains a plethora of examples.
 
 Some emblematic features of the languages follow.
 
 ##### Multiple dispatch
 
-One key feature of Julia is that it is possible to dispatch a function to different methods according to its signature, the number, and the type of its arguments.
-
-Assume we want to right two versions of the `best_algo_ever` for floats and integer. One could create two functions `best_algo_ever_float` and `best_algo_ever_int`, or, preferably use multiple dispatch.
+One key feature of Julia is that it is possible to dispatch a function to different methods according to its signature, the number, and the type of its arguments.\
+Assume we want to write two versions of the `best_algo_ever` for floats and integers. One could create two functions: `best_algo_ever_float` and `best_algo_ever_int`, or, preferably use multiple dispatches.
 
 ```julia
 best_algo_ever(x::F) where {F <: AbstractFloat} = println("Best float ever: $x")
@@ -24,7 +23,7 @@ best_algo_ever(42)
 best_algo_ever(42.0)
 ```
 
-A user of our algorithm does not need to know the different methods for `best_algo_ever`, Julia will dispatch the argument to the correct method. Now assume we want to provide two different ways (in order, or reverse) to apply this `best_algo_ever` to a `Vector` of numbers. One option would be to create, once again two different functions. Or, we could use multiple dispatch again.
+A user of our algorithm does not need to know the different methods for `best_algo_ever`. Julia will dispatch the argument to the correct method. Now, assume we want to provide two different ways (in order, or reverse) to apply this `best_algo_ever` to a `Vector` of numbers. One option would be to create once again two different functions. Or, we could use multiple dispatches again.
 
 ```julia
 # Create order and reverse version
@@ -46,12 +45,11 @@ Pull Requests (PR) to an existing algorithm are welcome, especially in the follo
 1. Improve its efficiency (speed, allocations, accuracy)
 1. Provide a significant variation of the available algorithm(s), especially if historically or algorithmically relevant or innovative
 
-We invite contributors to detail those improvements in the PR and in the documentation of the new function/method.
+We invite our contributors to detail those improvements in the PR and the documentation of the new function.
 
 ### Adding a new algorithm
 
-New contributors should only have one PR per algorithm. We assume you have basic knowledge using the [Git](https://git-scm.org) software.
-
+New contributors should only have one PR per algorithm. We assume you have basic knowledge using the [Git](https://git-scm.org) software.\
 To get started, [fork](https://help.github.com/articles/fork-a-repo) this repository, then clone the repository through Git.
 
 ```
