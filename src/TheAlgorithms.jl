@@ -1,11 +1,7 @@
 module TheAlgorithms
 
 # Usings/Imports (keep sorted)
-using DataFrames
-using DifferentialEquations
-# using GLM
 using LinearAlgebra
-using Plots
 using Random
 
 
