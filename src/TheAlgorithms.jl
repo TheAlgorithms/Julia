@@ -1,11 +1,7 @@
 module TheAlgorithms
 
 # Usings/Imports (keep sorted)
-using DataFrames
-using DifferentialEquations
-# using GLM
 using LinearAlgebra
-using Plots
 using Random
 
 
@@ -60,6 +56,7 @@ export factorial_recursive
 export floor_val
 export is_armstrong
 export line_length
+export krishnamurthy
 export mean
 export median
 export mode
@@ -76,8 +73,15 @@ export sum_gp
 export surfarea_cube
 export surfarea_sphere
 export trapazoidal_area
-export eratosthenes
 export verlet_integration
+export vol_cube
+export vol_cuboid
+export vol_cone
+export vol_right_circ_cone
+export vol_prism
+export vol_pyramid
+export vol_sphere
+export vol_circular_cylinder
 
 # Exports: matrix
 export determinant
@@ -107,6 +111,7 @@ export variance
 
 # Exports: strings
 export is_palindrome
+export detect_anagrams
 
 # Exports: scheduling
 export fcfs
@@ -145,7 +150,9 @@ include("math/ceil_floor.jl") # needed by average_median
 include("math/collatz_sequence.jl")
 include("math/euler_method.jl")
 include("math/factorial.jl")
+include("math/krishnamurthy_number.jl")
 include("math/line_length.jl")
+include("math/krishnamurthy_number.jl")
 include("math/monte_carlo_integration.jl")
 include("math/prime_check.jl")
 include("math/prime_factors.jl")
@@ -158,8 +165,8 @@ include("math/sieve_of_eratosthenes.jl")
 include("math/sir_model.jl")
 include("math/sum_of_arithmetic_series.jl")
 include("math/sum_of_geometric_progression.jl")
-include("math/sieve_of_eratosthenes.jl")
 include("math/verlet.jl")
+include("math/volume.jl")
 
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl
@@ -195,6 +202,7 @@ include("statistics/variance.jl")
 
 # Includes: strings
 include("strings/is_palindrome.jl")
+include("strings/detect_anagrams.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
