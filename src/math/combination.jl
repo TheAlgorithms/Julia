@@ -7,6 +7,8 @@ n possibilities, without repetition
 # Arguments:
 - `n`: Positive integers of items to choose from
 - 'r': Positive integers of items to choose
+
+Contributed By:- [Mayur Dahibhate](https://github.com/mayurdahibhate)
 """
 
 function combination(n, r)
