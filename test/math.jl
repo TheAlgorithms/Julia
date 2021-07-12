@@ -126,6 +126,16 @@
         @test collatz_sequence(5) == [5,16,8,4,2,1]
     end
 
+
+    @testset "Math: Combination" begin
+        @test combination(5,1) == 5 
+        @test combination(6,3) == 20
+        @test combination(7,5) == 21
+        @test combination(12,3) == 220
+        @test combination(5,5) == 1
+        @test combination(4,2) == 6
+    end
+
     @testset "Math: Line Length" begin
         # Arc Lengths
         @test line_length(x -> x, 0, 1, 10) == 1.4142135623730947
@@ -205,6 +215,15 @@
         @test perfect_square(10)== false
     end
 
+    @testset "Math: Permutation" begin
+        @test permutation(5,1) == 5 
+        @test permutation(6,3) == 120
+        @test permutation(7,5) == 2520
+        @test permutation(12,3) == 1320
+        @test permutation(5,5) == 120
+        @test permutation(4,2) == 12
+    end
+
     # @testset "Math: SIR Model" begin
     #     # TODO: implement tests
 
@@ -273,21 +292,4 @@
         @test verlet_integration(x->-x,[0.0,0.1],(1,10))[end][end] == 9.999
    end
 
-    @testset "Math: Combination" begin
-        @test combination(5,1) == 5 
-        @test combination(6,3) == 20
-        @test combination(7,5) == 21
-        @test combination(12,3) == 220
-        @test combination(5,5) == 1
-        @test combination(4,2) == 6
-    end
-
-    @testset "Math: Permutation" begin
-        @test combination(5,1) == 5 
-        @test combination(6,3) == 120
-        @test combination(7,5) == 2520
-        @test combination(12,3) == 1320
-        @test combination(5,5) == 120
-        @test combination(4,2) == 12
-    end
 end
