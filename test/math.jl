@@ -205,21 +205,21 @@
         @test perfect_square(10)== false
     end
 
-    @testset "Math: SIR Model" begin
-        # TODO: implement tests
+    # @testset "Math: SIR Model" begin
+    #     # TODO: implement tests
 
-        #initian conditions
-        p = [0.5/7900000.0,0.33]
-        u0 = [7900000.0,10.0,0.0]
-        tspan = (0.0,140.0)
+    #     #initian conditions
+    #     p = [0.5/7900000.0,0.33]
+    #     u0 = [7900000.0,10.0,0.0]
+    #     tspan = (0.0,140.0)
 
-        #solve
-        sir = ODEProblem(SIR,u0,tspan,p)
-        sol = solve(sir)
+    #     #solve
+    #     sir = ODEProblem(SIR,u0,tspan,p)
+    #     sol = solve(sir)
 
-        #plot
-        plot(sol)
-    end
+    #     #plot
+    #     plot(sol)
+    # end
 
     @testset "Math: Sum of Arithmetic progression" begin
         @test sum_ap(1, 1, 10) == 55.0
@@ -240,6 +240,33 @@
         @test eratosthenes(20) ==   [2,3,5,7,11,13,17,19]
         @test eratosthenes(2) == [2]
         @test eratosthenes(1) == Int64[] # No prime number less that 1, so it should return empty array.
+    end
+
+    @testset "Math: Volume of Various Shapes" begin
+        @test vol_cube(1) == 1
+        @test vol_cube(3) == 27
+        @test vol_cuboid(1, 1, 1) == 1
+        @test vol_cuboid(1, 2, 3) == 6
+        @test vol_cone(10, 3) == 10.0
+        @test vol_cone(1, 1) == 0.3333333333333333
+        @test vol_right_circ_cone(2, 3) == 12.566370614359172
+        @test vol_prism(10, 2) == 20.0
+        @test vol_prism(11, 1) == 11.0
+        @test vol_pyramid(10, 3) == 10.0
+        @test vol_pyramid(1.5, 3) == 1.5
+        @test vol_sphere(5) == 523.5987755982989
+        @test vol_sphere(1) == 4.1887902047863905
+        @test vol_circular_cylinder(1, 1) == 3.141592653589793
+        @test vol_circular_cylinder(4, 3) == 150.79644737231007
+
+        @test_throws DomainError vol_cube(-1)
+        @test_throws DomainError vol_cuboid(-1, 2, 2)
+        @test_throws DomainError vol_cone(-1, 3)
+        @test_throws DomainError vol_right_circ_cone(-1, 3)
+        @test_throws DomainError vol_prism(-1, 2)
+        @test_throws DomainError vol_pyramid(-1, 3)
+        @test_throws DomainError vol_sphere(-1)
+        @test_throws DomainError vol_circular_cylinder(-1, 3)
     end
 
    @testset "Math: Verlet scheme" begin
