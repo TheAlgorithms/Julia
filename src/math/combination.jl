@@ -29,5 +29,5 @@ function combination(n, r)
     
     comb = factorial(n) / (factorial(r) * factorial(n - r))
 
-    return convert(UInt64, comb)
+    return convert(Int64, comb)
 end

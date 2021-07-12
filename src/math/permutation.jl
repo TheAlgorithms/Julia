@@ -29,5 +29,5 @@ function permutation(n, r)
     
     perm = factorial(n) / factorial(n - r) 
 
-    return convert(UInt64, perm)
+    return convert(Int64, perm)
 end
