@@ -8,7 +8,11 @@ using Random
 ## Exports
 # Please keep the folders/functions sorted
 
+# Exports: basic
+export prefix_sum
+
 # Exports: data_structures
+export AbstractBinarySearchTree_arr
 export AbstractBinaryTree
 export AbstractBinaryTree_arr
 export BinaryTree
@@ -22,6 +26,8 @@ export isleaf
 export left
 export merge!
 export right
+export set_ch
+export Splay
 
 # Exports: knapsack
 export complete_pack!
@@ -98,6 +104,7 @@ export linear_search
 
 # Exports: sorts
 export BubbleSort!,InsertionSort!,SelectionSort!
+export MergeSort!,QuickSort!
 
 # Exports: statistics
 export OLSbeta # TODO: make the name lowercase if possible
@@ -123,8 +130,11 @@ export weight_conversion
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
 
+# Includes: basic
+include("basic/prefix_sum.jl")
+
 # Includes: data_structures
-include("data_structures/binary_tree/basic_binary_tree.jl")
+include("data_structures/binary_tree/splay.jl")
 include("data_structures/disjoint_set/disjoint_set.jl")
 
 # Includes: knapsack
@@ -185,6 +195,8 @@ include("searches/linear_search.jl")
 # Includes: sorts
 include("sorts/bubble_sort.jl")
 include("sorts/insertion_sort.jl")
+include("sorts/merge_sort.jl")
+include("sorts/quick_sort.jl")
 include("sorts/selection_sort.jl")
 
 # Includes: statistics
