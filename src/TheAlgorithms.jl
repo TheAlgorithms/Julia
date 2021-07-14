@@ -49,6 +49,7 @@ export area_trapezium
 export area_triangle
 export ceil_val
 export collatz_sequence
+export combination
 export eratosthenes
 export euler_method
 export factorial_iterative
@@ -66,6 +67,7 @@ export prime_factors
 export perfect_cube
 export perfect_number
 export perfect_square
+export permutation
 export prime_check
 export prime_factors
 export sum_ap
@@ -148,6 +150,7 @@ include("math/average_median.jl")
 include("math/average_mode.jl")
 include("math/ceil_floor.jl") # needed by average_median
 include("math/collatz_sequence.jl")
+include("math/combination.jl")
 include("math/euler_method.jl")
 include("math/factorial.jl")
 include("math/krishnamurthy_number.jl")
@@ -159,6 +162,7 @@ include("math/prime_factors.jl")
 include("math/perfect_cube.jl")
 include("math/perfect_number.jl")
 include("math/perfect_square.jl")
+include("math/permutation.jl")
 include("math/prime_check.jl")
 include("math/prime_factors.jl")
 include("math/sieve_of_eratosthenes.jl")
