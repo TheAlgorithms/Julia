@@ -3,7 +3,7 @@
     
     sorts = [
         BubbleSort!,
-        ExchangeSort!
+        ExchangeSort!,
         InsertionSort!,
         MergeSort!,
         QuickSort!,
