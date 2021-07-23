@@ -1,6 +1,8 @@
 """
     ExchangeSort(arr)
 
+Sort an array by exchanging elements that are not in their proper position, hence Exchange Sort
+
 Exchange Sort Steps
 1. Compares each element of an array
 2. Swap those elements that are not in their proper position
@@ -17,7 +19,6 @@ Program to sort an array
 ```julia
 ExchangeSort([5, 4, 3, 2, 1]) # returns [1, 2, 3, 4, 5]
 ExchangeSort([1, 2, 3, 4, 5]) # returns [1, 2, 3, 4, 5]
-ExchangeSort([1, 2, 3, 4, 5]) # returns 123.1
 ExchangeSort(['5', '4', '3', '2', '1']) # returns ['1', '2', '3', '4', '5']
 ```
 
