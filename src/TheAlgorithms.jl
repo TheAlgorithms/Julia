@@ -30,8 +30,10 @@ export set_ch
 export Splay
 
 # Exports: knapsack
-export complete_pack!
-export zero_one_pack!
+export dp_complete_pack!
+export dp_zero_one_pack!
+export ga_complete_pack!
+export ga_zero_one_pack!
 
 # Exports: math
 export SIR # TODO: make the name lowercase if possible
@@ -138,7 +140,8 @@ include("data_structures/binary_tree/splay.jl")
 include("data_structures/disjoint_set/disjoint_set.jl")
 
 # Includes: knapsack
-include("knapsack/knapsack.jl")
+include("knapsack/dynamic_programming.jl")
+include("knapsack/greedy_algorithm.jl")
 
 # Includes: math
 include("math/abs.jl")
