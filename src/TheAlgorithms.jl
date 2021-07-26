@@ -105,8 +105,13 @@ export jump_search
 export linear_search
 
 # Exports: sorts
-export BubbleSort!,InsertionSort!,SelectionSort!
-export MergeSort!,QuickSort!,ExchangeSort!
+export BubbleSort!
+export CountingSort!
+export ExchangeSort!
+export InsertionSort!
+export MergeSort!
+export QuickSort!
+export SelectionSort!
 
 # Exports: statistics
 export OLSbeta # TODO: make the name lowercase if possible
@@ -201,6 +206,7 @@ include("sorts/insertion_sort.jl")
 include("sorts/merge_sort.jl")
 include("sorts/quick_sort.jl")
 include("sorts/selection_sort.jl")
+include("sorts/counting_sort.jl")
 include("sorts/exchange_sort.jl")
 
 # Includes: statistics
