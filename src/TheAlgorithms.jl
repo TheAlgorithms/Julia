@@ -30,8 +30,10 @@ export set_ch
 export Splay
 
 # Exports: knapsack
-export complete_pack!
-export zero_one_pack!
+export dp_complete_pack!
+export dp_zero_one_pack!
+export ga_complete_pack!
+export ga_zero_one_pack!
 
 # Exports: math
 export SIR # TODO: make the name lowercase if possible
@@ -103,8 +105,13 @@ export jump_search
 export linear_search
 
 # Exports: sorts
-export BubbleSort!,InsertionSort!,SelectionSort!
-export MergeSort!,QuickSort!,CountingSort!
+export BubbleSort!
+export CountingSort!
+export ExchangeSort!
+export InsertionSort!
+export MergeSort!
+export QuickSort!
+export SelectionSort!
 
 # Exports: statistics
 export OLSbeta # TODO: make the name lowercase if possible
@@ -138,7 +145,8 @@ include("data_structures/binary_tree/splay.jl")
 include("data_structures/disjoint_set/disjoint_set.jl")
 
 # Includes: knapsack
-include("knapsack/knapsack.jl")
+include("knapsack/dynamic_programming.jl")
+include("knapsack/greedy_algorithm.jl")
 
 # Includes: math
 include("math/abs.jl")
@@ -199,6 +207,7 @@ include("sorts/merge_sort.jl")
 include("sorts/quick_sort.jl")
 include("sorts/selection_sort.jl")
 include("sorts/counting_sort.jl")
+include("sorts/exchange_sort.jl")
 
 # Includes: statistics
 include("statistics/ordinary_least_squares.jl")
