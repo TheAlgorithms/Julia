@@ -7,9 +7,9 @@ The sorting technique is to count the existing element and stored its occurrence
 STEPS: 
 Assume the input as --> x=[-3, 1, -5, 0, -3]
   minimum = -5
-- STEP 1: Create a list size within the range, in this case is -3 --> 1 which have range of 7 (-5, -4, -3, -2, -1, 0, 1), so list with size 7 and assign all to 0 is created
+- STEP 1: Create a list size within the range, in this case is -5 --> 1 which have range of 7 (-5, -4, -3, -2, -1, 0, 1), so list with size 7 and assign all to 0 is created
 - STEP 2: Count the occurances of element in the list 
-          First number = -3 it is the third number in the range, so count[2]+=1
+          First number = -3 it is the third number in the range, so count[3]+=1
           Final view:
           index : ( 1,  2,  3,  4,  5, 6, 7)
           range : (-5, -4, -3, -2, -1, 0, 1)

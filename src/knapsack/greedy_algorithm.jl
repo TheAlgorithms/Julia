@@ -1,5 +1,5 @@
 """
-For greedy algorithm, it will the element based on the optimal value in the array at each loop in the function
+For greedy algorithm, it will take the element based on the optimal value in the array at each loop in the function
 
 This does 0-1 (each item can be chosen only once) knapsack :
 pack capacity = capacity
@@ -15,7 +15,7 @@ julia> zero_one_pack!(20,[1,3,11],[2,5,30])
 37
 ```
 """
-function ga_zero_one_pack!(capacity::N, weights::V, values::V
+function zero_one_pack!(capacity::N, weights::V, values::V
 ) where {N <: Number,V <: AbstractVector}
     total_max_value = 0
     while capacity > 0 && (length(weights)!=0 || length(values)!=0)
@@ -45,7 +45,7 @@ julia> complete_pack!(20,[1,2,9],[1,3,20])
 43
 ```
 """
-function ga_complete_pack!(capacity::N, weights::V, values::V
+function complete_pack!(capacity::N, weights::V, values::V
 ) where {N <: Number,V <: AbstractVector}
     total_max_value = 0
     while capacity > 0 && (length(weights)!=0 || length(values)!=0)
