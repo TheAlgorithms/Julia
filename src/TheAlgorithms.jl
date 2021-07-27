@@ -121,6 +121,7 @@ export variance
 # Exports: strings
 export is_palindrome
 export detect_anagrams
+export ContainSubstringWithKMP
 
 # Exports: scheduling
 export fcfs
@@ -217,6 +218,7 @@ include("statistics/variance.jl")
 # Includes: strings
 include("strings/is_palindrome.jl")
 include("strings/detect_anagrams.jl")
+include("strings/kmp_substring_search.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
