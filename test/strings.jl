@@ -26,4 +26,34 @@
         samples = ["LiSten", "enlist"]
         @test detect_anagrams(s, samples) == ["enlist"]
     end
+
+    @testset "Strings: KMP SubString Search" begin
+        # contain sub string
+        string = "seems like kmp search works"
+        sub_string = "seems like kmp search"
+        @test ContainSubstringWithKMP(string, sub_string, false) == true
+        string = "ABABDABACDABABCABAB"
+        sub_string = "ABABCABAB"
+        @test ContainSubstringWithKMP(string, sub_string, false) == true
+        string = "abcxabcdabcdabcy"
+        sub_string = "abcdabcy"
+        @test ContainSubstringWithKMP(string, sub_string, false) == true
+        # does not contain sub string
+        string = "ABABDABACDABABCABAB"
+        sub_string = "X"
+        @test ContainSubstringWithKMP(string, sub_string, false) == false
+        string = "abcxabcdabcdabcy"
+        sub_string = "so this"
+        @test ContainSubstringWithKMP(string, sub_string, false) == false
+        # ignore cases
+        string = "SeEms Like IgNOrE CaSe Work"
+        sub_string = "seems like ignore case work"
+        @test ContainSubstringWithKMP(string, sub_string, true) == true
+        string = "123 456 AbC"
+        sub_string = "123 456 ABC"
+        @test ContainSubstringWithKMP(string, sub_string, true) == true
+        string = "abcdefg"
+        sub_string = "ABCDEFG"
+        @test ContainSubstringWithKMP(string, sub_string, true) == true
+    end
 end
