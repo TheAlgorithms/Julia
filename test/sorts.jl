@@ -1,6 +1,7 @@
 @testset "Sorts" begin
     sorts = [
         BubbleSort!,
+        BucketSort!,
         CountingSort!,
         ExchangeSort!,
         InsertionSort!,
