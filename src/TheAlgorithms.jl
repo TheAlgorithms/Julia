@@ -8,7 +8,11 @@ using Random
 ## Exports
 # Please keep the folders/functions sorted
 
+# Exports: basic
+export prefix_sum
+
 # Exports: data_structures
+export AbstractBinarySearchTree_arr
 export AbstractBinaryTree
 export AbstractBinaryTree_arr
 export BinaryTree
@@ -22,10 +26,14 @@ export isleaf
 export left
 export merge!
 export right
+export set_ch
+export Splay
 
 # Exports: knapsack
-export complete_pack!
-export zero_one_pack!
+export dp_complete_pack!
+export dp_zero_one_pack!
+export ga_complete_pack!
+export ga_zero_one_pack!
 
 # Exports: math
 export SIR # TODO: make the name lowercase if possible
@@ -43,6 +51,7 @@ export area_trapezium
 export area_triangle
 export ceil_val
 export collatz_sequence
+export combination
 export eratosthenes
 export euler_method
 export factorial_iterative
@@ -60,6 +69,7 @@ export prime_factors
 export perfect_cube
 export perfect_number
 export perfect_square
+export permutation
 export prime_check
 export prime_factors
 export sum_ap
@@ -95,7 +105,13 @@ export jump_search
 export linear_search
 
 # Exports: sorts
-export BubbleSort!,InsertionSort!,SelectionSort!
+export BubbleSort!
+export CountingSort!
+export ExchangeSort!
+export InsertionSort!
+export MergeSort!
+export QuickSort!
+export SelectionSort!
 
 # Exports: statistics
 export OLSbeta # TODO: make the name lowercase if possible
@@ -121,12 +137,16 @@ export weight_conversion
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
 
+# Includes: basic
+include("basic/prefix_sum.jl")
+
 # Includes: data_structures
-include("data_structures/binary_tree/basic_binary_tree.jl")
+include("data_structures/binary_tree/splay.jl")
 include("data_structures/disjoint_set/disjoint_set.jl")
 
 # Includes: knapsack
-include("knapsack/knapsack.jl")
+include("knapsack/dynamic_programming.jl")
+include("knapsack/greedy_algorithm.jl")
 
 # Includes: math
 include("math/abs.jl")
@@ -138,6 +158,7 @@ include("math/average_median.jl")
 include("math/average_mode.jl")
 include("math/ceil_floor.jl") # needed by average_median
 include("math/collatz_sequence.jl")
+include("math/combination.jl")
 include("math/euler_method.jl")
 include("math/factorial.jl")
 include("math/krishnamurthy_number.jl")
@@ -149,6 +170,7 @@ include("math/prime_factors.jl")
 include("math/perfect_cube.jl")
 include("math/perfect_number.jl")
 include("math/perfect_square.jl")
+include("math/permutation.jl")
 include("math/prime_check.jl")
 include("math/prime_factors.jl")
 include("math/sieve_of_eratosthenes.jl")
@@ -181,7 +203,11 @@ include("searches/linear_search.jl")
 # Includes: sorts
 include("sorts/bubble_sort.jl")
 include("sorts/insertion_sort.jl")
+include("sorts/merge_sort.jl")
+include("sorts/quick_sort.jl")
 include("sorts/selection_sort.jl")
+include("sorts/counting_sort.jl")
+include("sorts/exchange_sort.jl")
 
 # Includes: statistics
 include("statistics/ordinary_least_squares.jl")
