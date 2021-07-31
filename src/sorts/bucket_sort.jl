@@ -17,6 +17,7 @@ size of buckets = (largest element - smallest element + 1) / length of array
 4. Concatenate elements of non-empty buckets
 
 ## Example
+
 1. Array of [3, 5, 2, 9] has 4 buckets
 2. The size of buckets = (9 - 2 + 1) / 4 = 2
 3. The range of elements can be assign to each bucket, x
