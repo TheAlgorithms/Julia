@@ -7,6 +7,7 @@ Buckets are arrays that each stores a different range of elements
 Insertion sort is used to sort the buckets because its fast in small-sized arrays
 
 ## Bucket Calculation
+
 number of buckets = length of array
 size of buckets = (largest element - smallest element + 1) / length of array
 
