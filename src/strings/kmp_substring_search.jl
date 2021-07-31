@@ -5,15 +5,16 @@ Find if a string contain a given sub string with KMP Search, as an explanation m
 As such, a detailed explanation can be found at https://towardsdatascience.com/pattern-search-with-the-knuth-morris-pratt-kmp-algorithm-8562407dba5b
 
 
-Question
+Questions and answers
 1. Why KMP instead of naive search?
 - Given n = length of string , m = length of string P
-- Then naive search will have time complexity O(mn) to find all occurrences of pattern P in S
+- Then, the naive search will have time complexity O(mn) to find all occurrences of pattern P in S
 - However, knuth-morris-pratt (KMP) algorithm will have tim complexity of O(m+n) to find all occurrences of pattern P in S
-- Hence, KMP is more efficient than naive approach
+- Hence, KMP is more efficient than the naive approach
 
 
 Example
+
 ```julia
 GetIndexWithKMP("Hello I am Gervin", "Hello I am Gervin", false) # returns 1
 GetIndexWithKMP("ABABDABACDABABCABAB", "ABABCABAB", false) # returns 11
