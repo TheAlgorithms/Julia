@@ -11,6 +11,7 @@ number of buckets = length of array
 size of buckets = (largest element - smallest element + 1) / length of array
 
 ## Bucket Sort Steps
+
 1. Create an array of buckets
 2. Add each elements into its respective bucket
 3. Sort each non-empty bucket
