@@ -22,7 +22,6 @@ GetIndexWithKMP("SeEms Like IgNOrE CaSe Work", "seems like ignore case work", tr
 ```
 
 Contributed By:- [Gervin Fung](https://github.com/GervinFung)
-
 Note: This function will also allow ignoring cases also
 
 """
