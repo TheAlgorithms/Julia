@@ -30,10 +30,8 @@ export set_ch
 export Splay
 
 # Exports: knapsack
-export dp_complete_pack!
-export dp_zero_one_pack!
-export ga_complete_pack!
-export ga_zero_one_pack!
+export complete_pack!
+export zero_one_pack!
 
 # Exports: math
 export SIR # TODO: make the name lowercase if possible
