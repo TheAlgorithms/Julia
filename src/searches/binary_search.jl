@@ -26,12 +26,11 @@ A binary search halves the number of items to check with each iteration, so loca
 Bonus task:
 Implement keyword arguments by, lt and rev so that by specifies a transformation applied to all elements of the list, lt specifies a comparison and rev specifies if the list is ordered in reverse.
 """
-
 function binary_search(list, query; rev=false, lt=<, by=identity)
-    if issorted(list) || issorted(list, rev=true)
+    if issorted(list) || issorted(list; rev=true)
         low = !rev ? 1 : length(list)
         high = !rev ? length(list) : 1
-        middle(l, h) = round(Int, (l + h) // 2)
+        middle(l, h) = round(Int, (l + h)//2)
         query = by(query)
 
         while !rev ? low <= high : high <= low
@@ -47,5 +46,27 @@ function binary_search(list, query; rev=false, lt=<, by=identity)
 
     else
         throw(error("List not sorted, unable to search value"))
+    end
+end
+
+# See Issue https://github.com/TheAlgorithms/Julia/issues/34
+"""
+    binary_search(arr::AbstractArray{T,1}, l::T, r::T, x::T) where {T<:Real}
+
+The implementation of this binary Search is recursive and requires O(Log n) space. With iterative Binary Search, we need only O(1) space. Useful for the implementation of `exponential_search`.
+"""
+function binary_search(arr::AbstractArray{T,1}, l::T, r::T, x::T) where {T<:Real}
+    if (r >= l)
+        mid = Int(ceil(l + (r - l) / 2))
+        # println(mid)
+        if (arr[mid] == x)
+            return "Element present at index $mid"
+        elseif (arr[mid] > x)
+            binary_search(arr, l, mid - 1, x)
+        else
+            binary_search(arr, mid + 1, r, x)
+        end
+    else
+        return "Element not present in array"
     end
 end
