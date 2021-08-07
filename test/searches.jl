@@ -15,6 +15,7 @@
             arr = [1, 2, 3, 4, 13, 15, 20]
             # The next three values used are the result of the while-loop inside `exponential search`
             @test binary_search(arr, 4, 7, 4) == "Element present at index 4"
+            @test binary_search(arr, 4, 7, 10) == "Element not present in array"
         end
     end
 
@@ -31,8 +32,9 @@
         n = size(arr)[1]
         l = 1
         r = n
-
-        exponential_search(arr, x)
+        @test exponential_search(arr, 1) == "Element present at index 1"
+        @test exponential_search(arr, x) == "Element present at index 4"
+        @test exponential_search(arr, 100) == "Element not present in array"
     end
 
     @testset "Searches: Interpolation" begin
