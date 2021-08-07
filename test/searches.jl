@@ -1,18 +1,15 @@
 @testset "Searches" begin
     @testset "Searches: Binary" begin
-        @testset "binary search - first method" begin
             sample = [0, 23, 52, 552, 555, 602, 1004]
             reversed_sample = reverse(sample)
             unsorted_sample = [124, 53, 21, 163]
             binary_search(sample, 52)
             binary_search(reversed_sample, 52; rev=true)
             @test_throws ErrorException binary_search(unsorted_sample, 21)  # throws an error
-        end
-        @testset "binary search - second method" begin
+            # Second method used for exponential search
             arr = [1, 2, 3, 4, 13, 15, 20]
             # The next three values used are the result of the while-loop inside `exponential search`
             binary_search(arr, 4, 7, 4)
-        end
     end
 
     @testset "Searches: Linear" begin
