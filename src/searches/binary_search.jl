@@ -25,6 +25,8 @@ A binary search halves the number of items to check with each iteration, so loca
 
 Bonus task:
 Implement keyword arguments by, lt and rev so that by specifies a transformation applied to all elements of the list, lt specifies a comparison and rev specifies if the list is ordered in reverse.
+
+Contributed By:- [Soc Virnyl Estela](https://github.com/uncomfyhalomacro)
 """
 function binary_search(list, query; rev=false, lt=<, by=identity)
     if issorted(list) || issorted(list; rev=true)
@@ -54,6 +56,8 @@ end
     binary_search(arr::AbstractArray{T,1}, l::T, r::T, x::T) where {T<:Real}
 
 The implementation of this binary Search is recursive and requires O(Log n) space. With iterative Binary Search, we need only O(1) space. Useful for the implementation of `exponential_search`.
+
+Contributed By:- [Ash](https://github.com/ashwani-rathee)
 """
 function binary_search(arr::AbstractArray{T,1}, l::T, r::T, x::T) where {T<:Real}
     if (r >= l)
