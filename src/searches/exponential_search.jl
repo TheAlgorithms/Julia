@@ -1,4 +1,3 @@
-
 """
 	 exponential_search(arr::AbstractArray{T,1}, x::T) where {T <: Real}
 
@@ -18,7 +17,7 @@ It works better than Binary Search for bounded arrays, and also when the element
 function exponential_search(arr::AbstractArray{T,1}, x::T) where {T<:Real}
     n = size(arr)[1]
     if (arr[1] == x)
-        return "Elemenet present at index 1"
+        return "Element present at index 1"
     end
 
     i = 1
