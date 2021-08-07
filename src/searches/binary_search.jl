@@ -30,7 +30,7 @@ function binary_search(list, query; rev=false, lt=<, by=identity)
     if issorted(list) || issorted(list; rev=true)
         low = !rev ? 1 : length(list)
         high = !rev ? length(list) : 1
-        middle(l, h) = round(Int, (l + h) // 2)
+        middle(l, h) = round(Int, (l + h)//2)
         query = by(query)
 
         while !rev ? low <= high : high <= low
