@@ -34,7 +34,6 @@ export complete_pack!
 export zero_one_pack!
 
 # Exports: math
-export SIR # TODO: make the name lowercase if possible
 export abs_max
 export abs_min
 export abs_val
