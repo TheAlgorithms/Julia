@@ -75,7 +75,7 @@ plotly()  # use plotly for interactivity
 plot(sol, labels=["s" "e" "i" "r"], title="SEIR Dynamics", lw=2)
 
 # ╔═╡ 281b8f91-4a6f-469c-ab85-b5b8e0fb6a12
-
+areaplot(sol.t, sol', labels=["susceptible" "exposed" "infected" "removed"])
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -83,7 +83,6 @@ PLUTO_PROJECT_TOML_CONTENTS = """
 DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
 ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
-PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
@@ -92,7 +91,6 @@ Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 DifferentialEquations = "~6.18.0"
 ModelingToolkit = "~5.26.0"
 Plots = "~1.19.4"
-PlutoUI = "~0.7.9"
 Symbolics = "~1.4.2"
 """
 
@@ -952,12 +950,6 @@ git-tree-sha1 = "1e72752052a3893d0f7103fbac728b60b934f5a5"
 uuid = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
 version = "1.19.4"
 
-[[PlutoUI]]
-deps = ["Base64", "Dates", "InteractiveUtils", "JSON", "Logging", "Markdown", "Random", "Reexport", "Suppressor"]
-git-tree-sha1 = "44e225d5837e2a2345e69a1d1e01ac2443ff9fcb"
-uuid = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
-version = "0.7.9"
-
 [[PoissonRandom]]
 deps = ["Random", "Statistics", "Test"]
 git-tree-sha1 = "44d018211a56626288b5d3f8c6497d28c26dc850"
@@ -1229,11 +1221,6 @@ deps = ["CompilerSupportLibraries_jll", "Libdl", "OpenBLAS_jll", "Pkg", "SuiteSp
 git-tree-sha1 = "013ff4504fc1d475aa80c63b455b6b3a58767db2"
 uuid = "fb77eaff-e24c-56d4-86b1-d163f2edb164"
 version = "5.2.0+1"
-
-[[Suppressor]]
-git-tree-sha1 = "a819d77f31f83e5792a76081eee1ea6342ab8787"
-uuid = "fd094767-a336-5f1f-9728-57cf17d0bbfb"
-version = "0.2.0"
 
 [[SymbolicUtils]]
 deps = ["AbstractTrees", "ChainRulesCore", "Combinatorics", "ConstructionBase", "DataStructures", "DynamicPolynomials", "IfElse", "LabelledArrays", "LinearAlgebra", "MultivariatePolynomials", "NaNMath", "Setfield", "SparseArrays", "SpecialFunctions", "StaticArrays", "TimerOutputs"]
