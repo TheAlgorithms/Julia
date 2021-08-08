@@ -150,7 +150,6 @@ include("knapsack/greedy_algorithm.jl")
 # Includes: math
 include("math/abs.jl")
 include("math/area.jl")
-include("math/area_under_curve.jl")
 include("math/armstrong_number.jl")
 include("math/average_mean.jl")
 include("math/average_median.jl")
