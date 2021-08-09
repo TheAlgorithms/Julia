@@ -34,7 +34,6 @@ export complete_pack!
 export zero_one_pack!
 
 # Exports: math
-export SIR # TODO: make the name lowercase if possible
 export abs_max
 export abs_min
 export abs_val
@@ -172,7 +171,6 @@ include("math/permutation.jl")
 include("math/prime_check.jl")
 include("math/prime_factors.jl")
 include("math/sieve_of_eratosthenes.jl")
-include("math/sir_model.jl")
 include("math/sum_of_arithmetic_series.jl")
 include("math/sum_of_geometric_progression.jl")
 include("math/verlet.jl")
