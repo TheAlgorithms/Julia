@@ -104,6 +104,7 @@ export linear_search
 
 # Exports: sorts
 export BubbleSort!
+export BucketSort!
 export CountingSort!
 export ExchangeSort!
 export InsertionSort!
@@ -200,6 +201,7 @@ include("searches/linear_search.jl")
 
 # Includes: sorts
 include("sorts/bubble_sort.jl")
+include("sorts/bucket_sort.jl")
 include("sorts/insertion_sort.jl")
 include("sorts/merge_sort.jl")
 include("sorts/quick_sort.jl")

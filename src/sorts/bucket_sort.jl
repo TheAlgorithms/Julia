@@ -27,7 +27,7 @@ size of buckets = (largest element - smallest element + 1) / length of array
     bucket 2: 4 <= x < 6
     bucket 3: 6 <= x < 8
     bucket 4: 8 <= x <= 9
-4. The distribution of elements in the buckets = [3, 2][5][][9] 
+4. The distribution of elements in the buckets = [3, 2][5][][9]
 5. After sorting the elements each bucket = [2, 3][5][][9]
 6. Concatenate all elements = [2, 3, 5, 9]
 
@@ -62,10 +62,8 @@ function BucketSort!(arr::Vector{T}, l::Int=length(arr)) where T
                 idx = idx - 1
             end
 
-            bucket[idx] = val 
+            bucket[idx] = val
         end
     end
-    arr = vcat(buckets...)
+    copy!(arr, vcat(buckets...))
 end
-
-BucketSort!([1,2,3])
