@@ -112,7 +112,6 @@ export QuickSort!
 export SelectionSort!
 
 # Exports: statistics
-export OLSbeta # TODO: make the name lowercase if possible
 export pearson_correlation
 export variance
 
