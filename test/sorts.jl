@@ -1,6 +1,7 @@
 @testset "Sorts" begin
     sorts = [
         BubbleSort!,
+        BucketSort!,
         CountingSort!,
         ExchangeSort!,
         InsertionSort!,
@@ -8,7 +9,7 @@
         QuickSort!,
         SelectionSort!,
     ]
-    
+
     for f in sorts
         x = [3,5,1,4,2]
         f(x)

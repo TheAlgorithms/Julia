@@ -34,7 +34,6 @@ export complete_pack!
 export zero_one_pack!
 
 # Exports: math
-export SIR # TODO: make the name lowercase if possible
 export abs_max
 export abs_min
 export abs_val
@@ -104,6 +103,7 @@ export linear_search
 
 # Exports: sorts
 export BubbleSort!
+export BucketSort!
 export CountingSort!
 export ExchangeSort!
 export InsertionSort!
@@ -172,7 +172,6 @@ include("math/permutation.jl")
 include("math/prime_check.jl")
 include("math/prime_factors.jl")
 include("math/sieve_of_eratosthenes.jl")
-include("math/sir_model.jl")
 include("math/sum_of_arithmetic_series.jl")
 include("math/sum_of_geometric_progression.jl")
 include("math/verlet.jl")
@@ -200,6 +199,7 @@ include("searches/linear_search.jl")
 
 # Includes: sorts
 include("sorts/bubble_sort.jl")
+include("sorts/bucket_sort.jl")
 include("sorts/insertion_sort.jl")
 include("sorts/merge_sort.jl")
 include("sorts/quick_sort.jl")

@@ -224,22 +224,6 @@
         @test permutation(4,2) == 12
     end
 
-    # @testset "Math: SIR Model" begin
-    #     # TODO: implement tests
-
-    #     #initian conditions
-    #     p = [0.5/7900000.0,0.33]
-    #     u0 = [7900000.0,10.0,0.0]
-    #     tspan = (0.0,140.0)
-
-    #     #solve
-    #     sir = ODEProblem(SIR,u0,tspan,p)
-    #     sol = solve(sir)
-
-    #     #plot
-    #     plot(sol)
-    # end
-
     @testset "Math: Sum of Arithmetic progression" begin
         @test sum_ap(1, 1, 10) == 55.0
         @test sum_ap(1, 10, 100) == 49600.0
