@@ -208,7 +208,6 @@ include("sorts/counting_sort.jl")
 include("sorts/exchange_sort.jl")
 
 # Includes: statistics
-include("statistics/ordinary_least_squares.jl")
 include("statistics/pearson_correlation.jl")
 include("statistics/variance.jl")
 
