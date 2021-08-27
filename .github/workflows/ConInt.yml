@@ -1,0 +1,54 @@
+name: ContInt
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Run Latest Super-Linter
+        uses: github/super-linter@v4.6.2
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  test:
+    name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }} - ${{ github.event_name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ['1.6', 'nightly']
+        os: [ubuntu-latest, macOS-latest, windows-latest]
+        arch: [x64, x86]
+        threads:
+          - "4"
+        exclude:
+          - os: macOS-latest
+            arch: x86
+          - os: macOS-latest
+            version: 'nightly'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Run julia-actions/setup-julia@v1
+        uses: julia-actions/setup-julia@v1
+        with:
+          version: ${{ matrix.version }}
+          arch: ${{ matrix.arch }}
+
+      - name: Run julia-actions/julia-buildpkg@v1
+        uses: julia-actions/julia-buildpkg@v1
+
+      - name: Run julia-actions/julia-runtest@v1
+        uses: julia-actions/julia-runtest@v1
+        env:
+          JULIA_NUM_THREADS: ${{ matrix.threads }}
+
+      - name: Run julia-actions/julia-processcoverage@v1
+        uses: julia-actions/julia-processcoverage@v1
+
+      - name: Run codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1
