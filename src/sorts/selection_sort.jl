@@ -1,4 +1,4 @@
-function SelectionSort!(arr::Vector{T})where T
+function selection_sort!(arr::Vector{T})where T
     l=length(arr)
     for i in 1:l-1
         place=i

@@ -29,7 +29,7 @@ Assume the input as --> x=[-3, 1, -5, 0, -3]
 
 FINAL RESULT -->  [-5, -3, -3, 0, 1]                                                                                    
 """
-function CountingSort!(arr::Vector{T},l::Int=1,r::Int=length(arr))where T
+function counting_sort!(arr::Vector{T},l::Int=1,r::Int=length(arr))where T
     if l>=r
         return
     end

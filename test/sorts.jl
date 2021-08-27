@@ -1,13 +1,13 @@
 @testset "Sorts" begin
     sorts = [
-        BubbleSort!,
-        BucketSort!,
-        CountingSort!,
-        ExchangeSort!,
-        InsertionSort!,
-        MergeSort!,
-        QuickSort!,
-        SelectionSort!,
+        bubble_sort!
+        bucket_sort!
+        counting_sort!
+        exchange_sort!
+        insertion_sort!
+        merge_sort!
+        quick_sort!
+        selection_sort!
     ]
 
     for f in sorts
