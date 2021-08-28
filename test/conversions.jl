@@ -102,6 +102,7 @@
         @test weight_conversion("atomic-mass-unit", "ounce", 2) == 1.1714775914938915e-25
         @test weight_conversion("atomic-mass-unit", "carrat", 2) == 1.660540199e-23
         @test weight_conversion("atomic-mass-unit", "atomic-mass-unit", 2) == 1.999999998903455
+        @test_throws MethodError weight_conversion("inch", "meter")
     end
 
     @testset "Conversions: Temparature Conversions" begin

@@ -37,17 +37,25 @@ Interpolation Search in 1-D array
 Time Complexity: O(log2(log2 n))
 """
 function interpolation_search(arr::AbstractArray{T,1}, l::T, r::T, x::T) where {T <: Real}
-	n = size(arr)[1]
-	if (r >= l && x >= arr[l] && x <= arr[r])
-		mid = Int(ceil(l + (((x - arr[l]) * (r - l)) / (arr[r] - arr[l]))))
-		if (arr[mid] == x)
-			return "Element present at index $mid"
-		elseif (arr[mid] > x)
-			interpolation_search(arr, l, mid - 1, x)
-		else
-			interpolation_search(arr, mid + 1, r, x)
-		end
-	else
-		return "Element not present in array"
-	end
+
+    if (r >= l && x >= arr[l] && x <= arr[r])
+
+        mid = Int(ceil(l + (((x - arr[l]) * (r - l)) / (arr[r] - arr[l]))))
+
+        if (arr[mid] == x)
+            return mid
+
+        elseif (arr[mid] > x)
+            interpolation_search(arr, l, mid - 1, x)
+
+        else
+            interpolation_search(arr, mid + 1, r, x)
+
+        end
+
+    else
+        return -1
+
+    end
+
 end

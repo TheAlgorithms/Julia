@@ -38,13 +38,13 @@
     end
 
     @testset "Searches: Interpolation" begin
-        arr = [1, 2, 3, 4, 13, 15, 20]
-        x = 15
-        n = size(arr)[1]
+        arr = [1, 2, 4, 13, 15, 20]
         l = 1
-        r = n
+        r = length(arr)
 
-        interpolation_search(arr, l, r, x)
+        @test interpolation_search(arr, l, r, 20) == 6
+        @test interpolation_search(arr, l, r, 13) == 4
+        @test interpolation_search(arr, l, r, 8) == -1
     end
 
     @testset "Searches: Jump" begin
