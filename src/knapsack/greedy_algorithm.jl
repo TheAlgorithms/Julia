@@ -48,8 +48,8 @@ julia> complete_pack!(20,[1,2,9],[1,3,20])
 function complete_pack!(capacity::N, weights::V, values::V
 ) where {N <: Number,V <: AbstractVector}
     total_max_value = 0
-    while capacity > 0 && (length(weights)!=0 || length(values)!=0)
-        max_value, index = findmax(values)
+    while (length(weights)!=0 || length(values)!=0) && capacity > 0
+        max_value, index = findmax(values) # get the highest value and index in the vector
         while capacity >= weights[index] 
             total_max_value += max_value 
             capacity -= weights[index]

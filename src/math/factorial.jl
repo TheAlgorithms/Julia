@@ -33,9 +33,9 @@ Finds factorial of anumber using recursive method
 factorial_recursive(5)      # returns 120
 ```
 # Reference
-- factorial of a positive integer -- https://en.wikipedia.org/wiki/Factorial
+- positive integer factorialization --> https://en.wikipedia.org/wiki/Factorial
 
-Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
+Contributed By:- [Rratic](https://github.com/Rratic) and [Ashwani Rathee](https://github.com/ashwani-rathee)
 """
 function factorial_recursive(n::N)::BigInt where N<:Integer
     if n < 0
