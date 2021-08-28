@@ -156,6 +156,12 @@
         @test_throws ErrorException  factorial_recursive(-1)
     end
 
+    @testset "Math: GCD Euclid Algorithm" begin
+        @test gcd_euclid_algorithm([13, 48]) == 1
+        @test gcd_euclid_algorithm([2, 4, 6, 8, 16]) == 2
+        @test gcd_euclid_algorithm([30, 12, 6]) == 6
+    end
+
     @testset "Math: Krishnamurthy Number" begin
         @test krishnamurthy(145) == true
         @test krishnamurthy(240) == false
