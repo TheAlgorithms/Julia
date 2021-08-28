@@ -2,13 +2,13 @@
 
 We're glad you want to contribute to the Julia repository! This document describes how to become a contributor to this repository. This will help you add new algorithms, correct issues, and adding new fixes.
 
-### Writing the Julian way
+## Writing the Julian way
 
 Although there is no systematic way to write Julia, some aspects of the language contribute to its popularity. As such, we invite our contributors to write and possibly write their contributions in an easy-to-read fashion. Examples of the existing algorithms within this repository and many others, starting with the Julia language repository itself contains a plethora of examples.
 
 Some emblematic features of the languages follow.
 
-##### Multiple dispatch
+### Multiple dispatch
 
 One key feature of Julia is that it is possible to dispatch a function to different methods according to its signature, the number, and the type of its arguments.\
 Assume we want to write two versions of the `best_algo_ever` for floats and integers. One could create two functions: `best_algo_ever_float` and `best_algo_ever_int`, or, preferably use multiple dispatches.
@@ -52,65 +52,67 @@ We invite our contributors to detail those improvements in the PR and the docume
 New contributors should only have one PR per algorithm. We assume you have basic knowledge using the [Git](https://git-scm.org) software.\
 To get started, [fork](https://help.github.com/articles/fork-a-repo) this repository, then clone the repository through Git.
 
-```
-$ git clone https://github.com/<Your username>/Julia
+```markdown
+git clone https://github.com/<Your username>/Julia
 ```
 
 You can clone this repository using GitHub CLI by running the following command:
 
-```
-$ gh repo clone <Your username>/Julia
+```markdown
+gh repo clone <Your username>/Julia
 ```
 
 within Julia:
-```
+```markdown
 ] dev https://github.com/TheAlgorithms/Julia
 ```
 
 The source folder when cloning the repository within Julia is located at `$HOME/.julia/dev/TheAlgorithms/Julia`.\
 To keep your forked repository up to date, set up the `upstream` remote to pull in new changes.
 
-```
-$ git remote add upstream https://github.com/TheAlgorithms/Julia.git
-$ git pull --rebase upstream main
+```markdown
+git remote add upstream https://github.com/TheAlgorithms/Julia.git
+git pull --rebase upstream main
 ```
 
 If you used GitHub CLI, there is already an `upstream` remote, so to keep your repository updated just run
 
-```
-$ git pull --rebase upstream main
+```markdown
+git pull --rebase upstream main
 ```
 
 Always create a new branch when adding a new algorithm (or any contribution):
 
-```
-$ git checkout -b <name of issue or algorithm> main
-$ # do some work
-$ git push -u origin <name of issue or algorithm>
+```markdown
+git checkout -b <name of issue or algorithm> main
+# do some work
+git push -u origin <name of issue or algorithm>
 ```
 
-It is not advised to modify the `main` branch of your repository. Any mistake can lead to inconsistent history. You must always create a new branch for any changes you might want to add. Once those changes are merged upstream, you can merge those changes to `main` either by clicking the "fetching upstream" button on your remote repository from GitHub or using the `git pull --rebase upstream main` on your local repository to keep your history on track from upstream.
+It is not advised to modify the `main` branch of your repository. Any mistake can lead to inconsistent history.
+You must always create a new branch for any changes you might want to add. Once those changes are merged upstream, you can merge those changes to `main` either by clicking the "fetching upstream" button on your remote repository from GitHub or using the `git pull --rebase upstream main` on your local repository to keep your history on track from upstream.
 
 ### Usual steps in adding a new algorithm
 
 Put the algorithm in what you think is the right category in the `src` folder. Don't worry, the maintainers and other contributors will assist you and discuss on where to put it. For example, if it involves string manipulation, you should create a new file in `src/strings/<name of algorithm>`.
 
-Add documentation in the code, it will be build automatically on the github repository. Documentation is great for people who want to check out the repo and read the code. It will give them an idea on how it works. We provide a template 
+Add documentation in the code, it will be build automatically on the github repository. Documentation is great for people who want to check out the repo and read the code. It will give them an idea on how it works. We provide a template.
 
-Add tests and fix any issues. Adding tests to your algorithm will let us confirm that it works. Without tests, we cannot verify the function of the algorithm or if it works. To add your test, append it with other existing tests (but keep it separate) in the file named after the category within the `test` folder. For example, you should append the tests for `sieve of erastosthenes` with the other tests in `test/math.jl`.
+Add tests and fix any issues. Adding tests to your algorithm will let us confirm that it works.
+Without tests, we cannot verify the function of the algorithm or if it works. To add your test, append it with other existing tests (but keep it separate) in the file named after the category within the `test` folder. For example, you should append the tests for `sieve of erastosthenes` with the other tests in `test/math.jl`.
 
 If you have changes you need to commit, run the following commands:
 
-```
-$ git add <file>
-$ git commit -m "<your message>"
+```markdown
+git add <file>
+git commit -m "<your message>"
 ```
 
 To synchronize with the remote branch (pull command is optional but recommended if other contributors are participating to the changes)
 
-```
-$ git pull
-$ git push
+```markdown
+git pull
+git push
 ```
 
 A pull request (PR) can be opened on TheAlgorithms/Julia as soon as any new commit is pushed online. Not ready to be merged work should be proposed as draft PR, and are very common to obtain feedback from other users.

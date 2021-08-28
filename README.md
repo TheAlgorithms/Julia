@@ -8,7 +8,7 @@
 [![codecov](https://codecov.io/gh/TheAlgorithms/Julia/branch/main/graph/badge.svg)](https://codecov.io/gh/TheAlgorithms/Julia)
 [![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/TheAlgorithms/donate)
 
-### Algorithms implemented in Julia (for educational purposes)
+## Algorithms implemented in Julia (for educational purposes)
 
 These implementations are for learning purposes. The implementations may be less efficient than the Julia standard library.
 
