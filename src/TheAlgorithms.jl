@@ -102,14 +102,14 @@ export jump_search
 export linear_search
 
 # Exports: sorts
-export BubbleSort!
-export BucketSort!
-export CountingSort!
-export ExchangeSort!
-export InsertionSort!
-export MergeSort!
-export QuickSort!
-export SelectionSort!
+export bubble_sort!
+export bucket_sort!
+export counting_sort!
+export exchange_sort!
+export insertion_sort!
+export merge_sort!
+export quick_sort!
+export selection_sort!
 
 # Exports: statistics
 export pearson_correlation
@@ -118,7 +118,7 @@ export variance
 # Exports: strings
 export is_palindrome
 export detect_anagrams
-export ContainSubstringWithKMP
+export contain_substring_with_kmp
 
 # Exports: scheduling
 export fcfs

@@ -39,7 +39,7 @@ BucketSort!([3, 5, 2, 9]) # returns [2, 3, 5, 9]
 Contributed By:- [Ming Liang](https://github.com/DrakonDarquesse)
 """
 
-function BucketSort!(arr::Vector{T}, l::Int=length(arr)) where T
+function bucket_sort!(arr::Vector{T}, l::Int=length(arr)) where T
     if l==0
         return
     end

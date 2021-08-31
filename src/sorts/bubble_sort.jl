@@ -1,4 +1,4 @@
-function BubbleSort!(arr::Vector{T})where T
+function bubble_sort!(arr::Vector{T})where T
     l=length(arr)-1
     while true
         flag=true
