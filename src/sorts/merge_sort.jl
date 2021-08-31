@@ -1,11 +1,11 @@
-function MergeSort!(arr::Vector{T},l::Int=1,r::Int=length(arr),temp::Vector{T}=Vector{T}(undef,r-l+1))where T
+function merge_sort!(arr::Vector{T},l::Int=1,r::Int=length(arr),temp::Vector{T}=Vector{T}(undef,r-l+1))where T
     if l>=r
         return
     end
     # split
     mid=(l+r)>>1
-    MergeSort!(arr,l,mid)
-    MergeSort!(arr,mid+1,r)
+    merge_sort!(arr,l,mid)
+    merge_sort!(arr,mid+1,r)
     # merge
     l_pos=l # pos of the left part
     r_pos=mid+1 # pos of the right part
