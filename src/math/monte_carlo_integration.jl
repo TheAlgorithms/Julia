@@ -23,7 +23,7 @@ julia> monte_carlo_integration(x -> sin(x), 0, pi, 1000) # integrate the sin fun
 -https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/monte-carlo-methods-in-practice/monte-carlo-integration
 -https://kingaa.github.io/sbied/pfilter/monteCarlo.html
 
-# Contributors 
+# Contributors
 - [AugustoCL](https://github.com/AugustoCL)
 - [Ved Mahajan](https://github.com/Ved-Mahajan)
 """
