@@ -164,10 +164,10 @@
         @test_throws ErrorException krishnamurthy(-1)
     end
 
-	  @testset "Math: Monte Carlo Integration" begin
-		    @test isapprox(monte_carlo_integration(x->3*x^2,100000,(0,1)),1,atol = 0.01)
-		    @test isapprox(monte_carlo_integration(x->sin(x),1000,(0,pi)),2,atol = 0.1)
-	  end
+    @testset "Math: Monte Carlo Integration" begin
+        @test isapprox(monte_carlo_integration(x -> 3*x^2, 100000, (0,1)), 1, atol = 0.01)
+        @test isapprox(monte_carlo_integration(x -> sin(x),  1000, (0,π)), 2, atol = 0.1)
+    end
 
     @testset "Math: Prime Check" begin
         @test prime_check(2) == true
@@ -222,6 +222,12 @@
         @test permutation(12,3) == 1320
         @test permutation(5,5) == 120
         @test permutation(4,2) == 12
+    end
+    
+    @testset "Math: Riemman Sum Integration" begin
+        @test riemman_integration(x -> x, 1, 3, 1_000, :midpoint) == 4.0
+        @test riemman_integration(x -> x, 1, 3, 1_000, :left) == 3.5
+        @test riemman_integration(x -> x, 1, 3, 1_000, :right) == 4.5
     end
 
     @testset "Math: Sum of Arithmetic progression" begin
