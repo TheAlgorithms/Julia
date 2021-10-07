@@ -20,7 +20,7 @@ true
 -https://personal.math.ubc.ca/~pwalls/math-python/integration/trapezoid-rule/
 -https://en.wikipedia.org/wiki/Trapezoidal_rule
 
-# Contributor: [AugustoCL](https://github.com/AugustoCL)
+# Contributed By:- [AugustoCL](https://github.com/AugustoCL)
 """
 function trapezoid_integration(f::Function, a::Real, b::Real, n::Int)
     # width of the trapezoids
