@@ -164,10 +164,10 @@
         @test_throws ErrorException krishnamurthy(-1)
     end
 
-	  @testset "Math: Monte Carlo Integration" begin
-		    @test isapprox(monte_carlo_integration(x->3*x^2,100000,(0,1)),1,atol = 0.01)
-		    @test isapprox(monte_carlo_integration(x->sin(x),1000,(0,pi)),2,atol = 0.1)
-	  end
+	@testset "Math: Monte Carlo Integration" begin
+        @test isapprox(monte_carlo_integration(x -> 3*x^2, 100000, (0,1)), 1, atol = 0.01)
+        @test isapprox(monte_carlo_integration(x -> sin(x),  1000, (0,π)), 2, atol = 0.1)
+    end
 
     @testset "Math: Prime Check" begin
         @test prime_check(2) == true
@@ -244,6 +244,11 @@
         @test eratosthenes(2) == [2]
         @test eratosthenes(1) == Int64[] # No prime number less that 1, so it should return empty array.
     end
+
+    @testset "Math: Trapezoid Integration" begin
+        @test isapprox(trapezoid_integration(x->3*x^2, 0, 1, 100000),1,atol = 0.01)
+        @test isapprox(trapezoid_integration(x->sin(x), 0, pi, 1000),2,atol = 0.1)
+	end
 
     @testset "Math: Volume of Various Shapes" begin
         @test vol_cube(1) == 1
