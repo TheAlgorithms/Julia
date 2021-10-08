@@ -23,7 +23,7 @@ true
 # References:
 - https://personal.math.ubc.ca/~pwalls/math-python/integration/simpsons-rule/
 
-# Contributor: [AugustoCL](https://github.com/AugustoCL)
+# Contributed By:- [AugustoCL](https://github.com/AugustoCL)
 """
 function simpsons_integration(f::Function, a::Real, b::Real, n::Int)
     # width of the segments
@@ -41,3 +41,4 @@ function simpsons_integration(f::Function, a::Real, b::Real, n::Int)
     # approximate integral of f
     return (Δₓ / 3) * Σ
 end
+
