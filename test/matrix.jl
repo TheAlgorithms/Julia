@@ -42,14 +42,19 @@
     @testset "Matrix: Gauss-Jordan Elimination" begin
         M1 = [1 2 3; 4 5 6];
         M2 = [1 2 3; 4 8 12];
-        M3 = [1 4 8  1  4
+        M3 = [1 2; 4 8];
+        M4 = [1 4 8  1  4
               4 5 6  8  11
               1 3 2  4  8
               4 5 67 23 0];
-        M4 = Float64[1 4 8  1  4
+        M5 = Float64[1 4 8  1  4
                      4 5 6  8  11
                      1 3 2  4  8
                      4 5 67 23 0];
+        M6 = [1 4 8
+              4 0 6
+              1 3 2];
+        
         R3 =  [ 1.0  0.0  0.0  0.0  -1.10637
                 0.0  1.0  0.0  0.0   1.89743
                 0.0  0.0  1.0  0.0  -0.444913
@@ -57,9 +62,10 @@
 
         @test gauss_jordan(M1) == Float64[1 0 -1; 0 1 2]
         @test_throws AssertionError gauss_jordan(M2)
-        @test isapprox(gauss_jordan(M3), R3, atol=1e-5)
+        @test_throws AssertionError gauss_jordan(M3)
         @test isapprox(gauss_jordan(M4), R3, atol=1e-5)
+        @test isapprox(gauss_jordan(M5), R3, atol=1e-5)
+        @test isapprox(gauss_jordan(M6), Float64[1 0 0; 0 1 0; -0 -0  1], atol=1e-5)
     end
 
 end
-
