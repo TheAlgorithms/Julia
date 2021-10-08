@@ -41,4 +41,3 @@ function simpsons_integration(f::Function, a::Real, b::Real, n::Int)
     # approximate integral of f
     return (Δₓ / 3) * Σ
 end
-
