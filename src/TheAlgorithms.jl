@@ -86,6 +86,7 @@ export vol_circular_cylinder
 
 # Exports: matrix
 export determinant
+export gauss_jordan
 export lu_decompose
 export rotation_matrix
 
@@ -179,6 +180,7 @@ include("math/volume.jl")
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl
 include("matrix/determinant.jl")
+include("matrix/gauss_jordan_elim.jl")
 include("matrix/rotation-matrix.jl")
 
 # Includes: project-rosalind

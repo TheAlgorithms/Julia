@@ -50,7 +50,6 @@
                      4 5 6  8  11
                      1 3 2  4  8
                      4 5 67 23 0];
-
         R3 =  [ 1.0  0.0  0.0  0.0  -1.10637
                 0.0  1.0  0.0  0.0   1.89743
                 0.0  0.0  1.0  0.0  -0.444913
@@ -61,4 +60,5 @@
         @test isapprox(gauss_jordan(M3), R3, atol=1e-5)
         @test isapprox(gauss_jordan(M4), R3, atol=1e-5)
     end
+
 end

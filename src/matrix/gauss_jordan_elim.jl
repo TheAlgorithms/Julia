@@ -1,5 +1,3 @@
-using LinearAlgebra: det
-
 function _swap_rows(A::AbstractMatrix{NB}, i::T, nlines::T) where {T<:Int, NB<:Number}
     for n ∈ (i+1):nlines        # iterate in lines below to check if could be swap
         if A[n,i] ≠ 0.0         # condition to swap row
@@ -59,16 +57,3 @@ function gauss_jordan(A::AbstractMatrix{T}) where {T<:Number}
 
     return A
 end
-
-### example of the logic in the for-loops 
-# A[1,:] = A[1,:]./ A[1,1]
-# A[2,:] = A[2,:] - A[1,:]*A[2,1]
-# A[3,:] = A[3,:] - A[1,:]*A[3,1]
-
-# A[2,:] = A[2,:]./ A[2,2]
-# A[1,:] = A[1,:] - A[2,:].*A[1,2]
-# A[3,:] = A[3,:] - A[2,:].*A[3,2]
-
-# A[3,:] = A[3,:]./ A[3,3]
-# A[1,:] = A[1,:] - A[3,:].*A[1,3]
-# A[2,:] = A[2,:] - A[3,:].*A[2,3]
