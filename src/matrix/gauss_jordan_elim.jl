@@ -27,7 +27,7 @@ julia> @test gauss_jordan(M1) == [1 0 -1; 0 1 2]        # Test Passed
 julia> @test_throws AssertionError gauss_jordan(M2)     # Test Passed - Thrown: AssertionError
 ```     
 
-# Contributor: [AugustoCL](https://github.com/AugustoCL)
+# Contributed By:- [AugustoCL](https://github.com/AugustoCL)
 """
 function gauss_jordan(A::AbstractMatrix{T}) where {T<:Number}
     
