@@ -62,3 +62,4 @@
         @test isapprox(gauss_jordan(M4), R3, atol=1e-5)
     end
 end
+
