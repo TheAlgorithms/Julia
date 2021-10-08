@@ -225,9 +225,10 @@
     end
     
     @testset "Math: Riemman Sum Integration" begin
-        @test riemman_integration(x -> x, 1, 3, 1_000, :midpoint) == 4.0
-        @test riemman_integration(x -> x, 1, 3, 1_000, :left) == 3.5
-        @test riemman_integration(x -> x, 1, 3, 1_000, :right) == 4.5
+        @test isapprox(riemman_integration(x -> x, 1, 3, 1_000, :midpoint), 4.0, atol=0.01)
+        @test isapprox(riemman_integration(x -> x, 1, 3, 1_000, :left), 4.0, atol=0.01)
+        @test isapprox(riemman_integration(x -> x, 1, 3, 1_000, :right), 4.0, atol=0.01)
+        @test_throws ArgumentError riemman_integration(x -> x, 1, 3, 1_000, :wrongargument)
     end
 
     @testset "Math: Sum of Arithmetic progression" begin
