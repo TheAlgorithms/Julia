@@ -246,8 +246,8 @@
     end
 
     @testset "Math: Trapezoid Integration" begin
-        @test isapprox(trapezoid_integration(x->3*x^2, 0, 1, 100000),1,atol = 0.01)
-        @test isapprox(trapezoid_integration(x->sin(x), 0, pi, 1000),2,atol = 0.1)
+        @test isapprox(trapezoid_integration(x -> 3*x^2, 0, 1, 100000), 1, atol = 0.01)
+        @test isapprox(trapezoid_integration(x -> sin(x), 0, pi, 1000), 2, atol = 0.1)
 	end
 
     @testset "Math: Volume of Various Shapes" begin
@@ -282,4 +282,3 @@
    end
 
 end
-
