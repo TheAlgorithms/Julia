@@ -75,6 +75,7 @@ export sum_gp
 export surfarea_cube
 export surfarea_sphere
 export trapazoidal_area
+export trapezoid_integration
 export verlet_integration
 export vol_cube
 export vol_cuboid
@@ -175,6 +176,7 @@ include("math/sieve_of_eratosthenes.jl")
 include("math/simpsons_integration.jl")
 include("math/sum_of_arithmetic_series.jl")
 include("math/sum_of_geometric_progression.jl")
+include("math/trapezoid_integration.jl")
 include("math/verlet.jl")
 include("math/volume.jl")
 
