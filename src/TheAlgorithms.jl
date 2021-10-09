@@ -69,6 +69,7 @@ export perfect_square
 export permutation
 export prime_check
 export prime_factors
+export riemman_integration
 export simpsons_integration
 export sum_ap
 export sum_gp
@@ -172,6 +173,7 @@ include("math/perfect_square.jl")
 include("math/permutation.jl")
 include("math/prime_check.jl")
 include("math/prime_factors.jl")
+include("math/riemman_integration.jl")
 include("math/sieve_of_eratosthenes.jl")
 include("math/simpsons_integration.jl")
 include("math/sum_of_arithmetic_series.jl")
