@@ -1,4 +1,4 @@
-function QuickSort!(arr::Vector{T},l::Int=1,r::Int=length(arr))where T
+function quick_sort!(arr::Vector{T},l::Int=1,r::Int=length(arr))where T
     if l>=r
         return
     end
@@ -16,6 +16,6 @@ function QuickSort!(arr::Vector{T},l::Int=1,r::Int=length(arr))where T
             r_pos-=1
         end
     end
-    if l<r_pos QuickSort!(arr,l,r_pos) end
-    if l_pos<r QuickSort!(arr,l_pos,r) end
+    if l<r_pos quick_sort!(arr,l,r_pos) end
+    if l_pos<r quick_sort!(arr,l_pos,r) end
 end

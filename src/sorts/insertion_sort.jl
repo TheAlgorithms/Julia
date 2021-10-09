@@ -1,4 +1,4 @@
-function InsertionSort!(arr::Vector{T})where T
+function insertion_sort!(arr::Vector{T})where T
     for i in 1:length(arr)-1
         temp=arr[i+1]
         j=i

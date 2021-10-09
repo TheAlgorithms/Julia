@@ -1,15 +1,14 @@
-function BubbleSort!(arr::Vector{T})where T
-    l=length(arr)-1
-    while true
-        flag=true
-        for i in 1:l
-            if arr[i]>arr[i+1]
-                flag=false
-                temp=arr[i]
-                arr[i]=arr[i+1]
-                arr[i+1]=temp
+function bubble_sort!(array::Vector{T}) where {T}
+    for i = 1:length(array)
+        flag = false
+        for j = 1:(length(array)-i)
+            if array[j] > array[j+1]
+                array[j], array[j+1] = array[j+1], array[j]
             end
         end
-        if flag return end
+
+        if flag
+            return
+        end
     end
 end

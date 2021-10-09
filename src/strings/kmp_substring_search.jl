@@ -36,7 +36,7 @@ const NO_SUBSTRING_INDEX = 0
 # Should be convenient for others as most programming language use 0 as first index
 const JULIA_FIRST_INDEX = 1
 
-function CreateSuffixArray(pattern_length::Int, sub_string::String)::Vector{Int}
+function create_suffic_array(pattern_length::Int, sub_string::String)::Vector{Int}
 
     # Longest Proper Prefix which is Suffix array
     lps::Vector{Int} = ones(Int, pattern_length)
@@ -63,7 +63,7 @@ function CreateSuffixArray(pattern_length::Int, sub_string::String)::Vector{Int}
 end
 
 # this function will be used to obtain the index which the substring was found
-function GetIndexWithKMP(string::String, sub_string::String, ignore_case::Bool)::Int
+function get_index_with_kmp(string::String, sub_string::String, ignore_case::Bool)::Int
 
     string = ignore_case ? lowercase(string) : string
     sub_string = ignore_case ? lowercase(sub_string) : sub_string
@@ -71,7 +71,7 @@ function GetIndexWithKMP(string::String, sub_string::String, ignore_case::Bool):
     string_length::Int = length(string)
     substring_length::Int = length(sub_string)
 
-    lps::Vector{Int} = CreateSuffixArray(substring_length, sub_string)
+    lps::Vector{Int} = create_suffic_array(substring_length, sub_string)
 
     # likewise, 1 is the first index, unlike others, where 0 is the first index
     i::Int = JULIA_FIRST_INDEX
@@ -94,6 +94,6 @@ function GetIndexWithKMP(string::String, sub_string::String, ignore_case::Bool):
 end
 
 # optional function that returns boolean if string does contain the sub-string given
-function ContainSubstringWithKMP(string::String, sub_string::String, ignore_case::Bool)::Bool
-    return GetIndexWithKMP(string, sub_string, ignore_case) != NO_SUBSTRING_INDEX
+function contain_substring_with_kmp(string::String, sub_string::String, ignore_case::Bool)::Bool
+    return get_index_with_kmp(string, sub_string, ignore_case) != NO_SUBSTRING_INDEX
 end

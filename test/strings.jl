@@ -31,29 +31,29 @@
         # contain sub string
         string = "seems like kmp search works"
         sub_string = "seems like kmp search"
-        @test ContainSubstringWithKMP(string, sub_string, false) == true
+        @test contain_substring_with_kmp(string, sub_string, false) == true
         string = "ABABDABACDABABCABAB"
         sub_string = "ABABCABAB"
-        @test ContainSubstringWithKMP(string, sub_string, false) == true
+        @test contain_substring_with_kmp(string, sub_string, false) == true
         string = "abcxabcdabcdabcy"
         sub_string = "abcdabcy"
-        @test ContainSubstringWithKMP(string, sub_string, false) == true
+        @test contain_substring_with_kmp(string, sub_string, false) == true
         # does not contain sub string
         string = "ABABDABACDABABCABAB"
         sub_string = "X"
-        @test ContainSubstringWithKMP(string, sub_string, false) == false
+        @test contain_substring_with_kmp(string, sub_string, false) == false
         string = "abcxabcdabcdabcy"
         sub_string = "so this"
-        @test ContainSubstringWithKMP(string, sub_string, false) == false
+        @test contain_substring_with_kmp(string, sub_string, false) == false
         # ignore cases
         string = "SeEms Like IgNOrE CaSe Work"
         sub_string = "seems like ignore case work"
-        @test ContainSubstringWithKMP(string, sub_string, true) == true
+        @test contain_substring_with_kmp(string, sub_string, true) == true
         string = "123 456 AbC"
         sub_string = "123 456 ABC"
-        @test ContainSubstringWithKMP(string, sub_string, true) == true
+        @test contain_substring_with_kmp(string, sub_string, true) == true
         string = "abcdefg"
         sub_string = "ABCDEFG"
-        @test ContainSubstringWithKMP(string, sub_string, true) == true
+        @test contain_substring_with_kmp(string, sub_string, true) == true
     end
 end
