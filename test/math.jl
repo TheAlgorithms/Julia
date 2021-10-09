@@ -164,10 +164,10 @@
         @test_throws ErrorException krishnamurthy(-1)
     end
 
-	@testset "Math: Monte Carlo Integration" begin
+    @testset "Math: Monte Carlo Integration" begin
         @test isapprox(monte_carlo_integration(x -> 3*x^2, 0, 1, 100000), 1, atol = 0.01)
         @test isapprox(monte_carlo_integration(x -> sin(x), 0, pi, 1000), 2, atol = 0.1)
-	end
+    end
 
     @testset "Math: Prime Check" begin
         @test prime_check(2) == true
@@ -223,6 +223,13 @@
         @test permutation(5,5) == 120
         @test permutation(4,2) == 12
     end
+    
+    @testset "Math: Riemman Sum Integration" begin
+        @test isapprox(riemman_integration(x -> x, 1, 3, 1_000, :midpoint), 4.0, atol=0.01)
+        @test isapprox(riemman_integration(x -> x, 1, 3, 1_000, :left), 4.0, atol=0.01)
+        @test isapprox(riemman_integration(x -> x, 1, 3, 1_000, :right), 4.0, atol=0.01)
+        @test_throws ArgumentError riemman_integration(x -> x, 1, 3, 1_000, :wrongargument)
+    end
 
     @testset "Math: Sum of Arithmetic progression" begin
         @test sum_ap(1, 1, 10) == 55.0
@@ -255,6 +262,7 @@
         @test isapprox(simpsons_integration(x -> sin(x), 0, pi, 1000), 2, atol = 0.1)
         @test simpsons_integration(x -> 4 / (1 + x^2), 0, 1, 100_000) ≈ pi
     end
+    
     @testset "Math: Volume of Various Shapes" begin
         @test vol_cube(1) == 1
         @test vol_cube(3) == 27
