@@ -8,34 +8,34 @@ Because the region filled by the small shapes is usually not exactly the same sh
 This error can be reduced by dividing up the region more finely, using smaller and smaller shapes. 
 As the shapes get smaller and smaller, the sum approaches the Riemann integral.
 
-This function takes 5 outputs:
-    - `f`: the function to integrate. (at the momment only single variable is suported)
-    - `a`: Start of the integration limit.
-    - `b`: End of the integration limit.
-    - `n`: Number of points to sample. (as n increase, error decrease)
-    - `approx`: Indicate the method of approximation (midpoint, left or right)
+# Arguments
+- `f`: the function to integrate. (at the momment only single variable is suported)
+- `a`: Start of the integration limit.
+- `b`: End of the integration limit.
+- `n`: Number of points to sample. (as n increase, error decrease)
+- `approx`: Indicate the method of approximation (midpoint, left or right)
 
-Examples:
+# Examples
 ```julia
-julia> riemman_integration(x -> x, 1, 3, 1_000, :midpoint)    # 4.0
-julia> riemman_integration(x -> x, 1, 3, 1_000, :left)        # 3.5
-julia> riemman_integration(x -> x, 1, 3, 1_000, :right)       # 4.5
-julia> riemman_integration(x -> 3*x^2, 0, 1, 100000, :right)  # integrate a polynomial
-1.0000150001999926
+julia> riemman_integration(x -> x, 1, 3, 1_000, :midpoint)  # 4.0
+julia> riemman_integration(x -> x, 1, 3, 1_000, :left)      # 3.997997997997998
+julia> riemman_integration(x -> x, 1, 3, 1_000, :right)     # 4.002002002002002
+julia> riemman_integration(x -> 3*x^2, 0, 1, 100000)        # integrate a polynomial
+0.9999999999750021
 julia> riemman_integration(x->sin(x), 0, pi, 1000)          # integrate the sin function
 2.0000008241146774
 ```
 
-Refereces:
--https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-2/a/riemann-sums-review
--https://abel.math.harvard.edu/~knill/teaching/math1a_2011/handouts/40-numerical.pdf
--https://en.wikipedia.org/wiki/Riemann_integral
+# Refereces
+- https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-2/a/riemann-sums-review
+- https://abel.math.harvard.edu/~knill/teaching/math1a_2011/handouts/40-numerical.pdf
+- https://en.wikipedia.org/wiki/Riemann_integral
 
 Contributed By:- [AugustoCL](https://github.com/AugustoCL)
 """
 function riemman_integration(f::Function, a::Real, b::Real, n::Int, approx::Symbol = :midpoint)
     # width of the rectangles
-    Δₓ = (b - a) / (n - 1)
+    Δₓ = (b - a) / n
 
     # methods of approximation (:midpoint, :left, :right)
     if approx == :midpoint
