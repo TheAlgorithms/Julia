@@ -45,8 +45,8 @@ function gauss_jordan(A::AbstractMatrix{T}) where {T<:Number}
     # execute the gauss-jordan elimination
     for i ∈ axes(A, 1)
         (A[i,i] == 0.0) && map([A,i,m]) do (x,y,z)
-            for n ∈ (y+1):z                             # check if need swap rows
-                if x[n,y] ≠ 0.0
+            for n ∈ (y+1):z                             # check if need swap rows -> this came from function `_swap_rows` (commented above)
+                if x[n,y] ≠ 0.0                         # Since it is used only once, an anonymous function with do-block should suffice.
                     L = copy(x[y,:])
                     x[y,:] = x[n,:]
                     x[n,:] = L
