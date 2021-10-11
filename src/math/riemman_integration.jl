@@ -31,6 +31,7 @@ julia> riemman_integration(x->sin(x), 0, pi, 1000)          # integrate the sin 
 - https://abel.math.harvard.edu/~knill/teaching/math1a_2011/handouts/40-numerical.pdf
 - https://en.wikipedia.org/wiki/Riemann_integral
 
+
 Contributed By:- [AugustoCL](https://github.com/AugustoCL)
 """
 function riemman_integration(f::Function, a::Real, b::Real, n::Int, approx::Symbol = :midpoint)
