@@ -1,5 +1,5 @@
 """
-    monte_carlo_integration(f::Function, a::T, b::S, n::Int) where {T<:Number, S<:Number}
+    monte_carlo_integration(f::Function, a::Real, b::Real, n::Int)
 
 Monte carlo integration is a very easy and scalable way to do multidimentional integrals.
 However, only single variable integrals are considered.
@@ -20,8 +20,8 @@ julia> monte_carlo_integration(x -> sin(x), 0, pi, 1000) # integrate the sin fun
 ```
 
 # References
--https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/monte-carlo-methods-in-practice/monte-carlo-integration
--https://kingaa.github.io/sbied/pfilter/monteCarlo.html
+- https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/monte-carlo-methods-in-practice/monte-carlo-integration
+- https://kingaa.github.io/sbied/pfilter/monteCarlo.html
 
 # Contributors
 - [AugustoCL](https://github.com/AugustoCL)
