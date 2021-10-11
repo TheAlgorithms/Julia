@@ -1,15 +1,3 @@
-# function _swap_rows(A::AbstractMatrix{NB}, i::T, nlines::T) where {T<:Int, NB<:Number}
-    # for n ∈ (i+1):nlines        # iterate in lines below to check if could be swap
-        # if A[n,i] ≠ 0.0         # condition to swap row
-            # L = copy(A[i,:])    # copy line to swap
-            # A[i,:] = A[n,:]     # swap occur
-            # A[n,:] = L
-            # break
-        # end
-    # end
-    # return A
-# end
-
 """
     gauss_jordan(A::AbstractMatrix{T}) where T<:Number
 
@@ -30,40 +18,40 @@ julia> @test_throws AssertionError gauss_jordan(M2)     # Test Passed - Thrown: 
 # Contributed By:- [AugustoCL](https://github.com/AugustoCL)
 """
 function gauss_jordan(A::AbstractMatrix{T}) where {T<:Number}
-    
-    # convert to float to avoid InexactError: Int64()
-    (T <: Integer) && (A = convert.(Float64, A))
 
     # check if matrix is singular
     m, n = size(A)
     if m == n
         @assert det(A) ≠ 0.0 "Must insert a non-singular matrix"
     else
-        @assert det(A[:,1:end-1]) ≠ 0.0 "Must insert a non-singular matrix or a system matrix [A b]"
+        @assert det(A[:, 1:end-1]) ≠ 0.0 "Must insert a non-singular matrix or a system matrix [A b]"
     end
 
     # execute the gauss-jordan elimination
     for i ∈ axes(A, 1)
-        (A[i,i] == 0.0) && map([A,i,m]) do (x,y,z)
-            for n ∈ (y+1):z                             # check if need swap rows -> this came from function `_swap_rows` (commented above)
-                if x[n,y] ≠ 0.0                         # Since it is used only once, an anonymous function with do-block should suffice.
-                    L = copy(x[y,:])
-                    x[y,:] = x[n,:]
-                    x[n,:] = L
+
+        if A[i, i] == 0.0
+            for n ∈ (i + 1):m                           # iterate in lines below to check if could be swap
+                if A[n, i] ≠ 0.0                        # condition to swap row
+                    L = copy(A[i, :])                   # copy line to swap
+                    A[i, :] = A[n, :]                   # swap occur
+                    A[n, :] = L
                     break
                 end
             end
-            return x
         end
 
-        @. A[i,:] = A[i,:] ./ A[i,i]                    # divide pivot line by pivot element
+        @. A[i, :] = A[i, :] ./ A[i, i]                  # divide pivot line by pivot element
 
-        for j ∈ axes(A, 1)                              # iterate each line for each pivot column, except pivot line
-            if j ≠ i                                    # jump pivot line
-                @. A[j,:] = A[j,:] - A[i,:]*A[j,i]      # apply gauss jordan in each line
+        for j ∈ axes(A, 1)                               # iterate each line for each pivot column, except pivot line
+            if j ≠ i                                     # jump pivot line
+                @. A[j, :] = A[j, :] - A[i, :]*A[j, i]   # apply gauss jordan in each line
             end
         end
     end
 
     return A
 end
+
+# using multiple dispatch to avoid InexactError with Integers
+gauss_jordan(A::AbstractMatrix{T}) where {T<:Integer} = gauss_jordan(convert(Matrix{Float64}, A))
