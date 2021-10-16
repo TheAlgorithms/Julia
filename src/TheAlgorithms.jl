@@ -110,6 +110,7 @@ export bubble_sort!
 export bucket_sort!
 export counting_sort!
 export exchange_sort!
+export heap_sort!
 export insertion_sort!
 export merge_sort!
 export quick_sort!
@@ -207,12 +208,13 @@ include("searches/linear_search.jl")
 # Includes: sorts
 include("sorts/bubble_sort.jl")
 include("sorts/bucket_sort.jl")
+include("sorts/counting_sort.jl")
+include("sorts/exchange_sort.jl")
+include("sorts/heap_sort.jl")
 include("sorts/insertion_sort.jl")
 include("sorts/merge_sort.jl")
 include("sorts/quick_sort.jl")
 include("sorts/selection_sort.jl")
-include("sorts/counting_sort.jl")
-include("sorts/exchange_sort.jl")
 
 # Includes: statistics
 include("statistics/pearson_correlation.jl")
