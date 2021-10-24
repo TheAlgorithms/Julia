@@ -38,8 +38,7 @@ end
 
 ```
 
-# Contributors :
-- [Anson Biggs](https://ansonbiggs.com) 
+# Contributed by:- [Anson Biggs](https://ansonbiggs.com) 
 """
 function bab_sqrt(S::Real; tolerance = 1e-6, guess = nothing)
 
