@@ -60,9 +60,3 @@ function bab_sqrt(S::Real; tolerance = 1e-6, guess = nothing)
     return xn
 
 end
-
-
-
-
-
-
