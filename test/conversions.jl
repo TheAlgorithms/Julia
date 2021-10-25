@@ -148,8 +148,8 @@
         @test length_conversion(50, "mm", "cm") == 5
         @test length_conversion(500, "mm", "m") == 0.5
         @test length_conversion(4321, "mm", "km") == 0.004321
-        @test length_conversion(10, "m", "in") ≈ 393.701
-        @test length_conversion(10, "m", "ft") ≈ 32.8084
+        @test length_conversion(10, "meter", "in") ≈ 393.701
+        @test length_conversion(10, "m", "feet") ≈ 32.8084
         @test length_conversion(10, "m", "yd") ≈ 10.9361
         @test length_conversion(1, "in", "mm") ≈ 25.4
         @test length_conversion(1, "in", "cm") ≈ 2.54
