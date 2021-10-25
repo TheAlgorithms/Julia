@@ -137,6 +137,7 @@ export fahrenheit_to_kelvin
 export kelvin_to_celsius
 export kelvin_to_fahrenheit
 export weight_conversion
+export length_conversion
 
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
@@ -233,5 +234,6 @@ include("scheduling/fcfs.jl")
 # Includes: conversions
 include("conversions/weight_conversion.jl")
 include("conversions/temparature_conversion.jl")
+include("conversions/length_conversion.jl")
 
 end
