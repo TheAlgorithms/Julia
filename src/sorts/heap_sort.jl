@@ -1,25 +1,31 @@
-"""Simple helper function for converting 0-based indices to Julia's 1-based indices.
+"""
+    idx_for(i::Int)  
+
+Simple helper function for converting 0-based indices to Julia's 1-based indices.
 """
 function idx_for(i::Int) 
   return i + 1
 end
 
-"""Sort the given vector (in-place) using the Heapsort algorithm.
+"""
+    heap_sort!(arr::Vector{T}, gt = >, N::Int = length(arr)) where {T}
 
-   Heapsort consists of two stages:
-    1. Building a (max) heap of the array
-    2. Repeatedly extracting the largest element and inserting it at the front of the sorted part of the array
+Sort the given vector (in-place) using the Heapsort algorithm.
 
-   After the largest element has been extracted, the tree is updated to maintain the heap property via a "sifting" operation.
+Heapsort consists of two stages:
+  1. Building a (max) heap of the array
+  2. Repeatedly extracting the largest element and inserting it at the front of the sorted part of the array
 
-   Storing a heap in an array is pretty straightforward - for every node with index n, its children are stored at indices
-   2n + 1 and 2n + 2 (for 0-based indices). Index 0 contains the root node.
-   Since Julia's indices are 1-based, we need to change this a little bit. We're using a trivial helper function 
-   idx_for to convert from 0-based to 1-based.
+After the largest element has been extracted, the tree is updated to maintain the heap property via a "sifting" operation.
 
-   See https://en.wikipedia.org/wiki/Heapsort for a complete explanation of Heapsort.
+  Storing a heap in an array is pretty straightforward - for every node with index n, its children are stored at indices
+  2n + 1 and 2n + 2 (for 0-based indices). Index 0 contains the root node.
+  Since Julia's indices are 1-based, we need to change this a little bit. We're using a trivial helper function 
+  idx_for to convert from 0-based to 1-based.
 
-   Contributed By:- [Frank Schmitt](https://github.com/frankschmitt)
+  See https://en.wikipedia.org/wiki/Heapsort for a complete explanation of Heapsort.
+
+  Contributed By:- [Frank Schmitt](https://github.com/frankschmitt)
 """ 
 function heap_sort!(arr::Vector{T}, gt = >, N::Int = length(arr)) where {T}
       n = N 
