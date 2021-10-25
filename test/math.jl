@@ -252,6 +252,14 @@
         @test eratosthenes(1) == Int64[] # No prime number less that 1, so it should return empty array.
     end
 
+    @testset "Math: Babylonian Square Root" begin
+        @test bab_sqrt(100) ≈ sqrt(100)
+        @test bab_sqrt(π, guess = -100, tolerance = 1e-10) ≈ sqrt(π)
+        @test bab_sqrt(π, tolerance = π) ≈ π/2 # since inital guess should be π / 2
+        @test bab_sqrt(0) == 0
+        @test_throws DomainError bab_sqrt(-5)
+    end
+
     @testset "Math: Trapezoid Integration" begin
         @test isapprox(trapezoid_integration(x -> 3*x^2, 0, 1, 100000), 1, atol = 0.01)
         @test isapprox(trapezoid_integration(x -> sin(x), 0, pi, 1000), 2, atol = 0.1)
