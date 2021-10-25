@@ -46,6 +46,7 @@ export area_rhombus
 export area_square
 export area_trapezium
 export area_triangle
+export bab_sqrt
 export ceil_val
 export collatz_sequence
 export combination
@@ -110,6 +111,7 @@ export bubble_sort!
 export bucket_sort!
 export counting_sort!
 export exchange_sort!
+export heap_sort!
 export insertion_sort!
 export merge_sort!
 export quick_sort!
@@ -157,6 +159,7 @@ include("math/armstrong_number.jl")
 include("math/average_mean.jl")
 include("math/average_median.jl")
 include("math/average_mode.jl")
+include("math/babylonian_sqrt.jl")
 include("math/ceil_floor.jl") # needed by average_median
 include("math/collatz_sequence.jl")
 include("math/combination.jl")
@@ -207,12 +210,13 @@ include("searches/linear_search.jl")
 # Includes: sorts
 include("sorts/bubble_sort.jl")
 include("sorts/bucket_sort.jl")
+include("sorts/counting_sort.jl")
+include("sorts/exchange_sort.jl")
+include("sorts/heap_sort.jl")
 include("sorts/insertion_sort.jl")
 include("sorts/merge_sort.jl")
 include("sorts/quick_sort.jl")
 include("sorts/selection_sort.jl")
-include("sorts/counting_sort.jl")
-include("sorts/exchange_sort.jl")
 
 # Includes: statistics
 include("statistics/pearson_correlation.jl")

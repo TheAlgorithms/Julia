@@ -16,8 +16,7 @@ Because the algorithm converts values to meters, and from meters to the final ty
 some imperial system units may have errors:
 length_conversion(1, "yards", "FEET") returns 3.000000096, intead of 3.
 
-# Contributors:
-- [Fernanda Kawasaki](https://github.com/fernandakawasaki)
+# Contributed by:- [Fernanda Kawasaki](https://github.com/fernandakawasaki)
 """
 
 # Lookup table that returns conversion of 1 unit of type to meters
