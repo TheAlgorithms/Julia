@@ -9,10 +9,10 @@ Program to find word count in the given sentence. The program will return count 
 # Examples/Tests 
 ```julia
 julia> wordcount(The quick brown fox jumps over the lazy dog)
-10.000000000107445
+Dict{Any, Any}("jumps" => 1, "the" => 2, "brown" => 1, "over" => 1, "quick" => 1, "lazy" => 1, "dog" => 1, "fox" => 1)
 
 julia> wordcount(the sky is blue and beautiful)
-10.000000000131072
+Dict{Any, Any}("and" => 1, "the" => 1, "sky" => 1, "blue" => 1, "is" => 1, "beautiful" => 1)
 
 ```
 
