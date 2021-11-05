@@ -39,7 +39,7 @@ end
 
 ```
 
-# Contributed by:- [Ihjass](https://github.com/Ihjass)
+# Contributed by:- [Ihjass Thasbekha](https://github.com/Ihjass)
 """
 function ispangram(input)
     x = 2^26-1
