@@ -36,7 +36,7 @@ end
 
 ```
 
-# Contributed by:- [Ihjass](https://github.com/Ihjass)
+# Contributed by:- [Ihjass Thasbekha](https://github.com/Ihjass)
 """
 function wordcount(sentence)
     lowercase_sentence = lowercase(sentence)
