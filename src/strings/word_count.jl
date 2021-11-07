@@ -1,7 +1,8 @@
 """
 wordcount(sentence)
 
-Program to find word count in the given sentence. The program will return count with the word.A full description of the algorithm can be found on [exercism](https://exercism.org/tracks/julia/exercises/word-count)
+Program to find word count in the given sentence. The program will return count with the word.
+A full description of the algorithm can be found on [exercism](https://exercism.org/tracks/julia/exercises/word-count)
 
 # Arguments:
 - `sentence`: The sentence to find the word count.
