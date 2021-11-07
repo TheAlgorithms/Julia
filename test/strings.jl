@@ -56,4 +56,13 @@
         sub_string = "ABCDEFG"
         @test contain_substring_with_kmp(string, sub_string, true) == true
     end
+    
+    @testset "Strings: Pangrams" begin
+        input = "Pack my box with five dozen liquor jugs"    # Pangram
+        @test pangrams(input) == true
+        input = "Hello World"    # Not Pangram
+        @test pangrams(input) == false
+        input = "The quick brown fox jumps over the lazy dog"    # Pangram
+        @test pangrams(input) == true
+    end
 end
