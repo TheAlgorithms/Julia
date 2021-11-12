@@ -59,10 +59,10 @@
     
     @testset "Strings: Pangrams" begin
         input = "Pack my box with five dozen liquor jugs"    # Pangram
-        @test pangrams(input) == true
+        @test ispangram(input) == true
         input = "Hello World"    # Not Pangram
-        @test pangrams(input) == false
+        @test ispangram(input) == false
         input = "The quick brown fox jumps over the lazy dog"    # Pangram
-        @test pangrams(input) == true
+        @test ispangram(input) == true
     end
 end
