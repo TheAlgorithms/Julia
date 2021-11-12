@@ -61,7 +61,7 @@
         sentence = "The quick brown fox jumps over the lazy dog"    # 8 different words
         @test word_count(sentence) == Dict{Any, Any}("jumps" => 1, "the" => 2, "brown" => 1, "over" => 1, "quick" => 1, "lazy" => 1, "dog" => 1, "fox" => 1)
         sentence = "Hello World"    # 2 different words
-        @test word_count(sentence) == Dict{Any, Any}("hello" => 1, "world" => 2)
+        @test word_count(sentence) == Dict{Any, Any}("hello" => 1, "world" => 1)
         sentence = "the sky is blue and beautiful"    # 6 different words
         @test word_count(sentence) == Dict{Any, Any}("and" => 1, "the" => 1, "sky" => 1, "blue" => 1, "is" => 1, "beautiful" => 1)
     end

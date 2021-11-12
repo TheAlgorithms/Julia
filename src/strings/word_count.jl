@@ -38,7 +38,7 @@ end
 
 # Contributed by:- [Ihjass Thasbekha](https://github.com/Ihjass)
 """
-function wordcount(sentence)
+function word_count(sentence)
     lowercase_sentence = lowercase(sentence)
     counts = Dict()
     regex = r"(\w+('\w)?)"
