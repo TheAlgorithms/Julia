@@ -123,6 +123,7 @@ export variance
 
 # Exports: strings
 export contain_substring_with_kmp
+export ispangram
 export detect_anagrams
 export is_palindrome
 export word_count
@@ -228,6 +229,7 @@ include("statistics/variance.jl")
 include("strings/detect_anagrams.jl")
 include("strings/is_palindrome.jl")
 include("strings/kmp_substring_search.jl")
+include("strings/pangram.jl")
 include("strings/word_count.jl")
 
 # Includes: scheduling
