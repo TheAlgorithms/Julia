@@ -122,10 +122,11 @@ export pearson_correlation
 export variance
 
 # Exports: strings
-export is_palindrome
-export detect_anagrams
 export contain_substring_with_kmp
 export ispangram
+export detect_anagrams
+export is_palindrome
+export word_count
 
 # Exports: scheduling
 export fcfs
@@ -225,10 +226,11 @@ include("statistics/pearson_correlation.jl")
 include("statistics/variance.jl")
 
 # Includes: strings
-include("strings/is_palindrome.jl")
 include("strings/detect_anagrams.jl")
+include("strings/is_palindrome.jl")
 include("strings/kmp_substring_search.jl")
 include("strings/pangram.jl")
+include("strings/word_count.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
