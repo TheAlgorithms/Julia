@@ -64,7 +64,8 @@
         @test ispangram(input) == false
         input = "The quick brown fox jumps over the lazy dog"    # Pangram
         @test ispangram(input) == true
-
+    end
+    
     @testset "Strings: word_count" begin
         sentence = "The quick brown fox jumps over the lazy dog"    # 8 different words
         @test word_count(sentence) == Dict{Any, Any}("jumps" => 1, "the" => 2, "brown" => 1, "over" => 1, "quick" => 1, "lazy" => 1, "dog" => 1, "fox" => 1)
