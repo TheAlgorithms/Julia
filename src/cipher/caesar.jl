@@ -41,7 +41,7 @@ https://en.wikipedia.org/wiki/Caesar_cipher
 
 ```
 
-# Contributed by:- [Ihjass](https://github.com/Ihjass)
+# Contributed by:- [Ihjass Thasbekha](https://github.com/Ihjass)
 """
 function rotate(rot, s)
     rotate = function (r)
