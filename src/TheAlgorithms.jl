@@ -11,6 +11,9 @@ using Random
 # Exports: basic
 export prefix_sum
 
+# Exports: cipher
+export caesar
+
 # Exports: data_structures
 export AbstractBinarySearchTree_arr
 export AbstractBinaryTree
@@ -146,6 +149,9 @@ export length_conversion
 
 # Includes: basic
 include("basic/prefix_sum.jl")
+
+# Includes: cipher
+include("cipher/caesar.jl")
 
 # Includes: data_structures
 include("data_structures/binary_tree/splay.jl")
