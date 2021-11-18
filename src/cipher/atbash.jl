@@ -42,7 +42,7 @@ https://en.wikipedia.org/wiki/Atbash
 
 ```
 
-# Contributed by:- [Ihjass](https://github.com/Ihjass)
+# Contributed by:- [Ihjass Thasbekha](https://github.com/Ihjass)
 """
 function encode(input)
   input = replace(lowercase(input), reject_re => "")
@@ -60,8 +60,6 @@ function encode(input)
   end
   return join(parts, " ")
 end
-
-
 reject_re = r"[^a-z\d]+"
 xform(r) = (r >= 'a' && r <= 'z') ? r = 25 - (r - 'a') + 'a' : r
  
