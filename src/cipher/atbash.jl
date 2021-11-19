@@ -55,7 +55,8 @@ function encode(input)
       part = ""
     end
   end
-  if part != ""
+  if !isempty(part)
+
     push!(parts, part)
   end
   return join(parts, " ")
