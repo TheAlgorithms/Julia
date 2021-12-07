@@ -13,6 +13,7 @@ export prefix_sum
 
 # Exports: cipher
 export caesar
+export atbash
 
 # Exports: data_structures
 export AbstractBinarySearchTree_arr
@@ -152,6 +153,7 @@ include("basic/prefix_sum.jl")
 
 # Includes: cipher
 include("cipher/caesar.jl")
+include("cipher/atbash.jl")
 
 # Includes: data_structures
 include("data_structures/binary_tree/splay.jl")
