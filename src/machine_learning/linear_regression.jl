@@ -37,8 +37,7 @@ using Statistics
 
 
     
-    # Contributors (optional):
-    - [Navaneeth Sharma](https://github.com/Navaneeth-Sharma) 
+    # Contributors:- [Navaneeth Sharma](https://github.com/Navaneeth-Sharma) 
 """
 
 
