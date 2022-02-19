@@ -75,4 +75,19 @@
         @test word_count(sentence) == Dict{Any, Any}("and" => 1, "the" => 1, "sky" => 1, "blue" => 1, "is" => 1, "beautiful" => 1)
 
     end
+
+    @testset "Strings: hamming_distance" begin
+        input1 = "karolin"
+        input2 = "kathrin"
+        @test hamming_distance(input1, input2) == 3
+        input1 = "0000"
+        input2 = "1111"
+        @test hamming_distance(input1, input2) == 4
+        input1 = "ABCDEFG"
+        input2 = "AZCDWGM"
+        @test hamming_distance(input1, input2) == 4
+        input1 = ""
+        input2 = "a"
+        @test hamming_distance(input1, input2) == 0
+    end
 end
