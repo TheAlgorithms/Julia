@@ -86,8 +86,5 @@
         input1 = "ABCDEFG"
         input2 = "AZCDWGM"
         @test hamming_distance(input1, input2) == 4
-        input1 = ""
-        input2 = "a"
-        @test hamming_distance(input1, input2) == 0
     end
 end
