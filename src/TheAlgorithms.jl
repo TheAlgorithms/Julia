@@ -130,6 +130,7 @@ export ispangram
 export detect_anagrams
 export is_palindrome
 export word_count
+export hamming_distance
 
 # Exports: scheduling
 export fcfs
@@ -237,6 +238,7 @@ include("strings/is_palindrome.jl")
 include("strings/kmp_substring_search.jl")
 include("strings/pangram.jl")
 include("strings/word_count.jl")
+include("strings/hamming_distance.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
