@@ -29,6 +29,29 @@
         merge!(set,5,4)
         @test find(set,5) == find(set,2)
     end
+
+    @testset "LinkedList" begin
+        list = LinkedList.create_list(3, 13)
+        @test LinkedList.return_as_array(list) == [13, 13, 13]
+
+        LinkedList.insert(list, 5, 2)
+        LinkedList.push_back(list, 8)
+        LinkedList.insert(list, 7, 1)
+        LinkedList.insert(list, 7, 6)
+        @test LinkedList.return_as_array(list) == [7, 13, 5, 13, 13, 7, 8]
+
+        LinkedList.remove(list, 7)
+        @test LinkedList.return_as_array(list) == [7, 13, 5, 13, 13, 7]
+
+        LinkedList.remove_all(list, 13)
+        @test LinkedList.return_as_array(list) == [7, 5, 7]
+
+        @test LinkedList.indexOf(list, 5) == 2
+        @test LinkedList.indexOf(list, 3) == -1
+
+        LinkedList.remove_first(list, 7)
+        @test LinkedList.return_as_array(list) == [5, 7]
+    end
 end
 end
 
