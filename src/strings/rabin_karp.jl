@@ -15,7 +15,6 @@
 
 # Contributed by: [Nikola Mircic](https://github.com/Nikola-Mircic)
 """
-
 function rabin_karp(text::String, pattern::String)
     indices = Array{Int64}(undef, 0)# An array to store matching indices
 
