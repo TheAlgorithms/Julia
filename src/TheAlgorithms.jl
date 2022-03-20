@@ -131,6 +131,7 @@ export detect_anagrams
 export is_palindrome
 export word_count
 export hamming_distance
+export rabin_karp
 
 # Exports: scheduling
 export fcfs
@@ -239,6 +240,7 @@ include("strings/kmp_substring_search.jl")
 include("strings/pangram.jl")
 include("strings/word_count.jl")
 include("strings/hamming_distance.jl")
+include("strings/rabin_karp.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")

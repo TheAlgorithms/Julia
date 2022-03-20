@@ -87,4 +87,19 @@
         input2 = "AZCDWGM"
         @test hamming_distance(input1, input2) == 4
     end
+
+    @testset "Strings: Rabin-Karp algorithm" begin
+        text = "a"
+        pattern = "airplane"
+        @test rabin_karp(text, pattern) == []
+        text = "Hello, World!!"
+        pattern = "World"
+        @test rabin_karp(text, pattern) == [8]
+        text = "Banana"
+        pattern = "an"
+        @test rabin_karp(text, pattern) == [2, 4]
+        text = "aaaaaa"
+        pattern = "aaa"
+        @test rabin_karp(text, pattern) == [1, 2, 3, 4]
+    end
 end
