@@ -51,6 +51,11 @@
 
         LinkedList.remove_first(list, 7)
         @test LinkedList.return_as_array(list) == [5, 7]
+
+        @test LinkedList.get(list, 3) == missing
+
+        LinkedList.clear(list)
+        @test LinkedList.is_empty(list) == true
     end
 end
 end
