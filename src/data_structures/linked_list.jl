@@ -13,7 +13,7 @@
 
 # Functions
     - create_node(val, next=missing) - Create node with value 'val' and the pointer to the next node ( missing by default ) 
-    - create_list(n::Int=0, val=missing) - Create root node of the list
+    - create_list(n::Int=0, val=missing) - Create root node of the list with n elements with value set to 'val'
     - insert(list::Node, new_node::Node, index::Int=1) - Add a new node to the list at the specified index
     - insert(list::Node, val, index::Int=1) - Create a new node with value 'val' in the list at the specified index
     - push_back(list::Node, node::Node) - Add a new node to the end of the list
@@ -140,7 +140,6 @@ function get_node(list::Node, index::Int)
         if !ismissing(current_node)
             current_node = current_node.next
         else
-            println("There is no element in the list with index ", index," !")
             return missing
         end
     end
@@ -149,7 +148,11 @@ end
 
 # Get a value from the node at the specified index
 function get(list::Node, index::Int)
-    return get_node(list, index).val
+    node = get_node(list, index)
+    if !ismissing(node) 
+        return node.val
+    end
+    return missing
 end
 
 # Return the index of the first element with a value 'val'
