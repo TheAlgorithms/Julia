@@ -30,7 +30,6 @@
 
 # Contributed by: [Nikola Mircic](https://github.com/Nikola-Mircic)
 """
-
 module LinkedList
 
 mutable struct Node
