@@ -32,6 +32,7 @@ export merge!
 export right
 export set_ch
 export Splay
+export LinkedList
 
 # Exports: knapsack
 export complete_pack!
@@ -160,6 +161,7 @@ include("cipher/atbash.jl")
 # Includes: data_structures
 include("data_structures/binary_tree/splay.jl")
 include("data_structures/disjoint_set/disjoint_set.jl")
+include("data_structures/linked_list.jl")
 
 # Includes: knapsack
 include("knapsack/dynamic_programming.jl")
