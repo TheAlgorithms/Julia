@@ -10,6 +10,7 @@ using Random
 
 # Exports: basic
 export prefix_sum
+export DifferenceArray
 
 # Exports: cipher
 export atbash
@@ -152,6 +153,7 @@ export length_conversion
 
 # Includes: basic
 include("basic/prefix_sum.jl")
+include("basic/difference_arr.jl")
 
 # Includes: cipher
 include("cipher/atbash.jl")
