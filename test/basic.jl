@@ -18,4 +18,3 @@
         @test DifferenceArray.calculate_arr(diff_arr) == [2, 4, 8, 12, 17, 22]
     end
 end
-
