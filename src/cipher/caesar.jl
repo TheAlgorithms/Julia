@@ -49,9 +49,10 @@ function rotate(rot, s)
             v = ((r - 'a') + rot) % 26
             return v + 'a'
         end
-        if r >= 'A' && r <= 'Z'
+        if 'A' <= r <= 'Z'
             v = ((r - 'A') + rot) % 26
             return v + 'A'
+
         end
         return r
     end
