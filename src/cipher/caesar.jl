@@ -1,7 +1,7 @@
 """
 rotate(rot, s)
 
-Program to implement rotational cipher for the given sentence.A full description of the algorithm can be found on [wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)
+Program to implement rotational cipher for the given sentence. A full description of the algorithm can be found on [wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)
 
 # Arguments:
 - `rot`: The number of rotations needed.
@@ -43,7 +43,7 @@ https://en.wikipedia.org/wiki/Caesar_cipher
 
 # Contributed by:- [Ihjass Thasbekha](https://github.com/Ihjass)
 """
-function rotate(rot, s)
+function caesar(rot, s)
     rotate = function (r)
         if 'a' <= r <= 'z'
             v = ((r - 'a') + rot) % 26
@@ -58,7 +58,6 @@ function rotate(rot, s)
         return r
     end
     if s isa Char
-
         return rotate(s)
     end
     result = ""
