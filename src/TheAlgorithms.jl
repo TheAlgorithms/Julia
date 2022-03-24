@@ -10,6 +10,7 @@ using Random
 
 # Exports: basic
 export prefix_sum
+export DifferenceArray
 
 # Exports: cipher
 export caesar
@@ -32,6 +33,7 @@ export merge!
 export right
 export set_ch
 export Splay
+export LinkedList
 
 # Exports: knapsack
 export complete_pack!
@@ -131,6 +133,8 @@ export ispangram
 export detect_anagrams
 export is_palindrome
 export word_count
+export hamming_distance
+export rabin_karp
 
 # Exports: scheduling
 export fcfs
@@ -150,6 +154,7 @@ export length_conversion
 
 # Includes: basic
 include("basic/prefix_sum.jl")
+include("basic/difference_arr.jl")
 
 # Includes: cipher
 include("cipher/caesar.jl")
@@ -158,6 +163,7 @@ include("cipher/atbash.jl")
 # Includes: data_structures
 include("data_structures/binary_tree/splay.jl")
 include("data_structures/disjoint_set/disjoint_set.jl")
+include("data_structures/linked_list.jl")
 
 # Includes: knapsack
 include("knapsack/dynamic_programming.jl")
@@ -239,6 +245,8 @@ include("strings/is_palindrome.jl")
 include("strings/kmp_substring_search.jl")
 include("strings/pangram.jl")
 include("strings/word_count.jl")
+include("strings/hamming_distance.jl")
+include("strings/rabin_karp.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
