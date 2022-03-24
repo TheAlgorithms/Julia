@@ -28,7 +28,7 @@ METER_CONVERSION = Dict{String,Float64}(
     "in" => 0.0254,
     "ft" => 0.3048,
     "yd" => 0.9144,
-    "mi" => 1609.34
+    "mi" => 1609.34,
 )
 
 # Lookup table that returns the conversion of 1 meter to type
@@ -40,7 +40,7 @@ TYPE_CONVERSION = Dict{String,Float64}(
     "in" => 39.3701,
     "ft" => 3.28084,
     "yd" => 1.09361,
-    "mi" => 0.000621371
+    "mi" => 0.000621371,
 )
 
 NAME_CONVERSION = Dict{String,String}(

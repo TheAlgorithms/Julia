@@ -14,10 +14,10 @@ prime_factors(2560)        # returns [2, 2, 2, 2, 2, 2, 2, 2, 2, 5]
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
 """
-function prime_factors(number::N)where N<:Integer
+function prime_factors(number::N) where {N<:Integer}
     i = 2
     factors = Vector{Int}()
-    while i*i <= number
+    while i * i <= number
         if number % i == 1
             i += 1
         else

@@ -35,27 +35,37 @@ julia> riemann_integration(x -> sin(x), 0, pi, 1000)          # integrate the si
 
 Contributed By:- [AugustoCL](https://github.com/AugustoCL)
 """
-function riemann_integration(f::Function, a::Real, b::Real, n::Int, approx::Symbol = :midpoint)
+function riemann_integration(
+    f::Function,
+    a::Real,
+    b::Real,
+    n::Int,
+    approx::Symbol = :midpoint,
+)
     # width of the rectangles
     Δₓ = (b - a) / n
 
     # methods of approximation (:midpoint, :left, :right)
     if approx == :midpoint
-        sum_range = (a + Δₓ/2):Δₓ:(b - Δₓ/2)
+        sum_range = (a+Δₓ/2):Δₓ:(b-Δₓ/2)
     elseif approx == :left
-        sum_range = a:Δₓ:(b - Δₓ)
+        sum_range = a:Δₓ:(b-Δₓ)
     elseif approx == :right
-        sum_range = (a + Δₓ):Δₓ:b
+        sum_range = (a+Δₓ):Δₓ:b
     else
-        throw(ArgumentError("The symbol :$approx is not a valid argument. Insert :midpoint, :left or :right"))
+        throw(
+            ArgumentError(
+                "The symbol :$approx is not a valid argument. Insert :midpoint, :left or :right",
+            ),
+        )
     end
 
     # sum of the height of the rectangles
     Σ = 0.0
     for i in 2:length(sum_range)
-        a  = sum_range[i-1]
-        b  = sum_range[i]
-        xᵢ = a + (b-a)*rand()   # draw a uniform(a,b) for each subinterval [a,b]
+        a = sum_range[i-1]
+        b = sum_range[i]
+        xᵢ = a + (b - a) * rand()   # draw a uniform(a,b) for each subinterval [a,b]
         Σ += f(xᵢ)
     end
 

@@ -48,12 +48,10 @@ function caesar(rot, s)
         if 'a' <= r <= 'z'
             v = ((r - 'a') + rot) % 26
             return v + 'a'
-
         end
         if 'A' <= r <= 'Z'
             v = ((r - 'A') + rot) % 26
             return v + 'A'
-
         end
         return r
     end
@@ -66,4 +64,3 @@ function caesar(rot, s)
     end
     return result
 end
-

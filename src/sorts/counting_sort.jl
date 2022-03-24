@@ -29,40 +29,43 @@ Assume the input as --> x=[-3, 1, -5, 0, -3]
 
 FINAL RESULT -->  [-5, -3, -3, 0, 1]                                                                                    
 """
-function counting_sort!(arr::Vector{T},l::Int=1,r::Int=length(arr))where T
-    if l>=r
-        return
+function counting_sort!(
+    arr::Vector{T},
+    l::Int = 1,
+    r::Int = length(arr),
+) where {T}
+    if l >= r
+        return nothing
     end
     max = maximum(arr)
     min = minimum(arr)
-    range = max-min+1
+    range = max - min + 1
     count = Vector{T}(undef, range)
     output = Vector{T}(undef, r)
 
     for i in 1:range
-      count[i]=0
+        count[i] = 0
     end
 
     # Store count of the item that appear in the 'arr' (STEP 2)
     for i in 1:r
-      count[arr[i]-min+1]+=1
+        count[arr[i]-min+1] += 1
     end
 
     # Calculate cumulative frequency in 'count' (STEP 3)
     for i in 2:length(count)
-      count[i] += count[i-1]
+        count[i] += count[i-1]
     end
 
     # Build the 'output' by assigning the item into correct position (STEP 4)
     for i in 1:r
-      index = arr[i] - min + 1
-      output[count[index]] = arr[i]
-      count[index]-=1
+        index = arr[i] - min + 1
+        output[count[index]] = arr[i]
+        count[index] -= 1
     end
 
     # Copy the 'output' to 'arr', so that 'arr' contain sorted item (STEP 5)
     for i in 1:r
-      arr[i]=output[i]
+        arr[i] = output[i]
     end
-  
 end

@@ -19,47 +19,51 @@
 # Contributed by: [Nikola Mircic](https://github.com/Nikola-Mircic)
 """
 module DifferenceArray
-    # Create difference array for array 'original'
-    # Parameters:
-    #   - original - an array which is used for calculating the difference array
-    function create_diff_arr(original::Array{T}) where T<:Number
-        n = length(original)
+# Create difference array for array 'original'
+# Parameters:
+#   - original - an array which is used for calculating the difference array
+function create_diff_arr(original::Array{T}) where {T<:Number}
+    n = length(original)
 
-        diff_arr = Array(original)
+    diff_arr = Array(original)
 
-        for i in 2:n
-            diff_arr[i] = original[i]-original[i-1]
-        end
-
-        return diff_arr
+    for i in 2:n
+        diff_arr[i] = original[i] - original[i-1]
     end
 
-    # Create a original array from the given difference array
-    # Parameters:
-    #   - diff_arr - an difference array which is used for calculating the original array
-    function calculate_arr(diff_arr::Array{T}) where T<:Number
-        n = length(diff_arr)
-
-        arr = Array(diff_arr)
-
-        for i in 2:n
-            arr[i] = diff_arr[i] + arr[i-1]
-        end
-
-        return arr
-    end
-
-    # Add x to all elements with index from [l, r]
-    # Parameters:
-    #   - dif_arr - a difference array of the array you want to change
-    #   - l - leftmost index of the affected range
-    #   - r - rightmost index of the affected range
-    #   - x - a value to be added to all elements from a given range
-    function add_to_arr(diff_arr::Array{T}, l::Int, r::Int, x::Number) where T<:Number
-        diff_arr[l]+=x
-        if r<length(diff_arr)
-            diff_arr[r+1]-=x
-        end
-    end
+    return diff_arr
 end
 
+# Create a original array from the given difference array
+# Parameters:
+#   - diff_arr - an difference array which is used for calculating the original array
+function calculate_arr(diff_arr::Array{T}) where {T<:Number}
+    n = length(diff_arr)
+
+    arr = Array(diff_arr)
+
+    for i in 2:n
+        arr[i] = diff_arr[i] + arr[i-1]
+    end
+
+    return arr
+end
+
+# Add x to all elements with index from [l, r]
+# Parameters:
+#   - dif_arr - a difference array of the array you want to change
+#   - l - leftmost index of the affected range
+#   - r - rightmost index of the affected range
+#   - x - a value to be added to all elements from a given range
+function add_to_arr(
+    diff_arr::Array{T},
+    l::Int,
+    r::Int,
+    x::Number,
+) where {T<:Number}
+    diff_arr[l] += x
+    if r < length(diff_arr)
+        diff_arr[r+1] -= x
+    end
+end
+end

@@ -12,21 +12,20 @@ Contributed By:- [Mayur Dahibhate](https://github.com/mayurdahibhate)
 """
 
 function combination(n, r)
-
-    function factorial(n)        
+    function factorial(n)
         fact = 1
-        
+
         if n == 0 || n == 1
             return fact
         end
-         
-        for i = 1:n
+
+        for i in 1:n
             fact = fact * i
-        end 
-        
+        end
+
         return fact
     end
-    
+
     comb = factorial(n) / (factorial(r) * factorial(n - r))
 
     return convert(Int64, comb)

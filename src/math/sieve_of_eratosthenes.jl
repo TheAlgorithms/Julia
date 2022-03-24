@@ -5,13 +5,13 @@ Reference:
 -https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 """
 function eratosthenes(n)
-    primes = fill(true,n)
+    primes = fill(true, n)
     primes[1] = false
-    for p = 2:n
+    for p in 2:n
         primes[p] || continue
-        for i = 2:div(n,p)
+        for i in 2:div(n, p)
             primes[p*i] = false
         end
     end
-    findall(primes)
+    return findall(primes)
 end

@@ -27,11 +27,8 @@ function trapezoid_integration(f::Function, a::Real, b::Real, n::Int)
     Δₓ = (b - a) / n
 
     # sum of the height of the trapezoids
-    Σ = 0.5*f(a) +
-        sum(f(i) for i in (a+Δₓ):Δₓ:(b-Δₓ)) +
-        0.5*f(b)
+    Σ = 0.5 * f(a) + sum(f(i) for i in (a+Δₓ):Δₓ:(b-Δₓ)) + 0.5 * f(b)
 
     # approximate integral of f
     return Δₓ * Σ
 end
-

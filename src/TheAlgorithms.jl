@@ -4,7 +4,6 @@ module TheAlgorithms
 using LinearAlgebra
 using Random
 
-
 ## Exports
 # Please keep the folders/functions sorted
 

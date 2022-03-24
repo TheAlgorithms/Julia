@@ -1,5 +1,5 @@
 @testset "Cipher" begin
-  @testset "Cipher: caesar" begin
+    @testset "Cipher: caesar" begin
         rot = 13
         s = "abcdefghijklmnopqrstuvwxyz"
         @test rotate(rot, s) == "nopqrstuvwxyzabcdefghijklm"

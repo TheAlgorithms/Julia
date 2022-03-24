@@ -58,5 +58,4 @@ function bab_sqrt(S::Real; tolerance = 1e-6, guess = nothing)
         xn = (1 / 2) * (xn + S / xn)
     end
     return xn
-
 end

@@ -27,7 +27,6 @@ julia> hamming_distance("ABCDEFG", "AZCDWGM")
 - [Sedat Aybars Nazlica](https://github.com/saybarsnazlica)
 """
 
-
 function hamming_distance(s1::String, s2::String)
     @assert length(s1) == length(s2) "String lengths must be the same"
 

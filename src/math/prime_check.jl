@@ -23,7 +23,7 @@ prime_check(30) # returns false
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function prime_check(number::N)where N<:Integer
+function prime_check(number::N) where {N<:Integer}
     if 1 < number < 4
         # 2, 3 are primes
         return true
@@ -31,7 +31,7 @@ function prime_check(number::N)where N<:Integer
         # Negative ,0,1, and even numbers except 2 are not primes
         return false
     end
-    for i in 3:2:isqrt(number) + 1
+    for i in 3:2:(isqrt(number)+1)
         if number % i == 0
             return false
         end

@@ -28,7 +28,9 @@ Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee)
 """
 function krishnamurthy(number)
     if number != trunc(number) || number < 0
-        throw(error("krishnamurthy() only accepts non-negative integral values"))
+        throw(
+            error("krishnamurthy() only accepts non-negative integral values"),
+        )
     end
     total = 0
     temp = number

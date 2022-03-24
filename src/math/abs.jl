@@ -15,10 +15,9 @@ abs(123.1) # returns 123.1
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function abs_val(num::N)where N<:Real
+function abs_val(num::N) where {N<:Real}
     return num < 0 ? -num : num
 end
-
 
 """
     abs_max(x)
@@ -34,10 +33,12 @@ abs_max([-7,-3,6]) #returns -7
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function abs_max(x::Vector{N})where N<:Real
-    _max=x[1]
+function abs_max(x::Vector{N}) where {N<:Real}
+    _max = x[1]
     for i in x
-        if abs(i)>abs(_max) _max=i end
+        if abs(i) > abs(_max)
+            _max = i
+        end
     end
     return _max
 end
@@ -56,10 +57,12 @@ abs_min([-7,-3,6]) #returns -3
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function abs_min(x::Vector{N})where N<:Real
-    _min=x[1]
+function abs_min(x::Vector{N}) where {N<:Real}
+    _min = x[1]
     for i in x
-        if abs(i)<abs(_min) _min=i end
+        if abs(i) < abs(_min)
+            _min = i
+        end
     end
     return _min
 end
