@@ -45,9 +45,10 @@ https://en.wikipedia.org/wiki/Caesar_cipher
 """
 function rotate(rot, s)
     rotate = function (r)
-        if r >= 'a' && r <= 'z'
+        if 'a' <= r <= 'z'
             v = ((r - 'a') + rot) % 26
             return v + 'a'
+
         end
         if 'A' <= r <= 'Z'
             v = ((r - 'A') + rot) % 26
