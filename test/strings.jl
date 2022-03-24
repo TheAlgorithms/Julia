@@ -102,4 +102,13 @@
         pattern = "aaa"
         @test rabin_karp(text, pattern) == [1, 2, 3, 4]
     end
+    @testset "Strings: Longest common subsequence" begin
+        @test LSC("ABCD", "EFGHIJ") == ""
+
+        @test LSC("AAAAA", "AAA") == "AAA"
+ 
+        @test LSC("ABABABA", "ABBABBA") == "ABBABA"
+
+        @test LSC("AGCDEG", "BGFDG") == "GDG"
+    end
 end
