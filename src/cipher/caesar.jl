@@ -55,7 +55,8 @@ function rotate(rot, s)
         end
         return r
     end
-    if typeof(s) == Char
+    if s isa Char
+
         return rotate(s)
     end
     result = ""
