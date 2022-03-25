@@ -7,7 +7,7 @@
 # For more informations:
     https://www.programiz.com/dsa/longest-common-subsequence
 
-# Contributed by: [Nikola Mircic](https://github.com/Nikola-Mircic)
+# Contributed by:- [Nikola Mircic](https://github.com/Nikola-Mircic)
 """
 
 function LCS(a::String, b::String)
