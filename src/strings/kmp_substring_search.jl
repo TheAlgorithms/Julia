@@ -26,7 +26,6 @@ Note: This function will also allow ignoring cases also
 
 """
 
-
 # by convention -1 will be returned if the string does not contain the sub-string given
 # in this case, 0 will be returned for Julia with start index of 1
 # reason is that -1 is for language with start index of 0
@@ -36,7 +35,10 @@ const NO_SUBSTRING_INDEX = 0
 # Should be convenient for others as most programming language use 0 as first index
 const JULIA_FIRST_INDEX = 1
 
-function create_suffic_array(pattern_length::Int, sub_string::String)::Vector{Int}
+function create_suffic_array(
+    pattern_length::Int,
+    sub_string::String,
+)::Vector{Int}
 
     # Longest Proper Prefix which is Suffix array
     lps::Vector{Int} = ones(Int, pattern_length)
@@ -46,12 +48,12 @@ function create_suffic_array(pattern_length::Int, sub_string::String)::Vector{In
 
     while (i < pattern_length)
         if sub_string[i] == sub_string[index]
-            lps[i] = index + 1;
-            index += 1;
-            i += 1;
+            lps[i] = index + 1
+            index += 1
+            i += 1
         else
             if index != 1
-                index = lps[index - 1]
+                index = lps[index-1]
             else
                 lps[i] = 1
                 i += 1
@@ -63,8 +65,11 @@ function create_suffic_array(pattern_length::Int, sub_string::String)::Vector{In
 end
 
 # this function will be used to obtain the index which the substring was found
-function get_index_with_kmp(string::String, sub_string::String, ignore_case::Bool)::Int
-
+function get_index_with_kmp(
+    string::String,
+    sub_string::String,
+    ignore_case::Bool,
+)::Int
     string = ignore_case ? lowercase(string) : string
     sub_string = ignore_case ? lowercase(sub_string) : sub_string
 
@@ -83,7 +88,7 @@ function get_index_with_kmp(string::String, sub_string::String, ignore_case::Boo
             j += 1
         else
             if j != 1
-                j = lps[j - 1]
+                j = lps[j-1]
             else
                 i += 1
             end
@@ -94,6 +99,11 @@ function get_index_with_kmp(string::String, sub_string::String, ignore_case::Boo
 end
 
 # optional function that returns boolean if string does contain the sub-string given
-function contain_substring_with_kmp(string::String, sub_string::String, ignore_case::Bool)::Bool
-    return get_index_with_kmp(string, sub_string, ignore_case) != NO_SUBSTRING_INDEX
+function contain_substring_with_kmp(
+    string::String,
+    sub_string::String,
+    ignore_case::Bool,
+)::Bool
+    return get_index_with_kmp(string, sub_string, ignore_case) !=
+           NO_SUBSTRING_INDEX
 end

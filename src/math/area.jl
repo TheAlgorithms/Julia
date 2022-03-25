@@ -16,7 +16,12 @@ surfarea_cube(-1) # returns DomainError
 """
 function surfarea_cube(side)
     if side < 0
-        throw(DomainError(side, "surfarea_cube() only works for non-negative values"))
+        throw(
+            DomainError(
+                side,
+                "surfarea_cube() only works for non-negative values",
+            ),
+        )
     end
     return 6(side^2)
 end
@@ -36,7 +41,12 @@ surfarea_sphere(-1) # returns DomainError
 """
 function surfarea_sphere(radius)
     if radius < 0
-        throw(DomainError(radius, "surfarea_sphere() only works for non-negative values"))
+        throw(
+            DomainError(
+                radius,
+                "surfarea_sphere() only works for non-negative values",
+            ),
+        )
     end
     return 4π * (radius^2)
 end
@@ -57,7 +67,9 @@ area_rectangle(-1,2)  # returns DomainError
 """
 function area_rectangle(length, width)
     if length < 0 || width < 0
-        throw(DomainError("area_rectangle() only works for non-negative values"))
+        throw(
+            DomainError("area_rectangle() only works for non-negative values"),
+        )
     end
     return length * width
 end
@@ -118,16 +130,22 @@ area_heron_triangle(-1,2,1)  # returns DomainError
 """
 function area_heron_triangle(side1, side2, side3)
     if side1 < 0 || side2 < 0 || side3 < 0
-        throw(DomainError("area_triangle_three_sides() only accepts non-negative values"))
-    elseif side1 + side2 < side3 || side1 + side3 < side2 || side2 + side3 < side1
+        throw(
+            DomainError(
+                "area_triangle_three_sides() only accepts non-negative values",
+            ),
+        )
+    elseif side1 + side2 < side3 ||
+           side1 + side3 < side2 ||
+           side2 + side3 < side1
         throw(DomainError("Given three sides do not form a triangle"))
     end
     semi_perimeter = (side1 + side2 + side3) / 2
     area = sqrt(
-        semi_perimeter
-        * (semi_perimeter - side1)
-        * (semi_perimeter - side2)
-        * (semi_perimeter - side3)
+        semi_perimeter *
+        (semi_perimeter - side1) *
+        (semi_perimeter - side2) *
+        (semi_perimeter - side3),
     )
     return area
 end
@@ -147,9 +165,12 @@ area_parallelogram(-1,2)  # returns DomainError
 ```
 """
 function area_parallelogram(base, height)
-
     if base < 0 || height < 0
-        throw(DomainError("area_parallelogram() only accepts non-negative values"))
+        throw(
+            DomainError(
+                "area_parallelogram() only accepts non-negative values",
+            ),
+        )
     end
     return base * height
 end
@@ -252,17 +273,17 @@ Arguments:
  - steps: steps taken while integrating.
 """
 function trapazoidal_area(f, x_start, x_end, steps)
-	x1 = x_start
-	fx1 = f(x_start)
-	area = 0.0
+    x1 = x_start
+    fx1 = f(x_start)
+    area = 0.0
 
-	for _ in 1:steps
-		x2 = ((x_end - x_start) / steps) + x1
-		fx2 = f(x2)
-		area += abs(fx2 + fx1) * (x2 - x1) / 2
-		x1 = x2
-		fx1 = fx2
-	end
+    for _ in 1:steps
+        x2 = ((x_end - x_start) / steps) + x1
+        fx2 = f(x2)
+        area += abs(fx2 + fx1) * (x2 - x1) / 2
+        x1 = x2
+        fx1 = fx2
+    end
 
-	return area
+    return area
 end

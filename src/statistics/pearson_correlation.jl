@@ -19,5 +19,5 @@ function pearson_correlation(x, y)
     XY = (x .- mean_x) .* (y .- mean_y)
     XXs = sum((x .- mean_x) .* (x .- mean_x))
     YYs = sum((y .- mean_y) .* (y .- mean_y))
-    return(sum(XY) / (sqrt(XXs .* YYs)))
+    return (sum(XY) / (sqrt(XXs .* YYs)))
 end

@@ -14,13 +14,13 @@ det(A) = det(LU) = det(L)*det(U)
 Determinant of triangualar matrices is the product of their diagonal entries. Hence, makes finding the determinant easy.
 """
 function determinant(mat)
-	n, m = size(mat)
-	if n != m
-		DomainError(mat, "The matrix should be a square matrix.")
-	end
-	L, U = lu_decompose(mat)
-	l_prod = prod([L[i,i] for i in 1:n])
-	u_prod = prod([U[i,i] for i in 1:n])
+    n, m = size(mat)
+    if n != m
+        DomainError(mat, "The matrix should be a square matrix.")
+    end
+    L, U = lu_decompose(mat)
+    l_prod = prod([L[i, i] for i in 1:n])
+    u_prod = prod([U[i, i] for i in 1:n])
 
-	return l_prod * u_prod
+    return l_prod * u_prod
 end

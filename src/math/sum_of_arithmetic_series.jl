@@ -23,4 +23,3 @@ function sum_ap(first_term, diff, num_terms)
     sum = (num_terms / 2) * (2 * first_term + (num_terms - 1) * diff)
     return sum
 end
-

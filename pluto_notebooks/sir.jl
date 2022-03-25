@@ -6,8 +6,8 @@ using InteractiveUtils
 
 # ╔═╡ 53a5792b-fa40-4115-a723-df727188412e
 begin
-	using DifferentialEquations
-	using Plots
+    using DifferentialEquations
+    using Plots
 end
 
 # ╔═╡ feba2de0-f7f3-11eb-00c6-c7fa44990dd1
@@ -21,15 +21,15 @@ Contributed By: [Aru Bhardwaj](https://github.com/arubhardwaj)
 
 # ╔═╡ a1e773b3-ca82-4fa8-899d-e3ccdfdba234
 function SIR(du, u, p, t)
-	s, i, r = u
-	β, k = p
-	du[1] = -β * s * i
-	du[2] = β * s * i - k * i
-	du[3] = k * i
+    s, i, r = u
+    β, k = p
+    du[1] = -β * s * i
+    du[2] = β * s * i - k * i
+    return du[3] = k * i
 end
 
 # ╔═╡ d6fc7669-2c25-44f0-9de7-878f7374f784
-p = [0.5/7.9E5, 0.33]  # initial parameters
+p = [0.5 / 7.9E5, 0.33]  # initial parameters
 
 # ╔═╡ 311af29e-ac88-44f0-bd44-64ed26bd8ac0
 u0 = [7.9E5, 10.0, 0.0]
@@ -38,7 +38,7 @@ u0 = [7.9E5, 10.0, 0.0]
 tspan = (0.0, 140.0)
 
 # ╔═╡ f9e9374c-e367-41b8-bbc0-81e5a9a4d53b
-sir = ODEProblem(SIR,u0,tspan,p)
+sir = ODEProblem(SIR, u0, tspan, p)
 
 # ╔═╡ 93f23536-56f3-4420-8f47-3ef89c3e9a87
 sol = solve(sir)

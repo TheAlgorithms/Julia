@@ -28,11 +28,11 @@ Implement keyword arguments by, lt and rev so that by specifies a transformation
 
 Contributed By:- [Soc Virnyl Estela](https://github.com/uncomfyhalomacro)
 """
-function binary_search(list, query; rev=false, lt=<, by=identity)
-    if issorted(list) || issorted(list; rev=true)
+function binary_search(list, query; rev = false, lt = <, by = identity)
+    if issorted(list) || issorted(list; rev = true)
         low = !rev ? 1 : length(list)
         high = !rev ? length(list) : 1
-        middle(l, h) = round(Int, (l + h)//2)
+        middle(l, h) = round(Int, (l + h) // 2)
         query = by(query)
 
         while !rev ? low <= high : high <= low
@@ -59,7 +59,12 @@ The implementation of this binary Search is recursive and requires O(Log n) spac
 
 Contributed By:- [Ash](https://github.com/ashwani-rathee)
 """
-function binary_search(arr::AbstractArray{T,1}, l::T, r::T, x::T) where {T<:Real}
+function binary_search(
+    arr::AbstractArray{T,1},
+    l::T,
+    r::T,
+    x::T,
+) where {T<:Real}
     if (r >= l)
         mid = Int(ceil(l + (r - l) / 2))
         # println(mid)

@@ -1,5 +1,5 @@
 include("basic_binary_search_tree.jl")
-mutable struct Splay{T}<:AbstractBinarySearchTree_arr where T
+mutable struct Splay{T} <: AbstractBinarySearchTree_arr where {T}
     n::Int
     root::Int
     par::Vector{Int}

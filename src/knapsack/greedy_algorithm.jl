@@ -15,13 +15,16 @@ julia> zero_one_pack!(20,[1,3,11],[2,5,30])
 37
 ```
 """
-function zero_one_pack!(capacity::N, weights::V, values::V
-) where {N <: Number,V <: AbstractVector}
+function zero_one_pack!(
+    capacity::N,
+    weights::V,
+    values::V,
+) where {N<:Number,V<:AbstractVector}
     total_max_value = 0
-    while capacity > 0 && (length(weights)!=0 || length(values)!=0)
+    while capacity > 0 && (length(weights) != 0 || length(values) != 0)
         max_value, index = findmax(values) # get the highest value and index in the vector
         if capacity >= weights[index]
-            total_max_value += max_value 
+            total_max_value += max_value
             capacity -= weights[index]
         end
         splice!(values, index)
@@ -45,13 +48,16 @@ julia> complete_pack!(20,[1,2,9],[1,3,20])
 43
 ```
 """
-function complete_pack!(capacity::N, weights::V, values::V
-) where {N <: Number,V <: AbstractVector}
+function complete_pack!(
+    capacity::N,
+    weights::V,
+    values::V,
+) where {N<:Number,V<:AbstractVector}
     total_max_value = 0
-    while capacity > 0 && (length(weights)!=0 || length(values)!=0)
+    while capacity > 0 && (length(weights) != 0 || length(values) != 0)
         max_value, index = findmax(values)
-        while capacity >= weights[index] 
-            total_max_value += max_value 
+        while capacity >= weights[index]
+            total_max_value += max_value
             capacity -= weights[index]
         end
         splice!(values, index)
