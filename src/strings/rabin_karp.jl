@@ -22,7 +22,7 @@ function rabin_karp(text::String, pattern::String)
     ptn_len = length(pattern) # Length of the pattern
 
     # Convert string to an array of chars, and then to an array of integers
-    text = text |> collect .|> Int 
+    text = text |> collect .|> Int
     pattern = pattern |> collect .|> Int
 
     # If the text is shorter than the pattern, return empty vector
@@ -39,15 +39,15 @@ function rabin_karp(text::String, pattern::String)
 
     # Calculate the pow
     for _ in 1:(ptn_len-1)
-        pow = (pow*d)%m_hash
+        pow = (pow * d) % m_hash
     end
 
     # Calculate the first hash value
     for i in 1:ptn_len
-        t_hash = (t_hash*d + text[i]) % m_hash
-        p_hash = (p_hash*d + pattern[i]) % m_hash
+        t_hash = (t_hash * d + text[i]) % m_hash
+        p_hash = (p_hash * d + pattern[i]) % m_hash
     end
-    
+
     for i in 1:(txt_len-ptn_len+1)
         # If hash values match
         if p_hash == t_hash
@@ -64,8 +64,8 @@ function rabin_karp(text::String, pattern::String)
         end
 
         # If the current block is not the last one, calculate the hash value for the next block
-        if i <= txt_len-ptn_len
-            t_hash = (d*(t_hash - text[i]*pow) + text[i+ptn_len]) % m_hash
+        if i <= txt_len - ptn_len
+            t_hash = (d * (t_hash - text[i] * pow) + text[i+ptn_len]) % m_hash
 
             if t_hash < 0
                 t_hash += m_hash

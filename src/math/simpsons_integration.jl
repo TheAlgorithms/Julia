@@ -28,15 +28,15 @@ true
 function simpsons_integration(f::Function, a::Real, b::Real, n::Int)
     # width of the segments
     Δₓ = (b - a) / n
-    
+
     # rules of the method (check link in references)
     a₁(i) = 2i - 2
     a₂(i) = 2i - 1
 
     # sum of the heights
-    Σ = sum(1:n/2) do i
-            f(a + a₁(i)*Δₓ) + 4f(a + a₂(i)*Δₓ) + f(a + 2i*Δₓ)
-        end
+    Σ = sum(1:(n/2)) do i
+        return f(a + a₁(i) * Δₓ) + 4f(a + a₂(i) * Δₓ) + f(a + 2i * Δₓ)
+    end
 
     # approximate integral of f
     return (Δₓ / 3) * Σ

@@ -4,7 +4,6 @@ module TheAlgorithms
 using LinearAlgebra
 using Random
 
-
 ## Exports
 # Please keep the folders/functions sorted
 
@@ -13,6 +12,7 @@ export prefix_sum
 export DifferenceArray
 
 # Exports: cipher
+export caesar
 export atbash
 
 # Exports: data_structures
@@ -156,6 +156,7 @@ include("basic/prefix_sum.jl")
 include("basic/difference_arr.jl")
 
 # Includes: cipher
+include("cipher/caesar.jl")
 include("cipher/atbash.jl")
 
 # Includes: data_structures

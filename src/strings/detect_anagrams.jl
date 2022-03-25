@@ -25,7 +25,9 @@ Given "listen" and a list of candidates like "enlists" "google" "inlets" "banana
 Inspired by the [Extreme Startup game](https://github.com/rchatley/extreme_startup)
 """
 function detect_anagrams(subject, candidates)
-    condition(i) = sort(collect(lowercase(subject))) == sort(collect(lowercase(i)))
+    function condition(i)
+        return sort(collect(lowercase(subject))) == sort(collect(lowercase(i)))
+    end
     collection = collect(
         word for word in candidates if lowercase(word) != lowercase(subject)
     )

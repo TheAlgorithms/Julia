@@ -45,22 +45,20 @@ https://en.wikipedia.org/wiki/Atbash
 # Contributed by:- [Ihjass Thasbekha](https://github.com/Ihjass)
 """
 function encode(input)
-  input = replace(lowercase(input), reject_re => "")
-  parts = []
-  part = ""
-  for r in input
-    part *= xform(r)
-    if length(part) >= 5
-      push!(parts, part)
-      part = ""
+    input = replace(lowercase(input), reject_re => "")
+    parts = []
+    part = ""
+    for r in input
+        part *= xform(r)
+        if length(part) >= 5
+            push!(parts, part)
+            part = ""
+        end
     end
-  end
-  if !isempty(part)
-
-    push!(parts, part)
-  end
-  return join(parts, " ")
+    if !isempty(part)
+        push!(parts, part)
+    end
+    return join(parts, " ")
 end
 reject_re = r"[^a-z\d]+"
 xform(r) = (r >= 'a' && r <= 'z') ? r = 25 - (r - 'a') + 'a' : r
- 

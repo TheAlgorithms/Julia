@@ -18,21 +18,25 @@ Jump Search in 1-D array
 Time Complexity :  O(√ n)
 Time complexity of Jump Search is between Linear Search ( ( O(n) ) and Binary Search ( O (Log n) )
 """
-function jump_search(arr::AbstractArray{T,1}, x::T, jump::T = Int(ceil(sqrt(n)))) where {T <: Real}
-	n = size(arr)[1];
-	start = 1
-	final = jump
-	while( arr[final] <= x && final < n)
-		start = final
-	 	final = final + jump
-		if( final > n -1)
-		   final = n
-		end
-	end
-	for i in start:final
-		if(arr[i] == x)
-			return i
-		end
-	end
-	return -1
+function jump_search(
+    arr::AbstractArray{T,1},
+    x::T,
+    jump::T = Int(ceil(sqrt(n))),
+) where {T<:Real}
+    n = size(arr)[1]
+    start = 1
+    final = jump
+    while (arr[final] <= x && final < n)
+        start = final
+        final = final + jump
+        if (final > n - 1)
+            final = n
+        end
+    end
+    for i in start:final
+        if (arr[i] == x)
+            return i
+        end
+    end
+    return -1
 end

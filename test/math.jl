@@ -1,5 +1,4 @@
 @testset "Math" begin
-
     @testset "Math: abs.jl(Absolute Value) " begin
         @test abs_val(-100) == 100
         @test abs_val(0) == 0
@@ -7,13 +6,13 @@
         @test (-1000 == abs_val(-1000)) == false
         @test (1000 == abs_val(1000)) == true
 
-        @test abs_max([1,3,4]) == 4
-        @test abs_max([-3,1,2]) == -3
-        @test abs_max([-7,-3,6]) == -7
+        @test abs_max([1, 3, 4]) == 4
+        @test abs_max([-3, 1, 2]) == -3
+        @test abs_max([-7, -3, 6]) == -7
 
-        @test abs_min([1,3,4]) == 1
-        @test abs_min([-3,1,2]) == 1
-        @test abs_min([-7,-3,6]) == -3
+        @test abs_min([1, 3, 4]) == 1
+        @test abs_min([-3, 1, 2]) == 1
+        @test abs_min([-7, -3, 6]) == -3
     end
 
     @testset "Math: Area Under Curve" begin
@@ -88,12 +87,12 @@
         @test is_armstrong(x) == true
         x = 12      # Not an armstrong number
         @test is_armstrong(x) == false
-        end
+    end
 
     @testset "Math: Average Mean" begin
         @test mean([3, 6, 9, 12, 15, 18, 21]) == 12.0
         @test mean([5, 10, 15, 20, 25, 30, 35]) == 20.0
-        @test mean([1, 2, 3, 4, 5, 6, 7, 8])  == 4.5
+        @test mean([1, 2, 3, 4, 5, 6, 7, 8]) == 4.5
     end
 
     @testset "Math: Average Mode" begin
@@ -101,11 +100,11 @@
         @test mode([3, 4, 5, 3, 4, 2, 5, 2, 2, 4, 4, 2, 2, 2]) == [2]
         @test mode([3, 4, 5, 3, 4, 2, 5, 2, 2, 4, 4, 4, 2, 2, 4, 2]) == [4, 2]
         @test mode(["x", "y", "y", "z"]) == ["y"]
-        @test mode(["x", "x" , "y", "y", "z"]) == ["x", "y"]
+        @test mode(["x", "x", "y", "y", "z"]) == ["x", "y"]
     end
 
     @testset "Math: Average Median" begin
-        @test median([2,1,3,4]) == 2.5
+        @test median([2, 1, 3, 4]) == 2.5
         @test median([2, 70, 6, 50, 20, 8, 4]) == 8
         @test median([0]) == 0
     end
@@ -121,26 +120,30 @@
     end
 
     @testset "Math: Collatz Sequence" begin
-        @test collatz_sequence(3) == [3,10,5,16,8,4,2,1]
-        @test collatz_sequence(42) == [42,21,64,32,16,8,4,2,1]
-        @test collatz_sequence(5) == [5,16,8,4,2,1]
+        @test collatz_sequence(3) == [3, 10, 5, 16, 8, 4, 2, 1]
+        @test collatz_sequence(42) == [42, 21, 64, 32, 16, 8, 4, 2, 1]
+        @test collatz_sequence(5) == [5, 16, 8, 4, 2, 1]
     end
 
-
     @testset "Math: Combination" begin
-        @test combination(5,1) == 5 
-        @test combination(6,3) == 20
-        @test combination(7,5) == 21
-        @test combination(12,3) == 220
-        @test combination(5,5) == 1
-        @test combination(4,2) == 6
+        @test combination(5, 1) == 5
+        @test combination(6, 3) == 20
+        @test combination(7, 5) == 21
+        @test combination(12, 3) == 220
+        @test combination(5, 5) == 1
+        @test combination(4, 2) == 6
     end
 
     @testset "Math: Line Length" begin
         # Arc Lengths
         @test line_length(x -> x, 0, 1, 10) == 1.4142135623730947
         @test line_length(x -> 1, -5.5, 4.5) == 9.999999999999977
-        @test line_length(x -> sin(5 * x) + cos(10 * x) + 0.1 * x^2, 0, 10, 10000) == 69.53493003183544
+        @test line_length(
+            x -> sin(5 * x) + cos(10 * x) + 0.1 * x^2,
+            0,
+            10,
+            10000,
+        ) == 69.53493003183544
     end
 
     @testset "Math: Euler Method" begin
@@ -150,10 +153,10 @@
     @testset "Math: Factorial Related" begin
         @test factorial_iterative(5) == 120
         @test factorial_iterative(0) == 1
-        @test_throws ErrorException  factorial_iterative(-1)
+        @test_throws ErrorException factorial_iterative(-1)
         @test factorial_recursive(5) == 120
         @test factorial_recursive(0) == 1
-        @test_throws ErrorException  factorial_recursive(-1)
+        @test_throws ErrorException factorial_recursive(-1)
     end
 
     @testset "Math: Krishnamurthy Number" begin
@@ -164,10 +167,18 @@
         @test_throws ErrorException krishnamurthy(-1)
     end
 
-	@testset "Math: Monte Carlo Integration" begin
-        @test isapprox(monte_carlo_integration(x -> 3*x^2, 0, 1, 100000), 1, atol = 0.01)
-        @test isapprox(monte_carlo_integration(x -> sin(x), 0, pi, 1000), 2, atol = 0.1)
-	end
+    @testset "Math: Monte Carlo Integration" begin
+        @test isapprox(
+            monte_carlo_integration(x -> 3 * x^2, 0, 1, 100000),
+            1,
+            atol = 0.01,
+        )
+        @test isapprox(
+            monte_carlo_integration(x -> sin(x), 0, pi, 1000),
+            2,
+            atol = 0.1,
+        )
+    end
 
     @testset "Math: Prime Check" begin
         @test prime_check(2) == true
@@ -188,7 +199,7 @@
     end
 
     @testset "Math: Prime Factors" begin
-        @test prime_factors(50) == [2,5,5]
+        @test prime_factors(50) == [2, 5, 5]
         @test prime_factors(0) == []
         @test prime_factors(100) == [2, 2, 5, 5]
         @test prime_factors(2560) == [2, 2, 2, 2, 2, 2, 2, 2, 2, 5]
@@ -200,35 +211,53 @@
     end
 
     @testset "Math: Perfect Number" begin
-        @test perfect_number(27)  == false
-        @test perfect_number(28)  == true
+        @test perfect_number(27) == false
+        @test perfect_number(28) == true
         @test perfect_number(496) == true
-        @test perfect_number(8128)== true
+        @test perfect_number(8128) == true
         @test perfect_number(123) == false
     end
 
     @testset "Math: Perfect Square" begin
         @test perfect_square(9) == true
-        @test perfect_square(16)== true
+        @test perfect_square(16) == true
         @test perfect_square(1) == true
         @test perfect_square(0) == true
-        @test perfect_square(10)== false
+        @test perfect_square(10) == false
     end
 
     @testset "Math: Permutation" begin
-        @test permutation(5,1) == 5 
-        @test permutation(6,3) == 120
-        @test permutation(7,5) == 2520
-        @test permutation(12,3) == 1320
-        @test permutation(5,5) == 120
-        @test permutation(4,2) == 12
+        @test permutation(5, 1) == 5
+        @test permutation(6, 3) == 120
+        @test permutation(7, 5) == 2520
+        @test permutation(12, 3) == 1320
+        @test permutation(5, 5) == 120
+        @test permutation(4, 2) == 12
     end
-    
+
     @testset "Math: Riemann Sum Integration" begin
-        @test isapprox(riemann_integration(x -> x, 1, 3, 1_000, :midpoint), 4.0, atol=0.01)
-        @test isapprox(riemann_integration(x -> x, 1, 3, 1_000, :left), 4.0, atol=0.01)
-        @test isapprox(riemann_integration(x -> x, 1, 3, 1_000, :right), 4.0, atol=0.01)
-        @test_throws ArgumentError riemann_integration(x -> x, 1, 3, 1_000, :wrongargument)
+        @test isapprox(
+            riemann_integration(x -> x, 1, 3, 1_000, :midpoint),
+            4.0,
+            atol = 0.01,
+        )
+        @test isapprox(
+            riemann_integration(x -> x, 1, 3, 1_000, :left),
+            4.0,
+            atol = 0.01,
+        )
+        @test isapprox(
+            riemann_integration(x -> x, 1, 3, 1_000, :right),
+            4.0,
+            atol = 0.01,
+        )
+        @test_throws ArgumentError riemann_integration(
+            x -> x,
+            1,
+            3,
+            1_000,
+            :wrongargument,
+        )
     end
 
     @testset "Math: Sum of Arithmetic progression" begin
@@ -247,7 +276,7 @@
     end
 
     @testset "Math: Sieve of Eratosthenes" begin
-        @test eratosthenes(20) ==   [2,3,5,7,11,13,17,19]
+        @test eratosthenes(20) == [2, 3, 5, 7, 11, 13, 17, 19]
         @test eratosthenes(2) == [2]
         @test eratosthenes(1) == Int64[] # No prime number less that 1, so it should return empty array.
     end
@@ -255,22 +284,38 @@
     @testset "Math: Babylonian Square Root" begin
         @test bab_sqrt(100) ≈ sqrt(100)
         @test bab_sqrt(π, guess = -100, tolerance = 1e-10) ≈ sqrt(π)
-        @test bab_sqrt(π, tolerance = π) ≈ π/2 # since inital guess should be π / 2
+        @test bab_sqrt(π, tolerance = π) ≈ π / 2 # since inital guess should be π / 2
         @test bab_sqrt(0) == 0
         @test_throws DomainError bab_sqrt(-5)
     end
 
     @testset "Math: Trapezoid Integration" begin
-        @test isapprox(trapezoid_integration(x -> 3*x^2, 0, 1, 100000), 1, atol = 0.01)
-        @test isapprox(trapezoid_integration(x -> sin(x), 0, pi, 1000), 2, atol = 0.1)
-	end
+        @test isapprox(
+            trapezoid_integration(x -> 3 * x^2, 0, 1, 100000),
+            1,
+            atol = 0.01,
+        )
+        @test isapprox(
+            trapezoid_integration(x -> sin(x), 0, pi, 1000),
+            2,
+            atol = 0.1,
+        )
+    end
 
     @testset "Math: Simpson's Integration" begin
-        @test isapprox(simpsons_integration(x -> 3*x^2, 0, 1, 100000), 1, atol = 0.01)
-        @test isapprox(simpsons_integration(x -> sin(x), 0, pi, 1000), 2, atol = 0.1)
+        @test isapprox(
+            simpsons_integration(x -> 3 * x^2, 0, 1, 100000),
+            1,
+            atol = 0.01,
+        )
+        @test isapprox(
+            simpsons_integration(x -> sin(x), 0, pi, 1000),
+            2,
+            atol = 0.1,
+        )
         @test simpsons_integration(x -> 4 / (1 + x^2), 0, 1, 100_000) ≈ pi
     end
-    
+
     @testset "Math: Volume of Various Shapes" begin
         @test vol_cube(1) == 1
         @test vol_cube(3) == 27
@@ -298,8 +343,8 @@
         @test_throws DomainError vol_circular_cylinder(-1, 3)
     end
 
-   @testset "Math: Verlet scheme" begin
-        @test verlet_integration(x->-x,[0.0,0.1],(1,10))[end][end] == 9.999
-   end
-
+    @testset "Math: Verlet scheme" begin
+        @test verlet_integration(x -> -x, [0.0, 0.1], (1, 10))[end][end] ==
+              9.999
+    end
 end

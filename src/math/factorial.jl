@@ -13,14 +13,18 @@ factorial_iterative(-1)     # returns error
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function factorial_iterative(n::N)where N<:Integer
+function factorial_iterative(n::N) where {N<:Integer}
     if n < 0
-        throw(error("factorial_iterative() only accepts non-negative integral values"))
+        throw(
+            error(
+                "factorial_iterative() only accepts non-negative integral values",
+            ),
+        )
     end
-    if n==0 || n==1
+    if n == 0 || n == 1
         return one(BigInt)
     end
-    return n*factorial_iterative(n-1)
+    return n * factorial_iterative(n - 1)
 end
 
 """
@@ -37,17 +41,21 @@ factorial_recursive(5)      # returns 120
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function factorial_recursive(n::N)::BigInt where N<:Integer
+function factorial_recursive(n::N)::BigInt where {N<:Integer}
     if n < 0
-        throw(error("factorial_iterative() only accepts non-negative integral values"))
+        throw(
+            error(
+                "factorial_iterative() only accepts non-negative integral values",
+            ),
+        )
     end
     if n == 0 || n == 1
         return one(BigInt)
         # keep same result type
     else
-        factorial=one(BigInt)
+        factorial = one(BigInt)
         for i in 1:n
-            factorial*=i
+            factorial *= i
         end
         return factorial
     end

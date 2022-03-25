@@ -15,8 +15,8 @@ perfect_square(-9)  # returns False
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function perfect_square(number::N)where N<:Integer
-    number<0&&return false
-    val=isqrt(number)
-    return val*val == number
+function perfect_square(number::N) where {N<:Integer}
+    number < 0 && return false
+    val = isqrt(number)
+    return val * val == number
 end

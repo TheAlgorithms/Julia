@@ -39,18 +39,18 @@ BucketSort!([3, 5, 2, 9]) # returns [2, 3, 5, 9]
 Contributed By:- [Ming Liang](https://github.com/DrakonDarquesse)
 """
 
-function bucket_sort!(arr::Vector{T}, l::Int=length(arr)) where T
-    if l==0
-        return
+function bucket_sort!(arr::Vector{T}, l::Int = length(arr)) where {T}
+    if l == 0
+        return nothing
     end
 
     max = maximum(arr)
     min = minimum(arr)
-    r = (max-min+1)/l
-    buckets = Array{T, 1}[[] for a in 1:l]
+    r = (max - min + 1) / l
+    buckets = Array{T,1}[[] for a in 1:l]
 
     for i in arr
-        push!(buckets[floor(Int, (i-min)/r)+1], i)
+        push!(buckets[floor(Int, (i - min) / r)+1], i)
     end
 
     for bucket in buckets
@@ -65,5 +65,5 @@ function bucket_sort!(arr::Vector{T}, l::Int=length(arr)) where T
             bucket[idx] = val
         end
     end
-    copy!(arr, vcat(buckets...))
+    return copy!(arr, vcat(buckets...))
 end

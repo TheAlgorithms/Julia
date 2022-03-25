@@ -31,6 +31,3 @@ function sum_gp(first_term, ratio, num_terms)
     # ormula for finding sum of n terms of a geometric progression
     return (first_term / (1 - ratio)) * (1 - ratio^num_terms)
 end
-
-
-

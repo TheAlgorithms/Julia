@@ -25,14 +25,14 @@ ExchangeSort(['5', '4', '3', '2', '1']) # returns ['1', '2', '3', '4', '5']
 Contributed By:- [Gervin Fung](https://github.com/GervinFung)
 """
 
-function exchange_sort!(arr::Vector{T})where T
-    size=length(arr)
+function exchange_sort!(arr::Vector{T}) where {T}
+    size = length(arr)
     for i in 1:size
         for j in i:size
-            if (arr[i]>arr[j])
-                temp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = temp;
+            if (arr[i] > arr[j])
+                temp = arr[j]
+                arr[j] = arr[i]
+                arr[i] = temp
             end
         end
     end

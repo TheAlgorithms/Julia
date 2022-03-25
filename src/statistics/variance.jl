@@ -14,7 +14,7 @@ Find the variance from a set of data.
 """
 function variance(a)
     avg = sum(a) / length(a)
-    x = sum((a .- avg).^2)
+    x = sum((a .- avg) .^ 2)
     s_sq = x / (length(a) - 1)
-    return(s_sq)
+    return (s_sq)
 end

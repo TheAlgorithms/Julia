@@ -42,12 +42,12 @@ end
 # Contributed by:- [Ihjass Thasbekha](https://github.com/Ihjass)
 """
 function ispangram(input)
-    x = 2^26-1
+    x = 2^26 - 1
     for letter in input
         if 'A' <= letter <= 'Z'
-            x &= ~(1<<(letter-'A'))
+            x &= ~(1 << (letter - 'A'))
         elseif 'a' <= letter <= 'z'
-            x &= ~(1<<(letter-'a'))
+            x &= ~(1 << (letter - 'a'))
         end
         x == 0 && return true
     end

@@ -1,7 +1,7 @@
 function bubble_sort!(array::Vector{T}) where {T}
-    for i = 1:length(array)
+    for i in 1:length(array)
         flag = false
-        for j = 1:(length(array)-i)
+        for j in 1:(length(array)-i)
             if array[j] > array[j+1]
                 array[j], array[j+1] = array[j+1], array[j]
                 flag = true
@@ -9,7 +9,7 @@ function bubble_sort!(array::Vector{T}) where {T}
         end
 
         if !flag
-            return
+            return nothing
         end
     end
 end

@@ -31,9 +31,9 @@ function monte_carlo_integration(f::Function, a::Real, b::Real, n::Int)
     Δₓ = ((b - a) / n)
 
     Σ = 0.0
-    for _ ∈ 1:n
+    for _ in 1:n
         # generate uniform(a, b) using uniform(0, 1)
-        Xᵢ = a + (b-a)*rand()
+        Xᵢ = a + (b - a) * rand()
         Σ += f(Xᵢ)
     end
 

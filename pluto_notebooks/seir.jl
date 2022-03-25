@@ -6,12 +6,12 @@ using InteractiveUtils
 
 # ╔═╡ b676eebe-f036-11eb-3362-c768806de296
 begin
-	using Plots
-	using Statistics
-	using Random
-	using Symbolics
-	using ModelingToolkit
-	using DifferentialEquations
+    using Plots
+    using Statistics
+    using Random
+    using Symbolics
+    using ModelingToolkit
+    using DifferentialEquations
 end
 
 # ╔═╡ b342dd2f-dd63-4688-a94f-9f7653979cde
@@ -32,34 +32,25 @@ D = Differential(t)
 
 # ╔═╡ 953c609a-3afa-4704-808d-7061266f98eb
 eqs = [
-	D(s) ~ -γ * R₀ * s * i,
-	D(e) ~ γ * R₀ * s * i - σ * e,
-	D(i) ~ σ * e - γ * i,
-	D(r) ~ γ * i
+    D(s) ~ -γ * R₀ * s * i,
+    D(e) ~ γ * R₀ * s * i - σ * e,
+    D(i) ~ σ * e - γ * i,
+    D(r) ~ γ * i,
 ]
 
 # ╔═╡ 717cf919-fab5-48ef-be88-f6aa50c35851
 tspan = (0.0, 350.0)
 
 # ╔═╡ 794388a1-a3d5-4196-a108-f693b2dde5cb
-u0 = [
-	i => 1E-7, 
-	e => 4.0 * i,
-	s => 1.0 - i - e,
-	r => 0.0
-]
+u0 = [i => 1E-7, e => 4.0 * i, s => 1.0 - i - e, r => 0.0]
 
 # ╔═╡ 0c0cefc5-2d3f-4b99-81ec-881dd553d01c
-p = [
-	γ => 1/18,
-	R₀ => 3.0,
-	σ => 1/5.2
-]
+p = [γ => 1 / 18, R₀ => 3.0, σ => 1 / 5.2]
 
 # ╔═╡ 42666425-bed5-4007-8405-6178d840fdea
 begin
-	sys = ODESystem(eqs)
-	sys = ode_order_lowering(sys)
+    sys = ODESystem(eqs)
+    sys = ode_order_lowering(sys)
 end
 
 # ╔═╡ 8911888a-9fc8-472f-8807-c2962341e852
@@ -72,10 +63,10 @@ sol = solve(prob, Tsit5())
 plotly()  # use plotly for interactivity
 
 # ╔═╡ af33eafc-644b-4ff6-bd0a-68b2172d5170
-plot(sol, labels=["s" "e" "i" "r"], title="SEIR Dynamics", lw=2)
+plot(sol; labels = ["s" "e" "i" "r"], title = "SEIR Dynamics", lw = 2)
 
 # ╔═╡ 281b8f91-4a6f-469c-ab85-b5b8e0fb6a12
-areaplot(sol.t, sol', labels=["susceptible" "exposed" "infected" "removed"])
+areaplot(sol.t, sol'; labels = ["susceptible" "exposed" "infected" "removed"])
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """

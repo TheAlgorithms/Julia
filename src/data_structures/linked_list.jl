@@ -33,18 +33,18 @@
 module LinkedList
 
 mutable struct Node
-    val # Value of the node
-    next # Pointer to the next node
-    Node(val, next=missing) = new(val, next)
+    val::Any # Value of the node
+    next::Any # Pointer to the next node
+    Node(val, next = missing) = new(val, next)
 end
 
 # Create node with value 'val' and the pointer to the next node ( missing by default ) 
-function create_node(val, next=missing)
+function create_node(val, next = missing)
     return Node(val, next)
 end
 
 # Create root node of the list
-function create_list(n::Int=0, val=missing)
+function create_list(n::Int = 0, val = missing)
     root_node = create_node("root") # Root node with value "root"
 
     current_node = root_node
@@ -59,18 +59,18 @@ function create_list(n::Int=0, val=missing)
 end
 
 # Add a new node to the list at the specified index
-function insert(list::Node, new_node::Node, index::Int=1)
-    current_node = get_node(list, index-1)
+function insert(list::Node, new_node::Node, index::Int = 1)
+    current_node = get_node(list, index - 1)
 
     next = current_node.next
     current_node.next = new_node
-    new_node.next = next
+    return new_node.next = next
 end
 
 # Create a new node with value 'val' in the list at the specified index
-function insert(list::Node, val, index::Int=1)
+function insert(list::Node, val, index::Int = 1)
     new_node = create_node(val)
-    insert(list, new_node, index)
+    return insert(list, new_node, index)
 end
 
 # Add a new node to the end of the list
@@ -79,14 +79,14 @@ function push_back(list::Node, node::Node)
     while !ismissing(current_node.next)
         current_node = current_node.next
     end
-    
-    current_node.next = node
+
+    return current_node.next = node
 end
 
 # Add a new node with value 'val' to the end of the list
 function push_back(list::Node, val)
     new_node = create_node(val)
-    push_back(list, new_node)
+    return push_back(list, new_node)
 end
 
 function return_as_array(list::Node)
@@ -103,14 +103,14 @@ end
 
 # Remove all elements from the list
 function clear(list::Node)
-    list.next = missing
+    return list.next = missing
 end
 
 # Remove an element at the specified index
 function remove(list::Node, index::Int)
-    node_before = get_node(list, index-1)
+    node_before = get_node(list, index - 1)
     to_remove = node_before.next
-    node_before.next = to_remove.next
+    return node_before.next = to_remove.next
 end
 
 # Remove all elements with the value 'val'
@@ -129,7 +129,7 @@ end
 # Remove the first element in the list with value 'val'
 function remove_first(list::Node, val)
     index = indexOf(list, val)
-    remove(list, index)
+    return remove(list, index)
 end
 
 # Get a node at the specified index
@@ -148,7 +148,7 @@ end
 # Get a value from the node at the specified index
 function get(list::Node, index::Int)
     node = get_node(list, index)
-    if !ismissing(node) 
+    if !ismissing(node)
         return node.val
     end
     return missing
@@ -157,13 +157,13 @@ end
 # Return the index of the first element with a value 'val'
 function indexOf(list::Node, val)
     current_node = list.next
-    i=1
+    i = 1
     while !ismissing(current_node)
         if current_node.val == val
             return i
         else
             current_node = current_node.next
-            i+=1
+            i += 1
         end
     end
     return -1
