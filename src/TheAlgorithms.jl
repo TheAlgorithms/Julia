@@ -134,6 +134,7 @@ export is_palindrome
 export word_count
 export hamming_distance
 export rabin_karp
+export LCS
 
 # Exports: scheduling
 export fcfs
@@ -246,6 +247,7 @@ include("strings/pangram.jl")
 include("strings/word_count.jl")
 include("strings/hamming_distance.jl")
 include("strings/rabin_karp.jl")
+include("strings/lcs.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
