@@ -2,7 +2,7 @@
     @testset "Project Rosalind: Count Nucleotides" begin
         @test count_nucleotides(
             "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC",
-        ) == "20 21 17 12"
+        ) == "20 12 17 21"
     end
 
     @testset "Project Rosalind: DNA to RNA" begin
