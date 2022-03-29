@@ -17,4 +17,11 @@
         DifferenceArray.add_to_arr(diff_arr, 1, 6, 1)
         @test DifferenceArray.calculate_arr(diff_arr) == [2, 4, 8, 12, 17, 22]
     end
+
+    @testset "Basic: The Tower of Hanoi" begin
+        # a, b, c represents the names of the first, second and third rod respectively
+        @test Hanoi.solve('a', 'b', 'c', 1) == ['a' => 'c'] # One ring, just move it from the first to the third rod
+        @test Hanoi.solve('a', 'b', 'c', 2) == ['a' => 'b', 'a' => 'c', 'b' => 'c']
+        @test Hanoi.solve('a', 'b', 'c', 3) == ['a' => 'c', 'a' => 'b', 'c' => 'b', 'a' => 'c', 'b' => 'a', 'b' => 'c', 'a' => 'c']
+    end
 end
