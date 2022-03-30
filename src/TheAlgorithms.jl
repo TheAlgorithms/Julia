@@ -10,6 +10,7 @@ using Random
 # Exports: basic
 export prefix_sum
 export DifferenceArray
+export Hanoi
 
 # Exports: cipher
 export caesar
@@ -155,6 +156,7 @@ export length_conversion
 # Includes: basic
 include("basic/prefix_sum.jl")
 include("basic/difference_arr.jl")
+include("basic/hanoi.jl")
 
 # Includes: cipher
 include("cipher/caesar.jl")
