@@ -72,6 +72,19 @@
         @test_throws DomainError area_rhombus(-1, -2)
         @test_throws DomainError area_rhombus(1, -2)
         @test_throws DomainError area_rhombus(-1, 2)
+
+        @test area_regular_polygon(3, 5) == 10.825317547305486
+        @test area_regular_polygon(7, 15) == 817.6302999003576
+        @test_throws DomainError area_regular_polygon(1, 5)
+        @test_throws DomainError area_regular_polygon(-1, 4)
+        @test_throws DomainError area_regular_polygon(4, -3)
+        @test_throws DomainError area_regular_polygon(-12, -4)
+
+        @test area_polygon([(0, 0), (100, 0), (0, 100)]) == 5000.0
+        @test area_polygon([0 0;100 0;100 100;0 100]) == 10000.0
+        @test area_polygon([(6, 4.5), (5, 4.5), (4.5, 5.5), (5, 6.5)]) == 1.5
+        @test_throws DomainError area_polygon([0 0;100 0])
+        @test_throws DomainError area_polygon([(6, 4.63), (5, 4.63)])
     end
 
     @testset "Math: Armstrong Number" begin

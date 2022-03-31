@@ -47,7 +47,9 @@ export area_circle
 export area_ellipse
 export area_heron_triangle
 export area_parallelogram
+export area_polygon
 export area_rectangle
+export area_regular_polygon
 export area_rhombus
 export area_square
 export area_trapezium
