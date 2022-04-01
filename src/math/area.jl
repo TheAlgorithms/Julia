@@ -305,16 +305,13 @@ area_regular_polygon(-12, -4) # returns DomainError
 ```
 """
 function area_regular_polygon(sides, side_len)
-    if sides < 3
-        throw(DomainError("A polygon should have atleast 3 sides"))
-    elseif sides < 0 || side_len < 0
-        throw(
-            DomainError(
-                "area_regular_polygon() only works for non-negative values",
-            ),
-        )
-    end
-    return sides * side_len^2 *cot(pi/sides) / 4
+    sides < 3 && throw(DomainError("A polygon should have atleast 3 sides"))
+    (sides < 0 || side_len < 0) && throw(
+        DomainError(
+            "area_regular_polygon() only works for non-negative values",
+        ),
+    )
+    return sides * side_len^2 * cot(pi / sides) / 4
 end
 
 """
@@ -335,29 +332,28 @@ area_polygon([0 0;100 0]) # returns DomainError
 area_polygon([(6, 4.63), (5, 4.63)]) # returns DomainError
 ```
 """
-function area_polygon(coords::Matrix{T}) where {T <: Real}
-	r, c = size(coords)
-	if ~((c==2 && r>2) || (r==2 && c>2))
-		throw(DomainError("A polygon should have at least 3 vertices"))
-	end
-	reshape(coords, (:,2))
-	if ~(coords[1,:] == coords[end,:])
-		coords = vcat(coords, coords[1,:]') #to make a loop of the vertices
-	end
-	return @views abs(sum(coords[1:end-1,:].*(-coords[2:end,2:-1:1])))/2
+function area_polygon(coords::Matrix{T}) where {T<:Real}
+    r, c = size(coords)
+    (~((c == 2 && r > 2) || (r == 2 && c > 2))) &&
+        throw(DomainError("A polygon should have at least 3 vertices"))
+
+    reshape(coords, (:, 2))
+    if ~(coords[1, :] == coords[end, :])
+        coords = vcat(coords, coords[1, :]') #to make a loop of the vertices
+    end
+    return @views abs(sum(coords[1:end-1, :] .* (-coords[2:end, 2:-1:1]))) / 2
 end
 
-function area_polygon(coords::Vector{Tuple{T, N}}) where {T, N <: Real}
-	if length(coords) < 3
-		throw(DomainError("A polygon should have at least 3 vertices"))
-	end
-	if ~(first(coords)==last(coords))
-		push!(coords, first(coords)) #to make a loop of the vertices
-	end
-	res = 0
-	for i=1:length(coords)-1
-		res = res + coords[i][1] * coords[i+1][2] -
-             coords[i+1][1] * coords[i][2]
-	end
-	return abs(res)/2
+function area_polygon(coords::Vector{Tuple{T,N}}) where {T,N<:Real}
+    length(coords) < 3 &&
+        throw(DomainError("A polygon should have at least 3 vertices"))
+    if ~(first(coords) == last(coords))
+        push!(coords, first(coords)) #to make a loop of the vertices
+    end
+    res = 0
+    for i in 1:length(coords)-1
+        res =
+            res + coords[i][1] * coords[i+1][2] - coords[i+1][1] * coords[i][2]
+    end
+    return abs(res) / 2
 end
