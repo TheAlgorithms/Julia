@@ -8,13 +8,13 @@ Program to implement atbash cipher for the given sentence.A full description of 
 
 # Examples/Tests 
 ```julia
-julia> encode("test")
+julia> atbash_encode("test")
 gvhg
 
-julia> encode("abcdefghijklmnopqrstuvwxyz")
+julia> atbash_encode("abcdefghijklmnopqrstuvwxyz")
 zyxwvutsrqponmlkjihgfedcba
 
-julia> encode("hello")
+julia> atbash_encode("hello")
 svool
 
 ```
@@ -44,7 +44,7 @@ https://en.wikipedia.org/wiki/Atbash
 
 # Contributed by:- [Ihjass Thasbekha](https://github.com/Ihjass)
 """
-function encode(input)
+function atbash_encode(input)
     input = replace(lowercase(input), reject_re => "")
     parts = []
     part = ""
