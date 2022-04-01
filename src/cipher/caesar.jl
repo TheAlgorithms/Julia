@@ -1,5 +1,5 @@
 """
-rotate(rot, s)
+    caesar(rot, s)
 
 Program to implement rotational cipher for the given sentence. A full description of the algorithm can be found on [wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)
 
@@ -9,13 +9,13 @@ Program to implement rotational cipher for the given sentence. A full descriptio
 
 # Examples/Tests 
 ```julia
-julia> rotate(13,"abcdefghijklmnopqrstuvwxyz")
+julia> caesar(13,"abcdefghijklmnopqrstuvwxyz")
 nopqrstuvwxyzabcdefghijklm
 
-julia> rotate(5,"omg")
+julia> caesar(5,"omg")
 trl
 
-julia> rotate(0,"hello")
+julia> caesar(0,"hello")
 hello
 
 ```

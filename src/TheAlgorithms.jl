@@ -14,7 +14,8 @@ export Hanoi
 
 # Exports: cipher
 export caesar
-export atbash
+# export rotate
+export atbash_encode
 
 # Exports: data_structures
 export AbstractBinarySearchTree_arr
