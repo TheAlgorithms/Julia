@@ -9,6 +9,7 @@ using LinearAlgebra
     include("cipher.jl")
     include("data_structures.jl")
     include("knapsack.jl")
+    include("longest_increasing_subsequence.jl")
     include("math.jl")
     include("matrix.jl")
     include("project-rosalind.jl")
