@@ -16,7 +16,7 @@ julia> lis([2, 2, 3], Val(:dp))
 # Brief:
 Given a sequence of integers, the function finds the longest, strictly increasing, subsequence in that sequence.
 
-# For more informations:
+# For more information:
 https://cp-algorithms.com/sequences/longest_increasing_subsequence.html
 
 # Contributed by:
