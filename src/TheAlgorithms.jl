@@ -40,6 +40,9 @@ export LinkedList
 export complete_pack!
 export zero_one_pack!
 
+# Exports: longest_increasing_subsequence
+export lis
+
 # Exports: math
 export abs_max
 export abs_min
@@ -173,6 +176,9 @@ include("data_structures/linked_list.jl")
 # Includes: knapsack
 include("knapsack/dynamic_programming.jl")
 include("knapsack/greedy_algorithm.jl")
+
+#Includes: longest_increasing_subsequence
+include("longest_increasing_subsequence/dynamic_programming.jl")
 
 # Includes: math
 include("math/abs.jl")
