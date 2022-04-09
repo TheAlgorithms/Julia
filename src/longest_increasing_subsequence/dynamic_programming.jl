@@ -29,11 +29,14 @@ function lis(arr::Array{Int}, ::Val{:dp})
     p = zeros(Int, len)
 
     lis_arr = Int[]
-    lis_value = 0
-    lis_pos = 0
 
-    for i = 2:len
-        for j = 1:i
+    len == 0 && return lis_arr # if arr is empty
+
+    lis_value = 1
+    lis_pos = 1
+
+    for i in 2:len
+        for j in 1:i
             if arr[j] < arr[i] && memo[i] < memo[j] + 1
                 memo[i] = memo[j] + 1
                 p[i] = j
