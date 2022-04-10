@@ -179,6 +179,7 @@ include("knapsack/greedy_algorithm.jl")
 
 #Includes: longest_increasing_subsequence
 include("longest_increasing_subsequence/dynamic_programming.jl")
+include("longest_increasing_subsequence/binary_search.jl")
 
 # Includes: math
 include("math/abs.jl")

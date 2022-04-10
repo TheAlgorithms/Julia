@@ -17,4 +17,23 @@
         @test lis([3, 4, -1, 5, 8, 2, 3, 12, 7, 9, 10], Val(:dp)) in
               [[-1, 2, 3, 7, 9, 10], [3, 4, 5, 8, 9, 10]]
     end
+
+    @testset "LIS: Binary Search approach!" begin
+        @test lis([3, 10, 2, 1, 20], Val(:bs)) == [3, 10, 20]
+        # negative elements
+        @test lis([-10, -2, -1, -20], Val(:bs)) == [-10, -2, -1]
+        # repeated elements
+        @test lis([2, 2, 3, 3], Val(:bs)) == [2, 3]
+        # one element
+        @test lis([2], Val(:bs)) == [2]
+        # empty array
+        @test lis(Int[], Val(:bs)) == Int[]
+        # two possible results:
+        @test lis([3, 2], Val(:bs)) in [[2], [3]]
+        # two possible results:
+        @test lis([50, 3, 10, 7, 40, 80], Val(:bs)) in [[3, 7, 40, 80], [3, 10, 40, 80]]
+        # two possible results:
+        @test lis([3, 4, -1, 5, 8, 2, 3, 12, 7, 9, 10], Val(:bs)) in
+              [[-1, 2, 3, 7, 9, 10], [3, 4, 5, 8, 9, 10]]
+    end
 end
