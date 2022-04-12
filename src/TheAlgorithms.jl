@@ -43,6 +43,9 @@ export zero_one_pack!
 # Exports: longest_increasing_subsequence
 export lis
 
+# Exports: machine_learning
+export KMeans
+
 # Exports: math
 export abs_max
 export abs_min
@@ -179,6 +182,9 @@ include("knapsack/greedy_algorithm.jl")
 
 #Includes: longest_increasing_subsequence
 include("longest_increasing_subsequence/dynamic_programming.jl")
+
+# Includes: machine_learning
+include("machine_learning/k_mean.jl")
 
 # Includes: math
 include("math/abs.jl")
