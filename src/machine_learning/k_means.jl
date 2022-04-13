@@ -114,8 +114,14 @@ function cluster(k::Int, iter::Int, points::Vector{Vector{T}}) where T<:Number
                 new_clust = moveClusters(k, clust_dim, clusters, points)
             end
         else
-            for i in 1:iter
-                clusters = moveClusters(k, clust_dim, clusters, points)
+            new_clust = moveClusters(k, clust_dim, clusters, points)
+            for i in 2:iter
+                if new_clust == clusters
+                    # There is no need for further iterations, return the clusters
+                    return clusters
+                end
+                clusters = new_clust
+                new_clust = moveClusters(k, clust_dim, clusters, points)
             end
         end
 
@@ -123,4 +129,3 @@ function cluster(k::Int, iter::Int, points::Vector{Vector{T}}) where T<:Number
     end
 end
 end
-
