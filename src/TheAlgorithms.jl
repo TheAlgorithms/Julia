@@ -184,7 +184,7 @@ include("knapsack/greedy_algorithm.jl")
 include("longest_increasing_subsequence/dynamic_programming.jl")
 
 # Includes: machine_learning
-include("machine_learning/k_mean.jl")
+include("machine_learning/k_means.jl")
 
 # Includes: math
 include("math/abs.jl")
