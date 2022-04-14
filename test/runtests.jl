@@ -10,6 +10,7 @@ using LinearAlgebra
     include("data_structures.jl")
     include("knapsack.jl")
     include("longest_increasing_subsequence.jl")
+    include("machine_learning.jl")
     include("math.jl")
     include("matrix.jl")
     include("project-rosalind.jl")
