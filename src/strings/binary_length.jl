@@ -1,14 +1,14 @@
 #=
 This algorithm features use of the OEIS entry A070939 - 
-  Length of Binary Representation of n
+  Length of Binary Representation of n.
 
 The function, as believed, is O(n) 
 =#
 
-println("Enter Maximum Number Please")
-
-(function ()  
+function BinLength()  
+  println("Enter Maximum Number Please")
   maxNum = parse(UInt64, readline())
+  
   mod = 0
   len = 1
   arr = Array{Int64}(undef, maxNum, 1)
@@ -23,6 +23,6 @@ println("Enter Maximum Number Please")
     println(i," ",mod)
   end
 
-end )()
+end
 
 exit()
