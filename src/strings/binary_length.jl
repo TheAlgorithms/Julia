@@ -5,7 +5,7 @@ This algorithm features use of the OEIS entry A070939 -
 The function, as believed, is O(n) 
 =#
 
-function BinLength()  
+function binLength()  
   println("Enter Maximum Number Please")
   maxNum = parse(UInt64, readline())
   
