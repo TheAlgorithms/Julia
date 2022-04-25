@@ -1,4 +1,4 @@
-function bin_length_right(s::AbstractString)  
+function bin_length_long(s::AbstractString)  
   binNum = parse(UInt, s)
   
   finNum = 0
@@ -48,7 +48,7 @@ doubled amount.
 Contributed by F35H: https://github.com/F35H
 """
 
-function bin_length_left(s::AbstractString)  
+function bin_length_short(s::AbstractString)  
   binNum = parse(UInt, s)
   
   finNum = 0
