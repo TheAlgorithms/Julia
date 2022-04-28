@@ -305,7 +305,7 @@ area_regular_polygon(-12, -4) # returns DomainError
 ```
 """
 function area_regular_polygon(sides, side_len)
-    sides < 3 && throw(DomainError("A polygon should have atleast 3 sides"))
+    sides < 3 && throw(DomainError("A polygon should have at least 3 sides."))
     (sides < 0 || side_len < 0) && throw(
         DomainError(
             "area_regular_polygon() only works for non-negative values",

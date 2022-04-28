@@ -13,7 +13,7 @@ Assume the input as --> x=[-3, 1, -5, 0, -3]
           Final view:
           index : ( 1,  2,  3,  4,  5, 6, 7)
           range : (-5, -4, -3, -2, -1, 0, 1)
-          count : [ 1,  0,  2,  0,  0, 1, 1] <-- the list will store this occurences
+          count : [ 1,  0,  2,  0,  0, 1, 1] <-- the list will store this occurrence
 - STEP 3: Make the count list accumulate the occurances 
           The final count is (1, 1, 3, 3, 3, 4, 5)
 - STEP 4: Assign the elements in x into correct possition by creating a new list (will call 'output' in this sample)
@@ -25,7 +25,7 @@ Assume the input as --> x=[-3, 1, -5, 0, -3]
           ......
           ......
           *If you want the order of original array to have the same order as the output array use can change this to decremental for loop
-- STEP 5: Assign the 'ouput' list back to 'x'
+- STEP 5: Assign the 'output' list back to 'x'
 
 FINAL RESULT -->  [-5, -3, -3, 0, 1]                                                                                    
 """

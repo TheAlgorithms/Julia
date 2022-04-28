@@ -2,7 +2,7 @@
 A 2D Rotation matrix is a mtrix that rotates a vector in a 2D real space by an angle theta.
 For more info: https://en.wikipedia.org/wiki/Rotation_matrix
 
-This function takes the angle `theta` in radians as input and returns a 2D Matrix which will rotate the the vector by angle `theta`.
+This function takes the angle `theta` in radians as input and returns a 2D Matrix which will rotate the vector by angle `theta`.
 """
 function rotation_matrix(θ)
     rot_mat = Matrix{Float64}(undef, 2, 2)
