@@ -88,6 +88,6 @@ cont.
 As you can see, for every version of i, there is an appropriate
 final number that iterates on every doubling of i.
 
-#Contributions:
-Contributed by F35H: https://github.com/F35H
+Contributors:
+- [F45H](https://github.com/F35H)
 """
