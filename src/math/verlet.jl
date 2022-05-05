@@ -2,7 +2,7 @@
 Verlet integration is an integration method used to integrate newtons - law of motion. It is frequently used to find trajectories in molecular dynamics simulation.
 The function takes `four` inputs viz,
 - `f` : the differential equation
-- `x0` : the initial condition. This is a Vector with the first element as initial value for position(x_0) and the the second  initial condition for velocity (v_0) 
+- `x0` : the initial condition. This is a Vector with the first element as initial value for position (x_0) and the second initial condition for velocity (v_0) 
 - `tspan`: is the time span for integration. It is a tuple (initial time, final time)
 This functionr returns a tuple (x,t):
 - `x` is the solution
