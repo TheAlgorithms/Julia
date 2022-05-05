@@ -22,15 +22,20 @@ function factorial_iterative(n::N) where {N<:Integer}
         )
     end
     if n == 0 || n == 1
-        return one(BigInt)
+        return one(BigInt) # keep same result type
+    else
+        factorial = one(BigInt)
+        for i in 1:n
+            factorial *= i
+        end
+        return factorial
     end
-    return n * factorial_iterative(n - 1)
 end
 
 """
     factorial_recursive(n)
 
-Finds factorial of anumber using recursive method
+Finds factorial of a number using recursive method
 
 # Example
 ```julia
@@ -45,18 +50,12 @@ function factorial_recursive(n::N)::BigInt where {N<:Integer}
     if n < 0
         throw(
             error(
-                "factorial_iterative() only accepts non-negative integral values",
+                "factorial_recursive() only accepts non-negative integral values",
             ),
         )
     end
     if n == 0 || n == 1
-        return one(BigInt)
-        # keep same result type
-    else
-        factorial = one(BigInt)
-        for i in 1:n
-            factorial *= i
-        end
-        return factorial
+        return one(BigInt) # keep same result type
     end
+    return n * factorial_recursive(n - 1)
 end
