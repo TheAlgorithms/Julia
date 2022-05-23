@@ -193,6 +193,12 @@
         )
     end
 
+    @testset "Math: Partitions" begin
+        @test partitions_recursive.(0:9) == [1, 1, 2, 3, 5, 7, 11, 15, 22, 30]
+        @test partitions_recursive(50) == 204226
+        @test_throws DomainError partitions_recursive(-1)
+    end
+
     @testset "Math: Prime Check" begin
         @test prime_check(2) == true
         @test prime_check(3) == true
