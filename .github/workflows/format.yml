@@ -1,0 +1,15 @@
+name: JuliaFormatter
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  format:
+    name: Format with JuliaFormatter.jl
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: julia-actions/julia-format@master
+      with:
+        args: -v .
