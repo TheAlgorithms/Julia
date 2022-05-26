@@ -12,6 +12,7 @@
         @test KMeans.cluster(4, -1, points) == points
         # When there are not enough points to create k clusters,
         # each cluster will have its coordinates set to 0
-        KMeans.cluster(5, -1, points) == [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+        KMeans.cluster(5, -1, points) ==
+        [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
     end
 end

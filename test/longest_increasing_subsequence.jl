@@ -12,7 +12,8 @@
         # two possible results:
         @test lis([3, 2], Val(:dp)) in [[2], [3]]
         # two possible results:
-        @test lis([50, 3, 10, 7, 40, 80], Val(:dp)) in [[3, 7, 40, 80], [3, 10, 40, 80]]
+        @test lis([50, 3, 10, 7, 40, 80], Val(:dp)) in
+              [[3, 7, 40, 80], [3, 10, 40, 80]]
         # two possible results:
         @test lis([3, 4, -1, 5, 8, 2, 3, 12, 7, 9, 10], Val(:dp)) in
               [[-1, 2, 3, 7, 9, 10], [3, 4, 5, 8, 9, 10]]
@@ -31,7 +32,8 @@
         # two possible results:
         @test lis([3, 2], Val(:bs)) in [[2], [3]]
         # two possible results:
-        @test lis([50, 3, 10, 7, 40, 80], Val(:bs)) in [[3, 7, 40, 80], [3, 10, 40, 80]]
+        @test lis([50, 3, 10, 7, 40, 80], Val(:bs)) in
+              [[3, 7, 40, 80], [3, 10, 40, 80]]
         # two possible results:
         @test lis([3, 4, -1, 5, 8, 2, 3, 12, 7, 9, 10], Val(:bs)) in
               [[-1, 2, 3, 7, 9, 10], [3, 4, 5, 8, 9, 10]]

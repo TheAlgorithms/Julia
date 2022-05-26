@@ -16,28 +16,28 @@
 module KMeans
 # A function that takes two points and returns the distance 
 # between them
-function distance(a::Vector{T}, b::Vector{T}) where T<:Number
+function distance(a::Vector{T}, b::Vector{T}) where {T<:Number}
     if length(a) != length(b)
-        return 0.0;
+        return 0.0
     end
     sum = 0.0
     for i in 1:length(a)
-        sum = sum + (a[i]-b[i])*(a[i]-b[i])
+        sum = sum + (a[i] - b[i]) * (a[i] - b[i])
     end
-    return sqrt(sum);
+    return sqrt(sum)
 end
 
 # A function that returns the middle point based on the passed
 # matrix in which every row contains coordinates of the single point
-function findMiddle(points::Vector{Vector{T}}) where T<:Number
+function findMiddle(points::Vector{Vector{T}}) where {T<:Number}
     middle::Vector{T} = []
     # Calculate arithmetic mean of coordinates for each dimension
     for dim in 1:length(points[1])
         sum = 0.0
-        for val in 1:length(points[:,1])
+        for val in 1:length(points[:, 1])
             sum = sum + points[val][dim]
         end
-        push!(middle, sum/length(points[:,1]))
+        push!(middle, sum / length(points[:, 1]))
     end
     return middle
 end
@@ -45,13 +45,18 @@ end
 # Function that assigns each point to the nearest cluster and then creates a list
 # of centres of those clusters
 # Returns coordinates of the clusters at the end of the iteration
-function moveClusters(k::Int, dim::Int, clusters::Vector{Vector{T}}, points::Vector{Vector{T}}) where T<:Number
+function moveClusters(
+    k::Int,
+    dim::Int,
+    clusters::Vector{Vector{T}},
+    points::Vector{Vector{T}},
+) where {T<:Number}
     assign::Vector{Vector{Int}} = [] # A matrix to write point-cluster pairs
     for i in 1:k
         push!(assign, [])
     end
     # For each point we are finding the nearest cluster
-    for p in 1:length(points[:,1]) 
+    for p in 1:length(points[:, 1])
         min_dis = distance(points[p], clusters[1])
         idx = 1
         for c in 2:k
@@ -77,8 +82,8 @@ end
 # Call this function to find k clusters for passed points
 # If you want to have a limited number of iterations, set iter to any positive integer,
 # else set it to 0 or any negative number
-function cluster(k::Int, iter::Int, points::Vector{Vector{T}}) where T<:Number
-    points_num = length(points[:,1]) # Number of points
+function cluster(k::Int, iter::Int, points::Vector{Vector{T}}) where {T<:Number}
+    points_num = length(points[:, 1]) # Number of points
     clust_dim = length(points[1]) # dimension of the cluster we need to find
     #println("dim: ",points_num,"x",clust_dim)
 
@@ -92,19 +97,19 @@ function cluster(k::Int, iter::Int, points::Vector{Vector{T}}) where T<:Number
         return points
     else
         clusters::Vector{Vector{T}} = [] # Create a matrix to store centre points of the clusters 
-        step = points_num/k
-        idx = 1.0;
-        
+        step = points_num / k
+        idx = 1.0
+
         # To avoid generating empty clusters, we will assign each of clusters
         # to a different point
 
         for clust in 1:k
             push!(clusters, points[Int(idx)])
-            idx = floor(idx+step)            
+            idx = floor(idx + step)
         end
 
         #println(clusters)
-        
+
         if iter <= 0
             # There is no specific number of iteration
             # Program will run untill it finds the perfect solution

@@ -40,23 +40,30 @@ partitions_recursive(-1)     # returns DomainError
 # Contributor
 - [Vaishakh C R](https://github.com/Whiteshark-314)
 """
-function partitions_recursive(n::N)::BigInt where N<:Integer
-    n < 0 && 
-        throw(DomainError("partitions_recursive() only accepts positive integral values"))
+function partitions_recursive(n::N)::BigInt where {N<:Integer}
+    n < 0 && throw(
+        DomainError(
+            "partitions_recursive() only accepts positive integral values",
+        ),
+    )
     if n == 0
         return one(BigInt)
     end
-	k = collect(1:n)
-	return sum(partitions_k_parts.(n, k))
+    k = collect(1:n)
+    return sum(partitions_k_parts.(n, k))
 end
 
 function partitions_k_parts(n, k)
-    n < 0 || k < 0 && 
-        throw(DomainError("partitions_k_parts() only accepts positive integral values"))
-	if (n == 0 && k == 0) || (n > 0 && k == 1) || n == k
-		return one(BigInt)
-	elseif k == 0 || k > n
-		return zero(BigInt)
-	end
-	return partitions_k_parts(n-1, k-1) + partitions_k_parts(n-k, k)
+    n < 0 ||
+        k < 0 && throw(
+            DomainError(
+                "partitions_k_parts() only accepts positive integral values",
+            ),
+        )
+    if (n == 0 && k == 0) || (n > 0 && k == 1) || n == k
+        return one(BigInt)
+    elseif k == 0 || k > n
+        return zero(BigInt)
+    end
+    return partitions_k_parts(n - 1, k - 1) + partitions_k_parts(n - k, k)
 end

@@ -27,25 +27,25 @@
 """
 
 module Hanoi
-    function solveUtil(tower1, tower2, tower3, n::Int, solution::Array{Pair})
-        if n==1
-            push!(solution, tower1 => tower3) # There is only one ring, so just move it from tower1 to tower3
-        else
-            solveUtil(tower1, tower3, tower2, n-1, solution) # Move n-1 rings from tower1 to tower2 to free the bottom ring
-            push!(solution, tower1 => tower3) # Move the bottom ring from tower1 to tower3
-            solveUtil(tower2, tower1, tower3, n-1, solution) # Now move those n-1 rings from tower2 to tower3
-        end
+function solveUtil(tower1, tower2, tower3, n::Int, solution::Array{Pair})
+    if n == 1
+        push!(solution, tower1 => tower3) # There is only one ring, so just move it from tower1 to tower3
+    else
+        solveUtil(tower1, tower3, tower2, n - 1, solution) # Move n-1 rings from tower1 to tower2 to free the bottom ring
+        push!(solution, tower1 => tower3) # Move the bottom ring from tower1 to tower3
+        solveUtil(tower2, tower1, tower3, n - 1, solution) # Now move those n-1 rings from tower2 to tower3
     end
+end
 
-    function solve(tower1, tower2, tower3,n::Int)
-        solution = Array{Pair}(undef, 0)
-        solveUtil(tower1, tower2, tower3, n, solution)
-        return solution
-    end
+function solve(tower1, tower2, tower3, n::Int)
+    solution = Array{Pair}(undef, 0)
+    solveUtil(tower1, tower2, tower3, n, solution)
+    return solution
+end
 
-    function printSolution(solution::Array{Pair})
-        for step in solution
-            println(step)
-        end
+function printSolution(solution::Array{Pair})
+    for step in solution
+        println(step)
     end
+end
 end

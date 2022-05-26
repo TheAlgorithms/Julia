@@ -120,7 +120,7 @@
         @test LCS("ABCD", "EFGHIJ") == ""
 
         @test LCS("AAAAA", "AAA") == "AAA"
- 
+
         @test LCS("ABABABA", "ABBABBA") == "ABBABA"
 
         @test LCS("AGCDEG", "BGFDG") == "GDG"
