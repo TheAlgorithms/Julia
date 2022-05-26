@@ -81,9 +81,9 @@
         @test_throws DomainError area_regular_polygon(-12, -4)
 
         @test area_polygon([(0, 0), (100, 0), (0, 100)]) == 5000.0
-        @test area_polygon([0 0;100 0;100 100;0 100]) == 10000.0
+        @test area_polygon([0 0; 100 0; 100 100; 0 100]) == 10000.0
         @test area_polygon([(6, 4.5), (5, 4.5), (4.5, 5.5), (5, 6.5)]) == 1.5
-        @test_throws DomainError area_polygon([0 0;100 0])
+        @test_throws DomainError area_polygon([0 0; 100 0])
         @test_throws DomainError area_polygon([(6, 4.63), (5, 4.63)])
     end
 

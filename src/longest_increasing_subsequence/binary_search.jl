@@ -35,7 +35,7 @@ function lis(arr::Array{Int}, ::Val{:bs})
     lis_len = 1
     memo[1] = arr[1]
 
-    for i = 2:len
+    for i in 2:len
         # binary search in current `memo`, it uses @view and slicing for in-place verification
         p[i] = searchsortedfirst((@view memo[1:lis_len]), arr[i])
         # if arr[i] is greater than the greatest element in `memo`, it increases `lis_len`
@@ -46,7 +46,7 @@ function lis(arr::Array{Int}, ::Val{:bs})
 
     # Restoring
     last_pos = lis_len
-    for i = len:-1:1
+    for i in len:-1:1
         if p[i] == last_pos
             push!(lis_arr, arr[i])
             last_pos -= 1

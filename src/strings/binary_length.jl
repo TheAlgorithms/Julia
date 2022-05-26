@@ -1,19 +1,18 @@
-function bin_length_long(s::AbstractString)  
-  binNum = parse(UInt, s)
-  
-  finNum = 0
-  seq = 1
-   
-  for i in 1:binNum
-    if (i == seq)
-      finNum += 1 
-      seq *= 2
+function bin_length_long(s::AbstractString)
+    binNum = parse(UInt, s)
+
+    finNum = 0
+    seq = 1
+
+    for i in 1:binNum
+        if (i == seq)
+            finNum += 1
+            seq *= 2
+        end
     end
-  end
 
-  return string( finNum ) 
+    return string(finNum)
 end
-
 
 """
 This algorithm features use of the OEIS entry A070939 - 
@@ -48,18 +47,18 @@ doubled amount.
 Contributed by F35H: https://github.com/F35H
 """
 
-function bin_length_short(s::AbstractString)  
-  binNum = parse(UInt, s)
-  
-  finNum = 0
-  i = 1
-  
-  while i <= binNum
-    i *= 2
-     finNum += 1
-  end
+function bin_length_short(s::AbstractString)
+    binNum = parse(UInt, s)
 
-  return string( finNum ) 
+    finNum = 0
+    i = 1
+
+    while i <= binNum
+        i *= 2
+        finNum += 1
+    end
+
+    return string(finNum)
 end
 
 """
