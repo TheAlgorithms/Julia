@@ -1,5 +1,5 @@
 """
-    count_rabbits(n::Integer, k::Integer)
+    rabbits(n::Integer, k::Integer)
 
 Problem: https://rosalind.info/problems/fib/
 
@@ -12,7 +12,7 @@ Returns: Number of rabbits after n months
 Contributed by:- [Nikola Mircic](https://github.com/Nikola-Mircic)
 """
 
-function count_rabbits(n::Integer, k::Integer)
+function rabbits(n::Integer, k::Integer)
     # For calculating the number of rabbit pairs, we will only need the last two months
     # and instead of the array with n elements, we will only use two variables
     a = 1 # First generation
