@@ -114,6 +114,7 @@ export rotation_matrix
 export count_nucleotides
 export dna2rna
 export reverse_complement
+export rabbits
 
 # Exports: searches
 export binary_search
@@ -233,6 +234,7 @@ include("matrix/rotation-matrix.jl")
 include("project-rosalind/count_nucleotide.jl")
 include("project-rosalind/dna2rna.jl")
 include("project-rosalind/reverse_complement.jl")
+include("project-rosalind/rabbits")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
