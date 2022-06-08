@@ -12,4 +12,10 @@
     @testset "Project Rosalind: Reverse Complement" begin
         @test reverse_complement("AAAACCCGGT") == "ACCGGGTTTT"
     end
+
+    @testset "Project Rosalind: Rabbits" begin
+        @test rabbits(5, 3) == 19
+        @test rabbits(15, 2) == 75316
+        @test rabbits(10, 3) == 1159
+    end
 end
