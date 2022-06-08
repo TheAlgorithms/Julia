@@ -234,7 +234,7 @@ include("matrix/rotation-matrix.jl")
 include("project-rosalind/count_nucleotide.jl")
 include("project-rosalind/dna2rna.jl")
 include("project-rosalind/reverse_complement.jl")
-include("project-rosalind/rabbits")
+include("project-rosalind/rabbits.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
