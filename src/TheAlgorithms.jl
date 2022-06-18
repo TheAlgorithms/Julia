@@ -36,6 +36,9 @@ export set_ch
 export Splay
 export LinkedList
 
+# Exports: dynamic_programming
+export coin_change
+
 # Exports: knapsack
 export complete_pack!
 export zero_one_pack!
@@ -177,6 +180,9 @@ include("cipher/atbash.jl")
 include("data_structures/binary_tree/splay.jl")
 include("data_structures/disjoint_set/disjoint_set.jl")
 include("data_structures/linked_list.jl")
+
+# Includes: dynamic_programming
+include("dynamic_programming/coin_change.jl")
 
 # Includes: knapsack
 include("knapsack/dynamic_programming.jl")
