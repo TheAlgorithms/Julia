@@ -22,6 +22,7 @@ julia> coins
  7
 
 julia> n_coins, coins = coin_change([2, 4, 6], 23)
+(-1, Int64[])
 
 julia> n_coins
 -1
