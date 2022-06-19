@@ -10,7 +10,7 @@ It's considered that a unlimited number of coins for each value is available.
 
 # Examples
 ```jldoctest
-julia> n_coins, coins = coin_change([1, 3, 4, 7], 13)
+julia> n_coins, coins = coin_change([1, 3, 4, 7], 13);
 
 julia> n_coins
 3
