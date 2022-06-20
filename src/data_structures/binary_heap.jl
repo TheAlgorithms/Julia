@@ -25,6 +25,7 @@ implemented just once for both min and max heap, and it relies on the multiple d
 - `isempty(heap)`: wheter theres no elemets in the heap
 - `length(heap)`: how many elements are in the heap
 
+# Example
 ```jldoctest
 heap = MinHeap{Int}()
 push!(heap, 4, 2, 3, 1, 5)
