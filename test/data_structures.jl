@@ -19,6 +19,36 @@
             @test tree.val[left(tree)] == 50
             @test height(tree) == 2
         end
+
+        @testset "BinaryHeap: MinHeap" begin
+            h = MinHeap{Int}()
+            @test isempty(h)
+            push!(h, 10, 2, 7)
+            @test top(h) == 2
+            @test length(h) == 3
+            push!(h, -3, -1)
+            @test top(h) == -3
+            @test length(h) == 5
+            @test pop!(h) == -3
+            @test pop!(h) == -1
+            @test pop!(h) == 2
+            @test pop!(h) == 7
+            @test pop!(h) == 10
+            @test_throws ArgumentError pop!(h)
+            @test length(h) == 0
+        end
+
+        @testset "BinaryHeap: MaxHeap" begin
+            h = MaxHeap{Int}()
+            push!(h, 10, 20, 15, -20, -10)
+            @test pop!(h) == 20
+            @test pop!(h) == 15
+            @test pop!(h) == 10
+            @test pop!(h) == -10
+            @test pop!(h) == -20
+            @test_throws ArgumentError pop!(h)
+        end
+
         @testset "DisjointSet: DisjointSet" begin
             set = DisjointSet(10)
             set.par[4] = 1

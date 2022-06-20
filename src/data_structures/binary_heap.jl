@@ -17,18 +17,22 @@ isbefore(::MaxHeap{T}, x::T, y::T) where {T} = isless(y, x)
 
 top(heap::BinaryHeap) = heap.tree[begin]
 Base.isempty(heap::BinaryHeap) = isempty(heap.tree)
+Base.length(heap::BinaryHeap) = length(heap.tree)
 
-function Base.push!(heap::BinaryHeap{T}, el::T) where {T}
+function Base.push!(heap::BinaryHeap{T}, els::T...) where {T}
     tree = heap.tree
-    push!(tree, el)
 
-    check = lastindex(tree)
-    while check >= 1
-        parent = check ÷ 2 # integer division
-        if parent >= 1 && isbefore(heap, tree[check], tree[parent])
-            _swap(tree, parent, check)
+    for el in els
+        push!(tree, el)
+
+        check = lastindex(tree)
+        while check >= 1
+            parent = check ÷ 2 # integer division
+            if parent >= 1 && isbefore(heap, tree[check], tree[parent])
+                _swap(tree, parent, check)
+            end
+            check = parent
         end
-        check = parent
     end
 
     return
