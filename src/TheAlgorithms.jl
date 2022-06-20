@@ -21,6 +21,7 @@ export atbash_encode
 export AbstractBinarySearchTree_arr
 export AbstractBinaryTree
 export AbstractBinaryTree_arr
+export BinaryHeap
 export BinaryTree
 export ch
 export depth
@@ -30,10 +31,13 @@ export height
 export insert!
 export isleaf
 export left
+export MaxHeap
 export merge!
+export MinHeap
 export right
 export set_ch
 export Splay
+export top
 export LinkedList
 
 # Exports: dynamic_programming
@@ -177,6 +181,7 @@ include("cipher/caesar.jl")
 include("cipher/atbash.jl")
 
 # Includes: data_structures
+include("data_structures/binary_heap.jl")
 include("data_structures/binary_tree/splay.jl")
 include("data_structures/disjoint_set/disjoint_set.jl")
 include("data_structures/linked_list.jl")
