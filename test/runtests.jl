@@ -9,6 +9,7 @@ using LinearAlgebra
     include("cipher.jl")
     include("data_structures.jl")
     include("dynamic_programming.jl")
+    include("graph.jl")
     include("knapsack.jl")
     include("longest_increasing_subsequence.jl")
     include("machine_learning.jl")
