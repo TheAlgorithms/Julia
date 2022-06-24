@@ -43,6 +43,10 @@ export LinkedList
 # Exports: dynamic_programming
 export coin_change
 
+# Exports: graph
+export dijkstra
+export get_dijkstra_path
+
 # Exports: knapsack
 export complete_pack!
 export zero_one_pack!
@@ -188,6 +192,9 @@ include("data_structures/linked_list.jl")
 
 # Includes: dynamic_programming
 include("dynamic_programming/coin_change.jl")
+
+# Includes: graph
+include("graph/djikstra.jl")
 
 # Includes: knapsack
 include("knapsack/dynamic_programming.jl")
