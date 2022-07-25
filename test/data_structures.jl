@@ -87,5 +87,21 @@
             LinkedList.clear(list)
             @test LinkedList.is_empty(list) == true
         end
+
+        @testset "Fenwick tree" begin
+            arr = [-5 2 3 10 5 11 -5]
+            
+            tree = FenwickTree.create_tree(arr)
+            @test tree == [-5 -3 3 10 5 16 -5]
+
+            @test FenwickTree.get_sum(tree, 3) == 0
+            @test FenwickTree.get_sum(tree, 1, 3) == 0
+            @test FenwickTree.get_sum(tree, 5, 7) == 11
+
+            arr[6] -= 3
+            FenwickTree.change(tree, 6, -3)
+
+            @test FenwickTree.get_sum(tree, 5, 7) == 8
+        end
     end
 end
