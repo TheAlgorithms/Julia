@@ -102,6 +102,7 @@ export simpsons_integration
 export sum_ap
 export sum_gp
 export surfarea_cube
+export surfarea_cuboid
 export surfarea_sphere
 export trapazoidal_area
 export trapezoid_integration
