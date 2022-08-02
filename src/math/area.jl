@@ -34,11 +34,8 @@ Finds surface area of a cuboid
 # Example
 
 ```julia
-surfarea_cuboid(10, 5, 3)  # returns 150
-surfarea_cuboid(-10, 5, 3)  # returns DomainError
-surfarea_cuboid(10, -5, 3)  # returns DomainError
-surfarea_cuboid(10, 5, -3)  # returns DomainError
-surfarea_cuboid(-10, -5, -3)  # returns DomainError
+surfarea_cuboid(5, 5, 5)  # returns 150
+surfarea_cuboid(-5, -5, -5)  # returns DomainError
 ```
 """
 function surfarea_cuboid(length, width, height)
