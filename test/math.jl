@@ -27,6 +27,9 @@
         @test surfarea_cube(3) == 54
         @test_throws DomainError surfarea_cube(-1)
 
+        @test surfarea_cuboid(5, 5, 5) == 150
+        @test_throws DomainError surfarea_cuboid(-5, -5, -5)
+
         @test surfarea_sphere(5) == 314.1592653589793
         @test surfarea_sphere(1) == 12.566370614359172
         @test_throws DomainError surfarea_sphere(-1)
