@@ -96,4 +96,25 @@ function change(tree::Array{T}, x::Integer, k::Integer) where {T<:Number}
     end
 end
 
+"""
+Create a original array from the given tree
+
+# Arguments
+    - tree::Array{T} - an binary index tree which is used for calculating the original array
+"""
+function to_arr(tree::Array{T}) where {T<:Number}
+    n = length(tree)
+
+    arr = copy(tree)
+
+    for i in 1:n
+        parent = i + (i & -i) # Calculate the parent node by adding index and its least significant bit
+        if parent <= n  # Check if parent index is part of the tree
+            arr[parent] -= tree[i]; # Subtract the value of the child node from the value of the parent node
+        end
+    end
+
+    return arr
+end
+
 end # module end

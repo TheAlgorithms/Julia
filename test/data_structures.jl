@@ -94,6 +94,8 @@
             tree = FenwickTree.create_tree(arr)
             @test tree == [-5 -3 3 10 5 16 -5]
 
+            @test FenwickTree.to_arr(tree) == arr
+
             @test FenwickTree.get_sum(tree, 3) == 0
             @test FenwickTree.get_sum(tree, 1, 3) == 0
             @test FenwickTree.get_sum(tree, 5, 7) == 11
