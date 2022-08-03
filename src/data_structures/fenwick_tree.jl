@@ -31,11 +31,6 @@ function create_tree(arr::Array{T}) where {T<:Number}
 
     n = length(arr) # length of array and generated tree
 
-    # Returns empty tree if the array is empty
-    if n == 0
-        return tree
-    end
-
     for i in 1:n
         parent = i + (i & -i) # Calculate the parent node by adding index and its least significant bit
         if parent <= n  # Check if parent index is part of the tree
