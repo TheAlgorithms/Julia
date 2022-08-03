@@ -56,10 +56,6 @@ This is a function that returns the sum of the first x elements
 function get_sum(tree::Array{T}, x::Integer) where {T<:Number}
     sum = 0
 
-    if x < 1 # Return 0 for all indices smaller then 0  
-        return 0
-    end
-
     while x > 0 
         sum += tree[x]
         x -= (x & -x) # Select all child nodes containing parts of the sum from the interval [1, x]
