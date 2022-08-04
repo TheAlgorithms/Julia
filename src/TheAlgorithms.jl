@@ -39,6 +39,7 @@ export set_ch
 export Splay
 export top
 export LinkedList
+export FenwickTree
 
 # Exports: dynamic_programming
 export coin_change
@@ -103,6 +104,7 @@ export simpsons_integration
 export sum_ap
 export sum_gp
 export surfarea_cube
+export surfarea_cuboid
 export surfarea_sphere
 export trapazoidal_area
 export trapezoid_integration
@@ -190,6 +192,7 @@ include("data_structures/binary_heap.jl")
 include("data_structures/binary_tree/splay.jl")
 include("data_structures/disjoint_set/disjoint_set.jl")
 include("data_structures/linked_list.jl")
+include("data_structures/fenwick_tree.jl")
 
 # Includes: dynamic_programming
 include("dynamic_programming/coin_change.jl")

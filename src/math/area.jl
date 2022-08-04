@@ -27,6 +27,26 @@ function surfarea_cube(side)
 end
 
 """
+    surfarea_cuboid(length, width, height)
+
+Finds surface area of a cuboid
+
+# Example
+
+```julia
+surfarea_cuboid(5, 5, 5)  # returns 150
+surfarea_cuboid(-5, -5, -5)  # returns DomainError
+```
+"""
+function surfarea_cuboid(length, width, height)
+    if (length < 0) || (width < 0) || (height < 0)
+        throw(DomainError("surfarea_cuboid() only accepts non-negative values"))
+    end
+    return 2((length*width)+(length*height)+(width*height))
+end
+
+
+"""
     surfarea_sphere(side)
 
 Finds surface area of a sphere
