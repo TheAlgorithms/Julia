@@ -78,6 +78,7 @@ export collatz_sequence
 export combination
 export eratosthenes
 export euler_method
+export totient
 export factorial_iterative
 export factorial_recursive
 export floor_val
@@ -219,6 +220,7 @@ include("math/ceil_floor.jl") # needed by average_median
 include("math/collatz_sequence.jl")
 include("math/combination.jl")
 include("math/euler_method.jl")
+include("math/eulers_totient.jl")
 include("math/factorial.jl")
 include("math/krishnamurthy_number.jl")
 include("math/line_length.jl")
