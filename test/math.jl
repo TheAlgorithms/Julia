@@ -166,6 +166,16 @@
         @test euler_method((x, t) -> x, 1, (0, 5))[1][end] == 143.33937864611195
     end
 
+    @testset "Math: Eulers Totient" begin
+        @test totient(1) == 1
+        @test totient(2) == 1
+        @test totient(3) == 2
+        @test totient(10) == 4
+        @test totient(24) == 8
+        @test totient(50) == 20
+        @test_throws DomainError totient(-1)
+    end
+
     @testset "Math: Factorial Related" begin
         @test factorial_iterative(5) == 120
         @test factorial_iterative(0) == 1
