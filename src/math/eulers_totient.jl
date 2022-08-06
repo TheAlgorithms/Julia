@@ -23,8 +23,6 @@ Contributed by [Praneeth Jain](https://www.github.com/PraneethJain)
 """
 
 function totient(n::Int)
-    if n<=0
-        throw(DomainError("totient() only works for positive integers"))
-    end
+    n<=0 && throw(DomainError("totient() only works for positive integers"))
     return count(i->(gcd(i,n)==1), 1:n)
 end
