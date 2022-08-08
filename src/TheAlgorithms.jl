@@ -16,6 +16,7 @@ export Hanoi
 export caesar
 # export rotate
 export atbash_encode
+export affine
 
 # Exports: data_structures
 export AbstractBinarySearchTree_arr
@@ -186,6 +187,7 @@ include("basic/hanoi.jl")
 # Includes: cipher
 include("cipher/caesar.jl")
 include("cipher/atbash.jl")
+include("cipher/affine.jl")
 
 # Includes: data_structures
 include("data_structures/binary_heap.jl")

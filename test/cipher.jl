@@ -23,5 +23,18 @@
         # rot = 0
         # s = "hello"
         # @test rotate(rot, s) == "hello"
+
+    @testset "Cipher: affine" begin
+        alphabet = "abcdefghijklmnopqrstuvwxyz"
+        input = "secrets"
+        a = 3
+        b = 1
+        @test affine(input, alphabet, a, b) == "dnhangd"
+        alphabet = "0123456789"
+        input = "1234"
+        a = 7
+        b = 2
+        @test affine(input, alphabet, a, b) == "9630"
+    end
     end
 end
