@@ -29,12 +29,12 @@
         input = "secrets"
         a = 3
         b = 1
-        @test affine(input, alphabet, a, b) = "dnhangd"
+        @test affine(input, alphabet, a, b) == "dnhangd"
         alphabet = "0123456789"
         input = "1234"
         a = 7
         b = 2
-        @test affine(input, alphabet, a, b) = "9630"
+        @test affine(input, alphabet, a, b) == "9630"
     end
     end
 end
