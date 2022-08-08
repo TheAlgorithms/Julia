@@ -57,4 +57,3 @@ function affine(text::String, alphabet::String, nMultiply::Int, nAdd::Int)
     ])
 
 end # function
-affine()
