@@ -34,11 +34,11 @@ function create_tree(arr::Array{T}) where {T<:Number}
     for i in 1:n
         parent = i + (i & -i) # Calculate the parent node by adding index and its least significant bit
         if parent <= n  # Check if parent index is part of the tree
-            tree[parent] += tree[i]; # Add the value of the child to the parent
+            tree[parent] += tree[i] # Add the value of the child to the parent
         end
     end
 
-    return tree 
+    return tree
 end
 
 """
@@ -51,7 +51,7 @@ This is a function that returns the sum of the first x elements
 function get_sum(tree::Array{T}, x::Integer) where {T<:Number}
     sum = 0
 
-    while x > 0 
+    while x > 0
         sum += tree[x]
         x -= (x & -x) # Select all child nodes containing parts of the sum from the interval [1, x]
     end
@@ -72,7 +72,7 @@ This function calculate sum of the elements from the interval [x, y]
 """
 
 function get_sum(tree::Array{T}, x::Integer, y::Integer) where {T<:Number}
-    return get_sum(tree, y) - get_sum(tree, x-1)
+    return get_sum(tree, y) - get_sum(tree, x - 1)
 end
 
 """
@@ -105,7 +105,7 @@ function to_arr(tree::Array{T}) where {T<:Number}
     for i in 1:n
         parent = i + (i & -i) # Calculate the parent node by adding index and its least significant bit
         if parent <= n  # Check if parent index is part of the tree
-            arr[parent] -= tree[i]; # Subtract the value of the child node from the value of the parent node
+            arr[parent] -= tree[i] # Subtract the value of the child node from the value of the parent node
         end
     end
 

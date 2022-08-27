@@ -22,7 +22,7 @@ function rabbits(n::Integer, k::Integer)
         # Every rabbit pair older than month will give 3 new pairs
         # so the number of rabbits in k-th month is a[k] = a[k-1] + a[k-2] * 3
         t = b
-        b = b + 3*a
+        b = b + 3 * a
         a = t
     end
     return b

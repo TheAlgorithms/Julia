@@ -90,7 +90,7 @@
 
         @testset "Fenwick tree" begin
             arr = [-5 2 3 10 5 11 -5]
-            
+
             tree = FenwickTree.create_tree(arr)
             @test tree == [-5 -3 3 10 5 16 -5]
 

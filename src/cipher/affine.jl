@@ -50,10 +50,10 @@ https://github.com/Squalm/Cipher-Tools
 ### Contributed by: [Chirp (Squalm)](https://github.com/Squalm)
 """
 function affine(text::String, alphabet::String, nMultiply::Int, nAdd::Int)
-
     return join([
-        alphabet[((findfirst(isequal(letter), alphabet) - 1) * nMultiply + nAdd) % length(alphabet) + 1]
-        for letter in text
+        alphabet[((findfirst(
+            isequal(letter),
+            alphabet,
+        )-1)*nMultiply+nAdd)%length(alphabet)+1] for letter in text
     ])
-
 end # function
