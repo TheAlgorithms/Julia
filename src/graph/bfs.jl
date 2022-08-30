@@ -52,5 +52,5 @@ function bfs(graph::Vector{Vector{Int}}, source::Int = 1)
         end
     end
 
-    print("\n")
+    return print("\n")
 end

@@ -42,9 +42,8 @@ function surfarea_cuboid(length, width, height)
     if (length < 0) || (width < 0) || (height < 0)
         throw(DomainError("surfarea_cuboid() only accepts non-negative values"))
     end
-    return 2((length*width)+(length*height)+(width*height))
+    return 2((length * width) + (length * height) + (width * height))
 end
-
 
 """
     surfarea_sphere(side)
