@@ -19,4 +19,15 @@
         @test get_dijkstra_path(prev, 5) == [1, 3, 5]
         @test get_dijkstra_path(prev, 6) == []
     end
+
+    @testset "BellmanFord" begin
+        graph::Vector{Tuple{Int, Int, Int}} = [
+            (1, 2, 4), (1, 3, 2),
+            (2, 3, 3), (2, 4, 2), (2, 5, 3),
+            (3, 2, 1), (3, 4, 4), (3, 5, 5),
+            (5, 4, -5)
+        ]
+        
+        @test bellman_ford(graph, 1) == [0, 3, 2, 1, 6]
+    end
 end
