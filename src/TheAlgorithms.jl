@@ -3,6 +3,7 @@ module TheAlgorithms
 # Usings/Imports (keep sorted)
 using LinearAlgebra
 using Random
+using DataStructures
 
 ## Exports
 # Please keep the folders/functions sorted
