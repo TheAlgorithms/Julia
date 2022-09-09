@@ -56,11 +56,3 @@ function bellman_ford(graph::Vector{Tuple{Int, Int, Int}}, source::Int = 1)
 
     return distance
 end
-
-graph = [
-    (1, 2, 4), (1, 3, 2),
-    (2, 3, 3), (2, 4, 2), (2, 5, 3),
-    (3, 2, 1), (3, 4, 4), (3, 5, 5),
-    (5, 4, -5)
-]
-bellman_ford(graph, 1)
