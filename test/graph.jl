@@ -29,5 +29,13 @@
         ]
         
         @test bellman_ford(graph, 1) == [0, 3, 2, 1, 6]
+
+        negative_edge_cycle::Vector{Tuple{Int, Int, Int}} = [
+            (1, 3, 3),
+            (2, 1, -6),
+            (3, 2, 2)
+        ]
+        
+        @test_throws ErrorException bellman_ford(negative_edge_cycle, 1)
     end
 end
