@@ -41,7 +41,7 @@ function dfs(graph::Vector{Vector{Int}}, source::Int = 1)
 
     while length(stack) > 0
         curr_v = pop!(stack)
-        print(current, " ")
+        print(curr_v, " ")
 
         # Add every unvisited target to the top of the stack
         for i in 1:length(graph[curr_v])
