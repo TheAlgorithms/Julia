@@ -3,6 +3,7 @@ module TheAlgorithms
 # Usings/Imports (keep sorted)
 using LinearAlgebra
 using Random
+using DataStructures
 
 ## Exports
 # Please keep the folders/functions sorted
@@ -48,6 +49,9 @@ export coin_change
 # Exports: graph
 export dijkstra
 export get_dijkstra_path
+export bfs
+export dfs
+export bellman_ford
 
 # Exports: knapsack
 export complete_pack!
@@ -200,7 +204,10 @@ include("data_structures/fenwick_tree.jl")
 include("dynamic_programming/coin_change.jl")
 
 # Includes: graph
-include("graph/djikstra.jl")
+include("graph/dijkstra.jl")
+include("graph/bfs.jl")
+include("graph/dfs.jl")
+include("graph/bellman_ford.jl")
 
 # Includes: knapsack
 include("knapsack/dynamic_programming.jl")
