@@ -31,7 +31,7 @@ bellman_ford(graph, 1)
 
 Contributed by: [Yannick Brenning](https://github.com/ybrenning)
 """
-function bellman_ford(graph::Vector{Tuple{Int, Int, Int}}, source::Int = 1)
+function bellman_ford(graph::Vector{Tuple{Int,Int,Int}}, source::Int = 1)
     vertices = maximum(graph)[1]
     distance = [typemax(Int) for _ in 1:vertices]
     distance[source] = 0
