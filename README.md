@@ -10,7 +10,8 @@
 
 ### Algorithms implemented in Julia (for educational purposes)
 
-These implementations are for learning purposes. The implementations may be less efficient than the Julia standard library.
+These implementations are for learning purposes. The implementations may be less efficient than the Julia standard library.\
+We're collaborating with the amazing Humans of Julia community. Check their website here: https://humansofjulia.org/
 
 ## Contribution Guidelines
 
