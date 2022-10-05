@@ -87,6 +87,9 @@ export euler_method
 export totient
 export factorial_iterative
 export factorial_recursive
+export fib_recursive
+export fib_recursive_memo
+export fib_iterative
 export floor_val
 export is_armstrong
 export line_length
@@ -234,6 +237,7 @@ include("math/combination.jl")
 include("math/euler_method.jl")
 include("math/eulers_totient.jl")
 include("math/factorial.jl")
+include("math/fibonacci.jl") 
 include("math/krishnamurthy_number.jl")
 include("math/line_length.jl")
 include("math/krishnamurthy_number.jl")

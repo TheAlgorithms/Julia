@@ -185,6 +185,18 @@
         @test_throws ErrorException factorial_recursive(-1)
     end
 
+    @testset "Math: Fibonacci Numbers" begin
+        @test fib_recursive(1) == [0]
+        @test fib_recursive(6) == [0, 1, 1, 2, 3, 5]
+        @test_throws DomainError fib_recursive(-1)
+        @test fib_recursive_memo(1) == [0]
+        @test fib_recursive_memo(6) == [0, 1, 1, 2, 3, 5]
+        @test_throws DomainError fib_recursive_memo(-1)
+        @test fib_iterative(1) == [0]
+        @test fib_iterative(6) == [0, 1, 1, 2, 3, 5]
+        @test_throws DomainError fib_iterative(-1)
+    end
+
     @testset "Math: Krishnamurthy Number" begin
         @test krishnamurthy(145) == true
         @test krishnamurthy(240) == false
