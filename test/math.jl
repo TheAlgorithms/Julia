@@ -205,6 +205,15 @@
         @test_throws ErrorException krishnamurthy(-1)
     end
 
+    @testset "Math: Mersenne Prime" begin
+        @test is_mersenne_prime(3) == true
+        @test is_mersenne_prime(15) == false
+        @test is_mersenne_prime(8191) == true
+        @test get_mersenne_primes(100) == [3, 7, 31]
+        @test get_mersenne_primes(1000) == [3, 7, 31, 127]
+        @test get_mersenne_primes(10000) == [3, 7, 31, 127, 8191]
+    end
+
     @testset "Math: Monte Carlo Integration" begin
         @test isapprox(
             monte_carlo_integration(x -> 3 * x^2, 0, 1, 100000),
