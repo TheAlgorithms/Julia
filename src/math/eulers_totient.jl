@@ -21,7 +21,6 @@ totient(-1) # throws DomainError
 - https://mathworld.wolfram.com/TotientFunction.html
 Contributed by [Praneeth Jain](https://www.github.com/PraneethJain)
 """
-
 function totient(n::Int)
     n <= 0 && throw(DomainError("totient() only works for positive integers"))
     return count(i -> (gcd(i, n) == 1), 1:n)
