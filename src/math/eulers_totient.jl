@@ -19,6 +19,7 @@ totient(-1) # throws DomainError
 
 # Reference
 - https://mathworld.wolfram.com/TotientFunction.html
+
 Contributed by [Praneeth Jain](https://www.github.com/PraneethJain)
 """
 function totient(n::Int)
