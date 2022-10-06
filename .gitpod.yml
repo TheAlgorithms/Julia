@@ -1,0 +1,16 @@
+image:
+  file: .gitpod.dockerfile
+
+github:
+  prebuilds:
+    addBadge: true
+    addComment: false
+    addCheck: false
+    master: true
+    branches: true
+    pullRequestsFromForks: true
+
+vscode:
+  extensions:
+    - julialang.language-julia
+    - singularitti.vscode-julia-formatter
