@@ -84,6 +84,7 @@ export collatz_sequence
 export combination
 export eratosthenes
 export euler_method
+export is_mersenne_prime
 export totient
 export factorial_iterative
 export factorial_recursive
@@ -91,6 +92,7 @@ export fib_recursive
 export fib_recursive_memo
 export fib_iterative
 export floor_val
+export get_mersenne_primes
 export is_armstrong
 export line_length
 export krishnamurthy
@@ -241,6 +243,7 @@ include("math/fibonacci.jl")
 include("math/krishnamurthy_number.jl")
 include("math/line_length.jl")
 include("math/krishnamurthy_number.jl")
+include("math/mersenne_prime.jl")
 include("math/monte_carlo_integration.jl")
 include("math/partitions.jl")
 include("math/prime_check.jl")
