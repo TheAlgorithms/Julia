@@ -125,6 +125,13 @@
         @test median([0]) == 0
     end
 
+    @testset "Math: Catalan Number" begin
+        @test catalan(0) == 1
+        @test catalan(3) == 5
+        @test catalan(8) == 1430
+        @test_throws DomainError catalan(-1)
+    end
+
     @testset "Math: ceil_floor" begin
         @test ceil_val(1.3) == 2.0
         @test ceil_val(2.0) == 2.0
