@@ -79,6 +79,7 @@ export area_square
 export area_trapezium
 export area_triangle
 export bab_sqrt
+export catalan
 export ceil_val
 export collatz_sequence
 export combination
@@ -233,6 +234,7 @@ include("math/average_mean.jl")
 include("math/average_median.jl")
 include("math/average_mode.jl")
 include("math/babylonian_sqrt.jl")
+include("math/catalan_number.jl")
 include("math/ceil_floor.jl") # needed by average_median
 include("math/collatz_sequence.jl")
 include("math/combination.jl")
