@@ -148,6 +148,7 @@ export jump_search
 export linear_search
 
 # Exports: sorts
+export bogo_sort!
 export bubble_sort!
 export bucket_sort!
 export counting_sort!
