@@ -17,7 +17,7 @@ catalan(-1) # throws DomainError
 # Reference
 - https://mathworld.wolfram.com/CatalanNumber.html
 
-Contributed by [Praneeth Jain](https://www.github.com/PraneethJain)
+Contributed by: [Praneeth Jain](https://www.github.com/PraneethJain)
 """
 function catalan(n::Int)
     n < 0 && throw(DomainError("Only defined for non-negative n"))
