@@ -105,6 +105,12 @@
         @test is_armstrong(x) == false
     end
 
+    @testset "Math: Average Absolute Deviation" begin
+        @test average_absolute_deviation([1, 2, 3, 4, 5]) == 1.2
+        @test average_absolute_deviation([0]) == 0.0
+        @test average_absolute_deviation([5.5, 64.3, 100.4]) == 34.16
+    end
+
     @testset "Math: Average Mean" begin
         @test mean([3, 6, 9, 12, 15, 18, 21]) == 12.0
         @test mean([5, 10, 15, 20, 25, 30, 35]) == 20.0
