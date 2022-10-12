@@ -105,6 +105,12 @@
         @test is_armstrong(x) == false
     end
 
+    @testset "Math: Average Absolute Deviation" begin
+        @test average_absolute_deviation([1, 2, 3, 4, 5]) == 1.2
+        @test average_absolute_deviation([0]) == 0.0
+        @test average_absolute_deviation([5.5, 64.3, 100.4]) == 34.16
+    end
+
     @testset "Math: Average Mean" begin
         @test mean([3, 6, 9, 12, 15, 18, 21]) == 12.0
         @test mean([5, 10, 15, 20, 25, 30, 35]) == 20.0
@@ -123,6 +129,13 @@
         @test median([2, 1, 3, 4]) == 2.5
         @test median([2, 70, 6, 50, 20, 8, 4]) == 8
         @test median([0]) == 0
+    end
+
+    @testset "Math: Catalan Number" begin
+        @test catalan(0) == 1
+        @test catalan(3) == 5
+        @test catalan(8) == 1430
+        @test_throws DomainError catalan(-1)
     end
 
     @testset "Math: ceil_floor" begin
