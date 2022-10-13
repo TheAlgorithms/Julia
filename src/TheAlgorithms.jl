@@ -139,6 +139,9 @@ export gauss_jordan
 export lu_decompose
 export rotation_matrix
 
+# Exports: project-euler
+export problem_001
+
 # Exports: project-rosalind
 export count_nucleotides
 export dna2rna
@@ -277,6 +280,9 @@ include("matrix/lu_decompose.jl") # used by determinant.jl
 include("matrix/determinant.jl")
 include("matrix/gauss_jordan_elim.jl")
 include("matrix/rotation-matrix.jl")
+
+# Includes: project-euler
+include("project-euler/problem_001.jl")
 
 # Includes: project-rosalind
 include("project-rosalind/count_nucleotide.jl")

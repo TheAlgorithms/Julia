@@ -18,7 +18,7 @@ problem_001(-1)     # throws DomainError
 # Reference
 - https://projecteuler.net/problem=1
 
-Contributed by: [PraneethJain](https://www.github.com/PraneethJain)
+Contributed by: [Praneeth Jain](https://www.github.com/PraneethJain)
 """
 function problem_001(limit::Int)
     limit <= 0 && throw(DomainError("limit must be positive integer"))
