@@ -67,6 +67,7 @@ export KMeans
 export abs_max
 export abs_min
 export abs_val
+export aliquot_sum
 export area_circle
 export area_ellipse
 export area_heron_triangle
@@ -84,6 +85,7 @@ export catalan
 export ceil_val
 export collatz_sequence
 export combination
+export divisors
 export eratosthenes
 export euler_method
 export is_mersenne_prime
@@ -115,6 +117,7 @@ export riemann_integration
 export simpsons_integration
 export sum_ap
 export sum_gp
+export sum_divisors
 export surfarea_cube
 export surfarea_cuboid
 export surfarea_sphere
@@ -241,6 +244,7 @@ include("math/catalan_number.jl")
 include("math/ceil_floor.jl") # needed by average_median
 include("math/collatz_sequence.jl")
 include("math/combination.jl")
+include("math/divisors.jl")
 include("math/euler_method.jl")
 include("math/eulers_totient.jl")
 include("math/factorial.jl")
