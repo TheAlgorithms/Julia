@@ -1,5 +1,6 @@
 @testset "Sorts" begin
     sorts = [
+        bogo_sort!
         bubble_sort!
         bucket_sort!
         counting_sort!
