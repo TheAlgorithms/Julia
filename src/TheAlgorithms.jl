@@ -150,6 +150,7 @@ export jump_search
 export linear_search
 
 # Exports: sorts
+export bogo_sort!
 export bubble_sort!
 export bucket_sort!
 export counting_sort!
@@ -290,6 +291,7 @@ include("searches/jump_search.jl")
 include("searches/linear_search.jl")
 
 # Includes: sorts
+include("sorts/bogo_sort.jl")
 include("sorts/bubble_sort.jl")
 include("sorts/bucket_sort.jl")
 include("sorts/counting_sort.jl")
