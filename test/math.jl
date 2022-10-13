@@ -163,6 +163,23 @@
         @test combination(4, 2) == 6
     end
 
+    @testset "Math: Divisors" begin
+        @test divisors(6) == [1, 2, 3, 6]
+        @test divisors(10) == [1, 2, 5, 10]
+        @test divisors(1345) == [1, 5, 269, 1345]
+        @test_throws DomainError divisors(-1)
+
+        @test sum_divisors(6) == 12
+        @test sum_divisors(10) == 18
+        @test sum_divisors(1345) == 1620
+        @test_throws DomainError sum_divisors(-1)
+
+        @test aliquot_sum(6) == 6
+        @test aliquot_sum(10) == 8
+        @test aliquot_sum(1345) == 275
+        @test_throws DomainError aliquot_sum(-1)
+    end
+
     @testset "Math: Line Length" begin
         # Arc Lengths
         @test line_length(x -> x, 0, 1, 10) == 1.4142135623730947
