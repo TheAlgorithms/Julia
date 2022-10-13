@@ -21,6 +21,6 @@ problem_001(-1)     # throws DomainError
 Contributed by: [Praneeth Jain](https://www.github.com/PraneethJain)
 """
 function problem_001(limit::Int)
-    limit <= 0 && throw(DomainError("limit must be positive integer"))
+    limit <= 1 && throw(DomainError("limit must be integer greater than 1"))
     return sum([i for i in 1:limit-1 if i % 3 == 0 || i % 5 == 0])
 end
