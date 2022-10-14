@@ -1,0 +1,5 @@
+* @uncomfyhalomacro @Azzaare ## Has access over all files
+*.md        @Panquesito7
+*.yml       @Panquesito7
+/docs/      @Panquesito7
+/.github/   @Panquesito7
