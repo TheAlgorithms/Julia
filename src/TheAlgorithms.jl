@@ -141,6 +141,7 @@ export rotation_matrix
 
 # Exports: project-euler
 export problem_001
+export problem_002
 
 # Exports: project-rosalind
 export count_nucleotides
@@ -283,6 +284,7 @@ include("matrix/rotation-matrix.jl")
 
 # Includes: project-euler
 include("project-euler/problem_001.jl")
+include("project-euler/problem_002.jl")
 
 # Includes: project-rosalind
 include("project-rosalind/count_nucleotide.jl")
