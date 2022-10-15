@@ -15,6 +15,7 @@ using LinearAlgebra
     include("machine_learning.jl")
     include("math.jl")
     include("matrix.jl")
+    include("project-euler.jl")
     include("project-rosalind.jl")
     include("scheduling.jl")
     include("searches.jl")
