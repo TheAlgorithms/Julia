@@ -14,7 +14,7 @@
     @testset "Project Euler: Problem 003" begin
         @test problem_003(17) == 17
         @test problem_003(13195) == 29
-        @test problem_003(600851475143) == 6857
+        @test problem_003(Int64(600851475143)) == 6857
         @test_throws DomainError problem_003(-1)
     end
 end
