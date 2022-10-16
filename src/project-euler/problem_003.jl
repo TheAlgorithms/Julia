@@ -21,9 +21,9 @@ problem_003(-1)             # throws DomainError
 
 Contributed by: [Praneeth Jain](https://www.github.com/PraneethJain)
 """
-function problem_003(number::Int)
+function problem_003(number::BigInt)
     number <= 1 && throw(DomainError("Number must be integer greater than 1"))
-    prime_factor = 2
+    prime_factor = big(2)
     while prime_factor < number
         if number % prime_factor == 0
             number ÷= prime_factor
