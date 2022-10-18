@@ -17,4 +17,8 @@
         @test problem_003(Int64(600851475143)) == 6857
         @test_throws DomainError problem_003(-1)
     end
+
+    @testset "Project Euler: Problem 004" begin
+        @test problem_004() == 906609
+    end
 end
