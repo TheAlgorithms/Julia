@@ -27,4 +27,10 @@
         @test problem_005(20) == 232792560
         @test_throws DomainError problem_005(-1)
     end
+
+    @testset "Project Euler: Problem 006" begin
+        @test problem_006(10) == 2640
+        @test problem_006(100) == 25164150
+        @test_throws DomainError problem_006(-1)
+    end
 end
