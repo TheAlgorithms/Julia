@@ -7,6 +7,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@main
-    - uses: julia-actions/julia-format@master
-      with:
-        args: -v .
+    - name: Setup Git configuration
+      run: |
+        git config --global user.name 'autoprettier'
+        git config --global user.email 'actions@github.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+    - name: Install Julia packages
+      run: |
+        sudo apt-get update && sudo apt-get install julia -y
+    - name: Run Julia formatting
+      run: |
+        julia  -e 'using Pkg; Pkg.add(PackageSpec(name="JuliaFormatter"))'
+        julia  -e 'using JuliaFormatter; format(".", verbose=true)'
+    - name: Commit changes and push changes
+      run: |
+        git diff
+        git commit -am "🚀 Formatting files" || true
+        git push --force origin HEAD:$GITHUB_REF || true
