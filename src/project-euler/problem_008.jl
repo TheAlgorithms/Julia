@@ -15,6 +15,7 @@ num_str = "731671765313306249192251196744265747423553491949349698352031277450632
 problem_008("1234", 2)      # returns 12
 problem_008(num_str, 4)     # returns 5832    
 problem_008(num_str, 13)    # returns 23514624000
+problem_008("12345", 6)     # throws DomainError
 ```
 
 # Reference
