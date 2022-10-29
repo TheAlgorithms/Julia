@@ -46,6 +46,6 @@
         @test problem_008("1234", 2) == 12
         @test problem_008(num_str, 4) == 5832
         @test problem_008(num_str, 13) == 23514624000
-        @test_throws DomainError problem_008("12345", 6) 
+        @test_throws DomainError problem_008("12345", 6)
     end
 end

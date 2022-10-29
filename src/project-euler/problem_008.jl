@@ -28,7 +28,7 @@ function problem_008(num_str::String, n::Int)
         throw(DomainError("n can't be bigger than length of num_str"))
 
     return maximum([
-        mapreduce(x -> parse(Int, x), *, num_str[i:i+n-1]) for
+        mapreduce(x -> parse(Int64, x), *, num_str[i:i+n-1]) for
         i in 1:length(num_str)-n+1
     ])
 end
