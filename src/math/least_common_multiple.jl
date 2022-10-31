@@ -13,8 +13,9 @@ least_common_multiple(12, 76) # returns 228
 least_common_multiple(5, -10) # returns 10
 ```
 
-# Reference
-- least common multiple -- https://en.wikipedia.org/wiki/Least_common_multiple 
+# References:
+- https://en.wikipedia.org/wiki/Least_common_multiple 
+- https://www.javatpoint.com/python-find-lcm 
 """
 
 function least_common_multiple(a::Int, b::Int)
