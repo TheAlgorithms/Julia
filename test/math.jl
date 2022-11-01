@@ -430,4 +430,10 @@
         @test verlet_integration(x -> -x, [0.0, 0.1], (1, 10))[end][end] ==
               9.999
     end
+
+    @testset "Math: Least common multiple" begin
+        @test least_common_multiple(12, 76) == 228
+        @test least_common_multiple(5, -10) == 10
+    end
+
 end
