@@ -148,6 +148,7 @@ export problem_004
 export problem_005
 export problem_006
 export problem_007
+export problem_008
 
 # Exports: project-rosalind
 export count_nucleotides
@@ -297,6 +298,7 @@ include("project-euler/problem_004.jl")
 include("project-euler/problem_005.jl")
 include("project-euler/problem_006.jl")
 include("project-euler/problem_007.jl")
+include("project-euler/problem_008.jl")
 
 # Includes: project-rosalind
 include("project-rosalind/count_nucleotide.jl")
