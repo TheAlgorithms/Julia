@@ -132,6 +132,7 @@ export vol_prism
 export vol_pyramid
 export vol_sphere
 export vol_circular_cylinder
+export least_common_multiple
 
 # Exports: matrix
 export determinant
@@ -280,6 +281,7 @@ include("math/sum_of_geometric_progression.jl")
 include("math/trapezoid_integration.jl")
 include("math/verlet.jl")
 include("math/volume.jl")
+include("math/least_common_multiple.jl")
 
 # Includes: matrix
 include("matrix/lu_decompose.jl") # used by determinant.jl
