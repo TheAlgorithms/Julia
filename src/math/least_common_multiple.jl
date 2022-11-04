@@ -24,7 +24,7 @@ function least_common_multiple(a::Int, b::Int)
     else
         common_multiple = b
     end
-    
+
     while (common_multiple % a != 0) || (common_multiple % b != 0)
         common_multiple += 1
     end

@@ -435,5 +435,4 @@
         @test least_common_multiple(12, 76) == 228
         @test least_common_multiple(5, -10) == 10
     end
-
 end

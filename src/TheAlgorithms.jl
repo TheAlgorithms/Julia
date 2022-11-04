@@ -288,23 +288,23 @@ include("math/least_common_multiple.jl")
 include("matrix/lu_decompose.jl") # used by determinant.jl
 include("matrix/determinant.jl")
 include("matrix/gauss_jordan_elim.jl")
-include("matrix/rotation-matrix.jl")
+include("matrix/rotation_matrix.jl")
 
 # Includes: project-euler
-include("project-euler/problem_001.jl")
-include("project-euler/problem_002.jl")
-include("project-euler/problem_003.jl")
-include("project-euler/problem_004.jl")
-include("project-euler/problem_005.jl")
-include("project-euler/problem_006.jl")
-include("project-euler/problem_007.jl")
-include("project-euler/problem_008.jl")
+include("project_euler/problem_001.jl")
+include("project_euler/problem_002.jl")
+include("project_euler/problem_003.jl")
+include("project_euler/problem_004.jl")
+include("project_euler/problem_005.jl")
+include("project_euler/problem_006.jl")
+include("project_euler/problem_007.jl")
+include("project_euler/problem_008.jl")
 
 # Includes: project-rosalind
-include("project-rosalind/count_nucleotide.jl")
-include("project-rosalind/dna2rna.jl")
-include("project-rosalind/reverse_complement.jl")
-include("project-rosalind/rabbits.jl")
+include("project_rosalind/count_nucleotide.jl")
+include("project_rosalind/dna2_rna.jl")
+include("project_rosalind/reverse_complement.jl")
+include("project_rosalind/rabbits.jl")
 
 # Includes: scheduling
 include("scheduling/fcfs.jl")
