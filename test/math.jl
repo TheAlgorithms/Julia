@@ -138,14 +138,16 @@
         @test_throws DomainError catalan(-1)
     end
 
-    @testset "Math: ceil_floor" begin
-        @test ceil_val(1.3) == 2.0
-        @test ceil_val(2.0) == 2.0
-        @test ceil_val(-1.5) == -1.0
+    @testset "Math: Ceil" begin
+        @test ceil(1.3) == 2.0
+        @test ceil(2.0) == 2.0
+        @test ceil(-1.5) == -1.0
+    end
 
-        @test floor_val(1.3) == 1
-        @test floor_val(2.0) == 2.0
-        @test floor_val(-1.7) == -2.0
+    @testset "Math: Floor" begin
+        @test floor(1.3) == 1
+        @test floor(2.0) == 2.0
+        @test floor(-1.7) == -2.0
     end
 
     @testset "Math: Collatz Sequence" begin
