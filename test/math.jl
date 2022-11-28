@@ -139,15 +139,15 @@
     end
 
     @testset "Math: Ceil" begin
-        @test ceil(1.3) == 2.0
-        @test ceil(2.0) == 2.0
-        @test ceil(-1.5) == -1.0
+        @test TheAlgorithms.ceil(1.3) == 2.0
+        @test TheAlgorithms.ceil(2.0) == 2.0
+        @test TheAlgorithms.ceil(-1.5) == -1.0
     end
 
     @testset "Math: Floor" begin
-        @test floor(1.3) == 1
-        @test floor(2.0) == 2.0
-        @test floor(-1.7) == -2.0
+        @test TheAlgorithms.floor(1.3) == 1
+        @test TheAlgorithms.floor(2.0) == 2.0
+        @test TheAlgorithms.floor(-1.7) == -2.0
     end
 
     @testset "Math: Collatz Sequence" begin
