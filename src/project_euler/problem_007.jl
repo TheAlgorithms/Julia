@@ -30,7 +30,7 @@ function problem_007(n::Int)
         return Dict(1 => 2, 2 => 3, 3 => 5)[n]
     else
         # The nth prime is always lower than n(log(n) + log(log(n)))
-        upper_limit = ceil(Int, n * (log(n) + log(log(n))))
+        upper_limit = Base.ceil(Int, n * (log(n) + log(log(n))))
         return eratosthenes(upper_limit)[n]
     end
 end

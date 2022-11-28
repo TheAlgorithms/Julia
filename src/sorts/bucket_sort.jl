@@ -50,7 +50,7 @@ function bucket_sort!(arr::Vector{T}, l::Int = length(arr)) where {T}
     buckets = Array{T,1}[[] for a in 1:l]
 
     for i in arr
-        push!(buckets[floor(Int, (i - min) / r)+1], i)
+        push!(buckets[Base.floor(Int, (i - min) / r)+1], i)
     end
 
     for bucket in buckets
