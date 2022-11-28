@@ -82,7 +82,7 @@ export area_triangle
 export average_absolute_deviation
 export bab_sqrt
 export catalan
-export ceil_val
+export ceil
 export collatz_sequence
 export combination
 export divisors
@@ -95,7 +95,7 @@ export factorial_recursive
 export fib_recursive
 export fib_recursive_memo
 export fib_iterative
-export floor_val
+export floor
 export get_mersenne_primes
 export is_armstrong
 export line_length
@@ -252,7 +252,7 @@ include("math/average_median.jl")
 include("math/average_mode.jl")
 include("math/babylonian_sqrt.jl")
 include("math/catalan_number.jl")
-include("math/ceil_floor.jl") # needed by average_median
+include("math/ceil.jl") # needed by average_median
 include("math/collatz_sequence.jl")
 include("math/combination.jl")
 include("math/divisors.jl")
@@ -260,9 +260,9 @@ include("math/euler_method.jl")
 include("math/eulers_totient.jl")
 include("math/factorial.jl")
 include("math/fibonacci.jl")
+include("math/floor.jl")
 include("math/krishnamurthy_number.jl")
 include("math/line_length.jl")
-include("math/krishnamurthy_number.jl")
 include("math/mersenne_prime.jl")
 include("math/monte_carlo_integration.jl")
 include("math/partitions.jl")
