@@ -20,3 +20,7 @@ Read our [Contribution Guidelines](https://github.com/TheAlgorithms/Julia/blob/m
 ## Community Channel
 
 We're on [Gitter](https://gitter.im/TheAlgorithms) and [Discord](https://discord.gg/c7MnfGFGa6)! Please join us.
+
+## Todos
+
+- [ ] Find a solution conflicting namespaces from Base module and custom functions not from Base. `baremodule`
