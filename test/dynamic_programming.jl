@@ -1,3 +1,4 @@
+using TheAlgorithms.DynamicProgramming
 @testset "Dynamic Programming" begin
     @testset "Coin Change" begin
         n_coins, coins = coin_change([1, 3, 4, 7], 13)
