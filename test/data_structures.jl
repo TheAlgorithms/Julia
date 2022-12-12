@@ -1,3 +1,4 @@
+using TheAlgorithms.DataStructure
 @testset "DataStructures" begin
     @testset "BasicBinaryTree" begin
         @testset "BasicBinaryTree: BinaryTree" begin
