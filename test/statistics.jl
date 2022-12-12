@@ -1,3 +1,5 @@
+using TheAlgorithms.StatAlgo
+
 @testset "Statistics" begin
     @testset "Statistics: Pearson Correlation" begin
         a = 1:10
