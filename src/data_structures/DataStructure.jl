@@ -1,3 +1,8 @@
+"""
+  DataStructure
+
+`DataStructure` algorithms.
+"""
 module DataStructure
 
 export AbstractBinarySearchTree_arr
