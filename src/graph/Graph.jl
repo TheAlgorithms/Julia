@@ -1,6 +1,5 @@
 module Graph
 
-
 export dijkstra
 export get_dijkstra_path
 export bfs

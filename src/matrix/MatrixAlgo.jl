@@ -5,7 +5,6 @@
 """
 module MatrixAlgo
 
-
 export determinant
 export gauss_jordan
 export lu_decompose

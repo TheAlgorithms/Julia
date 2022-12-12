@@ -28,12 +28,10 @@ export top
 export LinkedList
 export FenwickTree
 
-
 include("binary_heap.jl")
 include("binary_tree/splay.jl")
 include("disjoint_set/disjoint_set.jl")
 include("linked_list.jl")
 include("fenwick_tree.jl")
-
 
 end
