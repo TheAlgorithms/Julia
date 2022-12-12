@@ -1,3 +1,5 @@
+using TheAlgorithms.LongSubSeq
+
 @testset "Longest Increasing Subsequence" begin
     @testset "LIS: Dynamic Programming approach!" begin
         @test lis([3, 10, 2, 1, 20], Val(:dp)) == [3, 10, 20]
