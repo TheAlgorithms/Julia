@@ -1,9 +1,12 @@
+export Conversions
 """
   Conversions
 
 `Conversions` are conversions of measurements in Julia	
 """
 module Conversions
+
+using TheAlgorithms
 
 export celsius_to_fahrenheit
 export celsius_to_kelvin

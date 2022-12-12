@@ -1,6 +1,4 @@
 
-import TheAlgorithms.DataStructure: MinHeap
-
 """
     dijkstra(graph::Vector{Vector{Tuple{Int,Int}}}, source::Int)
 

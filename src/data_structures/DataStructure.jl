@@ -1,9 +1,12 @@
+export DataStructure
 """
   DataStructure
 
 `DataStructure` algorithms.
 """
 module DataStructure
+
+using TheAlgorithms
 
 export AbstractBinarySearchTree_arr
 export AbstractBinaryTree

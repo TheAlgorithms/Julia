@@ -1,9 +1,12 @@
+export Math
 """
   Math
 
 `Math` algorithms.
 """
 module Math
+
+using TheAlgorithms
 
 export abs_max
 export abs_min

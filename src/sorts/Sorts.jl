@@ -1,9 +1,13 @@
+export Sorts
+
 """
   Sorts
 
 `Sorts` are sorting algorithms in Julia.
 """
 module Sorts
+
+using TheAlgorithms
 
 export bogo_sort!
 export bubble_sort!

@@ -1,9 +1,12 @@
+export Searches
 """
   Searches
 
 `Searches` - search algorithms.
 """
 module Searches
+
+using TheAlgorithms
 
 export binary_search
 export exponential_search

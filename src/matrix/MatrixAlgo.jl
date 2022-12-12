@@ -1,9 +1,12 @@
+export MatrixAlgo
 """
   MatrixAlgo
 
 `MatrixAlgo` for matrix algorithms.
 """
 module MatrixAlgo
+
+using TheAlgorithms
 
 export determinant
 export gauss_jordan

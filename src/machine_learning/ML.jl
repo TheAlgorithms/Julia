@@ -1,3 +1,4 @@
+export ML
 """
   ML
 
@@ -5,6 +6,8 @@
 """
 
 module ML
+
+using TheAlgorithms
 
 export KMeans
 include("k_means.jl")

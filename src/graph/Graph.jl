@@ -1,4 +1,15 @@
+export Graph
+
+
+"""
+  Graph
+
+`Graph` related algorithms in Julia.
+"""
 module Graph
+
+using TheAlgorithms
+using TheAlgorithms.DataStructure
 
 export dijkstra
 export get_dijkstra_path

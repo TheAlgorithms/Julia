@@ -1,9 +1,12 @@
+export StringAlgo
 """
   StringAlgo
 
 `StringAlgo` in Julia.
 """
 module StringAlgo
+
+using TheAlgorithms
 
 export contain_substring_with_kmp
 export ispangram

@@ -13,7 +13,7 @@ factorial_iterative(-1)     # returns error
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function factorial_iterative(n::N) where {N<:Integer}
+function factorial_iterative(n::Integer)
     if n < 0
         throw(
             error(
@@ -46,7 +46,7 @@ factorial_recursive(5)      # returns 120
 
 Contributed By:- [Ashwani Rathee](https://github.com/ashwani-rathee) and [Rratic](https://github.com/Rratic)
 """
-function factorial_recursive(n::N)::BigInt where {N<:Integer}
+function factorial_recursive(n::Integer)::BigInt
     if n < 0
         throw(
             error(

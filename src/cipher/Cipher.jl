@@ -1,9 +1,12 @@
+export Cipher
 """
   Cipher
 
 `Cipher` algorithms.
 """
 module Cipher
+
+using TheAlgorithms
 
 export caesar
 # export rotate
