@@ -1,7 +1,7 @@
 """
   Cipher
 
-Cipher related algorithms for TheAlgorithms/Julia
+`Cipher` algorithms.
 """
 module Cipher
 
