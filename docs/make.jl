@@ -19,6 +19,7 @@ makedocs(;
         assets = String[],
     ),
     pages = ["Home" => "index.md"],
+    doctest = false,
 )
 
 deploydocs(; repo = "github.com/TheAlgorithms/Julia", devbranch = "main")
