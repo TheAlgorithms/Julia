@@ -1,3 +1,5 @@
+using TheAlgorithms.ML
+
 @testset "Machine learning" begin
     @testset "Machine learning: K-Means clustering" begin
         # poinst is a vector of 2D points.
