@@ -1,5 +1,5 @@
 
-## Src
+## TheAlgorithms
   * Basic
     * [Basic](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/basic/Basic.jl)
     * [Difference Arr](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/basic/difference_arr.jl)
