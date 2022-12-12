@@ -9,345 +9,78 @@ using DataStructures
 # Please keep the folders/functions sorted
 
 # Exports: basic
-export prefix_sum
-export DifferenceArray
-export Hanoi
+export Basic
+include("basic/Basic.jl")
 
 # Exports: cipher
-export caesar
-# export rotate
-export atbash_encode
-export affine
+export Cipher
+include("cipher/Cipher.jl")
 
 # Exports: data_structures
-export AbstractBinarySearchTree_arr
-export AbstractBinaryTree
-export AbstractBinaryTree_arr
-export BinaryHeap
-export BinaryTree
-export ch
-export depth
-export DisjointSet
-export find
-export height
-export insert!
-export isleaf
-export left
-export MaxHeap
-export merge!
-export MinHeap
-export right
-export set_ch
-export Splay
-export top
-export LinkedList
-export FenwickTree
+export DataStructure
+include("data_structures/DataStructure.jl")
 
 # Exports: dynamic_programming
-export coin_change
+export DynamicProgramming
+include("dynamic_programming/DynamicProgramming.jl")
 
 # Exports: graph
-export dijkstra
-export get_dijkstra_path
-export bfs
-export dfs
-export bellman_ford
+export Graph
+include("graph/Graph.jl")
 
 # Exports: knapsack
-export complete_pack!
-export zero_one_pack!
+export KnapSack
+include("knapsack/KnapSack.jl")
 
 # Exports: longest_increasing_subsequence
-export lis
+export LongSubSeq
+include("longest_increasing_subsequence/LongSubSeq.jl")
 
 # Exports: machine_learning
-export KMeans
+export ML
+include("machine_learning/ML.jl")
 
 # Exports: math
-export abs_max
-export abs_min
-export abs_val
-export aliquot_sum
-export area_circle
-export area_ellipse
-export area_heron_triangle
-export area_parallelogram
-export area_polygon
-export area_rectangle
-export area_regular_polygon
-export area_rhombus
-export area_square
-export area_trapezium
-export area_triangle
-export average_absolute_deviation
-export bab_sqrt
-export catalan
-export ceil
-export collatz_sequence
-export combination
-export divisors
-export eratosthenes
-export euler_method
-export is_mersenne_prime
-export totient
-export factorial_iterative
-export factorial_recursive
-export fib_recursive
-export fib_recursive_memo
-export fib_iterative
-export floor
-export get_mersenne_primes
-export is_armstrong
-export line_length
-export krishnamurthy
-export mean
-export median
-export mode
-export monte_carlo_integration
-export partitions_recursive
-export prime_check
-export prime_factors
-export perfect_cube
-export perfect_number
-export perfect_square
-export permutation
-export prime_check
-export prime_factors
-export riemann_integration
-export simpsons_integration
-export sum_ap
-export sum_gp
-export sum_divisors
-export surfarea_cube
-export surfarea_cuboid
-export surfarea_sphere
-export trapazoidal_area
-export trapezoid_integration
-export verlet_integration
-export vol_cube
-export vol_cuboid
-export vol_cone
-export vol_right_circ_cone
-export vol_prism
-export vol_pyramid
-export vol_sphere
-export vol_circular_cylinder
-export least_common_multiple
+export Math
+include("math/Math.jl")
 
 # Exports: matrix
-export determinant
-export gauss_jordan
-export lu_decompose
-export rotation_matrix
+export MatrixAlgo # named like these to avoid conflicting Base.Matrix
+include("matrix/MatrixAlgo.jl")
 
 # Exports: project-euler
-export problem_001
-export problem_002
-export problem_003
-export problem_004
-export problem_005
-export problem_006
-export problem_007
-export problem_008
+export ProjectEuler
+include("project_euler/ProjectEuler.jl")
 
 # Exports: project-rosalind
-export count_nucleotides
-export dna2rna
-export reverse_complement
-export rabbits
+export ProjectRosalind
+include("project_rosalind/ProjectRosalind.jl")
 
 # Exports: searches
-export binary_search
-export exponential_search
-export interpolation_search
-export jump_search
-export linear_search
+export Searches
+include("searches/Searches.jl")
 
 # Exports: sorts
-export bogo_sort!
-export bubble_sort!
-export bucket_sort!
-export counting_sort!
-export exchange_sort!
-export heap_sort!
-export insertion_sort!
-export merge_sort!
-export quick_sort!
-export selection_sort!
+export Sorts
+include("sorts/Sorts.jl")
 
 # Exports: statistics
-export pearson_correlation
-export variance
+export StatAlgo # named to avoid conflict with Statistics
+include("statistics/StatAlgo.jl")
 
 # Exports: strings
-export contain_substring_with_kmp
-export ispangram
-export detect_anagrams
-export is_palindrome
-export word_count
-export hamming_distance
-export rabin_karp
-export LCS
+export StringAlgo # named to avoid conflict with Base.String
+include("strings/StringAlgo.jl")
 
 # Exports: scheduling
-export fcfs
+export Scheduling
+include("scheduling/Scheduling.jl")
 
 # Exports: conversions
-export celsius_to_fahrenheit
-export celsius_to_kelvin
-export fahrenheit_to_celsius
-export fahrenheit_to_kelvin
-export kelvin_to_celsius
-export kelvin_to_fahrenheit
-export weight_conversion
-export length_conversion
+export Conversions
+include("conversions/Conversions.jl")
 
 ## Includes
 # Please keep the folders/files sorted (by dependencies then alphabetical order)
-
-# Includes: basic
-include("basic/prefix_sum.jl")
-include("basic/difference_arr.jl")
-include("basic/hanoi.jl")
-
-# Includes: cipher
-include("cipher/caesar.jl")
-include("cipher/atbash.jl")
-include("cipher/affine.jl")
-
-# Includes: data_structures
-include("data_structures/binary_heap.jl")
-include("data_structures/binary_tree/splay.jl")
-include("data_structures/disjoint_set/disjoint_set.jl")
-include("data_structures/linked_list.jl")
-include("data_structures/fenwick_tree.jl")
-
-# Includes: dynamic_programming
-include("dynamic_programming/coin_change.jl")
-
-# Includes: graph
-include("graph/dijkstra.jl")
-include("graph/bfs.jl")
-include("graph/dfs.jl")
-include("graph/bellman_ford.jl")
-
-# Includes: knapsack
-include("knapsack/dynamic_programming.jl")
-include("knapsack/greedy_algorithm.jl")
-
-#Includes: longest_increasing_subsequence
-include("longest_increasing_subsequence/dynamic_programming.jl")
-include("longest_increasing_subsequence/binary_search.jl")
-
-# Includes: machine_learning
-include("machine_learning/k_means.jl")
-
-# Includes: math
-include("math/abs.jl")
-include("math/area.jl")
-include("math/armstrong_number.jl")
-include("math/average_absolute_deviation.jl")
-include("math/average_mean.jl")
-include("math/average_median.jl")
-include("math/average_mode.jl")
-include("math/babylonian_sqrt.jl")
-include("math/catalan_number.jl")
-include("math/ceil.jl") # needed by average_median
-include("math/collatz_sequence.jl")
-include("math/combination.jl")
-include("math/divisors.jl")
-include("math/euler_method.jl")
-include("math/eulers_totient.jl")
-include("math/factorial.jl")
-include("math/fibonacci.jl")
-include("math/floor.jl")
-include("math/krishnamurthy_number.jl")
-include("math/line_length.jl")
-include("math/mersenne_prime.jl")
-include("math/monte_carlo_integration.jl")
-include("math/partitions.jl")
-include("math/prime_check.jl")
-include("math/prime_factors.jl")
-include("math/perfect_cube.jl")
-include("math/perfect_number.jl")
-include("math/perfect_square.jl")
-include("math/permutation.jl")
-include("math/prime_check.jl")
-include("math/prime_factors.jl")
-include("math/riemann_integration.jl")
-include("math/sieve_of_eratosthenes.jl")
-include("math/simpsons_integration.jl")
-include("math/sum_of_arithmetic_series.jl")
-include("math/sum_of_geometric_progression.jl")
-include("math/trapezoid_integration.jl")
-include("math/verlet.jl")
-include("math/volume.jl")
-include("math/least_common_multiple.jl")
-
-# Includes: matrix
-include("matrix/lu_decompose.jl") # used by determinant.jl
-include("matrix/determinant.jl")
-include("matrix/gauss_jordan_elim.jl")
-include("matrix/rotation_matrix.jl")
-
-# Includes: project-euler
-include("project_euler/problem_001.jl")
-include("project_euler/problem_002.jl")
-include("project_euler/problem_003.jl")
-include("project_euler/problem_004.jl")
-include("project_euler/problem_005.jl")
-include("project_euler/problem_006.jl")
-include("project_euler/problem_007.jl")
-include("project_euler/problem_008.jl")
-
-# Includes: project-rosalind
-include("project_rosalind/count_nucleotide.jl")
-include("project_rosalind/dna2_rna.jl")
-include("project_rosalind/reverse_complement.jl")
-include("project_rosalind/rabbits.jl")
-
-# Includes: scheduling
-include("scheduling/fcfs.jl")
-
-# Includes: search
-include("searches/binary_search.jl")
-include("searches/exponential_search.jl")
-include("searches/interpolation_search.jl")
-include("searches/jump_search.jl")
-include("searches/linear_search.jl")
-
-# Includes: sorts
-include("sorts/bogo_sort.jl")
-include("sorts/bubble_sort.jl")
-include("sorts/bucket_sort.jl")
-include("sorts/counting_sort.jl")
-include("sorts/exchange_sort.jl")
-include("sorts/heap_sort.jl")
-include("sorts/insertion_sort.jl")
-include("sorts/merge_sort.jl")
-include("sorts/quick_sort.jl")
-include("sorts/selection_sort.jl")
-
-# Includes: statistics
-include("statistics/pearson_correlation.jl")
-include("statistics/variance.jl")
-
-# Includes: strings
-include("strings/detect_anagrams.jl")
-include("strings/is_palindrome.jl")
-include("strings/kmp_substring_search.jl")
-include("strings/pangram.jl")
-include("strings/word_count.jl")
-include("strings/hamming_distance.jl")
-include("strings/rabin_karp.jl")
-include("strings/lcs.jl")
-
-# Includes: scheduling
-include("scheduling/fcfs.jl")
-
-# Includes: conversions
-include("conversions/weight_conversion.jl")
-include("conversions/temparature_conversion.jl")
-include("conversions/length_conversion.jl")
 
 end
