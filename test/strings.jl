@@ -1,3 +1,5 @@
+using TheAlgorithms.StringAlgo
+
 @testset "Strings" begin
     @testset "Strings: Is Palindrome" begin
         s = "AA"     # A palindrome
