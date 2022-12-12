@@ -1,5 +1,3 @@
-using DataStructures
-
 """
     bfs(graph:Vector{Vector{Int}}, source::Int = 1)
 
@@ -21,7 +19,7 @@ graph = [
     [2],
     [1, 5]
 ]
-bfs(graph, 4)
+TheAlgorithms.Graph.bfs(graph, 4)
 
 # output
 

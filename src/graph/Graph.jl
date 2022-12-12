@@ -1,6 +1,5 @@
 export Graph
 
-
 """
   Graph
 
@@ -10,6 +9,7 @@ module Graph
 
 using TheAlgorithms
 using TheAlgorithms.DataStructure
+using DataStructures
 
 export dijkstra
 export get_dijkstra_path
