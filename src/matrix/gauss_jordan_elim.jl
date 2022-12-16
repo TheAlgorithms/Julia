@@ -22,9 +22,9 @@ function gauss_jordan(A::AbstractMatrix{T}) where {T<:Number}
     # check if matrix is singular
     m, n = size(A)
     if m == n
-        @assert det(A) ≠ 0.0 "Must insert a non-singular matrix"
+        @assert determinant(A) ≠ 0.0 "Must insert a non-singular matrix"
     else
-        @assert det(A[:, 1:(end-1)]) ≠ 0.0 "Must insert a non-singular matrix or a system matrix [A b]"
+        @assert determinant(A[:, 1:(end-1)]) ≠ 0.0 "Must insert a non-singular matrix or a system matrix [A b]"
     end
 
     # execute the gauss-jordan elimination

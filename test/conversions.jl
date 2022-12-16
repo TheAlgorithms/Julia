@@ -1,3 +1,4 @@
+using TheAlgorithms.Conversions
 
 @testset "Conversions" begin
     @testset "Conversions: Weight Conversions" begin

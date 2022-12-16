@@ -1,3 +1,5 @@
+using TheAlgorithms.ProjectRosalind
+
 @testset "Project Rosalind" begin
     @testset "Project Rosalind: Count Nucleotides" begin
         @test count_nucleotides(

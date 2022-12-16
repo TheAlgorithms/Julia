@@ -1,3 +1,5 @@
+using TheAlgorithms.Scheduling
+
 @testset "Scheduling" begin
     @testset "Scheduling: FCFS" begin
         n = 3

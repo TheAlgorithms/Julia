@@ -1,3 +1,4 @@
+using TheAlgorithms.Graph
 @testset "Graph" begin
     @testset "Dijkstra" begin
         graph::Vector{Vector{Tuple{Int,Int}}} = [

@@ -1,3 +1,5 @@
+using TheAlgorithms.Sorts
+
 @testset "Sorts" begin
     sorts = [
         bogo_sort!

@@ -1,3 +1,4 @@
+using TheAlgorithms.KnapSack
 @testset "Knapsack" begin
     @testset "Knapsack: DpZeroOnePack!" begin
         dp = zeros(Int, 30)

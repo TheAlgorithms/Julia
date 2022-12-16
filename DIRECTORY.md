@@ -1,18 +1,22 @@
 
-## Src
+## TheAlgorithms
   * Basic
+    * [Basic](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/basic/Basic.jl)
     * [Difference Arr](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/basic/difference_arr.jl)
     * [Hanoi](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/basic/hanoi.jl)
     * [Prefix Sum](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/basic/prefix_sum.jl)
   * Cipher
+    * [Cipher](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/cipher/Cipher.jl)
     * [Affine](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/cipher/affine.jl)
     * [Atbash](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/cipher/atbash.jl)
     * [Caesar](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/cipher/caesar.jl)
   * Conversions
+    * [Conversions](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/conversions/Conversions.jl)
     * [Length Conversion](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/conversions/length_conversion.jl)
     * [Temparature Conversion](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/conversions/temparature_conversion.jl)
     * [Weight Conversion](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/conversions/weight_conversion.jl)
   * Data Structures
+    * [Datastructure](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/DataStructure.jl)
     * [Binary Heap](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/binary_heap.jl)
     * Binary Tree
       * [Basic Binary Search Tree](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/binary_tree/basic_binary_search_tree.jl)
@@ -23,22 +27,28 @@
     * [Fenwick Tree](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/fenwick_tree.jl)
     * [Linked List](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/linked_list.jl)
   * Dynamic Programming
+    * [Dynamicprogramming](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/dynamic_programming/DynamicProgramming.jl)
     * [Coin Change](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/dynamic_programming/coin_change.jl)
   * Graph
+    * [Graph](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/graph/Graph.jl)
     * [Bellman Ford](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/graph/bellman_ford.jl)
     * [Bfs](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/graph/bfs.jl)
     * [Dfs](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/graph/dfs.jl)
     * [Dijkstra](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/graph/dijkstra.jl)
   * Knapsack
+    * [Knapsack](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/knapsack/KnapSack.jl)
     * [Dynamic Programming](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/knapsack/dynamic_programming.jl)
     * [Greedy Algorithm](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/knapsack/greedy_algorithm.jl)
   * Longest Increasing Subsequence
+    * [Longsubseq](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/longest_increasing_subsequence/LongSubSeq.jl)
     * [Binary Search](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/longest_increasing_subsequence/binary_search.jl)
     * [Dynamic Programming](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/longest_increasing_subsequence/dynamic_programming.jl)
   * Machine Learning
+    * [Ml](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/machine_learning/ML.jl)
     * [K Means](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/machine_learning/k_means.jl)
     * [Linear Regression](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/machine_learning/linear_regression.jl)
   * Math
+    * [Math](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/Math.jl)
     * [Abs](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/abs.jl)
     * [Area](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/area.jl)
     * [Armstrong Number](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/armstrong_number.jl)
@@ -48,7 +58,7 @@
     * [Average Mode](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/average_mode.jl)
     * [Babylonian Sqrt](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/babylonian_sqrt.jl)
     * [Catalan Number](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/catalan_number.jl)
-    * [Ceil Floor](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/ceil_floor.jl)
+    * [Ceil](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/ceil.jl)
     * [Collatz Sequence](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/collatz_sequence.jl)
     * [Combination](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/combination.jl)
     * [Divisors](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/divisors.jl)
@@ -56,7 +66,9 @@
     * [Eulers Totient](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/eulers_totient.jl)
     * [Factorial](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/factorial.jl)
     * [Fibonacci](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/fibonacci.jl)
+    * [Floor](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/floor.jl)
     * [Krishnamurthy Number](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/krishnamurthy_number.jl)
+    * [Least Common Multiple](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/least_common_multiple.jl)
     * [Line Length](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/line_length.jl)
     * [Mersenne Prime](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/mersenne_prime.jl)
     * [Monte Carlo Integration](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/monte_carlo_integration.jl)
@@ -76,11 +88,13 @@
     * [Verlet](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/verlet.jl)
     * [Volume](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/volume.jl)
   * Matrix
+    * [Matrixalgo](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/matrix/MatrixAlgo.jl)
     * [Determinant](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/matrix/determinant.jl)
     * [Gauss Jordan Elim](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/matrix/gauss_jordan_elim.jl)
     * [Lu Decompose](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/matrix/lu_decompose.jl)
     * [Rotation Matrix](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/matrix/rotation_matrix.jl)
   * Project Euler
+    * [Projecteuler](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/ProjectEuler.jl)
     * [Problem 001](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_001.jl)
     * [Problem 002](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_002.jl)
     * [Problem 003](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_003.jl)
@@ -90,19 +104,23 @@
     * [Problem 007](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_007.jl)
     * [Problem 008](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_008.jl)
   * Project Rosalind
+    * [Projectrosalind](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/ProjectRosalind.jl)
     * [Count Nucleotide](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/count_nucleotide.jl)
     * [Dna2 Rna](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/dna2_rna.jl)
     * [Rabbits](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/rabbits.jl)
     * [Reverse Complement](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/reverse_complement.jl)
   * Scheduling
+    * [Scheduling](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/scheduling/Scheduling.jl)
     * [Fcfs](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/scheduling/fcfs.jl)
   * Searches
+    * [Searches](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/searches/Searches.jl)
     * [Binary Search](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/searches/binary_search.jl)
     * [Exponential Search](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/searches/exponential_search.jl)
     * [Interpolation Search](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/searches/interpolation_search.jl)
     * [Jump Search](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/searches/jump_search.jl)
     * [Linear Search](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/searches/linear_search.jl)
   * Sorts
+    * [Sorts](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/sorts/Sorts.jl)
     * [Bogo Sort](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/sorts/bogo_sort.jl)
     * [Bubble Sort](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/sorts/bubble_sort.jl)
     * [Bucket Sort](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/sorts/bucket_sort.jl)
@@ -114,9 +132,11 @@
     * [Quick Sort](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/sorts/quick_sort.jl)
     * [Selection Sort](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/sorts/selection_sort.jl)
   * Statistics
+    * [Statalgo](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/statistics/StatAlgo.jl)
     * [Pearson Correlation](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/statistics/pearson_correlation.jl)
     * [Variance](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/statistics/variance.jl)
   * Strings
+    * [Stringalgo](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/StringAlgo.jl)
     * [Binary Length](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/binary_length.jl)
     * [Detect Anagrams](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/detect_anagrams.jl)
     * [Hamming Distance](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/hamming_distance.jl)

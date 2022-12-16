@@ -1,3 +1,5 @@
+using TheAlgorithms.ProjectEuler
+
 @testset "Project Euler" begin
     @testset "Project Euler: Problem 001" begin
         @test problem_001(10) == 23

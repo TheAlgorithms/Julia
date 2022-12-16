@@ -1,3 +1,5 @@
+using TheAlgorithms.Searches
+
 @testset "Searches" begin
     @testset "Searches: Binary" begin
         @testset "binary_search - first method" begin

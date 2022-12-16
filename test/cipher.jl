@@ -1,3 +1,4 @@
+using TheAlgorithms.Cipher
 @testset "Cipher" begin
     @testset "Cipher: atbash" begin
         input = "test"

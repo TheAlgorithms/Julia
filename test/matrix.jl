@@ -1,3 +1,5 @@
+using TheAlgorithms.MatrixAlgo
+
 @testset "Matrix" begin
     @testset "Matrix: Determinant" begin
         M1 = [1 0; 2 2]

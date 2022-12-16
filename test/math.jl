@@ -1,3 +1,4 @@
+using TheAlgorithms.Math
 @testset "Math" begin
     @testset "Math: abs.jl(Absolute Value) " begin
         @test abs_val(-100) == 100
