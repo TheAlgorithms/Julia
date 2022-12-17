@@ -1,6 +1,6 @@
 # The Algorithms - Julia
 
-[![Discord chat](https://img.shields.io/discord/808045925556682782.svg?logo=discord&colorB=7289DA&style=flat-square)](https://discord.gg/c7MnfGFGa6)&nbsp;
+[![Discord chat](https://img.shields.io/discord/808045925556682782.svg?logo=discord&colorB=7289DA&style=flat-square)](https://the-algorithms.com/discord/)&nbsp;
 [![Gitter chat](https://img.shields.io/badge/Chat-Gitter-ff69b4.svg?label=Chat&logo=gitter&style=flat-square)](https://gitter.im/TheAlgorithms)&nbsp;
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://TheAlgorithms.github.io/Julia/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://TheAlgorithms.github.io/Julia/dev)
