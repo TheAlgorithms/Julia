@@ -19,4 +19,4 @@ Read our [Contribution Guidelines](https://github.com/TheAlgorithms/Julia/blob/m
 
 ## Community Channel
 
-We're on [Gitter](https://gitter.im/TheAlgorithms) and [Discord](https://discord.gg/c7MnfGFGa6)! Please join us.
+We're on [Gitter](https://gitter.im/TheAlgorithms) and [Discord](https://the-algorithms.com/discord/)! Please join us.
