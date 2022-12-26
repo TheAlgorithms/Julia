@@ -27,6 +27,6 @@ function problem_010(n::Int64)
     if n < 1
         throw(DomainError("n must be a natural number"))
     else
-        return sum(eratosthenes(n))
+        return big(sum((eratosthenes(n))))
     end
 end

@@ -54,7 +54,7 @@ using TheAlgorithms.ProjectEuler
     @testset "Project Euler: Problem 010" begin
         @test problem_010(1) == 0
         @test problem_010(10) == 17
-        @test problem_010(2000000) == 142913828922
+        @test problem_010(2000000) == big(142913828922)
         @test_throws DomainError problem_010(-1)
     end
 end
