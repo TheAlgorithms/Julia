@@ -27,6 +27,6 @@ function problem_010(n::Int)
     if n < 1
         throw(DomainError("n must be a natural number"))
     else
-        return reduce(+, eratosthenes(Int64(n)))
+        return reduce(+, eratosthenes(Int64(n)), init=Int64(0))
     end
 end
