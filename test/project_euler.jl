@@ -50,4 +50,11 @@ using TheAlgorithms.ProjectEuler
         @test problem_008(num_str, 13) == 23514624000
         @test_throws DomainError problem_008("12345", 6)
     end
+
+    @testset "Project Euler: Problem 010" begin
+        @test problem_010(1) == 0
+        @test problem_010(10) == 17
+        @test problem_010(2000000) == 142913828922
+        @test_throws DomainError problem_010(-1)
+    end
 end
