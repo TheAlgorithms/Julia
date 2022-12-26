@@ -24,9 +24,7 @@ problem_010(-1)         # throws DomainError
 Contributed by: [Praneeth Jain](https://www.github.com/PraneethJain)
 """
 function problem_010(n::Int)
-    if n < 1
-        throw(DomainError("n must be a natural number"))
-    else
-        return reduce(+, eratosthenes(Int64(n)), init=Int64(0))
+    n < 1 && throw(DomainError("n must be a natural number"))
+    return reduce(+, eratosthenes(Int64(n)), init=Int64(0))
     end
 end
