@@ -51,6 +51,10 @@ using TheAlgorithms.ProjectEuler
         @test_throws DomainError problem_008("12345", 6)
     end
 
+    @testset "Project Euler: Problem 009" begin
+        @test problem_009() == 31875000
+    end
+    
     @testset "Project Euler: Problem 010" begin
         @test problem_010(1) == 0
         @test problem_010(10) == 17
