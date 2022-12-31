@@ -127,4 +127,14 @@ using TheAlgorithms.StringAlgo
 
         @test LCS("AGCDEG", "BGFDG") == "GDG"
     end
+
+    @testset "Strings: naive_pattern_search" begin
+        @test naive_pattern_search("ABCDEF", "DEF") == "DEF found at index: 3"
+
+        @test naive_pattern_search("Hello world!", "world") == "world found at index: 6"
+
+        @test naive_pattern_search("Hello world!", "world") == "world found at index: 6"
+
+        @test naive_pattern_search("ABCDEF", "XYZ") == "No matches found"
+    end
 end
