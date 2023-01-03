@@ -16,6 +16,7 @@ export word_count
 export hamming_distance
 export rabin_karp
 export LCS
+export naive_pattern_search
 
 include("detect_anagrams.jl")
 include("is_palindrome.jl")
@@ -25,5 +26,6 @@ include("word_count.jl")
 include("hamming_distance.jl")
 include("rabin_karp.jl")
 include("lcs.jl")
+include("naive_pattern_search.jl")
 
 end
