@@ -1,5 +1,3 @@
-include("../math/sieve_of_eratosthenes.jl")
-
 """
     10001st prime
 
