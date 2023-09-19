@@ -1,5 +1,3 @@
-include("prime_check.jl")
-
 """
     is_mersenne_prime(n::Int)
 A mersenne prime is a prime number that is one less than a power of 2.

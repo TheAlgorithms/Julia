@@ -1,5 +1,3 @@
-include("factorial.jl")
-
 """
     krishnamurthy(number)
 
