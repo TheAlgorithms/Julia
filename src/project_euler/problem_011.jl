@@ -88,5 +88,3 @@ end
 function dir_prod(grid::Matrix{Int}, x::Int, y::Int, dx::Int, dy::Int)
     return prod(grid[x+i*dx, y+i*dy] for i in 0:3)
 end
-
-problem_011()
