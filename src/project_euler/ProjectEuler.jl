@@ -15,6 +15,7 @@ export problem_007
 export problem_008
 export problem_009
 export problem_010
+export problem_011
 
 include("problem_001.jl")
 include("problem_002.jl")
@@ -26,5 +27,6 @@ include("problem_007.jl")
 include("problem_008.jl")
 include("problem_009.jl")
 include("problem_010.jl")
+include("problem_011.jl")
 
 end
