@@ -82,7 +82,7 @@ function problem_011()
         end
     end
 
-    return println(max_prod)
+    return max_prod
 end
 
 function dir_prod(grid::Matrix{Int}, x::Int, y::Int, dx::Int, dy::Int)
