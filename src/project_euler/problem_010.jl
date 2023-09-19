@@ -1,5 +1,3 @@
-include("../math/sieve_of_eratosthenes.jl")
-
 """
     Summation of primes
 
