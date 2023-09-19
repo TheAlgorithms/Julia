@@ -27,7 +27,7 @@ grid?
 
 # Examples/Tests:
 ```julia
-problem_010()           # returns 70600674 
+problem_011()           # returns 70600674 
 ```
 
 # Reference
