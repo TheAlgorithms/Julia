@@ -181,6 +181,12 @@ using TheAlgorithms.Math
         @test aliquot_sum(10) == 8
         @test aliquot_sum(1345) == 275
         @test_throws DomainError aliquot_sum(-1)
+
+        @test num_divisors(1) == 1
+        @test num_divisors(13) == 2
+        @test num_divisors(420) == 24
+        @test num_divisors(1345) == 4
+        @test_throws DomainError num_divisors(-1)
     end
 
     @testset "Math: Line Length" begin
