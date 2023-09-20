@@ -70,3 +70,44 @@ Contributed by: [Praneeth Jain](https://www.github.com/PraneethJain)
 function aliquot_sum(n::Int)
     return sum_divisors(n) - n
 end
+
+"""
+    num_divisors(n::Int)
+Efficiently finds the number of divisors of n.
+
+# Input parameters:
+- `n` : The number to find the number of divisors of.
+
+# Examples/Tests:
+```julia
+num_divisors(1)       # returns 1
+num_divisors(13)      # returns 2
+num_divisors(420)     # returns 24
+num_divisors(1345)    # returns 4
+num_divisors(-1)      # throws DomainError
+```
+
+# Reference
+- https://cp-algorithms.com/algebra/divisors.html#number-of-divisors
+
+Contributed by: [Praneeth Jain](https://www.github.com/PraneethJain)
+"""
+function num_divisors(n::Int)
+    n <= 0 && throw(DomainError("expected a positive integer"))
+    result = 1
+    limit = isqrt(n)
+    for i in 2:limit
+        e = 0
+        while n % i == 0
+            e += 1
+            n /= i
+        end
+        result *= e + 1
+    end
+
+    if n > 1
+        result *= 2
+    end
+
+    return result
+end
