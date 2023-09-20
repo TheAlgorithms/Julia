@@ -48,6 +48,7 @@ export mean
 export median
 export mode
 export monte_carlo_integration
+export num_divisors
 export partitions_recursive
 export prime_check
 export prime_factors
