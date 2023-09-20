@@ -33,8 +33,6 @@ DocMeta.setdocmeta!(
     recursive = true,
 )
 
-Documenter.HTML(size_threshold = 409600)
-
 makedocs(;
     modules = [
         TheAlgorithms,
