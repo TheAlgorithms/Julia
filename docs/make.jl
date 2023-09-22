@@ -65,6 +65,7 @@ makedocs(;
         prettyurls = get(ENV, "CI", "false") == "true",
         canonical = "https://TheAlgorithms.github.io/Julia",
         assets = String[],
+        size_threshold = 409600,
     ),
     pages = ["Home" => "index.md"],
     doctest = true,
