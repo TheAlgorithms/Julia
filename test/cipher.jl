@@ -38,4 +38,19 @@ using TheAlgorithms.Cipher
             @test affine(input, alphabet, a, b) == "9630"
         end
     end
+
+    @testset "Cipher: vigenere" begin
+        text = "Hello, World!"
+        key = "key"
+        @test encrypt_vigenere(text, key) == "Rijvs, Uyvjn!"
+        text = "QUICKBROWNFOX"
+        key = "LAZYDOG"
+        @test encrypt_vigenere(text, key) == "BUHANPXZWMDRL"
+        text = "Rijvs, Uyvjn!"
+        key = "key"
+        @test decrypt_vigenere(text, key) == "Hello, World!"
+        text = "BUHANPXZWMDRL"
+        key = "LAZYDOG"
+        @test decrypt_vigenere(text, key) == "QUICKBROWNFOX"
+    end
 end
