@@ -1,5 +1,3 @@
-include("../math/divisors.jl")
-
 """
     Special Pythagorean triplet
 
