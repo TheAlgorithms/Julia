@@ -65,4 +65,11 @@ using TheAlgorithms.ProjectEuler
     @testset "Project Euler: Problem 011" begin
         @test problem_011() == 70600674
     end
+
+    @testset "Project Euler: Problem 012" begin
+        @test problem_012(5) == 28
+        @test problem_012(333) == 17907120
+        @test problem_012(500) == 76576500
+        @test_throws DomainError problem_012(-1)
+    end
 end
