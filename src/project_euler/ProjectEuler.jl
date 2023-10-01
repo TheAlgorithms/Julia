@@ -17,6 +17,7 @@ export problem_009
 export problem_010
 export problem_011
 export problem_012
+export problem_013
 
 include("../math/divisors.jl")
 include("../math/sieve_of_eratosthenes.jl")
@@ -32,5 +33,6 @@ include("problem_009.jl")
 include("problem_010.jl")
 include("problem_011.jl")
 include("problem_012.jl")
+include("problem_013.jl")
 
 end
