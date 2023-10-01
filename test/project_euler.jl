@@ -72,4 +72,8 @@ using TheAlgorithms.ProjectEuler
         @test problem_012(500) == 76576500
         @test_throws DomainError problem_012(-1)
     end
+
+    @testset "Project Euler: Problem 013" begin
+        @test problem_013() == "5537376230"
+    end
 end
