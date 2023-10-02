@@ -12,6 +12,7 @@ export abs_max
 export abs_min
 export abs_val
 export aliquot_sum
+export amicable_pairs
 export area_circle
 export area_ellipse
 export area_heron_triangle
@@ -80,6 +81,7 @@ export vol_circular_cylinder
 export least_common_multiple
 
 include("abs.jl")
+include("amicable_numbers.jl")
 include("area.jl")
 include("armstrong_number.jl")
 include("average_absolute_deviation.jl")
