@@ -239,6 +239,7 @@ using TheAlgorithms.Math
         @test fib_recursive_memo(6) == [0, 1, 1, 2, 3, 5]
         @test_throws DomainError fib_recursive_memo(-1)
         @test fib_iterative(1) == [0]
+        @test fib_iterative(2) == [0, 1]
         @test fib_iterative(6) == [0, 1, 1, 2, 3, 5]
         @test_throws DomainError fib_iterative(-1)
     end
