@@ -16,6 +16,13 @@ using TheAlgorithms.Math
         @test abs_min([-7, -3, 6]) == -3
     end
 
+    @testset "Math: Amicable Numbers" begin
+        @test amicable_pairs(10) == []
+        @test amicable_pairs(400) == [220 => 284]
+        @test amicable_pairs(2000) == [220 => 284, 1184 => 1210]
+        @test_throws DomainError amicable_pairs(-1)
+    end
+
     @testset "Math: Area Under Curve" begin
         # Area by Trapazoid rule
         @test trapazoidal_area(x -> 5, 12, 14, 1000) == 10.00000000000334
@@ -365,6 +372,7 @@ using TheAlgorithms.Math
         @test sum_gp(1, 2, 0) == -0.0
         @test sum_gp(-1, 2, 10) == -1023.0
         @test sum_gp(1, -2, 10) == -341.0
+        @test sum_gp(10, 1, 3) == 30.0
     end
 
     @testset "Math: Sieve of Eratosthenes" begin
