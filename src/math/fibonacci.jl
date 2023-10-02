@@ -98,8 +98,6 @@ function fib_iterative(n::Int)
         throw(DomainError("n is negative"))
     elseif n == 1
         return [0]
-    elseif n == 2
-        return [0, 1]
     else
         result = [0, 1]
         a, b = 0, 1
