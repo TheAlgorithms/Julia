@@ -372,6 +372,7 @@ using TheAlgorithms.Math
         @test sum_gp(1, 2, 0) == -0.0
         @test sum_gp(-1, 2, 10) == -1023.0
         @test sum_gp(1, -2, 10) == -341.0
+        @test sum_gp(10, 1, 3) == 30.0
     end
 
     @testset "Math: Sieve of Eratosthenes" begin
