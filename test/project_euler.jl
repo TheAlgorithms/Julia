@@ -76,4 +76,11 @@ using TheAlgorithms.ProjectEuler
     @testset "Project Euler: Problem 013" begin
         @test problem_013() == "5537376230"
     end
+
+    @testset "Project Euler: Problem 014" begin
+        @test problem_014(Int64(10)) == 9
+        @test problem_014(Int64(250)) == 231
+        @test problem_014(Int64(1000000)) == 837799
+        @test_throws DomainError problem_014(Int64(-1))
+    end
 end
