@@ -23,13 +23,13 @@ problem_014(-1)         # throws DomainError
 
 Contributed by: [Praneeth Jain](https://www.github.com/PraneethJain)
 """
-function problem_014(n::Int)
+function problem_014(n::Int64)
     n < 1 && throw(DomainError("n must be a natural number"))
     return argmax(collatz_length, 1:n)
 end
 
-cache = Dict{Int,Int}(1 => 1)
-function collatz_length(x::Int)
+cache = Dict{Int64,Int64}(1 => 1)
+function collatz_length(x::Int64)
     # If result already in cache, then return it
     haskey(cache, x) && return cache[x]
 
