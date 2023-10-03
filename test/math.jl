@@ -59,6 +59,9 @@ using TheAlgorithms.Math
         @test_throws DomainError area_heron_triangle(-1, -2, 1)
         @test_throws DomainError area_heron_triangle(1, -2, 1)
         @test_throws DomainError area_heron_triangle(-1, 2, 1)
+        @test_throws DomainError area_heron_triangle(1, 1, 3)
+        @test_throws DomainError area_heron_triangle(1, 3, 1)
+        @test_throws DomainError area_heron_triangle(3, 1, 1)
 
         @test area_parallelogram(10, 20) == 200
         @test_throws DomainError area_parallelogram(-1, -2)
