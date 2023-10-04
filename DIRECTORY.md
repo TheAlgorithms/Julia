@@ -10,6 +10,7 @@
     * [Affine](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/cipher/affine.jl)
     * [Atbash](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/cipher/atbash.jl)
     * [Caesar](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/cipher/caesar.jl)
+    * [Vigenere](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/cipher/vigenere.jl)
   * Conversions
     * [Conversions](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/conversions/Conversions.jl)
     * [Length Conversion](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/conversions/length_conversion.jl)
@@ -18,14 +19,14 @@
   * Data Structures
     * [Datastructure](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/DataStructure.jl)
     * [Binary Heap](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/binary_heap.jl)
+    * [Fenwick Tree](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/fenwick_tree.jl)
+    * [Linked List](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/linked_list.jl)
     * Binary Tree
       * [Basic Binary Search Tree](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/binary_tree/basic_binary_search_tree.jl)
       * [Basic Binary Tree](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/binary_tree/basic_binary_tree.jl)
       * [Splay](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/binary_tree/splay.jl)
     * Disjoint Set
       * [Disjoint Set](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/disjoint_set/disjoint_set.jl)
-    * [Fenwick Tree](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/fenwick_tree.jl)
-    * [Linked List](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/data_structures/linked_list.jl)
   * Dynamic Programming
     * [Dynamicprogramming](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/dynamic_programming/DynamicProgramming.jl)
     * [Coin Change](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/dynamic_programming/coin_change.jl)
@@ -50,6 +51,7 @@
   * Math
     * [Math](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/Math.jl)
     * [Abs](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/abs.jl)
+    * [Amicable Numbers](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/amicable_numbers.jl)
     * [Area](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/area.jl)
     * [Armstrong Number](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/armstrong_number.jl)
     * [Average Absolute Deviation](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/average_absolute_deviation.jl)
@@ -103,6 +105,12 @@
     * [Problem 006](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_006.jl)
     * [Problem 007](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_007.jl)
     * [Problem 008](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_008.jl)
+    * [Problem 009](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_009.jl)
+    * [Problem 010](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_010.jl)
+    * [Problem 011](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_011.jl)
+    * [Problem 012](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_012.jl)
+    * [Problem 013](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_013.jl)
+    * [Problem 014](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_014.jl)
   * Project Rosalind
     * [Projectrosalind](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/ProjectRosalind.jl)
     * [Count Nucleotide](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/count_nucleotide.jl)
@@ -143,6 +151,8 @@
     * [Is Palindrome](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/is_palindrome.jl)
     * [Kmp Substring Search](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/kmp_substring_search.jl)
     * [Lcs](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/lcs.jl)
+    * [Naive Pattern Search](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/naive_pattern_search.jl)
     * [Pangram](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/pangram.jl)
     * [Rabin Karp](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/rabin_karp.jl)
     * [Word Count](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/word_count.jl)
+
