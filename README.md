@@ -6,6 +6,7 @@
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://TheAlgorithms.github.io/Julia/dev)
 [![Build Status](https://github.com/TheAlgorithms/Julia/workflows/CI/badge.svg)](https://github.com/TheAlgorithms/Julia/actions)
 [![codecov](https://codecov.io/gh/TheAlgorithms/Julia/branch/main/graph/badge.svg)](https://codecov.io/gh/TheAlgorithms/Julia)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/TheAlgorithms/Julia)
 [![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/TheAlgorithms/donate)
 
 ### Algorithms implemented in Julia (for educational purposes)
