@@ -41,12 +41,21 @@ using TheAlgorithms.Searches
 
     @testset "Searches: Interpolation" begin
         arr = [1, 2, 3, 4, 13, 15, 20]
-        x = 15
-        n = size(arr)[1]
         l = 1
-        r = n
+        r = size(arr)[1]
 
-        interpolation_search(arr, l, r, x)
+        @test interpolation_search(arr, l, r, 1) == 1
+        @test interpolation_search(arr, l, r, 2) == 2
+        @test interpolation_search(arr, l, r, 3) == 3
+        @test interpolation_search(arr, l, r, 4) == 4
+        @test interpolation_search(arr, l, r, 13) == 5
+        @test interpolation_search(arr, l, r, 15) == 6
+        @test interpolation_search(arr, l, r, 20) == 7
+        @test interpolation_search(arr, l, r, 5) == -1
+        @test interpolation_search(arr, l, r, 14) == -1
+        @test interpolation_search(arr, l, r, 19) == -1
+        @test interpolation_search(arr, l, r, 0) == -1
+        @test interpolation_search(arr, l, r, 1000) == -1
     end
 
     @testset "Searches: Jump" begin

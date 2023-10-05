@@ -46,13 +46,13 @@ function interpolation_search(
     if (r >= l && x >= arr[l] && x <= arr[r])
         mid = Int(ceil(l + (((x - arr[l]) * (r - l)) / (arr[r] - arr[l]))))
         if (arr[mid] == x)
-            return "Element present at index $mid"
+            return mid
         elseif (arr[mid] > x)
             interpolation_search(arr, l, mid - 1, x)
         else
             interpolation_search(arr, mid + 1, r, x)
         end
     else
-        return "Element not present in array"
+        return -1
     end
 end
