@@ -59,11 +59,11 @@ using TheAlgorithms.Searches
     end
 
     @testset "Searches: Jump" begin
-        arr = [1, 2, 3, 31, 4, 13]
-        x = 31
-        jump = 2 # optimum is sqroot(n)
-        n = size(arr)[1]
-
-        jump_search(arr, x, jump)
+        arr = [1, 2, 3, 4, 13, 31]
+        @test jump_search(arr, 31, 1) == 6
+        @test jump_search(arr, 13, 3) == 5
+        @test jump_search(arr, 3, 5) == 3
+        @test jump_search(arr, 1, 3) == 1
+        @test jump_search(arr, 10000, 3) == -1
     end
 end
