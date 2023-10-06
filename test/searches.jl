@@ -22,10 +22,14 @@ using TheAlgorithms.Searches
     end
 
     @testset "Searches: Linear" begin
-        array = [1, 3, 4, 7, 8, 11]
-        linear_search(array, 3)
-        linear_search(array, 8)
-        linear_search(array, 12)
+        array = [1, 30, 4, 70, 8, 11]
+        @test linear_search(array, 1) == 1
+        @test linear_search(array, 30) == 2
+        @test linear_search(array, 8) == 5
+        @test linear_search(array, 11) == 6
+        @test linear_search(array, 12) == -1
+        @test linear_search(array, 10) == -1
+        @test linear_search(array, 0) == -1
     end
 
     @testset "Searches: Exponential" begin
