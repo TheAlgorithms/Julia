@@ -16,8 +16,10 @@ using TheAlgorithms.Searches
             # Second method used for exponential search
             arr = [1, 2, 3, 4, 13, 15, 20]
             # The next three values used are the result of the while-loop inside `exponential search`
-            @test binary_search(arr, 4, 7, 4) == "Element present at index 4"
-            @test binary_search(arr, 4, 7, 10) == "Element not present in array"
+            @test binary_search(arr, 4, 7, 4) == 4
+            @test binary_search(arr, 4, 7, 20) == 7
+            @test binary_search(arr, 4, 7, 10) == -1
+            @test binary_search(arr, 4, 7, 21) == -1
         end
     end
 
@@ -34,13 +36,11 @@ using TheAlgorithms.Searches
 
     @testset "Searches: Exponential" begin
         arr = [1, 2, 3, 4, 13, 15, 20]
-        x = 4
-        n = size(arr)[1]
-        l = 1
-        r = n
-        @test exponential_search(arr, 1) == "Element present at index 1"
-        @test exponential_search(arr, x) == "Element present at index 4"
-        @test exponential_search(arr, 100) == "Element not present in array"
+        @test exponential_search(arr, 1) == 1
+        @test exponential_search(arr, 4) == 4
+        @test exponential_search(arr, 20) == 7
+        @test exponential_search(arr, 5) == -1
+        @test exponential_search(arr, 100) == -1
     end
 
     @testset "Searches: Interpolation" begin
