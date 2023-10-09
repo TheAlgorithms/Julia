@@ -4,8 +4,8 @@ using TheAlgorithms.Math
         @test abs_val(-100) == 100
         @test abs_val(0) == 0
         @test abs(123.1) == 123.1
-        @test (-1000 == abs_val(-1000)) == false
-        @test (1000 == abs_val(1000)) == true
+        @test abs_val(-1000) == 1000
+        @test abs_val(1000) == 1000
 
         @test abs_max([1, 3, 4]) == 4
         @test abs_max([-3, 1, 2]) == -3
