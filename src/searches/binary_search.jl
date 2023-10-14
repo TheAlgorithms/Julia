@@ -67,15 +67,14 @@ function binary_search(
 ) where {T<:Real}
     if (r >= l)
         mid = Int(ceil(l + (r - l) / 2))
-        # println(mid)
         if (arr[mid] == x)
-            return "Element present at index $mid"
+            return mid
         elseif (arr[mid] > x)
             binary_search(arr, l, mid - 1, x)
         else
             binary_search(arr, mid + 1, r, x)
         end
     else
-        return "Element not present in array"
+        return -1
     end
 end
