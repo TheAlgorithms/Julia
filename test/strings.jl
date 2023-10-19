@@ -118,7 +118,10 @@ using TheAlgorithms.StringAlgo
         pattern = "aaa"
         @test rabin_karp(text, pattern) == [1, 2, 3, 4]
 
-        @test rabin_karp("PHFvbVsfiZlPUjFYGzRcuIYBVPWcMsGiWpaRDERplINOFRnObeHuJbkwQKWlegxlckDRWQNMZOaHUMlwhHnZOcMEBKBfeQRTrIbL", "ab") == []
+        @test rabin_karp(
+            "PHFvbVsfiZlPUjFYGzRcuIYBVPWcMsGiWpaRDERplINOFRnObeHuJbkwQKWlegxlckDRWQNMZOaHUMlwhHnZOcMEBKBfeQRTrIbL",
+            "ab",
+        ) == []
     end
     @testset "Strings: Longest common subsequence" begin
         @test LCS("ABCD", "EFGHIJ") == ""
@@ -133,9 +136,11 @@ using TheAlgorithms.StringAlgo
     @testset "Strings: naive_pattern_search" begin
         @test naive_pattern_search("ABCDEF", "DEF") == "DEF found at index: 3"
 
-        @test naive_pattern_search("Hello world!", "world") == "world found at index: 6"
+        @test naive_pattern_search("Hello world!", "world") ==
+              "world found at index: 6"
 
-        @test naive_pattern_search("Hello world!", "world") == "world found at index: 6"
+        @test naive_pattern_search("Hello world!", "world") ==
+              "world found at index: 6"
 
         @test naive_pattern_search("ABCDEF", "XYZ") == "No matches found"
     end
