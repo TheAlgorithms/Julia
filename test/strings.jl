@@ -117,6 +117,8 @@ using TheAlgorithms.StringAlgo
         text = "aaaaaa"
         pattern = "aaa"
         @test rabin_karp(text, pattern) == [1, 2, 3, 4]
+
+        @test rabin_karp("PHFvbVsfiZlPUjFYGzRcuIYBVPWcMsGiWpaRDERplINOFRnObeHuJbkwQKWlegxlckDRWQNMZOaHUMlwhHnZOcMEBKBfeQRTrIbL", "ab") == []
     end
     @testset "Strings: Longest common subsequence" begin
         @test LCS("ABCD", "EFGHIJ") == ""
