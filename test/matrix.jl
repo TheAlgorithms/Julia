@@ -82,5 +82,8 @@ using TheAlgorithms.MatrixAlgo
             Float64[1 0 0; 0 1 0; -0 -0 1],
             atol = 1e-5,
         )
+
+        @test gauss_jordan([0.0 1.0 5.0; 1.0 -2.0 -3.0]) ==
+              [1.0 0.0 7.0; 0.0 1.0 5.0]
     end
 end
