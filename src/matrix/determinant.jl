@@ -16,7 +16,7 @@ Determinant of triangualar matrices is the product of their diagonal entries. He
 function determinant(mat)
     n, m = size(mat)
     if n != m
-        DomainError(mat, "The matrix should be a square matrix.")
+        throw(DomainError(mat, "The matrix should be a square matrix."))
     end
     L, U = lu_decompose(mat)
     l_prod = prod([L[i, i] for i in 1:n])
