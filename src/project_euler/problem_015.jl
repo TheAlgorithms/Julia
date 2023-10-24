@@ -8,7 +8,7 @@ grid?
 
 # Input parameters:
 - `n` : number of rows in the grid
-- `m` : number of columns in a grid
+- `m` : number of columns in the grid
 
 # Examples/Tests:
 ```julia
