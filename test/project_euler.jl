@@ -83,4 +83,12 @@ using TheAlgorithms.ProjectEuler
         @test problem_014(Int64(1000000)) == 837799
         @test_throws DomainError problem_014(Int64(-1))
     end
+
+    @testset "Project Euler: Problem 015" begin
+        @test problem_015(2, 2) == 6
+        @test problem_015(5, 3) == 56
+        @test problem_015(20, 20) == 137846528820
+        @test_throws DomainError problem_015(0, 5)
+        @test_throws DomainError problem_015(-3, 0)
+    end
 end
