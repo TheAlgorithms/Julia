@@ -28,7 +28,7 @@ module DifferenceArray
 function create_diff_arr(original::Array{T}) where {T<:Number}
     n = length(original)
 
-    diff_arr = Array(original)
+    diff_arr = copy(original)
 
     for i in 2:n
         diff_arr[i] = original[i] - original[i-1]
@@ -43,7 +43,7 @@ end
 function calculate_arr(diff_arr::Array{T}) where {T<:Number}
     n = length(diff_arr)
 
-    arr = Array(diff_arr)
+    arr = copy(diff_arr)
 
     for i in 2:n
         arr[i] = diff_arr[i] + arr[i-1]
