@@ -11,9 +11,12 @@
     - print array after any numbers of changes                - O(N)
 
 # Functions
-    - create_diff_arr(original::Array{T}) - Create difference array for array 'original'
-    - calculate_arr(diff_arr::Array{T}) - Create a original array from the given difference array
-    - add_to_arr(diff_arr::Array{T}, l::Int, r::Int, x::Number) - Add x to all elements with index from [l, r]
+    - create_diff_arr(original::Array{<:Number})
+        * Create difference array for array 'original'
+    - calculate_arr(diff_arr::Array{<:Number})
+        * Recreate the original array from the given difference array
+    - add_to_arr(diff_arr::Array{<:Number}, l::Int, r::Int, x::Number)
+        * Add x to all elements with index from [l, r]
 
 
 # Contributed by: [Nikola Mircic](https://github.com/Nikola-Mircic)
@@ -51,7 +54,7 @@ end
 
 # Add x to all elements with index from [l, r]
 # Parameters:
-#   - dif_arr - a difference array of the array you want to change
+#   - diff_arr - a difference array of the array you want to change
 #   - l - leftmost index of the affected range
 #   - r - rightmost index of the affected range
 #   - x - a value to be added to all elements from a given range
