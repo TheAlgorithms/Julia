@@ -1,5 +1,5 @@
 """
-    lis(arr::Array{Int}, ::Val{:dp})
+    lis(arr::Array{<:Integer}, ::Val{:dp})
 
 # Arguments:
 - `arr`: sequence of integers
@@ -23,12 +23,12 @@ https://cp-algorithms.com/sequences/longest_increasing_subsequence.html
 - [Igor Malheiros](https://github.com/igormalheiros)
 """
 
-function lis(arr::Array{Int}, ::Val{:dp})
+function lis(arr::Array{T}, ::Val{:dp}) where T <: Integer
     len = length(arr)
     memo = ones(Int, len)
     p = zeros(Int, len)
 
-    lis_arr = Int[]
+    lis_arr = T[]
 
     len == 0 && return lis_arr # if arr is empty
 
