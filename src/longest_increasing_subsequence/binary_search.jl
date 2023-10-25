@@ -48,12 +48,10 @@ function lis(arr::Array{Int}, ::Val{:bs})
     last_pos = lis_len
     for i in len:-1:1
         if p[i] == last_pos
-            push!(lis_arr, arr[i])
+            pushfirst!(lis_arr, arr[i])
             last_pos -= 1
         end
     end
-
-    reverse!(lis_arr)
 
     return lis_arr
 end

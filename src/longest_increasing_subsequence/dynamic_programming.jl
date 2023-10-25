@@ -51,11 +51,9 @@ function lis(arr::Array{Int}, ::Val{:dp})
 
     # Restoring
     while lis_pos != 0
-        push!(lis_arr, arr[lis_pos])
+        pushfirst!(lis_arr, arr[lis_pos])
         lis_pos = p[lis_pos]
     end
-
-    reverse!(lis_arr)
 
     return lis_arr
 end
