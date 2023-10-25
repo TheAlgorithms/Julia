@@ -26,7 +26,7 @@ julia> prefix_sum([0.0, 10.0, π])
 ```
 """
 function prefix_sum(arr::Vector{T}) where {T<:Number}
-    pre = []
+    pre = T[]
     preans = zero(T)
     for i in arr
         preans += i
