@@ -4,6 +4,9 @@ using TheAlgorithms.Basic
     @testset "Basic: prefix_sum" begin
         @test Basic.prefix_sum([1, 1, 1]) == [1, 2, 3]
         @test Basic.prefix_sum([1, 2, 3]) == [1, 3, 6]
+        @test Basic.prefix_sum(BigInt[]) == BigInt[]
+        @test Basic.prefix_sum([0., 0., 0.]) == [0., 0., 0.]
+        @test Basic.prefix_sum([1 + 2im, 2 - 3im]) == [1 + 2im, 3 - 1im]
     end
 
     @testset "Basic: DifferenceArray" begin
