@@ -22,7 +22,7 @@ Contributed by: [Praneeth Jain](https://www.github.com/PraneethJain)
 """
 function bin_length(binNum::T) where {T<:Integer}
     binNum <= 0 && throw(DomainError("binNum must be a positive integer"))
-    return floor(Int, log2(binNum)) + 1
+    return floor(log2(binNum)) + 1
 end
 
 """
@@ -58,6 +58,8 @@ doubled amount.
 Contributed by F35H: https://github.com/F35H
 """
 function bin_length_long(binNum::T) where {T<:Integer}
+    binNum <= 0 && throw(DomainError("binNum must be a positive integer"))
+
     finNum = 0
     seq = 1
 
@@ -101,6 +103,8 @@ Contributors:
 - [F45H](https://github.com/F35H)
 """
 function bin_length_short(binNum::T) where {T<:Integer}
+    binNum <= 0 && throw(DomainError("binNum must be a positive integer"))
+
     finNum = 0
     i = 1
 
