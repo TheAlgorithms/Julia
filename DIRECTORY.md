@@ -111,6 +111,7 @@
     * [Problem 012](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_012.jl)
     * [Problem 013](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_013.jl)
     * [Problem 014](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_014.jl)
+    * [Problem 015](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_015.jl)
   * Project Rosalind
     * [Projectrosalind](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/ProjectRosalind.jl)
     * [Count Nucleotide](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/count_nucleotide.jl)
