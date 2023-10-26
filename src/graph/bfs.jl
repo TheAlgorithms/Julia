@@ -23,7 +23,13 @@ TheAlgorithms.Graph.bfs(graph, 4)
 
 # output
 
-4 1 2 5 3 6
+6-element Vector{Int64}:
+ 4
+ 1
+ 2
+ 5
+ 3
+ 6
 ```
 
 Contributed by: [Yannick Brenning](https://github.com/ybrenning)
@@ -31,6 +37,7 @@ Contributed by: [Yannick Brenning](https://github.com/ybrenning)
 function bfs(graph::Vector{Vector{Int}}, source::Int = 1)
     # Use a boolean "visited" array to avoid processing a vertex more than once
     visited = [false for _ in 1:length(graph)]
+    result = Vector{Int}()
 
     queue = Queue{Int}()
     enqueue!(queue, source)
@@ -39,7 +46,7 @@ function bfs(graph::Vector{Vector{Int}}, source::Int = 1)
 
     while length(queue) > 0
         curr_v = dequeue!(queue)
-        print(curr_v, " ")
+        push!(result, curr_v)
 
         # Add every unvisited target to the end of the queue
         for i in 1:length(graph[curr_v])
@@ -50,5 +57,5 @@ function bfs(graph::Vector{Vector{Int}}, source::Int = 1)
         end
     end
 
-    return print("\n")
+    return result
 end

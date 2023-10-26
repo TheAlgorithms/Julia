@@ -19,6 +19,12 @@ using TheAlgorithms.LongSubSeq
         # two possible results:
         @test lis([3, 4, -1, 5, 8, 2, 3, 12, 7, 9, 10], Val(:dp)) in
               [[-1, 2, 3, 7, 9, 10], [3, 4, 5, 8, 9, 10]]
+        # Boolean array
+        @test lis([true, false, false, true], Val(:dp)) == [false, true]
+        # other Integer subtypes
+        for T in [UInt128, UInt16, UInt32, UInt64, UInt8, BigInt, Int128, Int16, Int32, Int64, Int8]
+            @test lis(T[3, 10, 2, 1, 20], Val(:dp)) == T[3, 10, 20]
+        end
     end
 
     @testset "LIS: Binary Search approach!" begin
@@ -39,5 +45,11 @@ using TheAlgorithms.LongSubSeq
         # two possible results:
         @test lis([3, 4, -1, 5, 8, 2, 3, 12, 7, 9, 10], Val(:bs)) in
               [[-1, 2, 3, 7, 9, 10], [3, 4, 5, 8, 9, 10]]
+        # Boolean array
+        @test lis([true, false, false, true], Val(:bs)) == [false, true]
+        # other Integer subtypes
+        for T in [UInt128, UInt16, UInt32, UInt64, UInt8, BigInt, Int128, Int16, Int32, Int64, Int8]
+            @test lis(T[3, 10, 2, 1, 20], Val(:bs)) == T[3, 10, 20]
+        end
     end
 end

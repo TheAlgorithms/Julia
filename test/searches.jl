@@ -8,8 +8,10 @@ using TheAlgorithms.Searches
             unsorted_sample = [124, 53, 21, 163]
             @test binary_search(sample, 52) == 3:3
             @test binary_search(sample, 602) == 6:6
+            @test binary_search(sample, 45) == 3:2
             @test binary_search(reversed_sample, 52; rev = true) == 5:5
             @test binary_search(reversed_sample, 602; rev = true) == 2:2
+            @test binary_search(reversed_sample, 45; rev = true) == 6:5
             @test_throws ErrorException binary_search(unsorted_sample, 21)  # throws an error
         end
         @testset "binary_search - second method" begin

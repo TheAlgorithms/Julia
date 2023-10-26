@@ -1,4 +1,4 @@
-FROM gitpod/workspace-base:2023-10-04-18-52-46
+FROM gitpod/workspace-base:2023-10-19-14-24-02
 
 ENV JULIA_TMP="julia_tmp.tar.gz"
 
