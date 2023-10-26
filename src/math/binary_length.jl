@@ -1,4 +1,31 @@
 """
+    bin_length(binNum)
+Returns the length of binNum's binary representation.
+
+# Input parameters:
+- `binNum` : The number to find the binary length of.
+
+# Examples/Tests:
+```julia
+bin_length(1)       # returns 1
+bin_length(2)       # returns 2
+bin_length(3)       # returns 2
+bin_length(4)       # returns 3
+bin_length(5)       # returns 3
+bin_length(12)      # returns 4
+bin_length(256)     # returns 9
+bin_length(1024)    # returns 11
+bin_length(-1)      # throws DomainError
+```
+
+Contributed by: [Praneeth Jain](https://www.github.com/PraneethJain)
+"""
+function bin_length(binNum::T) where {T<:Integer}
+    binNum <= 0 && throw(DomainError("binNum must be a positive integer"))
+    return floor(Int, log2(binNum)) + 1
+end
+
+"""
 This algorithm features use of the OEIS entry A070939 - 
 length of Binary Representation of n. It finds 
 the length of any binary number and returns said length.
@@ -30,7 +57,7 @@ doubled amount.
 #Contributions:
 Contributed by F35H: https://github.com/F35H
 """
-function bin_length_long(binNum::T) where {T<:Unsigned}
+function bin_length_long(binNum::T) where {T<:Integer}
     finNum = 0
     seq = 1
 
@@ -73,7 +100,7 @@ final number that iterates on every doubling of i.
 Contributors:
 - [F45H](https://github.com/F35H)
 """
-function bin_length_short(binNum::T) where {T<:Unsigned}
+function bin_length_short(binNum::T) where {T<:Integer}
     finNum = 0
     i = 1
 
