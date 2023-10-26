@@ -91,4 +91,11 @@ using TheAlgorithms.ProjectEuler
         @test_throws DomainError problem_015(0, 5)
         @test_throws DomainError problem_015(-3, 0)
     end
+
+    @testset "Project Euler: Problem 016" begin
+        @test problem_016(1, 1) == 1
+        @test problem_016(2, 15) == 26
+        @test problem_016(2, 1000) == 1366
+        @test_throws DomainError problem_016(2, -4)
+    end
 end
