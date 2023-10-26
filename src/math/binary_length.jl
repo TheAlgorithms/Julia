@@ -1,19 +1,3 @@
-function bin_length_long(s::AbstractString)
-    binNum = parse(UInt, s)
-
-    finNum = 0
-    seq = 1
-
-    for i in 1:binNum
-        if (i == seq)
-            finNum += 1
-            seq *= 2
-        end
-    end
-
-    return string(finNum)
-end
-
 """
 This algorithm features use of the OEIS entry A070939 - 
 length of Binary Representation of n. It finds 
@@ -46,19 +30,18 @@ doubled amount.
 #Contributions:
 Contributed by F35H: https://github.com/F35H
 """
-
-function bin_length_short(s::AbstractString)
-    binNum = parse(UInt, s)
-
+function bin_length_long(binNum::T) where {T<:Unsigned}
     finNum = 0
-    i = 1
+    seq = 1
 
-    while i <= binNum
-        i *= 2
-        finNum += 1
+    for i in 1:binNum
+        if (i == seq)
+            finNum += 1
+            seq *= 2
+        end
     end
 
-    return string(finNum)
+    return finNum
 end
 
 """
@@ -68,7 +51,7 @@ the length of any binary number and returns said length.
   
  https://oeis.org/A070939
 
-This function, as believed, is O(n)
+This function, as believed, is O(log(n))
 
 The idea follows that the sequence is dependent on 
 a repeating pattern of 2. The final number being finNum
@@ -90,3 +73,14 @@ final number that iterates on every doubling of i.
 Contributors:
 - [F45H](https://github.com/F35H)
 """
+function bin_length_short(binNum::T) where {T<:Unsigned}
+    finNum = 0
+    i = 1
+
+    while i <= binNum
+        i *= 2
+        finNum += 1
+    end
+
+    return finNum
+end
