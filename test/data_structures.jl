@@ -84,6 +84,7 @@ using TheAlgorithms.DataStructure
             @test LinkedList.return_as_array(list) == [5, 7]
 
             @test ismissing(LinkedList.get(list, 3)) == true
+            @test ismissing(LinkedList.get_node(list, 4)) == true
             @test LinkedList.get(list, 2) == 7
 
             LinkedList.clear(list)
