@@ -1,7 +1,7 @@
 using TheAlgorithms.Sorts
 
 @testset "Sorts" begin
-    @testset "bogo_sort" begin        
+    @testset "bogo_sort" begin
         x = [3, 1, 4, 2]
         bogo_sort!(x)
         @test x == [1, 2, 3, 4]
