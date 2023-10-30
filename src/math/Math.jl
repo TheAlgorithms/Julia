@@ -26,6 +26,9 @@ export area_trapezium
 export area_triangle
 export average_absolute_deviation
 export bab_sqrt
+export bin_length
+export bin_length_long
+export bin_length_short
 export catalan
 export ceil
 export collatz_sequence
@@ -90,6 +93,7 @@ include("average_mean.jl")
 include("average_median.jl")
 include("average_mode.jl")
 include("babylonian_sqrt.jl")
+include("binary_length.jl")
 include("catalan_number.jl")
 include("ceil.jl") # needed by average_median
 include("collatz_sequence.jl")

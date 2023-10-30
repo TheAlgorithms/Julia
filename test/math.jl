@@ -142,6 +142,20 @@ using TheAlgorithms.Math
         @test median([0]) == 0
     end
 
+    @testset "Math: Binary Length" begin
+        for bin_length_func in [bin_length, bin_length_long, bin_length_short]
+            @test bin_length_func(1) == 1
+            @test bin_length_func(2) == 2
+            @test bin_length_func(3) == 2
+            @test bin_length_func(4) == 3
+            @test bin_length_func(5) == 3
+            @test bin_length_func(12) == 4
+            @test bin_length_func(256) == 9
+            @test bin_length_func(1024) == 11
+            @test_throws DomainError bin_length_func(-1)
+        end
+    end
+
     @testset "Math: Catalan Number" begin
         @test catalan(0) == 1
         @test catalan(3) == 5
