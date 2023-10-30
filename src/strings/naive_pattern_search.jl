@@ -26,10 +26,10 @@ julia> naive_pattern_search("Hello world!", "eggs")
 """
 
 function naive_pattern_search(text, pattern)
-    for index in 0:(length(text)-length(pattern) + 1)
+    for index in 0:(length(text)-length(pattern)+1)
         matches = 0
         for character in eachindex(pattern)
-            if pattern[character] == text[index + character]
+            if pattern[character] == text[index+character]
                 matches += 1
 
                 if matches == length(pattern)

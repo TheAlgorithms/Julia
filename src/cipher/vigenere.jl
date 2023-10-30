@@ -1,6 +1,5 @@
 LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-
 """
     encrypt_vigenere(text, key)
 
@@ -27,15 +26,15 @@ function encrypt_vigenere(text::String, key::String)::String
             num += findfirst(isequal(key[key_index]), LETTERS) - 1
             num %= length(LETTERS)
             num = num == 0 ? 26 : num
-            encrypted *= isuppercase(symbol) ? LETTERS[num] : lowercase(LETTERS[num])
+            encrypted *=
+                isuppercase(symbol) ? LETTERS[num] : lowercase(LETTERS[num])
             key_index = key_index == length(key) ? 1 : key_index + 1
         else
             encrypted *= symbol
         end
     end
-    encrypted
+    return encrypted
 end
-
 
 """
     decrypt_vigenere(text, key)
@@ -63,13 +62,14 @@ function decrypt_vigenere(text::String, key::String)::String
             num -= findfirst(isequal(key[key_index]), LETTERS) - 1
             num %= length(LETTERS)
             num = num <= 0 ? num + length(LETTERS) : num
-            decrypted *= isuppercase(symbol) ? LETTERS[num] : lowercase(LETTERS[num])
+            decrypted *=
+                isuppercase(symbol) ? LETTERS[num] : lowercase(LETTERS[num])
             key_index = key_index == length(key) ? 1 : key_index + 1
         else
             decrypted *= symbol
         end
     end
-    decrypted
+    return decrypted
 end
 
 println(encrypt_vigenere("QUICKBROWNFOX", "LAZYDOG"))

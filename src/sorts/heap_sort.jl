@@ -30,7 +30,7 @@ After the largest element has been extracted, the tree is updated to maintain th
 function heap_sort!(arr::Vector{T}, gt = >, N::Int = length(arr)) where {T}
     if isempty(arr)
         return
-    end 
+    end
     n = N
     i = div(n, 2)
     t = -1
