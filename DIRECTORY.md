@@ -59,6 +59,7 @@
     * [Average Median](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/average_median.jl)
     * [Average Mode](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/average_mode.jl)
     * [Babylonian Sqrt](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/babylonian_sqrt.jl)
+    * [Binary Length](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/binary_length.jl)
     * [Catalan Number](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/catalan_number.jl)
     * [Ceil](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/ceil.jl)
     * [Collatz Sequence](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/collatz_sequence.jl)
@@ -112,6 +113,7 @@
     * [Problem 013](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_013.jl)
     * [Problem 014](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_014.jl)
     * [Problem 015](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_015.jl)
+    * [Problem 016](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_016.jl)
   * Project Rosalind
     * [Projectrosalind](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/ProjectRosalind.jl)
     * [Count Nucleotide](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/count_nucleotide.jl)
@@ -146,7 +148,6 @@
     * [Variance](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/statistics/variance.jl)
   * Strings
     * [Stringalgo](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/StringAlgo.jl)
-    * [Binary Length](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/binary_length.jl)
     * [Detect Anagrams](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/detect_anagrams.jl)
     * [Hamming Distance](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/hamming_distance.jl)
     * [Is Palindrome](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/strings/is_palindrome.jl)
