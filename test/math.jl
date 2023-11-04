@@ -378,12 +378,20 @@ using TheAlgorithms.Math
     end
 
     @testset "Math: Runge_Kutta Integration" begin
-        @test runge_kutta_integration((x, y)->1, 0, 0, 1, 3) == ([0.0, 1.0, 2.0, 3.0], [0.0, 1.0, 2.0, 3.0])
+        @test runge_kutta_integration((x, y) -> 1, 0, 0, 1, 3) ==
+              ([0.0, 1.0, 2.0, 3.0], [0.0, 1.0, 2.0, 3.0])
         @test begin
-            x, y = runge_kutta_integration((x, y)->cos(x), 0, 0, 1e-4, π/2)
-            isapprox(x[end], π/2; rtol=1e-4) && isapprox(y[end], 1; rtol=1e-4)
+            x, y = runge_kutta_integration((x, y) -> cos(x), 0, 0, 1e-4, π / 2)
+            isapprox(x[end], π / 2; rtol = 1e-4) &&
+                isapprox(y[end], 1; rtol = 1e-4)
         end
-        @test_throws DomainError runge_kutta_integration((x, y)->(), 0, 0, 0, 0)
+        @test_throws DomainError runge_kutta_integration(
+            (x, y) -> (),
+            0,
+            0,
+            0,
+            0,
+        )
     end
 
     @testset "Math: Sum of Arithmetic progression" begin
