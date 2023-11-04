@@ -58,19 +58,25 @@ julia> exp.([0.0, 0.1])
 # Contributors:
 - [E-W-Jones](https://github.com/E-W-Jones)
 """
-function runge_kutta_integration(f::Function, x0::Real, y0::Real, h::Real, x_stop::Real)
+function runge_kutta_integration(
+    f::Function,
+    x0::Real,
+    y0::Real,
+    h::Real,
+    x_stop::Real,
+)
     h > 0 || throw(DomainError(h, "The step size `h` should be >0."))
 
     x = Float64(x0)
     y = Float64(y0)
     output_x = [x]
     output_y = [y]
-    
+
     while x < x_stop
         k1 = f(x, y)
-        k2 = f(x + h/2, y + k1*h/2)
-        k3 = f(x + h/2, y + k2*h/2)
-        k4 = f(x + h  , y + k3*h  )
+        k2 = f(x + h / 2, y + k1 * h / 2)
+        k3 = f(x + h / 2, y + k2 * h / 2)
+        k4 = f(x + h, y + k3 * h)
 
         y += h * (k1 + 2k2 + 2k3 + k4) / 6
         x += h
