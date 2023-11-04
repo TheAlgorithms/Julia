@@ -63,6 +63,7 @@ export permutation
 export prime_check
 export prime_factors
 export riemann_integration
+export runge_kutta_integration
 export simpsons_integration
 export sum_ap
 export sum_gp
@@ -115,6 +116,7 @@ include("permutation.jl")
 include("prime_check.jl")
 include("prime_factors.jl")
 include("riemann_integration.jl")
+include("runge_kutta_integration.jl")
 include("sieve_of_eratosthenes.jl")
 include("simpsons_integration.jl")
 include("sum_of_arithmetic_series.jl")
