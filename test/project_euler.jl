@@ -98,4 +98,8 @@ using TheAlgorithms.ProjectEuler
         @test problem_016(2, 1000) == 1366
         @test_throws DomainError problem_016(2, -4)
     end
+
+    @testset "Project Euler: Problem 017" begin
+        @test problem_017() == 21124
+    end
 end
