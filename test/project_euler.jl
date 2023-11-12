@@ -102,4 +102,8 @@ using TheAlgorithms.ProjectEuler
     @testset "Project Euler: Problem 017" begin
         @test problem_017() == 21124
     end
+
+    @testset "Project Euler: Problem 018" begin
+        @test problem_018() == 1074
+    end
 end
