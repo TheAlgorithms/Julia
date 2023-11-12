@@ -113,4 +113,11 @@ using TheAlgorithms.ProjectEuler
         @test problem_019(2020, 2023) == 6
         @test_throws DomainError problem_019(-1, 2023)
     end
+
+    @testset "Project Euler: Problem 020" begin
+        @test problem_020(10) == 27
+        @test problem_020(37) == 153
+        @test problem_020(100) == 648
+        @test_throws DomainError problem_020(-1)
+    end
 end
