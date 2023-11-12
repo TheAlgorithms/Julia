@@ -18,7 +18,7 @@ problem_016(2, -4)      # throws DomainError
 ```
 
 # Reference
-- https://projecteuler.net/problem=15
+- https://projecteuler.net/problem=16
 
 Contributed by: [Praneeth Jain](https://www.github.com/PraneethJain)
 """
