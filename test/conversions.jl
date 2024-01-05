@@ -124,6 +124,8 @@ using TheAlgorithms.Conversions
               1.660540199e-23
         @test weight_conversion("atomic-mass-unit", "atomic-mass-unit", 2) ==
               1.999999998903455
+        @test_throws ErrorException weight_conversion("kg", "wrong_unit", 1)
+        @test_throws ErrorException weight_conversion("wrong_unit", "kg", 1)
     end
 
     @testset "Conversions: Temparature Conversions" begin
