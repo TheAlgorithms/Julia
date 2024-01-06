@@ -180,5 +180,7 @@ using TheAlgorithms.Conversions
         @test length_conversion(5, "in", "m") ≈ 0.127
         @test length_conversion(3, "ft", "mm") ≈ 914.4
         @test length_conversion(10, "mi", "km") ≈ 16.0934
+        @test_throws ErrorException length_conversion(1, "m", "wrong_unit")
+        @test_throws ErrorException length_conversion(1, "wrong_unit", "m")
     end
 end
