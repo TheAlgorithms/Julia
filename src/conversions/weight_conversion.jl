@@ -24,7 +24,7 @@ WEIGHT_TYPE_CHART = Dict{String,Float64}(
     "atomic-mass-unit" => 1.660540199e-27,
 )
 
-function weight_conversion(from_type, to_type, value)
+function weight_conversion(value, from_type, to_type)
     if !haskey(KILOGRAM_CHART, to_type) || !haskey(WEIGHT_TYPE_CHART, from_type)
         throw(
             error(
