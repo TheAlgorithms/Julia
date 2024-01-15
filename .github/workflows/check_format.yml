@@ -37,3 +37,4 @@ jobs:
               git status --porcelain=v1
               exit 1
           fi
+...
