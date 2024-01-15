@@ -1,6 +1,6 @@
 name: Directory writer
-on:
-  schedule:
+on: [push]
+  #schedule:
   #        ┌───────────── minute (0 - 59)
   #        │  ┌───────────── hour (0 - 23)
   #        │  │ ┌───────────── day of the month (1 - 31)
@@ -10,20 +10,24 @@ on:
   #        │  │ │ │ │
   #        │  │ │ │ │
   #        *  * * * *
-  - cron: '0 0 * * *'
+  #- cron: '0 0 * * *'
   workflow_dispatch:
 jobs:
   build:
-    if: github.repository == 'TheAlgorithms/Julia' # We only need this to run in our repository.
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Get Julia v1.8
+        uses: julia-actions/setup-julia@v1
         with:
-          fetch-depth: 0
-      - name: Build directory
-        uses: TheAlgorithms/scripts/directory_md@main
-        with:
-          language: Julia
-          working-directory: src
-          filetypes: jl
-          ignored-directories: docs/,pluto_notebooks/,test/
+          version: 1.9
+      - name: Build DIRECTORY.md
+        run: julia scripts/directory_writer.jl | tee DIRECTORY.md
+      - name: Update DIRECTORY.md
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git add DIRECTORY.md
+          git commit -am "updating DIRECTORY.md" ||  true
+          git push --force origin HEAD:$GITHUB_REF || true
