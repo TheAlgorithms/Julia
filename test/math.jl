@@ -4,8 +4,8 @@ using TheAlgorithms.Math
         @test abs_val(-100) == 100
         @test abs_val(0) == 0
         @test abs(123.1) == 123.1
-        @test (-1000 == abs_val(-1000)) == false
-        @test (1000 == abs_val(1000)) == true
+        @test abs_val(-1000) == 1000
+        @test abs_val(1000) == 1000
 
         @test abs_max([1, 3, 4]) == 4
         @test abs_max([-3, 1, 2]) == -3
@@ -59,6 +59,9 @@ using TheAlgorithms.Math
         @test_throws DomainError area_heron_triangle(-1, -2, 1)
         @test_throws DomainError area_heron_triangle(1, -2, 1)
         @test_throws DomainError area_heron_triangle(-1, 2, 1)
+        @test_throws DomainError area_heron_triangle(1, 1, 3)
+        @test_throws DomainError area_heron_triangle(1, 3, 1)
+        @test_throws DomainError area_heron_triangle(3, 1, 1)
 
         @test area_parallelogram(10, 20) == 200
         @test_throws DomainError area_parallelogram(-1, -2)
@@ -137,6 +140,20 @@ using TheAlgorithms.Math
         @test median([2, 1, 3, 4]) == 2.5
         @test median([2, 70, 6, 50, 20, 8, 4]) == 8
         @test median([0]) == 0
+    end
+
+    @testset "Math: Binary Length" begin
+        for bin_length_func in [bin_length, bin_length_long, bin_length_short]
+            @test bin_length_func(1) == 1
+            @test bin_length_func(2) == 2
+            @test bin_length_func(3) == 2
+            @test bin_length_func(4) == 3
+            @test bin_length_func(5) == 3
+            @test bin_length_func(12) == 4
+            @test bin_length_func(256) == 9
+            @test bin_length_func(1024) == 11
+            @test_throws DomainError bin_length_func(-1)
+        end
     end
 
     @testset "Math: Catalan Number" begin
@@ -239,6 +256,7 @@ using TheAlgorithms.Math
         @test fib_recursive_memo(6) == [0, 1, 1, 2, 3, 5]
         @test_throws DomainError fib_recursive_memo(-1)
         @test fib_iterative(1) == [0]
+        @test fib_iterative(2) == [0, 1]
         @test fib_iterative(6) == [0, 1, 1, 2, 3, 5]
         @test_throws DomainError fib_iterative(-1)
     end
@@ -357,6 +375,15 @@ using TheAlgorithms.Math
             1_000,
             :wrongargument,
         )
+    end
+
+    @testset "Math: Runge_Kutta Integration" begin
+        @test runge_kutta_integration((x, y)->1, 0, 0, 1, 3) == ([0.0, 1.0, 2.0, 3.0], [0.0, 1.0, 2.0, 3.0])
+        @test begin
+            x, y = runge_kutta_integration((x, y)->cos(x), 0, 0, 1e-4, π/2)
+            isapprox(x[end], π/2; rtol=1e-4) && isapprox(y[end], 1; rtol=1e-4)
+        end
+        @test_throws DomainError runge_kutta_integration((x, y)->(), 0, 0, 0, 0)
     end
 
     @testset "Math: Sum of Arithmetic progression" begin

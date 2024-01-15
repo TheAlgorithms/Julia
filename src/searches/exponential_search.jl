@@ -19,7 +19,7 @@ Contributed By:- [Ash](https://github.com/ashwani-rathee)
 function exponential_search(arr::AbstractArray{T,1}, x::T) where {T<:Real}
     n = size(arr)[1]
     if (arr[1] == x)
-        return "Element present at index 1"
+        return 1
     end
 
     i = 1

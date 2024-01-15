@@ -41,4 +41,32 @@ using TheAlgorithms.Graph
 
         @test_throws ErrorException bellman_ford(negative_edge_cycle, 1)
     end
+
+    @testset "bfs" begin
+        graph = [
+            [2, 3, 6],
+            [3, 4],
+            [4],
+            [1, 2, 5],
+            [2],
+            [1, 5]
+        ]
+
+        @test bfs(graph, 4) == [4, 1, 2, 5, 3, 6]
+        @test bfs(graph) == [1, 2, 3, 6, 4, 5]
+    end
+
+    @testset "dfs" begin
+        graph = [
+            [2, 3, 6],
+            [3, 4],
+            [4],
+            [1, 2, 5],
+            [2],
+            [1, 5]
+        ]
+
+        @test dfs(graph, 6) == [6, 5, 2, 4, 3, 1]
+        @test dfs(graph) == [1, 6, 5, 3, 4, 2]
+    end
 end

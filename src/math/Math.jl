@@ -26,6 +26,9 @@ export area_trapezium
 export area_triangle
 export average_absolute_deviation
 export bab_sqrt
+export bin_length
+export bin_length_long
+export bin_length_short
 export catalan
 export ceil
 export collatz_sequence
@@ -60,6 +63,7 @@ export permutation
 export prime_check
 export prime_factors
 export riemann_integration
+export runge_kutta_integration
 export simpsons_integration
 export sum_ap
 export sum_gp
@@ -89,6 +93,7 @@ include("average_mean.jl")
 include("average_median.jl")
 include("average_mode.jl")
 include("babylonian_sqrt.jl")
+include("binary_length.jl")
 include("catalan_number.jl")
 include("ceil.jl") # needed by average_median
 include("collatz_sequence.jl")
@@ -111,6 +116,7 @@ include("permutation.jl")
 include("prime_check.jl")
 include("prime_factors.jl")
 include("riemann_integration.jl")
+include("runge_kutta_integration.jl")
 include("sieve_of_eratosthenes.jl")
 include("simpsons_integration.jl")
 include("sum_of_arithmetic_series.jl")

@@ -10,10 +10,15 @@ using TheAlgorithms.Cipher
     end
 
     @testset "Cipher: caesar" begin
-        input = "stealth"
-        @test caesar(0, input) == "stealth"
-        input = "ghsozhv"
-        @test caesar(90, input) == "stealth"
+        @test caesar(0, "stealth") == "stealth"
+        @test caesar(90, "ghsozhv") == "stealth"
+
+        @test caesar(1, "ABC") == "BCD"
+        @test caesar(-1, "BCD") == "ABC"
+
+        @test caesar(2, "f(x)") == "h(z)"
+
+        @test caesar(5, 'a') == 'f'
 
         # rot = 13
         # s = "abcdefghijklmnopqrstuvwxyz"

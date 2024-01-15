@@ -9,6 +9,9 @@ using TheAlgorithms.MatrixAlgo
         @test determinant(M1) == det(M1)
         @test round(determinant(M2), digits = 4) == round(det(M2), digits = 4)
         @test round(determinant(M3), digits = 4) == round(det(M3), digits = 4)
+
+        @test_throws DomainError determinant([1 2])
+        @test_throws DomainError determinant([1 2; 3 4; 5 6])
     end
 
     @testset "Matrix: LU Decompose" begin
@@ -79,5 +82,8 @@ using TheAlgorithms.MatrixAlgo
             Float64[1 0 0; 0 1 0; -0 -0 1],
             atol = 1e-5,
         )
+
+        @test gauss_jordan([0.0 1.0 5.0; 1.0 -2.0 -3.0]) ==
+              [1.0 0.0 7.0; 0.0 1.0 5.0]
     end
 end

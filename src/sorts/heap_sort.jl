@@ -28,6 +28,9 @@ After the largest element has been extracted, the tree is updated to maintain th
   Contributed By:- [Frank Schmitt](https://github.com/frankschmitt)
 """
 function heap_sort!(arr::Vector{T}, gt = >, N::Int = length(arr)) where {T}
+    if isempty(arr)
+        return
+    end 
     n = N
     i = div(n, 2)
     t = -1
