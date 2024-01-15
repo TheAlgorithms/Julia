@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: julia-actions/setup-julia@v1
         with:
-          version: 1.8
+          version: 1.9
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
