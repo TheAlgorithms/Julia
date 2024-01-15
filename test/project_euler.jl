@@ -98,4 +98,26 @@ using TheAlgorithms.ProjectEuler
         @test problem_016(2, 1000) == 1366
         @test_throws DomainError problem_016(2, -4)
     end
+
+    @testset "Project Euler: Problem 017" begin
+        @test problem_017() == 21124
+    end
+
+    @testset "Project Euler: Problem 018" begin
+        @test problem_018() == 1074
+    end
+
+    @testset "Project Euler: Problem 019" begin
+        @test problem_019(1901, 2000) == 171
+        @test problem_019(1901, 2200) == 515
+        @test problem_019(2020, 2023) == 6
+        @test_throws DomainError problem_019(-1, 2023)
+    end
+
+    @testset "Project Euler: Problem 020" begin
+        @test problem_020(10) == 27
+        @test problem_020(37) == 153
+        @test problem_020(100) == 648
+        @test_throws DomainError problem_020(-1)
+    end
 end

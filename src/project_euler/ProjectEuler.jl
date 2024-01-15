@@ -21,6 +21,10 @@ export problem_013
 export problem_014
 export problem_015
 export problem_016
+export problem_017
+export problem_018
+export problem_019
+export problem_020
 
 include("../math/divisors.jl")
 include("../math/sieve_of_eratosthenes.jl")
@@ -40,5 +44,9 @@ include("problem_013.jl")
 include("problem_014.jl")
 include("problem_015.jl")
 include("problem_016.jl")
+include("problem_017.jl")
+include("problem_018.jl")
+include("problem_019.jl")
+include("problem_020.jl")
 
 end
