@@ -20,7 +20,7 @@ jobs:
       - name: Get Julia v1.8
         uses: julia-actions/setup-julia@v1
         with:
-          version: 1.8
+          version: 1.9
       - name: Build DIRECTORY.md
         run: julia scripts/directory_writer.jl | tee DIRECTORY.md
       - name: Update DIRECTORY.md
