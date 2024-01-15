@@ -83,6 +83,7 @@
     * [Prime Check](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/prime_check.jl)
     * [Prime Factors](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/prime_factors.jl)
     * [Riemann Integration](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/riemann_integration.jl)
+    * [Runge Kutta Integration](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/runge_kutta_integration.jl)
     * [Sieve Of Eratosthenes](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/sieve_of_eratosthenes.jl)
     * [Simpsons Integration](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/simpsons_integration.jl)
     * [Sum Of Arithmetic Series](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/math/sum_of_arithmetic_series.jl)
@@ -114,6 +115,10 @@
     * [Problem 014](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_014.jl)
     * [Problem 015](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_015.jl)
     * [Problem 016](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_016.jl)
+    * [Problem 017](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_017.jl)
+    * [Problem 018](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_018.jl)
+    * [Problem 019](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_019.jl)
+    * [Problem 020](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_euler/problem_020.jl)
   * Project Rosalind
     * [Projectrosalind](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/ProjectRosalind.jl)
     * [Count Nucleotide](https://github.com/TheAlgorithms/Julia/blob/HEAD/src/project_rosalind/count_nucleotide.jl)
