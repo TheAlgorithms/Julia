@@ -23,7 +23,7 @@ https://cp-algorithms.com/sequences/longest_increasing_subsequence.html
 - [Igor Malheiros](https://github.com/igormalheiros)
 """
 
-function lis(arr::Array{T}, ::Val{:bs}) where T <: Integer
+function lis(arr::Array{T}, ::Val{:bs}) where {T<:Integer}
     len = length(arr)
     memo = ones(T, len)
     p = ones(Int, len)

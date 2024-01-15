@@ -1,0 +1,40 @@
+---
+name: check_format
+
+# yamllint disable-line rule:truthy
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  check_format:
+    name: Check format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: julia-actions/setup-julia@v1
+        with:
+          version: 1.9
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install JuliaFormatter
+        run: |
+          julia  -e 'using Pkg; Pkg.add(PackageSpec(name="JuliaFormatter"))'
+
+      - name: Format code
+        run: |
+          git clean -f -x -d
+          julia  -e 'using JuliaFormatter; format(".", verbose=true)'
+
+      - name: Fail if needs reformatting
+        run: |
+          if [[ $(git status --porcelain) ]]; then
+              echo "please reformat these files:"
+              git status --porcelain=v1
+              exit 1
+          fi
+...
